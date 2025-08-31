@@ -1,0 +1,126 @@
+# product_assoc null public null 0 0
+# primaryColumns
+#   product_id
+#   product_id_to
+#   product_assoc_type_id
+#   from_date
+# foreignKeys
+#   product_assoc.routing_work_effort_id ==> work_effort.work_effort_id
+#   product_assoc.recurrence_info_id ==> recurrence_info.recurrence_info_id
+#   product_assoc.estimate_calc_method ==> custom_method.custom_method_id
+#   product_assoc.product_id ==> product.product_id
+#   product_assoc.product_id_to ==> product.product_id
+#   product_assoc.product_assoc_type_id ==> product_assoc_type.product_assoc_type_id
+# checkConstraints---
+title: "ProductAssoc"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "estimateCalcMethod"
+  - "fromDate"
+  - "instruction"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productAssocTypeId"
+  - "productId"
+  - "productIdTo"
+  - "quantity"
+  - "reason"
+  - "recurrenceInfoId"
+  - "routingWorkEffortId"
+  - "scrapFactor"
+  - "sequenceNum"
+  - "thruDate"
+type: "object"
+properties:
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  productIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id_to"
+    exampleSetFlag: false
+  productAssocTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_assoc_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  reason:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "reason"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  scrapFactor:
+    type: "number"
+    description: "scrap_factor"
+    exampleSetFlag: false
+  instruction:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "instruction"
+    exampleSetFlag: false
+  routingWorkEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "routing_work_effort_id"
+    exampleSetFlag: false
+  estimateCalcMethod:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "estimate_calc_method"
+    exampleSetFlag: false
+  recurrenceInfoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "recurrence_info_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

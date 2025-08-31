@@ -1,0 +1,51 @@
+# party_note null public null 0 0
+# primaryColumns
+#   party_id
+#   note_id
+# foreignKeys
+#   party_note.note_id ==> note_data.note_id
+#   party_note.party_id ==> party.party_id
+# checkConstraints---
+title: "PartyNote"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "noteId"
+  - "partyId"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  noteId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "note_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,101 @@
+# product_feature null public null 0 0
+# primaryColumns
+#   product_feature_id
+# foreignKeys
+#   product_feature.product_feature_type_id ==> product_feature_type.product_feature_type_id
+#   product_feature.product_feature_category_id ==> product_feature_category.product_feature_category_id
+#   product_feature.uom_id ==> uom.uom_id
+# checkConstraints---
+title: "ProductFeature"
+required:
+  - "abbrev"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "defaultAmount"
+  - "defaultSequenceNum"
+  - "description"
+  - "idCode"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "numberSpecified"
+  - "productFeatureCategoryId"
+  - "productFeatureId"
+  - "productFeatureTypeId"
+  - "uomId"
+type: "object"
+properties:
+  productFeatureId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_feature_id"
+    exampleSetFlag: false
+  productFeatureTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_feature_type_id"
+    exampleSetFlag: false
+  productFeatureCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_feature_category_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  uomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "uom_id"
+    exampleSetFlag: false
+  numberSpecified:
+    type: "number"
+    description: "number_specified"
+    exampleSetFlag: false
+  defaultAmount:
+    type: "number"
+    description: "default_amount"
+    exampleSetFlag: false
+  defaultSequenceNum:
+    type: "number"
+    description: "default_sequence_num"
+    exampleSetFlag: false
+  abbrev:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "abbrev"
+    exampleSetFlag: false
+  idCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "id_code"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

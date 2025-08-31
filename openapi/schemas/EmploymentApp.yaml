@@ -1,0 +1,98 @@
+# employment_app null public null 0 0
+# primaryColumns
+#   application_id
+# foreignKeys
+#   employment_app.job_requisition_id ==> job_requisition.job_requisition_id
+#   employment_app.approver_party_id ==> party.party_id
+# checkConstraints---
+title: "EmploymentApp"
+required:
+  - "applicationDate"
+  - "applicationId"
+  - "applyingPartyId"
+  - "approverPartyId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "emplPositionId"
+  - "employmentAppSourceTypeId"
+  - "jobRequisitionId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "referredByPartyId"
+  - "statusId"
+type: "object"
+properties:
+  applicationId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "application_id"
+    exampleSetFlag: false
+  emplPositionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "empl_position_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  employmentAppSourceTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "employment_app_source_type_id"
+    exampleSetFlag: false
+  applyingPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "applying_party_id"
+    exampleSetFlag: false
+  referredByPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "referred_by_party_id"
+    exampleSetFlag: false
+  applicationDate:
+    type: "string"
+    description: "application_date"
+    format: "date-time"
+    exampleSetFlag: false
+  approverPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "approver_party_id"
+    exampleSetFlag: false
+  jobRequisitionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "job_requisition_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,92 @@
+# geo_point null public null 0 0
+# primaryColumns
+#   geo_point_id
+# foreignKeys
+#   geo_point.data_source_id ==> data_source.data_source_id
+#   geo_point.geo_point_type_enum_id ==> enumeration.enum_id
+#   geo_point.elevation_uom_id ==> uom.uom_id
+# checkConstraints---
+title: "GeoPoint"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "dataSourceId"
+  - "description"
+  - "elevation"
+  - "elevationUomId"
+  - "geoPointId"
+  - "geoPointTypeEnumId"
+  - "information"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  geoPointId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_point_id"
+    exampleSetFlag: false
+  geoPointTypeEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_point_type_enum_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  dataSourceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "data_source_id"
+    exampleSetFlag: false
+  latitude:
+    type: "number"
+    description: "latitude"
+    exampleSetFlag: false
+  longitude:
+    type: "number"
+    description: "longitude"
+    exampleSetFlag: false
+  elevation:
+    type: "number"
+    description: "elevation"
+    exampleSetFlag: false
+  elevationUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "elevation_uom_id"
+    exampleSetFlag: false
+  information:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "information"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,70 @@
+# custom_screen null public null 0 0
+# primaryColumns
+#   custom_screen_id
+# foreignKeys
+#   custom_screen.custom_screen_type_id ==> custom_screen_type.custom_screen_type_id
+# checkConstraints---
+title: "CustomScreen"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "customScreenId"
+  - "customScreenLocation"
+  - "customScreenName"
+  - "customScreenTypeId"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  customScreenId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "custom_screen_id"
+    exampleSetFlag: false
+  customScreenTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "custom_screen_type_id"
+    exampleSetFlag: false
+  customScreenName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "custom_screen_name"
+    exampleSetFlag: false
+  customScreenLocation:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "custom_screen_location"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

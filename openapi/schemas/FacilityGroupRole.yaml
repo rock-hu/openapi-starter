@@ -1,0 +1,59 @@
+# facility_group_role null public null 0 0
+# primaryColumns
+#   facility_group_id
+#   party_id
+#   role_type_id
+# foreignKeys
+#   facility_group_role.party_id,role_type_id ==> party_role.party_id,role_type_id
+#   facility_group_role.facility_group_id ==> facility_group.facility_group_id
+# checkConstraints---
+title: "FacilityGroupRole"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "facilityGroupId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "roleTypeId"
+type: "object"
+properties:
+  facilityGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_group_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

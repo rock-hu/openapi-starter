@@ -1,0 +1,206 @@
+# job_sandbox null public null 0 0
+# primaryColumns
+#   job_id
+# foreignKeys
+#   job_sandbox.recurrence_info_id ==> recurrence_info.recurrence_info_id
+#   job_sandbox.temp_expr_id ==> temporal_expression.temp_expr_id
+#   job_sandbox.runtime_data_id ==> runtime_data.runtime_data_id
+#   job_sandbox.status_id ==> status_item.status_id
+#   job_sandbox.run_as_user ==> user_login.user_login_id
+#   job_sandbox.auth_user_login_id ==> user_login.user_login_id
+# checkConstraints---
+title: "JobSandbox"
+required:
+  - "authUserLoginId"
+  - "cancelDateTime"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currentRecurrenceCount"
+  - "currentRetryCount"
+  - "finishDateTime"
+  - "jobId"
+  - "jobName"
+  - "jobResult"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "loaderName"
+  - "maxRecurrenceCount"
+  - "maxRetry"
+  - "parentJobId"
+  - "poolId"
+  - "previousJobId"
+  - "priority"
+  - "recurrenceInfoId"
+  - "recurrenceTimeZone"
+  - "runAsUser"
+  - "runByInstanceId"
+  - "runTime"
+  - "runTimeEpoch"
+  - "runtimeDataId"
+  - "serviceName"
+  - "startDateTime"
+  - "statusId"
+  - "tempExprId"
+type: "object"
+properties:
+  jobId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "job_id"
+    exampleSetFlag: false
+  jobName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "job_name"
+    exampleSetFlag: false
+  runTime:
+    type: "string"
+    description: "run_time"
+    format: "date-time"
+    exampleSetFlag: false
+  runTimeEpoch:
+    type: "number"
+    description: "run_time_epoch"
+    exampleSetFlag: false
+  priority:
+    type: "number"
+    description: "priority"
+    exampleSetFlag: false
+  poolId:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "pool_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  parentJobId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_job_id"
+    exampleSetFlag: false
+  previousJobId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "previous_job_id"
+    exampleSetFlag: false
+  serviceName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "service_name"
+    exampleSetFlag: false
+  loaderName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "loader_name"
+    exampleSetFlag: false
+  maxRetry:
+    type: "number"
+    description: "max_retry"
+    exampleSetFlag: false
+  currentRetryCount:
+    type: "number"
+    description: "current_retry_count"
+    exampleSetFlag: false
+  authUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "auth_user_login_id"
+    exampleSetFlag: false
+  runAsUser:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "run_as_user"
+    exampleSetFlag: false
+  runtimeDataId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "runtime_data_id"
+    exampleSetFlag: false
+  recurrenceInfoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "recurrence_info_id"
+    exampleSetFlag: false
+  tempExprId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "temp_expr_id"
+    exampleSetFlag: false
+  currentRecurrenceCount:
+    type: "number"
+    description: "current_recurrence_count"
+    exampleSetFlag: false
+  maxRecurrenceCount:
+    type: "number"
+    description: "max_recurrence_count"
+    exampleSetFlag: false
+  runByInstanceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "run_by_instance_id"
+    exampleSetFlag: false
+  startDateTime:
+    type: "string"
+    description: "start_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  finishDateTime:
+    type: "string"
+    description: "finish_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  cancelDateTime:
+    type: "string"
+    description: "cancel_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  jobResult:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "job_result"
+    exampleSetFlag: false
+  recurrenceTimeZone:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "recurrence_time_zone"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

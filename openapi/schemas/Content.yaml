@@ -1,0 +1,202 @@
+# content null public null 0 0
+# primaryColumns
+#   content_id
+# foreignKeys
+#   content.custom_method_id ==> custom_method.custom_method_id
+#   content.content_type_id ==> content_type.content_type_id
+#   content.character_set_id ==> character_set.character_set_id
+#   content.instance_of_content_id ==> content.content_id
+#   content.privilege_enum_id ==> enumeration.enum_id
+#   content.status_id ==> status_item.status_id
+#   content.template_data_resource_id ==> data_resource.data_resource_id
+#   content.decorator_content_id ==> content.content_id
+#   content.data_source_id ==> data_source.data_source_id
+#   content.owner_content_id ==> content.content_id
+#   content.created_by_user_login ==> user_login.user_login_id
+#   content.data_resource_id ==> data_resource.data_resource_id
+#   content.last_modified_by_user_login ==> user_login.user_login_id
+# checkConstraints---
+title: "Content"
+required:
+  - "characterSetId"
+  - "childBranchCount"
+  - "childLeafCount"
+  - "contentId"
+  - "contentName"
+  - "contentTypeId"
+  - "createdByUserLogin"
+  - "createdDate"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "customMethodId"
+  - "dataResourceId"
+  - "dataSourceId"
+  - "decoratorContentId"
+  - "description"
+  - "instanceOfContentId"
+  - "lastModifiedByUserLogin"
+  - "lastModifiedDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "localeString"
+  - "mimeTypeId"
+  - "ownerContentId"
+  - "privilegeEnumId"
+  - "serviceName"
+  - "statusId"
+  - "templateDataResourceId"
+type: "object"
+properties:
+  contentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_id"
+    exampleSetFlag: false
+  contentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_type_id"
+    exampleSetFlag: false
+  ownerContentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "owner_content_id"
+    exampleSetFlag: false
+  decoratorContentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "decorator_content_id"
+    exampleSetFlag: false
+  instanceOfContentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "instance_of_content_id"
+    exampleSetFlag: false
+  dataResourceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "data_resource_id"
+    exampleSetFlag: false
+  templateDataResourceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "template_data_resource_id"
+    exampleSetFlag: false
+  dataSourceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "data_source_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  privilegeEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "privilege_enum_id"
+    exampleSetFlag: false
+  serviceName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "service_name"
+    exampleSetFlag: false
+  customMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "custom_method_id"
+    exampleSetFlag: false
+  contentName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "content_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  localeString:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "locale_string"
+    exampleSetFlag: false
+  mimeTypeId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "mime_type_id"
+    exampleSetFlag: false
+  characterSetId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "character_set_id"
+    exampleSetFlag: false
+  childLeafCount:
+    type: "number"
+    description: "child_leaf_count"
+    exampleSetFlag: false
+  childBranchCount:
+    type: "number"
+    description: "child_branch_count"
+    exampleSetFlag: false
+  createdDate:
+    type: "string"
+    description: "created_date"
+    format: "date-time"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedDate:
+    type: "string"
+    description: "last_modified_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

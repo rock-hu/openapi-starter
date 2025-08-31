@@ -1,0 +1,104 @@
+# survey_response null public null 0 0
+# primaryColumns
+#   survey_response_id
+# foreignKeys
+#   survey_response.status_id ==> status_item.status_id
+#   survey_response.survey_id ==> survey.survey_id
+# checkConstraints---
+title: "SurveyResponse"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "generalFeedback"
+  - "lastModifiedDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemSeqId"
+  - "partyId"
+  - "referenceId"
+  - "responseDate"
+  - "statusId"
+  - "surveyId"
+  - "surveyResponseId"
+type: "object"
+properties:
+  surveyResponseId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_response_id"
+    exampleSetFlag: false
+  surveyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  responseDate:
+    type: "string"
+    description: "response_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastModifiedDate:
+    type: "string"
+    description: "last_modified_date"
+    format: "date-time"
+    exampleSetFlag: false
+  referenceId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "reference_id"
+    exampleSetFlag: false
+  generalFeedback:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "general_feedback"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

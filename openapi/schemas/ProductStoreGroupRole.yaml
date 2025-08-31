@@ -1,0 +1,59 @@
+# product_store_group_role null public null 0 0
+# primaryColumns
+#   product_store_group_id
+#   party_id
+#   role_type_id
+# foreignKeys
+#   product_store_group_role.party_id,role_type_id ==> party_role.party_id,role_type_id
+#   product_store_group_role.product_store_group_id ==> product_store_group.product_store_group_id
+# checkConstraints---
+title: "ProductStoreGroupRole"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "productStoreGroupId"
+  - "roleTypeId"
+type: "object"
+properties:
+  productStoreGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_group_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

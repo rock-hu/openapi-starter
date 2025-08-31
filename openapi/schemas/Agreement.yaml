@@ -1,0 +1,126 @@
+# agreement null public null 0 0
+# primaryColumns
+#   agreement_id
+# foreignKeys
+#   agreement.party_id_to,role_type_id_to ==> party_role.party_id,role_type_id
+#   agreement.product_id ==> product.product_id
+#   agreement.agreement_type_id ==> agreement_type.agreement_type_id
+#   agreement.party_id_from,role_type_id_from ==> party_role.party_id,role_type_id
+# checkConstraints---
+title: "Agreement"
+required:
+  - "agreementDate"
+  - "agreementId"
+  - "agreementTypeId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyIdFrom"
+  - "partyIdTo"
+  - "productId"
+  - "roleTypeIdFrom"
+  - "roleTypeIdTo"
+  - "statusId"
+  - "textData"
+  - "thruDate"
+type: "object"
+properties:
+  agreementId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "agreement_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  partyIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_from"
+    exampleSetFlag: false
+  partyIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_to"
+    exampleSetFlag: false
+  roleTypeIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id_from"
+    exampleSetFlag: false
+  roleTypeIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id_to"
+    exampleSetFlag: false
+  agreementTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "agreement_type_id"
+    exampleSetFlag: false
+  agreementDate:
+    type: "string"
+    description: "agreement_date"
+    format: "date-time"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  textData:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "text_data"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

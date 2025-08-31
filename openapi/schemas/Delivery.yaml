@@ -1,0 +1,104 @@
+# delivery null public null 0 0
+# primaryColumns
+#   delivery_id
+# foreignKeys
+#   delivery.dest_facility_id ==> facility.facility_id
+#   delivery.origin_facility_id ==> facility.facility_id
+#   delivery.fixed_asset_id ==> fixed_asset.fixed_asset_id
+# checkConstraints---
+title: "Delivery"
+required:
+  - "actualArrivalDate"
+  - "actualStartDate"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "deliveryId"
+  - "destFacilityId"
+  - "endMileage"
+  - "estimatedArrivalDate"
+  - "estimatedStartDate"
+  - "fixedAssetId"
+  - "fuelUsed"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "originFacilityId"
+  - "startMileage"
+type: "object"
+properties:
+  deliveryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "delivery_id"
+    exampleSetFlag: false
+  originFacilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "origin_facility_id"
+    exampleSetFlag: false
+  destFacilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "dest_facility_id"
+    exampleSetFlag: false
+  actualStartDate:
+    type: "string"
+    description: "actual_start_date"
+    format: "date-time"
+    exampleSetFlag: false
+  actualArrivalDate:
+    type: "string"
+    description: "actual_arrival_date"
+    format: "date-time"
+    exampleSetFlag: false
+  estimatedStartDate:
+    type: "string"
+    description: "estimated_start_date"
+    format: "date-time"
+    exampleSetFlag: false
+  estimatedArrivalDate:
+    type: "string"
+    description: "estimated_arrival_date"
+    format: "date-time"
+    exampleSetFlag: false
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  startMileage:
+    type: "number"
+    description: "start_mileage"
+    exampleSetFlag: false
+  endMileage:
+    type: "number"
+    description: "end_mileage"
+    exampleSetFlag: false
+  fuelUsed:
+    type: "number"
+    description: "fuel_used"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

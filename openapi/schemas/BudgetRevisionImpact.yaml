@@ -1,0 +1,79 @@
+# budget_revision_impact null public null 0 0
+# primaryColumns
+#   budget_id
+#   budget_item_seq_id
+#   revision_seq_id
+# foreignKeys
+#   budget_revision_impact.budget_id,revision_seq_id ==> budget_revision.budget_id,revision_seq_id
+#   budget_revision_impact.budget_id,budget_item_seq_id ==> budget_item.budget_id,budget_item_seq_id
+#   budget_revision_impact.budget_id ==> budget.budget_id
+# checkConstraints---
+title: "BudgetRevisionImpact"
+required:
+  - "addDeleteFlag"
+  - "budgetId"
+  - "budgetItemSeqId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "revisedAmount"
+  - "revisionReason"
+  - "revisionSeqId"
+type: "object"
+properties:
+  budgetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_id"
+    exampleSetFlag: false
+  budgetItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_item_seq_id"
+    exampleSetFlag: false
+  revisionSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "revision_seq_id"
+    exampleSetFlag: false
+  revisedAmount:
+    type: "number"
+    description: "revised_amount"
+    exampleSetFlag: false
+  addDeleteFlag:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "add_delete_flag"
+    exampleSetFlag: false
+  revisionReason:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "revision_reason"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

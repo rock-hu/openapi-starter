@@ -1,0 +1,56 @@
+# payment_gateway_resp_msg null public null 0 0
+# primaryColumns
+#   payment_gateway_resp_msg_id
+# foreignKeys
+#   payment_gateway_resp_msg.payment_gateway_response_id ==> payment_gateway_response.payment_gateway_response_id
+# checkConstraints---
+title: "PaymentGatewayRespMsg"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "paymentGatewayRespMsgId"
+  - "paymentGatewayResponseId"
+  - "pgrMessage"
+type: "object"
+properties:
+  paymentGatewayRespMsgId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_gateway_resp_msg_id"
+    exampleSetFlag: false
+  paymentGatewayResponseId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_gateway_response_id"
+    exampleSetFlag: false
+  pgrMessage:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "pgr_message"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

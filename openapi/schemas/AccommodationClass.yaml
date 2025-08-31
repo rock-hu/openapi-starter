@@ -1,0 +1,56 @@
+# accommodation_class null public null 0 0
+# primaryColumns
+#   accommodation_class_id
+# foreignKeys
+#   accommodation_class.parent_class_id ==> accommodation_class.accommodation_class_id
+# checkConstraints---
+title: "AccommodationClass"
+required:
+  - "accommodationClassId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentClassId"
+type: "object"
+properties:
+  accommodationClassId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "accommodation_class_id"
+    exampleSetFlag: false
+  parentClassId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_class_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,76 @@
+# inventory_item_variance null public null 0 0
+# primaryColumns
+#   inventory_item_id
+#   physical_inventory_id
+# foreignKeys
+#   inventory_item_variance.physical_inventory_id ==> physical_inventory.physical_inventory_id
+#   inventory_item_variance.inventory_item_id ==> inventory_item.inventory_item_id
+#   inventory_item_variance.variance_reason_id ==> variance_reason.variance_reason_id
+# checkConstraints---
+title: "InventoryItemVariance"
+required:
+  - "availableToPromiseVar"
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "inventoryItemId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "physicalInventoryId"
+  - "quantityOnHandVar"
+  - "varianceReasonId"
+type: "object"
+properties:
+  inventoryItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_id"
+    exampleSetFlag: false
+  physicalInventoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "physical_inventory_id"
+    exampleSetFlag: false
+  varianceReasonId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "variance_reason_id"
+    exampleSetFlag: false
+  availableToPromiseVar:
+    type: "number"
+    description: "available_to_promise_var"
+    exampleSetFlag: false
+  quantityOnHandVar:
+    type: "number"
+    description: "quantity_on_hand_var"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

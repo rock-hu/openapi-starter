@@ -1,0 +1,69 @@
+# testing_crypto null public null 0 0
+# primaryColumns
+#   testing_crypto_id
+# foreignKeys
+# checkConstraints---
+title: "TestingCrypto"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "encryptedValue"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "saltedEncryptedValue"
+  - "testingCryptoId"
+  - "testingCryptoTypeId"
+  - "unencryptedValue"
+type: "object"
+properties:
+  testingCryptoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "testing_crypto_id"
+    exampleSetFlag: false
+  testingCryptoTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "testing_crypto_type_id"
+    exampleSetFlag: false
+  unencryptedValue:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "unencrypted_value"
+    exampleSetFlag: false
+  encryptedValue:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "encrypted_value"
+    exampleSetFlag: false
+  saltedEncryptedValue:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "salted_encrypted_value"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

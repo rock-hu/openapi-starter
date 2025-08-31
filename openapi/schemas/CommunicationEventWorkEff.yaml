@@ -1,0 +1,58 @@
+# communication_event_work_eff null public null 0 0
+# primaryColumns
+#   work_effort_id
+#   communication_event_id
+# foreignKeys
+#   communication_event_work_eff.work_effort_id ==> work_effort.work_effort_id
+#   communication_event_work_eff.communication_event_id ==> communication_event.communication_event_id
+# checkConstraints---
+title: "CommunicationEventWorkEff"
+required:
+  - "communicationEventId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "workEffortId"
+type: "object"
+properties:
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  communicationEventId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "communication_event_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

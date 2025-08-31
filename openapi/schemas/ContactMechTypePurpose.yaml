@@ -1,0 +1,51 @@
+# contact_mech_type_purpose null public null 0 0
+# primaryColumns
+#   contact_mech_type_id
+#   contact_mech_purpose_type_id
+# foreignKeys
+#   contact_mech_type_purpose.contact_mech_purpose_type_id ==> contact_mech_purpose_type.contact_mech_purpose_type_id
+#   contact_mech_type_purpose.contact_mech_type_id ==> contact_mech_type.contact_mech_type_id
+# checkConstraints---
+title: "ContactMechTypePurpose"
+required:
+  - "contactMechPurposeTypeId"
+  - "contactMechTypeId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  contactMechTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_type_id"
+    exampleSetFlag: false
+  contactMechPurposeTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_purpose_type_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

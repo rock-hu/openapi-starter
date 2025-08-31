@@ -1,0 +1,64 @@
+# requirement_budget_allocation null public null 0 0
+# primaryColumns
+#   budget_id
+#   budget_item_seq_id
+#   requirement_id
+# foreignKeys
+#   requirement_budget_allocation.budget_id,budget_item_seq_id ==> budget_item.budget_id,budget_item_seq_id
+#   requirement_budget_allocation.requirement_id ==> requirement.requirement_id
+# checkConstraints---
+title: "RequirementBudgetAllocation"
+required:
+  - "amount"
+  - "budgetId"
+  - "budgetItemSeqId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "requirementId"
+type: "object"
+properties:
+  budgetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_id"
+    exampleSetFlag: false
+  budgetItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_item_seq_id"
+    exampleSetFlag: false
+  requirementId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "requirement_id"
+    exampleSetFlag: false
+  amount:
+    type: "number"
+    description: "amount"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

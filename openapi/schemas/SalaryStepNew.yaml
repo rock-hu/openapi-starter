@@ -1,0 +1,88 @@
+# salary_step_new null public null 0 0
+# primaryColumns
+#   salary_step_seq_id
+#   pay_grade_id
+#   from_date
+# foreignKeys
+#   salary_step_new.pay_grade_id ==> pay_grade.pay_grade_id
+# checkConstraints---
+title: "SalaryStepNew"
+required:
+  - "amount"
+  - "createdByUserLogin"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "dateModified"
+  - "fromDate"
+  - "lastModifiedByUserLogin"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "payGradeId"
+  - "salaryStepSeqId"
+  - "thruDate"
+type: "object"
+properties:
+  salaryStepSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "salary_step_seq_id"
+    exampleSetFlag: false
+  payGradeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "pay_grade_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  dateModified:
+    type: "string"
+    description: "date_modified"
+    format: "date-time"
+    exampleSetFlag: false
+  amount:
+    type: "number"
+    description: "amount"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

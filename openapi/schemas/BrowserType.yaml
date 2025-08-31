@@ -1,0 +1,55 @@
+# browser_type null public null 0 0
+# primaryColumns
+#   browser_type_id
+# foreignKeys
+# checkConstraints---
+title: "BrowserType"
+required:
+  - "browserName"
+  - "browserTypeId"
+  - "browserVersion"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  browserTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "browser_type_id"
+    exampleSetFlag: false
+  browserName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "browser_name"
+    exampleSetFlag: false
+  browserVersion:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "browser_version"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

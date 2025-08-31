@@ -1,0 +1,121 @@
+# pay_history null public null 0 0
+# primaryColumns
+#   role_type_id_from
+#   role_type_id_to
+#   party_id_from
+#   party_id_to
+#   empl_from_date
+#   from_date
+# foreignKeys
+#   pay_history.period_type_id ==> period_type.period_type_id
+#   pay_history.role_type_id_from,role_type_id_to,party_id_from,party_id_to,empl_from_date ==> employment.role_type_id_from,role_type_id_to,party_id_from,party_id_to,from_date
+#   pay_history.pay_grade_id ==> pay_grade.pay_grade_id
+# checkConstraints---
+title: "PayHistory"
+required:
+  - "amount"
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "emplFromDate"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyIdFrom"
+  - "partyIdTo"
+  - "payGradeId"
+  - "periodTypeId"
+  - "roleTypeIdFrom"
+  - "roleTypeIdTo"
+  - "salaryStepSeqId"
+  - "thruDate"
+type: "object"
+properties:
+  roleTypeIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id_from"
+    exampleSetFlag: false
+  roleTypeIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id_to"
+    exampleSetFlag: false
+  partyIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_from"
+    exampleSetFlag: false
+  partyIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_to"
+    exampleSetFlag: false
+  emplFromDate:
+    type: "string"
+    description: "empl_from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  salaryStepSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "salary_step_seq_id"
+    exampleSetFlag: false
+  payGradeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "pay_grade_id"
+    exampleSetFlag: false
+  periodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "period_type_id"
+    exampleSetFlag: false
+  amount:
+    type: "number"
+    description: "amount"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

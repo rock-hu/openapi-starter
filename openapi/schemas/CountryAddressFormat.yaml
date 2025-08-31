@@ -1,0 +1,92 @@
+# country_address_format null public null 0 0
+# primaryColumns
+#   geo_id
+# foreignKeys
+#   country_address_format.geo_id ==> geo.geo_id
+#   country_address_format.geo_assoc_type_id ==> geo_assoc_type.geo_assoc_type_id
+# checkConstraints---
+title: "CountryAddressFormat"
+required:
+  - "addressFormat"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "geoAssocTypeId"
+  - "geoId"
+  - "hasPostalCodeExt"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "postalCodeRegex"
+  - "requirePostalCode"
+  - "requirePostalCodeExt"
+  - "requireStateProvinceId"
+type: "object"
+properties:
+  geoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_id"
+    exampleSetFlag: false
+  geoAssocTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_assoc_type_id"
+    exampleSetFlag: false
+  requireStateProvinceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "require_state_province_id"
+    exampleSetFlag: false
+  requirePostalCode:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "require_postal_code"
+    exampleSetFlag: false
+  postalCodeRegex:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "postal_code_regex"
+    exampleSetFlag: false
+  hasPostalCodeExt:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "has_postal_code_ext"
+    exampleSetFlag: false
+  requirePostalCodeExt:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "require_postal_code_ext"
+    exampleSetFlag: false
+  addressFormat:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "address_format"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

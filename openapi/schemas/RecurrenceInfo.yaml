@@ -1,0 +1,82 @@
+# recurrence_info null public null 0 0
+# primaryColumns
+#   recurrence_info_id
+# foreignKeys
+#   recurrence_info.recurrence_rule_id ==> recurrence_rule.recurrence_rule_id
+#   recurrence_info.exception_rule_id ==> recurrence_rule.recurrence_rule_id
+# checkConstraints---
+title: "RecurrenceInfo"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "exceptionDateTimes"
+  - "exceptionRuleId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "recurrenceCount"
+  - "recurrenceDateTimes"
+  - "recurrenceInfoId"
+  - "recurrenceRuleId"
+  - "startDateTime"
+type: "object"
+properties:
+  recurrenceInfoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "recurrence_info_id"
+    exampleSetFlag: false
+  startDateTime:
+    type: "string"
+    description: "start_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  exceptionDateTimes:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "exception_date_times"
+    exampleSetFlag: false
+  recurrenceDateTimes:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "recurrence_date_times"
+    exampleSetFlag: false
+  exceptionRuleId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "exception_rule_id"
+    exampleSetFlag: false
+  recurrenceRuleId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "recurrence_rule_id"
+    exampleSetFlag: false
+  recurrenceCount:
+    type: "number"
+    description: "recurrence_count"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

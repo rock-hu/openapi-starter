@@ -1,0 +1,76 @@
+# party_rate_new null public null 0 0
+# primaryColumns
+#   party_id
+#   rate_type_id
+#   from_date
+# foreignKeys
+#   party_rate_new.rate_type_id ==> rate_type.rate_type_id
+#   party_rate_new.party_id ==> party.party_id
+# checkConstraints---
+title: "PartyRateNew"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "defaultRate"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "percentageUsed"
+  - "rateTypeId"
+  - "thruDate"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  rateTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "rate_type_id"
+    exampleSetFlag: false
+  defaultRate:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "default_rate"
+    exampleSetFlag: false
+  percentageUsed:
+    type: "number"
+    description: "percentage_used"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

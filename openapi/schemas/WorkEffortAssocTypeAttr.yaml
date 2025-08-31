@@ -1,0 +1,57 @@
+# work_effort_assoc_type_attr null public null 0 0
+# primaryColumns
+#   work_effort_assoc_type_id
+#   attr_name
+# foreignKeys
+#   work_effort_assoc_type_attr.work_effort_assoc_type_id ==> work_effort_assoc_type.work_effort_assoc_type_id
+# checkConstraints---
+title: "WorkEffortAssocTypeAttr"
+required:
+  - "attrName"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "workEffortAssocTypeId"
+type: "object"
+properties:
+  workEffortAssocTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_assoc_type_id"
+    exampleSetFlag: false
+  attrName:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "attr_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

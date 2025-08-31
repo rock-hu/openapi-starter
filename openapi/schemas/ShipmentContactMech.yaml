@@ -1,0 +1,59 @@
+# shipment_contact_mech null public null 0 0
+# primaryColumns
+#   shipment_id
+#   shipment_contact_mech_type_id
+# foreignKeys
+#   shipment_contact_mech.shipment_id ==> shipment.shipment_id
+#   shipment_contact_mech.shipment_contact_mech_type_id ==> shipment_contact_mech_type.shipment_contact_mech_type_id
+#   shipment_contact_mech.contact_mech_id ==> contact_mech.contact_mech_id
+# checkConstraints---
+title: "ShipmentContactMech"
+required:
+  - "contactMechId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "shipmentContactMechTypeId"
+  - "shipmentId"
+type: "object"
+properties:
+  shipmentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_id"
+    exampleSetFlag: false
+  shipmentContactMechTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_contact_mech_type_id"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

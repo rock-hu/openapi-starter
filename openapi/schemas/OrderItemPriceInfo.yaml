@@ -1,0 +1,90 @@
+# order_item_price_info null public null 0 0
+# primaryColumns
+#   order_item_price_info_id
+# foreignKeys
+#   order_item_price_info.order_id,order_item_seq_id ==> order_item.order_id,order_item_seq_id
+#   order_item_price_info.product_price_rule_id,product_price_action_seq_id ==> product_price_action.product_price_rule_id,product_price_action_seq_id
+# checkConstraints---
+title: "OrderItemPriceInfo"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "modifyAmount"
+  - "orderId"
+  - "orderItemPriceInfoId"
+  - "orderItemSeqId"
+  - "productPriceActionSeqId"
+  - "productPriceRuleId"
+  - "rateCode"
+type: "object"
+properties:
+  orderItemPriceInfoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_price_info_id"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  productPriceRuleId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_price_rule_id"
+    exampleSetFlag: false
+  productPriceActionSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_price_action_seq_id"
+    exampleSetFlag: false
+  modifyAmount:
+    type: "number"
+    description: "modify_amount"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  rateCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "rate_code"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

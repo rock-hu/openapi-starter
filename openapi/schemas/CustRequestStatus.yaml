@@ -1,0 +1,78 @@
+# cust_request_status null public null 0 0
+# primaryColumns
+#   cust_request_status_id
+# foreignKeys
+#   cust_request_status.change_by_user_login_id ==> user_login.user_login_id
+#   cust_request_status.status_id ==> status_item.status_id
+#   cust_request_status.cust_request_id ==> cust_request.cust_request_id
+# checkConstraints---
+title: "CustRequestStatus"
+required:
+  - "changeByUserLoginId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "custRequestId"
+  - "custRequestItemSeqId"
+  - "custRequestStatusId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "statusDate"
+  - "statusId"
+type: "object"
+properties:
+  custRequestStatusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_status_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  custRequestId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_id"
+    exampleSetFlag: false
+  custRequestItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_item_seq_id"
+    exampleSetFlag: false
+  statusDate:
+    type: "string"
+    description: "status_date"
+    format: "date-time"
+    exampleSetFlag: false
+  changeByUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "change_by_user_login_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

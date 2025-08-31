@@ -1,0 +1,248 @@
+# order_header null public null 0 0
+# primaryColumns
+#   order_id
+# foreignKeys
+#   order_header.order_type_id ==> order_type.order_type_id
+#   order_header.product_store_id ==> product_store.product_store_id
+#   order_header.origin_facility_id ==> facility.facility_id
+#   order_header.sync_status_id ==> status_item.status_id
+#   order_header.billing_account_id ==> billing_account.billing_account_id
+#   order_header.currency_uom ==> uom.uom_id
+#   order_header.sales_channel_enum_id ==> enumeration.enum_id
+#   order_header.created_by ==> user_login.user_login_id
+#   order_header.status_id ==> status_item.status_id
+#   order_header.auto_order_shopping_list_id ==> shopping_list.shopping_list_id
+#   order_header.web_site_id ==> web_site.web_site_id
+# checkConstraints---
+title: "OrderHeader"
+required:
+  - "agreementId"
+  - "autoOrderShoppingListId"
+  - "billingAccountId"
+  - "createdBy"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUom"
+  - "entryDate"
+  - "externalId"
+  - "firstAttemptOrderId"
+  - "grandTotal"
+  - "internalCode"
+  - "invoicePerShipment"
+  - "isRushOrder"
+  - "isViewed"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "needsInventoryIssuance"
+  - "orderDate"
+  - "orderId"
+  - "orderName"
+  - "orderTypeId"
+  - "originFacilityId"
+  - "pickSheetPrintedDate"
+  - "priority"
+  - "productStoreId"
+  - "remainingSubTotal"
+  - "salesChannelEnumId"
+  - "statusId"
+  - "syncStatusId"
+  - "terminalId"
+  - "transactionId"
+  - "visitId"
+  - "webSiteId"
+type: "object"
+properties:
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_type_id"
+    exampleSetFlag: false
+  orderName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "order_name"
+    exampleSetFlag: false
+  externalId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "external_id"
+    exampleSetFlag: false
+  salesChannelEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "sales_channel_enum_id"
+    exampleSetFlag: false
+  orderDate:
+    type: "string"
+    description: "order_date"
+    format: "date-time"
+    exampleSetFlag: false
+  priority:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "priority"
+    exampleSetFlag: false
+  entryDate:
+    type: "string"
+    description: "entry_date"
+    format: "date-time"
+    exampleSetFlag: false
+  pickSheetPrintedDate:
+    type: "string"
+    description: "pick_sheet_printed_date"
+    format: "date-time"
+    exampleSetFlag: false
+  visitId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "visit_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  createdBy:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by"
+    exampleSetFlag: false
+  firstAttemptOrderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "first_attempt_order_id"
+    exampleSetFlag: false
+  currencyUom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom"
+    exampleSetFlag: false
+  syncStatusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "sync_status_id"
+    exampleSetFlag: false
+  billingAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "billing_account_id"
+    exampleSetFlag: false
+  originFacilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "origin_facility_id"
+    exampleSetFlag: false
+  webSiteId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "web_site_id"
+    exampleSetFlag: false
+  productStoreId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_id"
+    exampleSetFlag: false
+  agreementId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "agreement_id"
+    exampleSetFlag: false
+  terminalId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "terminal_id"
+    exampleSetFlag: false
+  transactionId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "transaction_id"
+    exampleSetFlag: false
+  autoOrderShoppingListId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "auto_order_shopping_list_id"
+    exampleSetFlag: false
+  needsInventoryIssuance:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "needs_inventory_issuance"
+    exampleSetFlag: false
+  isRushOrder:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_rush_order"
+    exampleSetFlag: false
+  internalCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "internal_code"
+    exampleSetFlag: false
+  remainingSubTotal:
+    type: "number"
+    description: "remaining_sub_total"
+    exampleSetFlag: false
+  grandTotal:
+    type: "number"
+    description: "grand_total"
+    exampleSetFlag: false
+  isViewed:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_viewed"
+    exampleSetFlag: false
+  invoicePerShipment:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "invoice_per_shipment"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

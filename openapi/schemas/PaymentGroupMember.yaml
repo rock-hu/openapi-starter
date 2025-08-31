@@ -1,0 +1,69 @@
+# payment_group_member null public null 0 0
+# primaryColumns
+#   payment_group_id
+#   payment_id
+#   from_date
+# foreignKeys
+#   payment_group_member.payment_id ==> payment.payment_id
+#   payment_group_member.payment_group_id ==> payment_group.payment_group_id
+# checkConstraints---
+title: "PaymentGroupMember"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "paymentGroupId"
+  - "paymentId"
+  - "sequenceNum"
+  - "thruDate"
+type: "object"
+properties:
+  paymentGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_group_id"
+    exampleSetFlag: false
+  paymentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

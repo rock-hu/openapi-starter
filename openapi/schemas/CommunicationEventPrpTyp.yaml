@@ -1,0 +1,63 @@
+# communication_event_prp_typ null public null 0 0
+# primaryColumns
+#   communication_event_prp_typ_id
+# foreignKeys
+#   communication_event_prp_typ.parent_type_id ==> communication_event_prp_typ.communication_event_prp_typ_id
+# checkConstraints---
+title: "CommunicationEventPrpTyp"
+required:
+  - "communicationEventPrpTypId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "hasTable"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentTypeId"
+type: "object"
+properties:
+  communicationEventPrpTypId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "communication_event_prp_typ_id"
+    exampleSetFlag: false
+  parentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_type_id"
+    exampleSetFlag: false
+  hasTable:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "has_table"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,132 @@
+# product_promo null public null 0 0
+# primaryColumns
+#   product_promo_id
+# foreignKeys
+#   product_promo.override_org_party_id ==> party.party_id
+#   product_promo.last_modified_by_user_login ==> user_login.user_login_id
+#   product_promo.created_by_user_login ==> user_login.user_login_id
+# checkConstraints---
+title: "ProductPromo"
+required:
+  - "billbackFactor"
+  - "createdByUserLogin"
+  - "createdDate"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastModifiedByUserLogin"
+  - "lastModifiedDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "overrideOrgPartyId"
+  - "productPromoId"
+  - "promoName"
+  - "promoText"
+  - "requireCode"
+  - "showToCustomer"
+  - "useLimitPerCustomer"
+  - "useLimitPerOrder"
+  - "useLimitPerPromotion"
+  - "userEntered"
+type: "object"
+properties:
+  productPromoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_promo_id"
+    exampleSetFlag: false
+  promoName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "promo_name"
+    exampleSetFlag: false
+  promoText:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "promo_text"
+    exampleSetFlag: false
+  userEntered:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "user_entered"
+    exampleSetFlag: false
+  showToCustomer:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "show_to_customer"
+    exampleSetFlag: false
+  requireCode:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "require_code"
+    exampleSetFlag: false
+  useLimitPerOrder:
+    type: "number"
+    description: "use_limit_per_order"
+    exampleSetFlag: false
+  useLimitPerCustomer:
+    type: "number"
+    description: "use_limit_per_customer"
+    exampleSetFlag: false
+  useLimitPerPromotion:
+    type: "number"
+    description: "use_limit_per_promotion"
+    exampleSetFlag: false
+  billbackFactor:
+    type: "number"
+    description: "billback_factor"
+    exampleSetFlag: false
+  overrideOrgPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "override_org_party_id"
+    exampleSetFlag: false
+  createdDate:
+    type: "string"
+    description: "created_date"
+    format: "date-time"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedDate:
+    type: "string"
+    description: "last_modified_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

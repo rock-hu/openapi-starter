@@ -1,0 +1,140 @@
+# payment_gateway_pay_pal null public null 0 0
+# primaryColumns
+#   payment_gateway_config_id
+# foreignKeys
+#   payment_gateway_pay_pal.payment_gateway_config_id ==> payment_gateway_config.payment_gateway_config_id
+# checkConstraints---
+title: "PaymentGatewayPayPal"
+required:
+  - "apiEnvironment"
+  - "apiPassword"
+  - "apiSignature"
+  - "apiUserName"
+  - "businessEmail"
+  - "cancelReturnUrl"
+  - "confirmTemplate"
+  - "confirmUrl"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "imageUrl"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "notifyUrl"
+  - "paymentGatewayConfigId"
+  - "redirectUrl"
+  - "requireConfirmedShipping"
+  - "returnUrl"
+  - "shippingCallbackUrl"
+type: "object"
+properties:
+  paymentGatewayConfigId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_gateway_config_id"
+    exampleSetFlag: false
+  businessEmail:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "business_email"
+    exampleSetFlag: false
+  apiUserName:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "api_user_name"
+    exampleSetFlag: false
+  apiPassword:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "api_password"
+    exampleSetFlag: false
+  apiSignature:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "api_signature"
+    exampleSetFlag: false
+  apiEnvironment:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "api_environment"
+    exampleSetFlag: false
+  notifyUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "notify_url"
+    exampleSetFlag: false
+  returnUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "return_url"
+    exampleSetFlag: false
+  cancelReturnUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "cancel_return_url"
+    exampleSetFlag: false
+  imageUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "image_url"
+    exampleSetFlag: false
+  confirmTemplate:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "confirm_template"
+    exampleSetFlag: false
+  redirectUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "redirect_url"
+    exampleSetFlag: false
+  confirmUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "confirm_url"
+    exampleSetFlag: false
+  shippingCallbackUrl:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "shipping_callback_url"
+    exampleSetFlag: false
+  requireConfirmedShipping:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "require_confirmed_shipping"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

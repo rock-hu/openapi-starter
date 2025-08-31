@@ -1,0 +1,57 @@
+# cust_request_type_attr null public null 0 0
+# primaryColumns
+#   cust_request_type_id
+#   attr_name
+# foreignKeys
+#   cust_request_type_attr.cust_request_type_id ==> cust_request_type.cust_request_type_id
+# checkConstraints---
+title: "CustRequestTypeAttr"
+required:
+  - "attrName"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "custRequestTypeId"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  custRequestTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_type_id"
+    exampleSetFlag: false
+  attrName:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "attr_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

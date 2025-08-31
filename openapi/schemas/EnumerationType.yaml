@@ -1,0 +1,63 @@
+# enumeration_type null public null 0 0
+# primaryColumns
+#   enum_type_id
+# foreignKeys
+#   enumeration_type.parent_type_id ==> enumeration_type.enum_type_id
+# checkConstraints---
+title: "EnumerationType"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "enumTypeId"
+  - "hasTable"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentTypeId"
+type: "object"
+properties:
+  enumTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "enum_type_id"
+    exampleSetFlag: false
+  parentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_type_id"
+    exampleSetFlag: false
+  hasTable:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "has_table"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

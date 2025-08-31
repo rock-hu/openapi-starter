@@ -1,0 +1,83 @@
+# standard_language null public null 0 0
+# primaryColumns
+#   standard_language_id
+# foreignKeys
+# checkConstraints---
+title: "StandardLanguage"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "langCharset"
+  - "langCode2"
+  - "langCode3b"
+  - "langCode3t"
+  - "langFamily"
+  - "langName"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "standardLanguageId"
+type: "object"
+properties:
+  standardLanguageId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "standard_language_id"
+    exampleSetFlag: false
+  langCode3t:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "lang_code3t"
+    exampleSetFlag: false
+  langCode3b:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "lang_code3b"
+    exampleSetFlag: false
+  langCode2:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "lang_code2"
+    exampleSetFlag: false
+  langName:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "lang_name"
+    exampleSetFlag: false
+  langFamily:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "lang_family"
+    exampleSetFlag: false
+  langCharset:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "lang_charset"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,69 @@
+# facility_group_member null public null 0 0
+# primaryColumns
+#   facility_id
+#   facility_group_id
+#   from_date
+# foreignKeys
+#   facility_group_member.facility_id ==> facility.facility_id
+#   facility_group_member.facility_group_id ==> facility_group.facility_group_id
+# checkConstraints---
+title: "FacilityGroupMember"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "facilityGroupId"
+  - "facilityId"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "sequenceNum"
+  - "thruDate"
+type: "object"
+properties:
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  facilityGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_group_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

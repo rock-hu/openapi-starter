@@ -1,0 +1,68 @@
+# shortened_path null public null 0 0
+# primaryColumns
+#   shortened_path
+# foreignKeys
+# checkConstraints---
+title: "ShortenedPath"
+required:
+  - "createdByUserLogin"
+  - "createdDate"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "originalPath"
+  - "originalPathHash"
+  - "shortenedPath"
+type: "object"
+properties:
+  shortenedPath:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shortened_path"
+    exampleSetFlag: false
+  originalPathHash:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "original_path_hash"
+    exampleSetFlag: false
+  originalPath:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "original_path"
+    exampleSetFlag: false
+  createdDate:
+    type: "string"
+    description: "created_date"
+    format: "date-time"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

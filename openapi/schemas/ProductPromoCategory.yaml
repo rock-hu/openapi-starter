@@ -1,0 +1,98 @@
+# product_promo_category null public null 0 0
+# primaryColumns
+#   product_promo_id
+#   product_promo_rule_id
+#   product_promo_action_seq_id
+#   product_promo_cond_seq_id
+#   product_category_id
+#   and_group_id
+# foreignKeys
+#   product_promo_category.product_category_id ==> product_category.product_category_id
+#   product_promo_category.product_promo_appl_enum_id ==> enumeration.enum_id
+#   product_promo_category.product_promo_id ==> product_promo.product_promo_id
+# checkConstraints---
+title: "ProductPromoCategory"
+required:
+  - "andGroupId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "includeSubCategories"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productCategoryId"
+  - "productPromoActionSeqId"
+  - "productPromoApplEnumId"
+  - "productPromoCondSeqId"
+  - "productPromoId"
+  - "productPromoRuleId"
+type: "object"
+properties:
+  productPromoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_promo_id"
+    exampleSetFlag: false
+  productPromoRuleId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_promo_rule_id"
+    exampleSetFlag: false
+  productPromoActionSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_promo_action_seq_id"
+    exampleSetFlag: false
+  productPromoCondSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_promo_cond_seq_id"
+    exampleSetFlag: false
+  productCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_category_id"
+    exampleSetFlag: false
+  andGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "and_group_id"
+    exampleSetFlag: false
+  productPromoApplEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_promo_appl_enum_id"
+    exampleSetFlag: false
+  includeSubCategories:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "include_sub_categories"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

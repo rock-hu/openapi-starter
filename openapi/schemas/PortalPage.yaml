@@ -1,0 +1,98 @@
+# portal_page null public null 0 0
+# primaryColumns
+#   portal_page_id
+# foreignKeys
+#   portal_page.parent_portal_page_id ==> portal_page.portal_page_id
+#   portal_page.help_content_id ==> content.content_id
+#   portal_page.security_group_id ==> security_group.group_id
+# checkConstraints---
+title: "PortalPage"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "helpContentId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "originalPortalPageId"
+  - "ownerUserLoginId"
+  - "parentPortalPageId"
+  - "portalPageId"
+  - "portalPageName"
+  - "securityGroupId"
+  - "sequenceNum"
+type: "object"
+properties:
+  portalPageId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "portal_page_id"
+    exampleSetFlag: false
+  portalPageName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "portal_page_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  ownerUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "owner_user_login_id"
+    exampleSetFlag: false
+  originalPortalPageId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "original_portal_page_id"
+    exampleSetFlag: false
+  parentPortalPageId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_portal_page_id"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  securityGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "security_group_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  helpContentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "help_content_id"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,172 @@
+# party_acctg_preference null public null 0 0
+# primaryColumns
+#   party_id
+# foreignKeys
+#   party_acctg_preference.party_id ==> party.party_id
+#   party_acctg_preference.tax_form_id ==> enumeration.enum_id
+#   party_acctg_preference.error_gl_journal_id ==> gl_journal.gl_journal_id
+#   party_acctg_preference.cogs_method_id ==> enumeration.enum_id
+#   party_acctg_preference.invoice_seq_cust_meth_id ==> custom_method.custom_method_id
+#   party_acctg_preference.refund_payment_method_id ==> payment_method.payment_method_id
+#   party_acctg_preference.quote_seq_cust_meth_id ==> custom_method.custom_method_id
+#   party_acctg_preference.order_seq_cust_meth_id ==> custom_method.custom_method_id
+#   party_acctg_preference.base_currency_uom_id ==> uom.uom_id
+# checkConstraints---
+title: "PartyAcctgPreference"
+required:
+  - "baseCurrencyUomId"
+  - "cogsMethodId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "enableAccounting"
+  - "errorGlJournalId"
+  - "fiscalYearStartDay"
+  - "fiscalYearStartMonth"
+  - "invoiceIdPrefix"
+  - "invoiceSeqCustMethId"
+  - "lastInvoiceNumber"
+  - "lastInvoiceRestartDate"
+  - "lastOrderNumber"
+  - "lastQuoteNumber"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderIdPrefix"
+  - "orderSeqCustMethId"
+  - "partyId"
+  - "quoteIdPrefix"
+  - "quoteSeqCustMethId"
+  - "refundPaymentMethodId"
+  - "taxFormId"
+  - "useInvoiceIdForReturns"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  fiscalYearStartMonth:
+    type: "number"
+    description: "fiscal_year_start_month"
+    exampleSetFlag: false
+  fiscalYearStartDay:
+    type: "number"
+    description: "fiscal_year_start_day"
+    exampleSetFlag: false
+  taxFormId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "tax_form_id"
+    exampleSetFlag: false
+  cogsMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cogs_method_id"
+    exampleSetFlag: false
+  baseCurrencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "base_currency_uom_id"
+    exampleSetFlag: false
+  invoiceSeqCustMethId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_seq_cust_meth_id"
+    exampleSetFlag: false
+  invoiceIdPrefix:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "invoice_id_prefix"
+    exampleSetFlag: false
+  lastInvoiceNumber:
+    type: "number"
+    description: "last_invoice_number"
+    exampleSetFlag: false
+  lastInvoiceRestartDate:
+    type: "string"
+    description: "last_invoice_restart_date"
+    format: "date-time"
+    exampleSetFlag: false
+  useInvoiceIdForReturns:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "use_invoice_id_for_returns"
+    exampleSetFlag: false
+  quoteSeqCustMethId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "quote_seq_cust_meth_id"
+    exampleSetFlag: false
+  quoteIdPrefix:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "quote_id_prefix"
+    exampleSetFlag: false
+  lastQuoteNumber:
+    type: "number"
+    description: "last_quote_number"
+    exampleSetFlag: false
+  orderSeqCustMethId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_seq_cust_meth_id"
+    exampleSetFlag: false
+  orderIdPrefix:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "order_id_prefix"
+    exampleSetFlag: false
+  lastOrderNumber:
+    type: "number"
+    description: "last_order_number"
+    exampleSetFlag: false
+  refundPaymentMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "refund_payment_method_id"
+    exampleSetFlag: false
+  errorGlJournalId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "error_gl_journal_id"
+    exampleSetFlag: false
+  enableAccounting:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "enable_accounting"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

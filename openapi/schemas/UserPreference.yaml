@@ -1,0 +1,71 @@
+# user_preference null public null 0 0
+# primaryColumns
+#   user_login_id
+#   user_pref_type_id
+# foreignKeys
+#   user_preference.user_pref_group_type_id ==> user_pref_group_type.user_pref_group_type_id
+# checkConstraints---
+title: "UserPreference"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "userLoginId"
+  - "userPrefDataType"
+  - "userPrefGroupTypeId"
+  - "userPrefTypeId"
+  - "userPrefValue"
+type: "object"
+properties:
+  userLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "user_login_id"
+    exampleSetFlag: false
+  userPrefTypeId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "user_pref_type_id"
+    exampleSetFlag: false
+  userPrefGroupTypeId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "user_pref_group_type_id"
+    exampleSetFlag: false
+  userPrefValue:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "user_pref_value"
+    exampleSetFlag: false
+  userPrefDataType:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "user_pref_data_type"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

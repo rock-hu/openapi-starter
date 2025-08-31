@@ -1,0 +1,56 @@
+# survey_question_category null public null 0 0
+# primaryColumns
+#   survey_question_category_id
+# foreignKeys
+#   survey_question_category.parent_category_id ==> survey_question_category.survey_question_category_id
+# checkConstraints---
+title: "SurveyQuestionCategory"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentCategoryId"
+  - "surveyQuestionCategoryId"
+type: "object"
+properties:
+  surveyQuestionCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_question_category_id"
+    exampleSetFlag: false
+  parentCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_category_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,94 @@
+# party_group null public null 0 0
+# primaryColumns
+#   party_id
+# foreignKeys
+#   party_group.party_id ==> party.party_id
+# checkConstraints---
+title: "PartyGroup"
+required:
+  - "annualRevenue"
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "groupName"
+  - "groupNameLocal"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "logoImageUrl"
+  - "numEmployees"
+  - "officeSiteName"
+  - "partyId"
+  - "tickerSymbol"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  groupName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "group_name"
+    exampleSetFlag: false
+  groupNameLocal:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "group_name_local"
+    exampleSetFlag: false
+  officeSiteName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "office_site_name"
+    exampleSetFlag: false
+  annualRevenue:
+    type: "number"
+    description: "annual_revenue"
+    exampleSetFlag: false
+  numEmployees:
+    type: "number"
+    description: "num_employees"
+    exampleSetFlag: false
+  tickerSymbol:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "ticker_symbol"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  logoImageUrl:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "logo_image_url"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

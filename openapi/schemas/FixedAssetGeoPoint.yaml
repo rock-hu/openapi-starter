@@ -1,0 +1,64 @@
+# fixed_asset_geo_point null public null 0 0
+# primaryColumns
+#   fixed_asset_id
+#   geo_point_id
+#   from_date
+# foreignKeys
+#   fixed_asset_geo_point.geo_point_id ==> geo_point.geo_point_id
+#   fixed_asset_geo_point.fixed_asset_id ==> fixed_asset.fixed_asset_id
+# checkConstraints---
+title: "FixedAssetGeoPoint"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fixedAssetId"
+  - "fromDate"
+  - "geoPointId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "thruDate"
+type: "object"
+properties:
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  geoPointId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_point_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

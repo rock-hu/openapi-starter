@@ -1,0 +1,360 @@
+# order_item null public null 0 0
+# primaryColumns
+#   order_id
+#   order_item_seq_id
+# foreignKeys
+#   order_item.override_gl_account_id ==> gl_account.gl_account_id
+#   order_item.product_id ==> product.product_id
+#   order_item.quote_id,quote_item_seq_id ==> quote_item.quote_id,quote_item_seq_id
+#   order_item.recurring_freq_uom_id ==> uom.uom_id
+#   order_item.order_id ==> order_header.order_id
+#   order_item.sales_opportunity_id ==> sales_opportunity.sales_opportunity_id
+#   order_item.sync_status_id ==> status_item.status_id
+#   order_item.order_item_type_id ==> order_item_type.order_item_type_id
+#   order_item.from_inventory_item_id ==> inventory_item.inventory_item_id
+#   order_item.change_by_user_login_id ==> user_login.user_login_id
+#   order_item.order_id,order_item_group_seq_id ==> order_item_group.order_id,order_item_group_seq_id
+#   order_item.status_id ==> status_item.status_id
+#   order_item.dont_cancel_set_user_login ==> user_login.user_login_id
+# checkConstraints---
+title: "OrderItem"
+required:
+  - "autoCancelDate"
+  - "budgetId"
+  - "budgetItemSeqId"
+  - "cancelBackOrderDate"
+  - "cancelQuantity"
+  - "changeByUserLoginId"
+  - "comments"
+  - "correspondingPoId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "deploymentId"
+  - "discountRate"
+  - "dontCancelSetDate"
+  - "dontCancelSetUserLogin"
+  - "estimatedDeliveryDate"
+  - "estimatedShipDate"
+  - "externalId"
+  - "fromInventoryItemId"
+  - "isItemGroupPrimary"
+  - "isModifiedPrice"
+  - "isPromo"
+  - "itemDescription"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemGroupSeqId"
+  - "orderItemSeqId"
+  - "orderItemTypeId"
+  - "overrideGlAccountId"
+  - "prodCatalogId"
+  - "productCategoryId"
+  - "productFeatureId"
+  - "productId"
+  - "quantity"
+  - "quoteId"
+  - "quoteItemSeqId"
+  - "recurringFreqUomId"
+  - "reserveAfterDate"
+  - "salesOpportunityId"
+  - "selectedAmount"
+  - "shipAfterDate"
+  - "shipBeforeDate"
+  - "shoppingListId"
+  - "shoppingListItemSeqId"
+  - "statusId"
+  - "subscriptionId"
+  - "supplierProductId"
+  - "syncStatusId"
+  - "unitAverageCost"
+  - "unitListPrice"
+  - "unitPrice"
+  - "unitRecurringPrice"
+type: "object"
+properties:
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  externalId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "external_id"
+    exampleSetFlag: false
+  orderItemTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_type_id"
+    exampleSetFlag: false
+  orderItemGroupSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_group_seq_id"
+    exampleSetFlag: false
+  isItemGroupPrimary:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_item_group_primary"
+    exampleSetFlag: false
+  fromInventoryItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "from_inventory_item_id"
+    exampleSetFlag: false
+  budgetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_id"
+    exampleSetFlag: false
+  budgetItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_item_seq_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  supplierProductId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "supplier_product_id"
+    exampleSetFlag: false
+  productFeatureId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_feature_id"
+    exampleSetFlag: false
+  prodCatalogId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "prod_catalog_id"
+    exampleSetFlag: false
+  productCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_category_id"
+    exampleSetFlag: false
+  isPromo:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_promo"
+    exampleSetFlag: false
+  quoteId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "quote_id"
+    exampleSetFlag: false
+  quoteItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "quote_item_seq_id"
+    exampleSetFlag: false
+  shoppingListId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shopping_list_id"
+    exampleSetFlag: false
+  shoppingListItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shopping_list_item_seq_id"
+    exampleSetFlag: false
+  subscriptionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "subscription_id"
+    exampleSetFlag: false
+  deploymentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "deployment_id"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  cancelQuantity:
+    type: "number"
+    description: "cancel_quantity"
+    exampleSetFlag: false
+  selectedAmount:
+    type: "number"
+    description: "selected_amount"
+    exampleSetFlag: false
+  unitPrice:
+    type: "number"
+    description: "unit_price"
+    exampleSetFlag: false
+  unitListPrice:
+    type: "number"
+    description: "unit_list_price"
+    exampleSetFlag: false
+  unitAverageCost:
+    type: "number"
+    description: "unit_average_cost"
+    exampleSetFlag: false
+  unitRecurringPrice:
+    type: "number"
+    description: "unit_recurring_price"
+    exampleSetFlag: false
+  discountRate:
+    type: "number"
+    description: "discount_rate"
+    exampleSetFlag: false
+  isModifiedPrice:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_modified_price"
+    exampleSetFlag: false
+  recurringFreqUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "recurring_freq_uom_id"
+    exampleSetFlag: false
+  itemDescription:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "item_description"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  correspondingPoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "corresponding_po_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  syncStatusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "sync_status_id"
+    exampleSetFlag: false
+  estimatedShipDate:
+    type: "string"
+    description: "estimated_ship_date"
+    format: "date-time"
+    exampleSetFlag: false
+  estimatedDeliveryDate:
+    type: "string"
+    description: "estimated_delivery_date"
+    format: "date-time"
+    exampleSetFlag: false
+  autoCancelDate:
+    type: "string"
+    description: "auto_cancel_date"
+    format: "date-time"
+    exampleSetFlag: false
+  dontCancelSetDate:
+    type: "string"
+    description: "dont_cancel_set_date"
+    format: "date-time"
+    exampleSetFlag: false
+  dontCancelSetUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "dont_cancel_set_user_login"
+    exampleSetFlag: false
+  shipBeforeDate:
+    type: "string"
+    description: "ship_before_date"
+    format: "date-time"
+    exampleSetFlag: false
+  shipAfterDate:
+    type: "string"
+    description: "ship_after_date"
+    format: "date-time"
+    exampleSetFlag: false
+  reserveAfterDate:
+    type: "string"
+    description: "reserve_after_date"
+    format: "date-time"
+    exampleSetFlag: false
+  cancelBackOrderDate:
+    type: "string"
+    description: "cancel_back_order_date"
+    format: "date-time"
+    exampleSetFlag: false
+  overrideGlAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "override_gl_account_id"
+    exampleSetFlag: false
+  salesOpportunityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "sales_opportunity_id"
+    exampleSetFlag: false
+  changeByUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "change_by_user_login_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

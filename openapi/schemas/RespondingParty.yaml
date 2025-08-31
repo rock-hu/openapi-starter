@@ -1,0 +1,73 @@
+# responding_party null public null 0 0
+# primaryColumns
+#   responding_party_seq_id
+#   cust_request_id
+#   party_id
+# foreignKeys
+#   responding_party.party_id ==> party.party_id
+#   responding_party.cust_request_id ==> cust_request.cust_request_id
+#   responding_party.contact_mech_id ==> contact_mech.contact_mech_id
+# checkConstraints---
+title: "RespondingParty"
+required:
+  - "contactMechId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "custRequestId"
+  - "dateSent"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "respondingPartySeqId"
+type: "object"
+properties:
+  respondingPartySeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "responding_party_seq_id"
+    exampleSetFlag: false
+  custRequestId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  dateSent:
+    type: "string"
+    description: "date_sent"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

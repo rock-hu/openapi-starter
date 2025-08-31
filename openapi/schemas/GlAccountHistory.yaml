@@ -1,0 +1,80 @@
+# gl_account_history null public null 0 0
+# primaryColumns
+#   gl_account_id
+#   organization_party_id
+#   custom_time_period_id
+# foreignKeys
+#   gl_account_history.organization_party_id ==> party.party_id
+#   gl_account_history.gl_account_id ==> gl_account.gl_account_id
+#   gl_account_history.custom_time_period_id ==> custom_time_period.custom_time_period_id
+# checkConstraints---
+title: "GlAccountHistory"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "customTimePeriodId"
+  - "endingBalance"
+  - "glAccountId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "openingBalance"
+  - "organizationPartyId"
+  - "postedCredits"
+  - "postedDebits"
+type: "object"
+properties:
+  glAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_account_id"
+    exampleSetFlag: false
+  organizationPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "organization_party_id"
+    exampleSetFlag: false
+  customTimePeriodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "custom_time_period_id"
+    exampleSetFlag: false
+  openingBalance:
+    type: "number"
+    description: "opening_balance"
+    exampleSetFlag: false
+  postedDebits:
+    type: "number"
+    description: "posted_debits"
+    exampleSetFlag: false
+  postedCredits:
+    type: "number"
+    description: "posted_credits"
+    exampleSetFlag: false
+  endingBalance:
+    type: "number"
+    description: "ending_balance"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

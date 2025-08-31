@@ -1,0 +1,91 @@
+# order_term null public null 0 0
+# primaryColumns
+#   term_type_id
+#   order_id
+#   order_item_seq_id
+# foreignKeys
+#   order_term.uom_id ==> uom.uom_id
+#   order_term.order_id ==> order_header.order_id
+#   order_term.term_type_id ==> term_type.term_type_id
+# checkConstraints---
+title: "OrderTerm"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemSeqId"
+  - "termDays"
+  - "termTypeId"
+  - "termValue"
+  - "textValue"
+  - "uomId"
+type: "object"
+properties:
+  termTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "term_type_id"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  termValue:
+    type: "number"
+    description: "term_value"
+    exampleSetFlag: false
+  termDays:
+    type: "number"
+    description: "term_days"
+    exampleSetFlag: false
+  textValue:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "text_value"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  uomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "uom_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

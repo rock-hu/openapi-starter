@@ -1,0 +1,148 @@
+# return_header null public null 0 0
+# primaryColumns
+#   return_id
+# foreignKeys
+#   return_header.destination_facility_id ==> facility.facility_id
+#   return_header.status_id ==> status_item.status_id
+#   return_header.from_party_id ==> party.party_id
+#   return_header.fin_account_id ==> fin_account.fin_account_id
+#   return_header.return_header_type_id ==> return_header_type.return_header_type_id
+#   return_header.payment_method_id ==> payment_method.payment_method_id
+#   return_header.billing_account_id ==> billing_account.billing_account_id
+#   return_header.currency_uom_id ==> uom.uom_id
+#   return_header.origin_contact_mech_id ==> contact_mech.contact_mech_id
+#   return_header.to_party_id ==> party.party_id
+# checkConstraints---
+title: "ReturnHeader"
+required:
+  - "billingAccountId"
+  - "createdBy"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUomId"
+  - "destinationFacilityId"
+  - "entryDate"
+  - "finAccountId"
+  - "fromPartyId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "needsInventoryReceive"
+  - "originContactMechId"
+  - "paymentMethodId"
+  - "returnHeaderTypeId"
+  - "returnId"
+  - "statusId"
+  - "supplierRmaId"
+  - "toPartyId"
+type: "object"
+properties:
+  returnId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "return_id"
+    exampleSetFlag: false
+  returnHeaderTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "return_header_type_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  createdBy:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by"
+    exampleSetFlag: false
+  fromPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "from_party_id"
+    exampleSetFlag: false
+  toPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "to_party_id"
+    exampleSetFlag: false
+  paymentMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_id"
+    exampleSetFlag: false
+  finAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fin_account_id"
+    exampleSetFlag: false
+  billingAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "billing_account_id"
+    exampleSetFlag: false
+  entryDate:
+    type: "string"
+    description: "entry_date"
+    format: "date-time"
+    exampleSetFlag: false
+  originContactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "origin_contact_mech_id"
+    exampleSetFlag: false
+  destinationFacilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "destination_facility_id"
+    exampleSetFlag: false
+  needsInventoryReceive:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "needs_inventory_receive"
+    exampleSetFlag: false
+  currencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom_id"
+    exampleSetFlag: false
+  supplierRmaId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "supplier_rma_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

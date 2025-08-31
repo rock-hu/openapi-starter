@@ -1,0 +1,118 @@
+# allocation_plan_item null public null 0 0
+# primaryColumns
+#   plan_id
+#   plan_item_seq_id
+#   product_id
+# foreignKeys
+#   allocation_plan_item.created_by_user_login ==> user_login.user_login_id
+#   allocation_plan_item.last_modified_by_user_login ==> user_login.user_login_id
+#   allocation_plan_item.order_id ==> order_header.order_id
+#   allocation_plan_item.plan_method_enum_id ==> enumeration.enum_id
+#   allocation_plan_item.status_id ==> status_item.status_id
+#   allocation_plan_item.plan_id,product_id ==> allocation_plan_header.plan_id,product_id
+#   allocation_plan_item.order_id,order_item_seq_id ==> order_item.order_id,order_item_seq_id
+# checkConstraints---
+title: "AllocationPlanItem"
+required:
+  - "allocatedQuantity"
+  - "createdByUserLogin"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastModifiedByUserLogin"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemSeqId"
+  - "planId"
+  - "planItemSeqId"
+  - "planMethodEnumId"
+  - "prioritySeqId"
+  - "productId"
+  - "statusId"
+type: "object"
+properties:
+  planId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "plan_id"
+    exampleSetFlag: false
+  planItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "plan_item_seq_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  planMethodEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "plan_method_enum_id"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  allocatedQuantity:
+    type: "number"
+    description: "allocated_quantity"
+    exampleSetFlag: false
+  prioritySeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "priority_seq_id"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

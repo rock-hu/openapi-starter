@@ -1,0 +1,69 @@
+# product_category_rollup null public null 0 0
+# primaryColumns
+#   product_category_id
+#   parent_product_category_id
+#   from_date
+# foreignKeys
+#   product_category_rollup.product_category_id ==> product_category.product_category_id
+#   product_category_rollup.parent_product_category_id ==> product_category.product_category_id
+# checkConstraints---
+title: "ProductCategoryRollup"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentProductCategoryId"
+  - "productCategoryId"
+  - "sequenceNum"
+  - "thruDate"
+type: "object"
+properties:
+  productCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_category_id"
+    exampleSetFlag: false
+  parentProductCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_product_category_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

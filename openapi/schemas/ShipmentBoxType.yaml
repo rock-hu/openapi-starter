@@ -1,0 +1,84 @@
+# shipment_box_type null public null 0 0
+# primaryColumns
+#   shipment_box_type_id
+# foreignKeys
+#   shipment_box_type.dimension_uom_id ==> uom.uom_id
+#   shipment_box_type.weight_uom_id ==> uom.uom_id
+# checkConstraints---
+title: "ShipmentBoxType"
+required:
+  - "boxHeight"
+  - "boxLength"
+  - "boxWeight"
+  - "boxWidth"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "dimensionUomId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "shipmentBoxTypeId"
+  - "weightUomId"
+type: "object"
+properties:
+  shipmentBoxTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_box_type_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  dimensionUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "dimension_uom_id"
+    exampleSetFlag: false
+  boxLength:
+    type: "number"
+    description: "box_length"
+    exampleSetFlag: false
+  boxWidth:
+    type: "number"
+    description: "box_width"
+    exampleSetFlag: false
+  boxHeight:
+    type: "number"
+    description: "box_height"
+    exampleSetFlag: false
+  weightUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "weight_uom_id"
+    exampleSetFlag: false
+  boxWeight:
+    type: "number"
+    description: "box_weight"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

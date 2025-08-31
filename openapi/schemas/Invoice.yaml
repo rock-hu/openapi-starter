@@ -1,0 +1,152 @@
+# invoice null public null 0 0
+# primaryColumns
+#   invoice_id
+# foreignKeys
+#   invoice.contact_mech_id ==> contact_mech.contact_mech_id
+#   invoice.currency_uom_id ==> uom.uom_id
+#   invoice.billing_account_id ==> billing_account.billing_account_id
+#   invoice.party_id_from ==> party.party_id
+#   invoice.invoice_type_id ==> invoice_type.invoice_type_id
+#   invoice.recurrence_info_id ==> recurrence_info.recurrence_info_id
+#   invoice.party_id ==> party.party_id
+#   invoice.role_type_id ==> role_type.role_type_id
+#   invoice.status_id ==> status_item.status_id
+# checkConstraints---
+title: "Invoice"
+required:
+  - "billingAccountId"
+  - "contactMechId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUomId"
+  - "description"
+  - "dueDate"
+  - "invoiceDate"
+  - "invoiceId"
+  - "invoiceMessage"
+  - "invoiceTypeId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "paidDate"
+  - "partyId"
+  - "partyIdFrom"
+  - "recurrenceInfoId"
+  - "referenceNumber"
+  - "roleTypeId"
+  - "statusId"
+type: "object"
+properties:
+  invoiceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_id"
+    exampleSetFlag: false
+  invoiceTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_type_id"
+    exampleSetFlag: false
+  partyIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_from"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  billingAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "billing_account_id"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  invoiceDate:
+    type: "string"
+    description: "invoice_date"
+    format: "date-time"
+    exampleSetFlag: false
+  dueDate:
+    type: "string"
+    description: "due_date"
+    format: "date-time"
+    exampleSetFlag: false
+  paidDate:
+    type: "string"
+    description: "paid_date"
+    format: "date-time"
+    exampleSetFlag: false
+  invoiceMessage:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "invoice_message"
+    exampleSetFlag: false
+  referenceNumber:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "reference_number"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  currencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom_id"
+    exampleSetFlag: false
+  recurrenceInfoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "recurrence_info_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

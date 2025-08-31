@@ -1,0 +1,130 @@
+# cost_component null public null 0 0
+# primaryColumns
+#   cost_component_id
+# foreignKeys
+#   cost_component.party_id ==> party.party_id
+#   cost_component.cost_component_calc_id ==> cost_component_calc.cost_component_calc_id
+#   cost_component.cost_component_type_id ==> cost_component_type.cost_component_type_id
+#   cost_component.product_id ==> product.product_id
+#   cost_component.geo_id ==> geo.geo_id
+#   cost_component.work_effort_id ==> work_effort.work_effort_id
+#   cost_component.product_feature_id ==> product_feature.product_feature_id
+#   cost_component.cost_uom_id ==> uom.uom_id
+#   cost_component.fixed_asset_id ==> fixed_asset.fixed_asset_id
+# checkConstraints---
+title: "CostComponent"
+required:
+  - "cost"
+  - "costComponentCalcId"
+  - "costComponentId"
+  - "costComponentTypeId"
+  - "costUomId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fixedAssetId"
+  - "fromDate"
+  - "geoId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "productFeatureId"
+  - "productId"
+  - "thruDate"
+  - "workEffortId"
+type: "object"
+properties:
+  costComponentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cost_component_id"
+    exampleSetFlag: false
+  costComponentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cost_component_type_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  productFeatureId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_feature_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  geoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_id"
+    exampleSetFlag: false
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  costComponentCalcId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cost_component_calc_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  cost:
+    type: "number"
+    description: "cost"
+    exampleSetFlag: false
+  costUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cost_uom_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

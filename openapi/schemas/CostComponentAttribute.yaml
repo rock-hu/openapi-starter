@@ -1,0 +1,64 @@
+# cost_component_attribute null public null 0 0
+# primaryColumns
+#   cost_component_id
+#   attr_name
+# foreignKeys
+#   cost_component_attribute.cost_component_id ==> cost_component.cost_component_id
+# checkConstraints---
+title: "CostComponentAttribute"
+required:
+  - "attrDescription"
+  - "attrName"
+  - "attrValue"
+  - "costComponentId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  costComponentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cost_component_id"
+    exampleSetFlag: false
+  attrName:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "attr_name"
+    exampleSetFlag: false
+  attrValue:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "attr_value"
+    exampleSetFlag: false
+  attrDescription:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "attr_description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

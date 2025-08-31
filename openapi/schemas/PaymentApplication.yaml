@@ -1,0 +1,101 @@
+# payment_application null public null 0 0
+# primaryColumns
+#   payment_application_id
+# foreignKeys
+#   payment_application.payment_id ==> payment.payment_id
+#   payment_application.override_gl_account_id ==> gl_account.gl_account_id
+#   payment_application.tax_auth_geo_id ==> geo.geo_id
+#   payment_application.invoice_id ==> invoice.invoice_id
+#   payment_application.to_payment_id ==> payment.payment_id
+#   payment_application.billing_account_id ==> billing_account.billing_account_id
+# checkConstraints---
+title: "PaymentApplication"
+required:
+  - "amountApplied"
+  - "billingAccountId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "invoiceId"
+  - "invoiceItemSeqId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "overrideGlAccountId"
+  - "paymentApplicationId"
+  - "paymentId"
+  - "taxAuthGeoId"
+  - "toPaymentId"
+type: "object"
+properties:
+  paymentApplicationId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_application_id"
+    exampleSetFlag: false
+  paymentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_id"
+    exampleSetFlag: false
+  invoiceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_id"
+    exampleSetFlag: false
+  invoiceItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_item_seq_id"
+    exampleSetFlag: false
+  billingAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "billing_account_id"
+    exampleSetFlag: false
+  overrideGlAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "override_gl_account_id"
+    exampleSetFlag: false
+  toPaymentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "to_payment_id"
+    exampleSetFlag: false
+  taxAuthGeoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "tax_auth_geo_id"
+    exampleSetFlag: false
+  amountApplied:
+    type: "number"
+    description: "amount_applied"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

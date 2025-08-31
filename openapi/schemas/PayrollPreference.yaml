@@ -1,0 +1,123 @@
+# payroll_preference null public null 0 0
+# primaryColumns
+#   party_id
+#   role_type_id
+#   payroll_preference_seq_id
+# foreignKeys
+#   payroll_preference.party_id,role_type_id ==> party_role.party_id,role_type_id
+#   payroll_preference.party_id ==> party.party_id
+# checkConstraints---
+title: "PayrollPreference"
+required:
+  - "accountNumber"
+  - "bankName"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "deductionTypeId"
+  - "flatAmount"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "paymentMethodTypeId"
+  - "payrollPreferenceSeqId"
+  - "percentage"
+  - "periodTypeId"
+  - "roleTypeId"
+  - "routingNumber"
+  - "thruDate"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  payrollPreferenceSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payroll_preference_seq_id"
+    exampleSetFlag: false
+  deductionTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "deduction_type_id"
+    exampleSetFlag: false
+  paymentMethodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_type_id"
+    exampleSetFlag: false
+  periodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "period_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  percentage:
+    type: "number"
+    description: "percentage"
+    exampleSetFlag: false
+  flatAmount:
+    type: "number"
+    description: "flat_amount"
+    exampleSetFlag: false
+  routingNumber:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "routing_number"
+    exampleSetFlag: false
+  accountNumber:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "account_number"
+    exampleSetFlag: false
+  bankName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "bank_name"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

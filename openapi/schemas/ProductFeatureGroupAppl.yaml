@@ -1,0 +1,69 @@
+# product_feature_group_appl null public null 0 0
+# primaryColumns
+#   product_feature_group_id
+#   product_feature_id
+#   from_date
+# foreignKeys
+#   product_feature_group_appl.product_feature_id ==> product_feature.product_feature_id
+#   product_feature_group_appl.product_feature_group_id ==> product_feature_group.product_feature_group_id
+# checkConstraints---
+title: "ProductFeatureGroupAppl"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productFeatureGroupId"
+  - "productFeatureId"
+  - "sequenceNum"
+  - "thruDate"
+type: "object"
+properties:
+  productFeatureGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_feature_group_id"
+    exampleSetFlag: false
+  productFeatureId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_feature_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

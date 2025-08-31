@@ -1,0 +1,140 @@
+# party_relationship null public null 0 0
+# primaryColumns
+#   party_id_from
+#   party_id_to
+#   role_type_id_from
+#   role_type_id_to
+#   from_date
+# foreignKeys
+#   party_relationship.security_group_id ==> security_group.group_id
+#   party_relationship.party_id_from,role_type_id_from ==> party_role.party_id,role_type_id
+#   party_relationship.party_relationship_type_id ==> party_relationship_type.party_relationship_type_id
+#   party_relationship.party_id_to,role_type_id_to ==> party_role.party_id,role_type_id
+#   party_relationship.status_id ==> status_item.status_id
+#   party_relationship.priority_type_id ==> priority_type.priority_type_id
+# checkConstraints---
+title: "PartyRelationship"
+required:
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyIdFrom"
+  - "partyIdTo"
+  - "partyRelationshipTypeId"
+  - "permissionsEnumId"
+  - "positionTitle"
+  - "priorityTypeId"
+  - "relationshipName"
+  - "roleTypeIdFrom"
+  - "roleTypeIdTo"
+  - "securityGroupId"
+  - "statusId"
+  - "thruDate"
+type: "object"
+properties:
+  partyIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_from"
+    exampleSetFlag: false
+  partyIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_to"
+    exampleSetFlag: false
+  roleTypeIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id_from"
+    exampleSetFlag: false
+  roleTypeIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id_to"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  relationshipName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "relationship_name"
+    exampleSetFlag: false
+  securityGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "security_group_id"
+    exampleSetFlag: false
+  priorityTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "priority_type_id"
+    exampleSetFlag: false
+  partyRelationshipTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_relationship_type_id"
+    exampleSetFlag: false
+  permissionsEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "permissions_enum_id"
+    exampleSetFlag: false
+  positionTitle:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "position_title"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

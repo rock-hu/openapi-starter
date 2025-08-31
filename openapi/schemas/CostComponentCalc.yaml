@@ -1,0 +1,95 @@
+# cost_component_calc null public null 0 0
+# primaryColumns
+#   cost_component_calc_id
+# foreignKeys
+#   cost_component_calc.cost_custom_method_id ==> custom_method.custom_method_id
+#   cost_component_calc.cost_gl_account_type_id ==> gl_account_type.gl_account_type_id
+#   cost_component_calc.currency_uom_id ==> uom.uom_id
+#   cost_component_calc.offsetting_gl_account_type_id ==> gl_account_type.gl_account_type_id
+# checkConstraints---
+title: "CostComponentCalc"
+required:
+  - "costComponentCalcId"
+  - "costCustomMethodId"
+  - "costGlAccountTypeId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUomId"
+  - "description"
+  - "fixedCost"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "offsettingGlAccountTypeId"
+  - "perMilliSecond"
+  - "variableCost"
+type: "object"
+properties:
+  costComponentCalcId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cost_component_calc_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  costGlAccountTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cost_gl_account_type_id"
+    exampleSetFlag: false
+  offsettingGlAccountTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "offsetting_gl_account_type_id"
+    exampleSetFlag: false
+  fixedCost:
+    type: "number"
+    description: "fixed_cost"
+    exampleSetFlag: false
+  variableCost:
+    type: "number"
+    description: "variable_cost"
+    exampleSetFlag: false
+  perMilliSecond:
+    type: "number"
+    description: "per_milli_second"
+    exampleSetFlag: false
+  currencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom_id"
+    exampleSetFlag: false
+  costCustomMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cost_custom_method_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

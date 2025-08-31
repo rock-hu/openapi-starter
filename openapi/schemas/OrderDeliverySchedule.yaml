@@ -1,0 +1,105 @@
+# order_delivery_schedule null public null 0 0
+# primaryColumns
+#   order_id
+#   order_item_seq_id
+# foreignKeys
+#   order_delivery_schedule.total_cubic_uom_id ==> uom.uom_id
+#   order_delivery_schedule.status_id ==> status_item.status_id
+#   order_delivery_schedule.order_id ==> order_header.order_id
+#   order_delivery_schedule.total_weight_uom_id ==> uom.uom_id
+# checkConstraints---
+title: "OrderDeliverySchedule"
+required:
+  - "cartons"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "estimatedReadyDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemSeqId"
+  - "skidsPallets"
+  - "statusId"
+  - "totalCubicSize"
+  - "totalCubicUomId"
+  - "totalWeight"
+  - "totalWeightUomId"
+  - "unitsPieces"
+type: "object"
+properties:
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  estimatedReadyDate:
+    type: "string"
+    description: "estimated_ready_date"
+    format: "date-time"
+    exampleSetFlag: false
+  cartons:
+    type: "number"
+    description: "cartons"
+    exampleSetFlag: false
+  skidsPallets:
+    type: "number"
+    description: "skids_pallets"
+    exampleSetFlag: false
+  unitsPieces:
+    type: "number"
+    description: "units_pieces"
+    exampleSetFlag: false
+  totalCubicSize:
+    type: "number"
+    description: "total_cubic_size"
+    exampleSetFlag: false
+  totalCubicUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "total_cubic_uom_id"
+    exampleSetFlag: false
+  totalWeight:
+    type: "number"
+    description: "total_weight"
+    exampleSetFlag: false
+  totalWeightUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "total_weight_uom_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

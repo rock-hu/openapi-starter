@@ -1,0 +1,48 @@
+# runtime_data null public null 0 0
+# primaryColumns
+#   runtime_data_id
+# foreignKeys
+# checkConstraints---
+title: "RuntimeData"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "runtimeDataId"
+  - "runtimeInfo"
+type: "object"
+properties:
+  runtimeDataId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "runtime_data_id"
+    exampleSetFlag: false
+  runtimeInfo:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "runtime_info"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

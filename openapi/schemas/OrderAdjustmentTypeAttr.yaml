@@ -1,0 +1,57 @@
+# order_adjustment_type_attr null public null 0 0
+# primaryColumns
+#   order_adjustment_type_id
+#   attr_name
+# foreignKeys
+#   order_adjustment_type_attr.order_adjustment_type_id ==> order_adjustment_type.order_adjustment_type_id
+# checkConstraints---
+title: "OrderAdjustmentTypeAttr"
+required:
+  - "attrName"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderAdjustmentTypeId"
+type: "object"
+properties:
+  orderAdjustmentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_adjustment_type_id"
+    exampleSetFlag: false
+  attrName:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "attr_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

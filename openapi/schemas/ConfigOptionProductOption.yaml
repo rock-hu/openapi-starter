@@ -1,0 +1,87 @@
+# config_option_product_option null public null 0 0
+# primaryColumns
+#   config_id
+#   config_item_id
+#   config_option_id
+#   sequence_num
+#   product_id
+# foreignKeys
+#   config_option_product_option.config_id,config_item_id,config_option_id,sequence_num ==> product_config_config.config_id,config_item_id,config_option_id,sequence_num
+#   config_option_product_option.config_item_id,config_option_id,product_id ==> product_config_product.config_item_id,config_option_id,product_id
+# checkConstraints---
+title: "ConfigOptionProductOption"
+required:
+  - "configId"
+  - "configItemId"
+  - "configOptionId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productId"
+  - "productOptionId"
+  - "sequenceNum"
+type: "object"
+properties:
+  configId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "config_id"
+    exampleSetFlag: false
+  configItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "config_item_id"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  configOptionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "config_option_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  productOptionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_option_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

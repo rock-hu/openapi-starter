@@ -1,0 +1,125 @@
+# tech_data_calendar_week null public null 0 0
+# primaryColumns
+#   calendar_week_id
+# foreignKeys
+# checkConstraints---
+title: "TechDataCalendarWeek"
+required:
+  - "calendarWeekId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "fridayCapacity"
+  - "fridayStartTime"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "mondayCapacity"
+  - "mondayStartTime"
+  - "saturdayCapacity"
+  - "saturdayStartTime"
+  - "sundayCapacity"
+  - "sundayStartTime"
+  - "thursdayCapacity"
+  - "thursdayStartTime"
+  - "tuesdayCapacity"
+  - "tuesdayStartTime"
+  - "wednesdayCapacity"
+  - "wednesdayStartTime"
+type: "object"
+properties:
+  calendarWeekId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "calendar_week_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  mondayStartTime:
+    type: "string"
+    description: "monday_start_time"
+    format: "date-time"
+    exampleSetFlag: false
+  mondayCapacity:
+    type: "number"
+    description: "monday_capacity"
+    exampleSetFlag: false
+  tuesdayStartTime:
+    type: "string"
+    description: "tuesday_start_time"
+    format: "date-time"
+    exampleSetFlag: false
+  tuesdayCapacity:
+    type: "number"
+    description: "tuesday_capacity"
+    exampleSetFlag: false
+  wednesdayStartTime:
+    type: "string"
+    description: "wednesday_start_time"
+    format: "date-time"
+    exampleSetFlag: false
+  wednesdayCapacity:
+    type: "number"
+    description: "wednesday_capacity"
+    exampleSetFlag: false
+  thursdayStartTime:
+    type: "string"
+    description: "thursday_start_time"
+    format: "date-time"
+    exampleSetFlag: false
+  thursdayCapacity:
+    type: "number"
+    description: "thursday_capacity"
+    exampleSetFlag: false
+  fridayStartTime:
+    type: "string"
+    description: "friday_start_time"
+    format: "date-time"
+    exampleSetFlag: false
+  fridayCapacity:
+    type: "number"
+    description: "friday_capacity"
+    exampleSetFlag: false
+  saturdayStartTime:
+    type: "string"
+    description: "saturday_start_time"
+    format: "date-time"
+    exampleSetFlag: false
+  saturdayCapacity:
+    type: "number"
+    description: "saturday_capacity"
+    exampleSetFlag: false
+  sundayStartTime:
+    type: "string"
+    description: "sunday_start_time"
+    format: "date-time"
+    exampleSetFlag: false
+  sundayCapacity:
+    type: "number"
+    description: "sunday_capacity"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

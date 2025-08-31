@@ -1,0 +1,64 @@
+# inventory_item_label_appl null public null 0 0
+# primaryColumns
+#   inventory_item_id
+#   inventory_item_label_type_id
+# foreignKeys
+#   inventory_item_label_appl.inventory_item_label_id ==> inventory_item_label.inventory_item_label_id
+#   inventory_item_label_appl.inventory_item_label_type_id ==> inventory_item_label_type.inventory_item_label_type_id
+#   inventory_item_label_appl.inventory_item_id ==> inventory_item.inventory_item_id
+# checkConstraints---
+title: "InventoryItemLabelAppl"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "inventoryItemId"
+  - "inventoryItemLabelId"
+  - "inventoryItemLabelTypeId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "sequenceNum"
+type: "object"
+properties:
+  inventoryItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_id"
+    exampleSetFlag: false
+  inventoryItemLabelTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_label_type_id"
+    exampleSetFlag: false
+  inventoryItemLabelId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_label_id"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

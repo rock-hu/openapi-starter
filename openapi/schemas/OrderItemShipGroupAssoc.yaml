@@ -1,0 +1,70 @@
+# order_item_ship_group_assoc null public null 0 0
+# primaryColumns
+#   order_id
+#   order_item_seq_id
+#   ship_group_seq_id
+# foreignKeys
+#   order_item_ship_group_assoc.order_id,ship_group_seq_id ==> order_item_ship_group.order_id,ship_group_seq_id
+#   order_item_ship_group_assoc.order_id ==> order_header.order_id
+#   order_item_ship_group_assoc.order_id,order_item_seq_id ==> order_item.order_id,order_item_seq_id
+# checkConstraints---
+title: "OrderItemShipGroupAssoc"
+required:
+  - "cancelQuantity"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemSeqId"
+  - "quantity"
+  - "shipGroupSeqId"
+type: "object"
+properties:
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  shipGroupSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "ship_group_seq_id"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  cancelQuantity:
+    type: "number"
+    description: "cancel_quantity"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

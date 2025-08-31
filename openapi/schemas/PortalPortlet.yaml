@@ -1,0 +1,104 @@
+# portal_portlet null public null 0 0
+# primaryColumns
+#   portal_portlet_id
+# foreignKeys
+# checkConstraints---
+title: "PortalPortlet"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "editFormLocation"
+  - "editFormName"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "portalPortletId"
+  - "portletName"
+  - "screenLocation"
+  - "screenName"
+  - "screenshot"
+  - "securityMainAction"
+  - "securityServiceName"
+type: "object"
+properties:
+  portalPortletId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "portal_portlet_id"
+    exampleSetFlag: false
+  portletName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "portlet_name"
+    exampleSetFlag: false
+  screenName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "screen_name"
+    exampleSetFlag: false
+  screenLocation:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "screen_location"
+    exampleSetFlag: false
+  editFormName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "edit_form_name"
+    exampleSetFlag: false
+  editFormLocation:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "edit_form_location"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  screenshot:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "screenshot"
+    exampleSetFlag: false
+  securityServiceName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "security_service_name"
+    exampleSetFlag: false
+  securityMainAction:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "security_main_action"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

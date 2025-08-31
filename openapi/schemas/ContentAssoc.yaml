@@ -1,0 +1,139 @@
+# content_assoc null public null 0 0
+# primaryColumns
+#   content_id
+#   content_id_to
+#   content_assoc_type_id
+#   from_date
+# foreignKeys
+#   content_assoc.last_modified_by_user_login ==> user_login.user_login_id
+#   content_assoc.created_by_user_login ==> user_login.user_login_id
+#   content_assoc.content_id_to ==> content.content_id
+#   content_assoc.content_id ==> content.content_id
+#   content_assoc.content_assoc_type_id ==> content_assoc_type.content_assoc_type_id
+#   content_assoc.content_assoc_predicate_id ==> content_assoc_predicate.content_assoc_predicate_id
+#   content_assoc.data_source_id ==> data_source.data_source_id
+# checkConstraints---
+title: "ContentAssoc"
+required:
+  - "contentAssocPredicateId"
+  - "contentAssocTypeId"
+  - "contentId"
+  - "contentIdTo"
+  - "createdByUserLogin"
+  - "createdDate"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "dataSourceId"
+  - "fromDate"
+  - "lastModifiedByUserLogin"
+  - "lastModifiedDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "leftCoordinate"
+  - "mapKey"
+  - "sequenceNum"
+  - "thruDate"
+  - "upperCoordinate"
+type: "object"
+properties:
+  contentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_id"
+    exampleSetFlag: false
+  contentIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_id_to"
+    exampleSetFlag: false
+  contentAssocTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_assoc_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  contentAssocPredicateId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_assoc_predicate_id"
+    exampleSetFlag: false
+  dataSourceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "data_source_id"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  mapKey:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "map_key"
+    exampleSetFlag: false
+  upperCoordinate:
+    type: "number"
+    description: "upper_coordinate"
+    exampleSetFlag: false
+  leftCoordinate:
+    type: "number"
+    description: "left_coordinate"
+    exampleSetFlag: false
+  createdDate:
+    type: "string"
+    description: "created_date"
+    format: "date-time"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedDate:
+    type: "string"
+    description: "last_modified_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

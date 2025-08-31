@@ -1,0 +1,71 @@
+# product_store_group null public null 0 0
+# primaryColumns
+#   product_store_group_id
+# foreignKeys
+#   product_store_group.product_store_group_type_id ==> product_store_group_type.product_store_group_type_id
+#   product_store_group.primary_parent_group_id ==> product_store_group.product_store_group_id
+# checkConstraints---
+title: "ProductStoreGroup"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "primaryParentGroupId"
+  - "productStoreGroupId"
+  - "productStoreGroupName"
+  - "productStoreGroupTypeId"
+type: "object"
+properties:
+  productStoreGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_group_id"
+    exampleSetFlag: false
+  productStoreGroupTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_group_type_id"
+    exampleSetFlag: false
+  primaryParentGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "primary_parent_group_id"
+    exampleSetFlag: false
+  productStoreGroupName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "product_store_group_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

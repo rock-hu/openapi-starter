@@ -1,0 +1,97 @@
+# order_item_assoc null public null 0 0
+# primaryColumns
+#   order_id
+#   order_item_seq_id
+#   ship_group_seq_id
+#   to_order_id
+#   to_order_item_seq_id
+#   to_ship_group_seq_id
+#   order_item_assoc_type_id
+# foreignKeys
+#   order_item_assoc.order_id ==> order_header.order_id
+#   order_item_assoc.order_item_assoc_type_id ==> order_item_assoc_type.order_item_assoc_type_id
+#   order_item_assoc.to_order_id ==> order_header.order_id
+# checkConstraints---
+title: "OrderItemAssoc"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemAssocTypeId"
+  - "orderItemSeqId"
+  - "quantity"
+  - "shipGroupSeqId"
+  - "toOrderId"
+  - "toOrderItemSeqId"
+  - "toShipGroupSeqId"
+type: "object"
+properties:
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  shipGroupSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "ship_group_seq_id"
+    exampleSetFlag: false
+  toOrderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "to_order_id"
+    exampleSetFlag: false
+  toOrderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "to_order_item_seq_id"
+    exampleSetFlag: false
+  toShipGroupSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "to_ship_group_seq_id"
+    exampleSetFlag: false
+  orderItemAssocTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_assoc_type_id"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,67 @@
+# work_order_item_fulfillment null public null 0 0
+# primaryColumns
+#   work_effort_id
+#   order_id
+#   order_item_seq_id
+# foreignKeys
+#   work_order_item_fulfillment.order_id ==> order_header.order_id
+#   work_order_item_fulfillment.work_effort_id ==> work_effort.work_effort_id
+#   work_order_item_fulfillment.order_id,order_item_seq_id ==> order_item.order_id,order_item_seq_id
+# checkConstraints---
+title: "WorkOrderItemFulfillment"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemSeqId"
+  - "shipGroupSeqId"
+  - "workEffortId"
+type: "object"
+properties:
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  shipGroupSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "ship_group_seq_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,105 @@
+# rate_amount null public null 0 0
+# primaryColumns
+#   rate_type_id
+#   rate_currency_uom_id
+#   period_type_id
+#   party_id
+#   work_effort_id
+#   empl_position_type_id
+#   from_date
+# foreignKeys
+#   rate_amount.work_effort_id ==> work_effort.work_effort_id
+#   rate_amount.empl_position_type_id ==> empl_position_type.empl_position_type_id
+#   rate_amount.period_type_id ==> period_type.period_type_id
+#   rate_amount.party_id ==> party.party_id
+#   rate_amount.rate_currency_uom_id ==> uom.uom_id
+#   rate_amount.rate_type_id ==> rate_type.rate_type_id
+# checkConstraints---
+title: "RateAmount"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "emplPositionTypeId"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "periodTypeId"
+  - "rateAmount"
+  - "rateCurrencyUomId"
+  - "rateTypeId"
+  - "thruDate"
+  - "workEffortId"
+type: "object"
+properties:
+  rateTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "rate_type_id"
+    exampleSetFlag: false
+  rateCurrencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "rate_currency_uom_id"
+    exampleSetFlag: false
+  periodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "period_type_id"
+    exampleSetFlag: false
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  emplPositionTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "empl_position_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  rateAmount:
+    type: "number"
+    description: "rate_amount"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

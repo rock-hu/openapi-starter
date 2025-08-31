@@ -1,0 +1,115 @@
+# order_item_change null public null 0 0
+# primaryColumns
+#   order_item_change_id
+# foreignKeys
+#   order_item_change.change_type_enum_id ==> enumeration.enum_id
+#   order_item_change.change_user_login ==> user_login.user_login_id
+#   order_item_change.reason_enum_id ==> enumeration.enum_id
+#   order_item_change.order_id,order_item_seq_id ==> order_item.order_id,order_item_seq_id
+# checkConstraints---
+title: "OrderItemChange"
+required:
+  - "cancelQuantity"
+  - "changeComments"
+  - "changeDatetime"
+  - "changeTypeEnumId"
+  - "changeUserLogin"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "itemDescription"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemChangeId"
+  - "orderItemSeqId"
+  - "quantity"
+  - "reasonEnumId"
+  - "unitPrice"
+type: "object"
+properties:
+  orderItemChangeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_change_id"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  changeTypeEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "change_type_enum_id"
+    exampleSetFlag: false
+  changeDatetime:
+    type: "string"
+    description: "change_datetime"
+    format: "date-time"
+    exampleSetFlag: false
+  changeUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "change_user_login"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  cancelQuantity:
+    type: "number"
+    description: "cancel_quantity"
+    exampleSetFlag: false
+  unitPrice:
+    type: "number"
+    description: "unit_price"
+    exampleSetFlag: false
+  itemDescription:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "item_description"
+    exampleSetFlag: false
+  reasonEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "reason_enum_id"
+    exampleSetFlag: false
+  changeComments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "change_comments"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

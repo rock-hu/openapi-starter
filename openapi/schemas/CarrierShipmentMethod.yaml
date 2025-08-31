@@ -1,0 +1,72 @@
+# carrier_shipment_method null public null 0 0
+# primaryColumns
+#   shipment_method_type_id
+#   party_id
+#   role_type_id
+# foreignKeys
+#   carrier_shipment_method.party_id ==> party.party_id
+#   carrier_shipment_method.shipment_method_type_id ==> shipment_method_type.shipment_method_type_id
+#   carrier_shipment_method.party_id,role_type_id ==> party_role.party_id,role_type_id
+# checkConstraints---
+title: "CarrierShipmentMethod"
+required:
+  - "carrierServiceCode"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "roleTypeId"
+  - "sequenceNumber"
+  - "shipmentMethodTypeId"
+type: "object"
+properties:
+  shipmentMethodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_method_type_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  sequenceNumber:
+    type: "number"
+    description: "sequence_number"
+    exampleSetFlag: false
+  carrierServiceCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "carrier_service_code"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

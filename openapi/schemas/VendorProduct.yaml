@@ -1,0 +1,60 @@
+# vendor_product null public null 0 0
+# primaryColumns
+#   product_id
+#   vendor_party_id
+#   product_store_group_id
+# foreignKeys
+#   vendor_product.vendor_party_id ==> party.party_id
+#   vendor_product.product_id ==> product.product_id
+#   vendor_product.product_store_group_id ==> product_store_group.product_store_group_id
+# checkConstraints---
+title: "VendorProduct"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productId"
+  - "productStoreGroupId"
+  - "vendorPartyId"
+type: "object"
+properties:
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  vendorPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "vendor_party_id"
+    exampleSetFlag: false
+  productStoreGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_group_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

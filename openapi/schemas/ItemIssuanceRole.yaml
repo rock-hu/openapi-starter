@@ -1,0 +1,60 @@
+# item_issuance_role null public null 0 0
+# primaryColumns
+#   item_issuance_id
+#   party_id
+#   role_type_id
+# foreignKeys
+#   item_issuance_role.party_id ==> party.party_id
+#   item_issuance_role.party_id,role_type_id ==> party_role.party_id,role_type_id
+#   item_issuance_role.item_issuance_id ==> item_issuance.item_issuance_id
+# checkConstraints---
+title: "ItemIssuanceRole"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "itemIssuanceId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "roleTypeId"
+type: "object"
+properties:
+  itemIssuanceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "item_issuance_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

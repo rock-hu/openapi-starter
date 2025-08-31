@@ -1,0 +1,65 @@
+# carrier_shipment_box_type null public null 0 0
+# primaryColumns
+#   shipment_box_type_id
+#   party_id
+# foreignKeys
+#   carrier_shipment_box_type.shipment_box_type_id ==> shipment_box_type.shipment_box_type_id
+#   carrier_shipment_box_type.party_id ==> party.party_id
+# checkConstraints---
+title: "CarrierShipmentBoxType"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "oversizeCode"
+  - "packagingTypeCode"
+  - "partyId"
+  - "shipmentBoxTypeId"
+type: "object"
+properties:
+  shipmentBoxTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_box_type_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  packagingTypeCode:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "packaging_type_code"
+    exampleSetFlag: false
+  oversizeCode:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "oversize_code"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

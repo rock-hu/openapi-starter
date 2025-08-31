@@ -1,0 +1,66 @@
+# product_feature_iactn null public null 0 0
+# primaryColumns
+#   product_feature_id
+#   product_feature_id_to
+# foreignKeys
+#   product_feature_iactn.product_feature_id_to ==> product_feature.product_feature_id
+#   product_feature_iactn.product_feature_id ==> product_feature.product_feature_id
+#   product_feature_iactn.product_feature_iactn_type_id ==> product_feature_iactn_type.product_feature_iactn_type_id
+# checkConstraints---
+title: "ProductFeatureIactn"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productFeatureIactnTypeId"
+  - "productFeatureId"
+  - "productFeatureIdTo"
+  - "productId"
+type: "object"
+properties:
+  productFeatureId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_feature_id"
+    exampleSetFlag: false
+  productFeatureIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_feature_id_to"
+    exampleSetFlag: false
+  productFeatureIactnTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_feature_iactn_type_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,55 @@
+# facility_calendar_type null public null 0 0
+# primaryColumns
+#   facility_calendar_type_id
+# foreignKeys
+# checkConstraints---
+title: "FacilityCalendarType"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "facilityCalendarTypeId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentTypeId"
+type: "object"
+properties:
+  facilityCalendarTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_calendar_type_id"
+    exampleSetFlag: false
+  parentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_type_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

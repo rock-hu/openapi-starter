@@ -1,0 +1,51 @@
+# cust_request_work_effort null public null 0 0
+# primaryColumns
+#   cust_request_id
+#   work_effort_id
+# foreignKeys
+#   cust_request_work_effort.work_effort_id ==> work_effort.work_effort_id
+#   cust_request_work_effort.cust_request_id ==> cust_request.cust_request_id
+# checkConstraints---
+title: "CustRequestWorkEffort"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "custRequestId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "workEffortId"
+type: "object"
+properties:
+  custRequestId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_id"
+    exampleSetFlag: false
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

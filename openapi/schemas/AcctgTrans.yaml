@@ -1,0 +1,240 @@
+# acctg_trans null public null 0 0
+# primaryColumns
+#   acctg_trans_id
+# foreignKeys
+#   acctg_trans.fixed_asset_id ==> fixed_asset.fixed_asset_id
+#   acctg_trans.payment_id ==> payment.payment_id
+#   acctg_trans.physical_inventory_id ==> physical_inventory.physical_inventory_id
+#   acctg_trans.inventory_item_id,physical_inventory_id ==> inventory_item_variance.inventory_item_id,physical_inventory_id
+#   acctg_trans.shipment_id ==> shipment.shipment_id
+#   acctg_trans.gl_fiscal_type_id ==> gl_fiscal_type.gl_fiscal_type_id
+#   acctg_trans.inventory_item_id ==> inventory_item.inventory_item_id
+#   acctg_trans.acctg_trans_type_id ==> acctg_trans_type.acctg_trans_type_id
+#   acctg_trans.gl_journal_id ==> gl_journal.gl_journal_id
+#   acctg_trans.invoice_id ==> invoice.invoice_id
+#   acctg_trans.party_id ==> party.party_id
+#   acctg_trans.fin_account_trans_id ==> fin_account_trans.fin_account_trans_id
+#   acctg_trans.group_status_id ==> status_item.status_id
+#   acctg_trans.work_effort_id ==> work_effort.work_effort_id
+#   acctg_trans.role_type_id ==> role_type.role_type_id
+#   acctg_trans.receipt_id ==> shipment_receipt.receipt_id
+# checkConstraints---
+title: "AcctgTrans"
+required:
+  - "acctgTransId"
+  - "acctgTransTypeId"
+  - "createdByUserLogin"
+  - "createdDate"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "finAccountTransId"
+  - "fixedAssetId"
+  - "glFiscalTypeId"
+  - "glJournalId"
+  - "groupStatusId"
+  - "inventoryItemId"
+  - "invoiceId"
+  - "isPosted"
+  - "lastModifiedByUserLogin"
+  - "lastModifiedDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "paymentId"
+  - "physicalInventoryId"
+  - "postedDate"
+  - "receiptId"
+  - "roleTypeId"
+  - "scheduledPostingDate"
+  - "shipmentId"
+  - "theirAcctgTransId"
+  - "transactionDate"
+  - "voucherDate"
+  - "voucherRef"
+  - "workEffortId"
+type: "object"
+properties:
+  acctgTransId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "acctg_trans_id"
+    exampleSetFlag: false
+  acctgTransTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "acctg_trans_type_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  transactionDate:
+    type: "string"
+    description: "transaction_date"
+    format: "date-time"
+    exampleSetFlag: false
+  isPosted:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_posted"
+    exampleSetFlag: false
+  postedDate:
+    type: "string"
+    description: "posted_date"
+    format: "date-time"
+    exampleSetFlag: false
+  scheduledPostingDate:
+    type: "string"
+    description: "scheduled_posting_date"
+    format: "date-time"
+    exampleSetFlag: false
+  glJournalId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_journal_id"
+    exampleSetFlag: false
+  glFiscalTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_fiscal_type_id"
+    exampleSetFlag: false
+  voucherRef:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "voucher_ref"
+    exampleSetFlag: false
+  voucherDate:
+    type: "string"
+    description: "voucher_date"
+    format: "date-time"
+    exampleSetFlag: false
+  groupStatusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "group_status_id"
+    exampleSetFlag: false
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  inventoryItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_id"
+    exampleSetFlag: false
+  physicalInventoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "physical_inventory_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  invoiceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_id"
+    exampleSetFlag: false
+  paymentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_id"
+    exampleSetFlag: false
+  finAccountTransId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fin_account_trans_id"
+    exampleSetFlag: false
+  shipmentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_id"
+    exampleSetFlag: false
+  receiptId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "receipt_id"
+    exampleSetFlag: false
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  theirAcctgTransId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "their_acctg_trans_id"
+    exampleSetFlag: false
+  createdDate:
+    type: "string"
+    description: "created_date"
+    format: "date-time"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedDate:
+    type: "string"
+    description: "last_modified_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

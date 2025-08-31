@@ -1,0 +1,177 @@
+# quote_item null public null 0 0
+# primaryColumns
+#   quote_id
+#   quote_item_seq_id
+# foreignKeys
+#   quote_item.cust_request_id ==> cust_request.cust_request_id
+#   quote_item.skill_type_id ==> skill_type.skill_type_id
+#   quote_item.quote_id ==> quote.quote_id
+#   quote_item.deliverable_type_id ==> deliverable_type.deliverable_type_id
+#   quote_item.product_id ==> product.product_id
+#   quote_item.uom_id ==> uom.uom_id
+#   quote_item.product_feature_id ==> product_feature.product_feature_id
+#   quote_item.cust_request_id,cust_request_item_seq_id ==> cust_request_item.cust_request_id,cust_request_item_seq_id
+#   quote_item.work_effort_id ==> work_effort.work_effort_id
+# checkConstraints---
+title: "QuoteItem"
+required:
+  - "comments"
+  - "configId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "custRequestId"
+  - "custRequestItemSeqId"
+  - "deliverableTypeId"
+  - "estimatedDeliveryDate"
+  - "isPromo"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "leadTimeDays"
+  - "productFeatureId"
+  - "productId"
+  - "quantity"
+  - "quoteId"
+  - "quoteItemSeqId"
+  - "quoteUnitPrice"
+  - "reservLength"
+  - "reservPersons"
+  - "reservStart"
+  - "selectedAmount"
+  - "skillTypeId"
+  - "uomId"
+  - "workEffortId"
+type: "object"
+properties:
+  quoteId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "quote_id"
+    exampleSetFlag: false
+  quoteItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "quote_item_seq_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  productFeatureId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_feature_id"
+    exampleSetFlag: false
+  deliverableTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "deliverable_type_id"
+    exampleSetFlag: false
+  skillTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "skill_type_id"
+    exampleSetFlag: false
+  uomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "uom_id"
+    exampleSetFlag: false
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  custRequestId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_id"
+    exampleSetFlag: false
+  custRequestItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_item_seq_id"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  selectedAmount:
+    type: "number"
+    description: "selected_amount"
+    exampleSetFlag: false
+  quoteUnitPrice:
+    type: "number"
+    description: "quote_unit_price"
+    exampleSetFlag: false
+  reservStart:
+    type: "string"
+    description: "reserv_start"
+    format: "date-time"
+    exampleSetFlag: false
+  reservLength:
+    type: "number"
+    description: "reserv_length"
+    exampleSetFlag: false
+  reservPersons:
+    type: "number"
+    description: "reserv_persons"
+    exampleSetFlag: false
+  configId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "config_id"
+    exampleSetFlag: false
+  estimatedDeliveryDate:
+    type: "string"
+    description: "estimated_delivery_date"
+    format: "date-time"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  isPromo:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_promo"
+    exampleSetFlag: false
+  leadTimeDays:
+    type: "number"
+    description: "lead_time_days"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

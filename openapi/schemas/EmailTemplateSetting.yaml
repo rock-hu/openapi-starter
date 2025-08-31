@@ -1,0 +1,105 @@
+# email_template_setting null public null 0 0
+# primaryColumns
+#   email_template_setting_id
+# foreignKeys
+#   email_template_setting.email_type ==> enumeration.enum_id
+# checkConstraints---
+title: "EmailTemplateSetting"
+required:
+  - "bccAddress"
+  - "bodyScreenLocation"
+  - "ccAddress"
+  - "contentType"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "emailTemplateSettingId"
+  - "emailType"
+  - "fromAddress"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "subject"
+  - "xslfoAttachScreenLocation"
+type: "object"
+properties:
+  emailTemplateSettingId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "email_template_setting_id"
+    exampleSetFlag: false
+  emailType:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "email_type"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  bodyScreenLocation:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "body_screen_location"
+    exampleSetFlag: false
+  xslfoAttachScreenLocation:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "xslfo_attach_screen_location"
+    exampleSetFlag: false
+  fromAddress:
+    maxLength: 320
+    minLength: 0
+    type: "string"
+    description: "from_address"
+    exampleSetFlag: false
+  ccAddress:
+    maxLength: 320
+    minLength: 0
+    type: "string"
+    description: "cc_address"
+    exampleSetFlag: false
+  bccAddress:
+    maxLength: 320
+    minLength: 0
+    type: "string"
+    description: "bcc_address"
+    exampleSetFlag: false
+  subject:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "subject"
+    exampleSetFlag: false
+  contentType:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "content_type"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

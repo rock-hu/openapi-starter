@@ -1,0 +1,72 @@
+# tax_authority null public null 0 0
+# primaryColumns
+#   tax_auth_geo_id
+#   tax_auth_party_id
+# foreignKeys
+#   tax_authority.tax_auth_party_id ==> party.party_id
+#   tax_authority.tax_auth_geo_id ==> geo.geo_id
+# checkConstraints---
+title: "TaxAuthority"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "includeTaxInPrice"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "requireTaxIdForExemption"
+  - "taxAuthGeoId"
+  - "taxAuthPartyId"
+  - "taxIdFormatPattern"
+type: "object"
+properties:
+  taxAuthGeoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "tax_auth_geo_id"
+    exampleSetFlag: false
+  taxAuthPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "tax_auth_party_id"
+    exampleSetFlag: false
+  requireTaxIdForExemption:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "require_tax_id_for_exemption"
+    exampleSetFlag: false
+  taxIdFormatPattern:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "tax_id_format_pattern"
+    exampleSetFlag: false
+  includeTaxInPrice:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "include_tax_in_price"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

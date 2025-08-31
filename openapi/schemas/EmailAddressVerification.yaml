@@ -1,0 +1,54 @@
+# email_address_verification null public null 0 0
+# primaryColumns
+#   email_address
+# foreignKeys
+# checkConstraints---
+title: "EmailAddressVerification"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "emailAddress"
+  - "expireDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "verifyHash"
+type: "object"
+properties:
+  emailAddress:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "email_address"
+    exampleSetFlag: false
+  verifyHash:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "verify_hash"
+    exampleSetFlag: false
+  expireDate:
+    type: "string"
+    description: "expire_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

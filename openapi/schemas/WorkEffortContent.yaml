@@ -1,0 +1,73 @@
+# work_effort_content null public null 0 0
+# primaryColumns
+#   work_effort_id
+#   content_id
+#   work_effort_content_type_id
+#   from_date
+# foreignKeys
+#   work_effort_content.work_effort_content_type_id ==> work_effort_content_type.work_effort_content_type_id
+#   work_effort_content.content_id ==> content.content_id
+#   work_effort_content.work_effort_id ==> work_effort.work_effort_id
+# checkConstraints---
+title: "WorkEffortContent"
+required:
+  - "contentId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "thruDate"
+  - "workEffortContentTypeId"
+  - "workEffortId"
+type: "object"
+properties:
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  contentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_id"
+    exampleSetFlag: false
+  workEffortContentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_content_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

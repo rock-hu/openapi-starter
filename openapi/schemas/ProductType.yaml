@@ -1,0 +1,77 @@
+# product_type null public null 0 0
+# primaryColumns
+#   product_type_id
+# foreignKeys
+#   product_type.parent_type_id ==> product_type.product_type_id
+# checkConstraints---
+title: "ProductType"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "hasTable"
+  - "isDigital"
+  - "isPhysical"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentTypeId"
+  - "productTypeId"
+type: "object"
+properties:
+  productTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_type_id"
+    exampleSetFlag: false
+  parentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_type_id"
+    exampleSetFlag: false
+  isPhysical:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_physical"
+    exampleSetFlag: false
+  isDigital:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_digital"
+    exampleSetFlag: false
+  hasTable:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "has_table"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

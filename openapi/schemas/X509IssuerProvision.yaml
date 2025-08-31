@@ -1,0 +1,90 @@
+# x509_issuer_provision null public null 0 0
+# primaryColumns
+#   cert_provision_id
+# foreignKeys
+# checkConstraints---
+title: "X509IssuerProvision"
+required:
+  - "certProvisionId"
+  - "cityLocality"
+  - "commonName"
+  - "country"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "organizationName"
+  - "organizationalUnit"
+  - "serialNumber"
+  - "stateProvince"
+type: "object"
+properties:
+  certProvisionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cert_provision_id"
+    exampleSetFlag: false
+  commonName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "common_name"
+    exampleSetFlag: false
+  organizationalUnit:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "organizational_unit"
+    exampleSetFlag: false
+  organizationName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "organization_name"
+    exampleSetFlag: false
+  cityLocality:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "city_locality"
+    exampleSetFlag: false
+  stateProvince:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "state_province"
+    exampleSetFlag: false
+  country:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "country"
+    exampleSetFlag: false
+  serialNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "serial_number"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

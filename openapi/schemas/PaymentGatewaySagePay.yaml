@@ -1,0 +1,133 @@
+# payment_gateway_sage_pay null public null 0 0
+# primaryColumns
+#   payment_gateway_config_id
+# foreignKeys
+#   payment_gateway_sage_pay.payment_gateway_config_id ==> payment_gateway_config.payment_gateway_config_id
+# checkConstraints---
+title: "PaymentGatewaySagePay"
+required:
+  - "authenticationTransType"
+  - "authenticationUrl"
+  - "authoriseTransType"
+  - "authoriseUrl"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "paymentGatewayConfigId"
+  - "productionHost"
+  - "protocolVersion"
+  - "refundUrl"
+  - "releaseTransType"
+  - "releaseUrl"
+  - "sagePayMode"
+  - "testingHost"
+  - "vendor"
+  - "voidUrl"
+type: "object"
+properties:
+  paymentGatewayConfigId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_gateway_config_id"
+    exampleSetFlag: false
+  vendor:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "vendor"
+    exampleSetFlag: false
+  productionHost:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "production_host"
+    exampleSetFlag: false
+  testingHost:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "testing_host"
+    exampleSetFlag: false
+  sagePayMode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "sage_pay_mode"
+    exampleSetFlag: false
+  protocolVersion:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "protocol_version"
+    exampleSetFlag: false
+  authenticationTransType:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "authentication_trans_type"
+    exampleSetFlag: false
+  authenticationUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "authentication_url"
+    exampleSetFlag: false
+  authoriseTransType:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "authorise_trans_type"
+    exampleSetFlag: false
+  authoriseUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "authorise_url"
+    exampleSetFlag: false
+  releaseTransType:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "release_trans_type"
+    exampleSetFlag: false
+  releaseUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "release_url"
+    exampleSetFlag: false
+  voidUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "void_url"
+    exampleSetFlag: false
+  refundUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "refund_url"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

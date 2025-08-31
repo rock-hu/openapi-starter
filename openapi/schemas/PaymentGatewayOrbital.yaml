@@ -1,0 +1,132 @@
+# payment_gateway_orbital null public null 0 0
+# primaryColumns
+#   payment_gateway_config_id
+# foreignKeys
+#   payment_gateway_orbital.payment_gateway_config_id ==> payment_gateway_config.payment_gateway_config_id
+# checkConstraints---
+title: "PaymentGatewayOrbital"
+required:
+  - "authorizationURI"
+  - "connectionPassword"
+  - "connectionTimeoutSeconds"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "engineClass"
+  - "hostName"
+  - "hostNameFailover"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "merchantId"
+  - "paymentGatewayConfigId"
+  - "port"
+  - "portFailover"
+  - "readTimeoutSeconds"
+  - "responseType"
+  - "sdkVersion"
+  - "sslSocketFactory"
+  - "username"
+type: "object"
+properties:
+  paymentGatewayConfigId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_gateway_config_id"
+    exampleSetFlag: false
+  username:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "username"
+    exampleSetFlag: false
+  connectionPassword:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "connection_password"
+    exampleSetFlag: false
+  merchantId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "merchant_id"
+    exampleSetFlag: false
+  engineClass:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "engine_class"
+    exampleSetFlag: false
+  hostName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "host_name"
+    exampleSetFlag: false
+  port:
+    type: "number"
+    description: "port"
+    exampleSetFlag: false
+  hostNameFailover:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "host_name_failover"
+    exampleSetFlag: false
+  portFailover:
+    type: "number"
+    description: "port_failover"
+    exampleSetFlag: false
+  connectionTimeoutSeconds:
+    type: "number"
+    description: "connection_timeout_seconds"
+    exampleSetFlag: false
+  readTimeoutSeconds:
+    type: "number"
+    description: "read_timeout_seconds"
+    exampleSetFlag: false
+  authorizationURI:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "authorization_u_r_i"
+    exampleSetFlag: false
+  sdkVersion:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "sdk_version"
+    exampleSetFlag: false
+  sslSocketFactory:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "ssl_socket_factory"
+    exampleSetFlag: false
+  responseType:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "response_type"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

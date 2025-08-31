@@ -1,0 +1,193 @@
+# payment_gateway_payflow_pro null public null 0 0
+# primaryColumns
+#   payment_gateway_config_id
+# foreignKeys
+#   payment_gateway_payflow_pro.payment_gateway_config_id ==> payment_gateway_config.payment_gateway_config_id
+# checkConstraints---
+title: "PaymentGatewayPayflowPro"
+required:
+  - "cancelReturnUrl"
+  - "certsPath"
+  - "checkAvs"
+  - "checkCvv2"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "enableTransmit"
+  - "hostAddress"
+  - "hostPort"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "logFileName"
+  - "loggingLevel"
+  - "maxLogFileSize"
+  - "partner"
+  - "paymentGatewayConfigId"
+  - "preAuth"
+  - "proxyAddress"
+  - "proxyLogon"
+  - "proxyPassword"
+  - "proxyPort"
+  - "pwd"
+  - "redirectUrl"
+  - "returnUrl"
+  - "stackTraceOn"
+  - "timeout"
+  - "userId"
+  - "vendor"
+type: "object"
+properties:
+  paymentGatewayConfigId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_gateway_config_id"
+    exampleSetFlag: false
+  certsPath:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "certs_path"
+    exampleSetFlag: false
+  hostAddress:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "host_address"
+    exampleSetFlag: false
+  hostPort:
+    type: "number"
+    description: "host_port"
+    exampleSetFlag: false
+  timeout:
+    type: "number"
+    description: "timeout"
+    exampleSetFlag: false
+  proxyAddress:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "proxy_address"
+    exampleSetFlag: false
+  proxyPort:
+    type: "number"
+    description: "proxy_port"
+    exampleSetFlag: false
+  proxyLogon:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "proxy_logon"
+    exampleSetFlag: false
+  proxyPassword:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "proxy_password"
+    exampleSetFlag: false
+  vendor:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "vendor"
+    exampleSetFlag: false
+  userId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "user_id"
+    exampleSetFlag: false
+  pwd:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "pwd"
+    exampleSetFlag: false
+  partner:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "partner"
+    exampleSetFlag: false
+  checkAvs:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "check_avs"
+    exampleSetFlag: false
+  checkCvv2:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "check_cvv2"
+    exampleSetFlag: false
+  preAuth:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "pre_auth"
+    exampleSetFlag: false
+  enableTransmit:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "enable_transmit"
+    exampleSetFlag: false
+  logFileName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "log_file_name"
+    exampleSetFlag: false
+  loggingLevel:
+    type: "number"
+    description: "logging_level"
+    exampleSetFlag: false
+  maxLogFileSize:
+    type: "number"
+    description: "max_log_file_size"
+    exampleSetFlag: false
+  stackTraceOn:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "stack_trace_on"
+    exampleSetFlag: false
+  redirectUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "redirect_url"
+    exampleSetFlag: false
+  returnUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "return_url"
+    exampleSetFlag: false
+  cancelReturnUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "cancel_return_url"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

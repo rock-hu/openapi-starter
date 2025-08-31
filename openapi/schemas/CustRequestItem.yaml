@@ -1,0 +1,142 @@
+# cust_request_item null public null 0 0
+# primaryColumns
+#   cust_request_id
+#   cust_request_item_seq_id
+# foreignKeys
+#   cust_request_item.product_id ==> product.product_id
+#   cust_request_item.cust_request_resolution_id ==> cust_request_resolution.cust_request_resolution_id
+#   cust_request_item.cust_request_id ==> cust_request.cust_request_id
+#   cust_request_item.status_id ==> status_item.status_id
+# checkConstraints---
+title: "CustRequestItem"
+required:
+  - "configId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "custRequestId"
+  - "custRequestItemSeqId"
+  - "custRequestResolutionId"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maximumAmount"
+  - "priority"
+  - "productId"
+  - "quantity"
+  - "requiredByDate"
+  - "reservLength"
+  - "reservPersons"
+  - "reservStart"
+  - "selectedAmount"
+  - "sequenceNum"
+  - "statusId"
+  - "story"
+type: "object"
+properties:
+  custRequestId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_id"
+    exampleSetFlag: false
+  custRequestItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_item_seq_id"
+    exampleSetFlag: false
+  custRequestResolutionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_resolution_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  priority:
+    type: "number"
+    description: "priority"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  requiredByDate:
+    type: "string"
+    description: "required_by_date"
+    format: "date-time"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  selectedAmount:
+    type: "number"
+    description: "selected_amount"
+    exampleSetFlag: false
+  maximumAmount:
+    type: "number"
+    description: "maximum_amount"
+    exampleSetFlag: false
+  reservStart:
+    type: "string"
+    description: "reserv_start"
+    format: "date-time"
+    exampleSetFlag: false
+  reservLength:
+    type: "number"
+    description: "reserv_length"
+    exampleSetFlag: false
+  reservPersons:
+    type: "number"
+    description: "reserv_persons"
+    exampleSetFlag: false
+  configId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "config_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  story:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "story"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

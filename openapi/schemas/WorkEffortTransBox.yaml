@@ -1,0 +1,58 @@
+# work_effort_trans_box null public null 0 0
+# primaryColumns
+#   process_work_effort_id
+#   to_activity_id
+#   transition_id
+# foreignKeys
+#   work_effort_trans_box.process_work_effort_id ==> work_effort.work_effort_id
+# checkConstraints---
+title: "WorkEffortTransBox"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "processWorkEffortId"
+  - "toActivityId"
+  - "transitionId"
+type: "object"
+properties:
+  processWorkEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "process_work_effort_id"
+    exampleSetFlag: false
+  toActivityId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "to_activity_id"
+    exampleSetFlag: false
+  transitionId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "transition_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

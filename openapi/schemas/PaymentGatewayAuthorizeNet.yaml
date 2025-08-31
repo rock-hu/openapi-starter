@@ -1,0 +1,166 @@
+# payment_gateway_authorize_net null public null 0 0
+# primaryColumns
+#   payment_gateway_config_id
+# foreignKeys
+#   payment_gateway_authorize_net.payment_gateway_config_id ==> payment_gateway_config.payment_gateway_config_id
+# checkConstraints---
+title: "PaymentGatewayAuthorizeNet"
+required:
+  - "apiVersion"
+  - "certificateAlias"
+  - "cpDeviceType"
+  - "cpMarketType"
+  - "cpVersion"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "delimitedData"
+  - "delimiterChar"
+  - "duplicateWindow"
+  - "emailCustomer"
+  - "emailMerchant"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "method"
+  - "paymentGatewayConfigId"
+  - "pwd"
+  - "relayResponse"
+  - "testMode"
+  - "tranKey"
+  - "transDescription"
+  - "transactionUrl"
+  - "userId"
+type: "object"
+properties:
+  paymentGatewayConfigId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_gateway_config_id"
+    exampleSetFlag: false
+  transactionUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "transaction_url"
+    exampleSetFlag: false
+  certificateAlias:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "certificate_alias"
+    exampleSetFlag: false
+  apiVersion:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "api_version"
+    exampleSetFlag: false
+  delimitedData:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "delimited_data"
+    exampleSetFlag: false
+  delimiterChar:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "delimiter_char"
+    exampleSetFlag: false
+  cpVersion:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "cp_version"
+    exampleSetFlag: false
+  cpMarketType:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "cp_market_type"
+    exampleSetFlag: false
+  cpDeviceType:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "cp_device_type"
+    exampleSetFlag: false
+  method:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "method"
+    exampleSetFlag: false
+  emailCustomer:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "email_customer"
+    exampleSetFlag: false
+  emailMerchant:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "email_merchant"
+    exampleSetFlag: false
+  testMode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "test_mode"
+    exampleSetFlag: false
+  relayResponse:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "relay_response"
+    exampleSetFlag: false
+  tranKey:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "tran_key"
+    exampleSetFlag: false
+  userId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "user_id"
+    exampleSetFlag: false
+  pwd:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "pwd"
+    exampleSetFlag: false
+  transDescription:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "trans_description"
+    exampleSetFlag: false
+  duplicateWindow:
+    type: "number"
+    description: "duplicate_window"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,66 @@
+# tech_data_calendar_exc_day null public null 0 0
+# primaryColumns
+#   calendar_id
+#   exception_date_start_time
+# foreignKeys
+#   tech_data_calendar_exc_day.calendar_id ==> tech_data_calendar.calendar_id
+# checkConstraints---
+title: "TechDataCalendarExcDay"
+required:
+  - "calendarId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "exceptionCapacity"
+  - "exceptionDateStartTime"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "usedCapacity"
+type: "object"
+properties:
+  calendarId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "calendar_id"
+    exampleSetFlag: false
+  exceptionDateStartTime:
+    type: "string"
+    description: "exception_date_start_time"
+    format: "date-time"
+    exampleSetFlag: false
+  exceptionCapacity:
+    type: "number"
+    description: "exception_capacity"
+    exampleSetFlag: false
+  usedCapacity:
+    type: "number"
+    description: "used_capacity"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

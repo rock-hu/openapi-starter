@@ -1,0 +1,95 @@
+# empl_leave null public null 0 0
+# primaryColumns
+#   party_id
+#   leave_type_id
+#   from_date
+# foreignKeys
+#   empl_leave.empl_leave_reason_type_id ==> empl_leave_reason_type.empl_leave_reason_type_id
+#   empl_leave.party_id ==> party.party_id
+#   empl_leave.leave_status ==> status_item.status_id
+#   empl_leave.leave_type_id ==> empl_leave_type.leave_type_id
+#   empl_leave.approver_party_id ==> party.party_id
+# checkConstraints---
+title: "EmplLeave"
+required:
+  - "approverPartyId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "emplLeaveReasonTypeId"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "leaveStatus"
+  - "leaveTypeId"
+  - "partyId"
+  - "thruDate"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  leaveTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "leave_type_id"
+    exampleSetFlag: false
+  emplLeaveReasonTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "empl_leave_reason_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  approverPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "approver_party_id"
+    exampleSetFlag: false
+  leaveStatus:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "leave_status"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,96 @@
+# employment null public null 0 0
+# primaryColumns
+#   role_type_id_from
+#   role_type_id_to
+#   party_id_from
+#   party_id_to
+#   from_date
+# foreignKeys
+#   employment.party_id_to,role_type_id_to ==> party_role.party_id,role_type_id
+#   employment.party_id_to ==> party.party_id
+#   employment.party_id_from,role_type_id_from ==> party_role.party_id,role_type_id
+#   employment.party_id_from ==> party.party_id
+# checkConstraints---
+title: "Employment"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyIdFrom"
+  - "partyIdTo"
+  - "roleTypeIdFrom"
+  - "roleTypeIdTo"
+  - "terminationReasonId"
+  - "terminationTypeId"
+  - "thruDate"
+type: "object"
+properties:
+  roleTypeIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id_from"
+    exampleSetFlag: false
+  roleTypeIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id_to"
+    exampleSetFlag: false
+  partyIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_from"
+    exampleSetFlag: false
+  partyIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_to"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  terminationReasonId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "termination_reason_id"
+    exampleSetFlag: false
+  terminationTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "termination_type_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,71 @@
+# invoice_role null public null 0 0
+# primaryColumns
+#   invoice_id
+#   party_id
+#   role_type_id
+# foreignKeys
+#   invoice_role.party_id,role_type_id ==> party_role.party_id,role_type_id
+#   invoice_role.invoice_id ==> invoice.invoice_id
+#   invoice_role.party_id ==> party.party_id
+# checkConstraints---
+title: "InvoiceRole"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "datetimePerformed"
+  - "invoiceId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "percentage"
+  - "roleTypeId"
+type: "object"
+properties:
+  invoiceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  datetimePerformed:
+    type: "string"
+    description: "datetime_performed"
+    format: "date-time"
+    exampleSetFlag: false
+  percentage:
+    type: "number"
+    description: "percentage"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

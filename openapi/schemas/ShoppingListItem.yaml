@@ -1,0 +1,96 @@
+# shopping_list_item null public null 0 0
+# primaryColumns
+#   shopping_list_id
+#   shopping_list_item_seq_id
+# foreignKeys
+#   shopping_list_item.product_id ==> product.product_id
+#   shopping_list_item.shopping_list_id ==> shopping_list.shopping_list_id
+# checkConstraints---
+title: "ShoppingListItem"
+required:
+  - "configId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "modifiedPrice"
+  - "productId"
+  - "quantity"
+  - "quantityPurchased"
+  - "reservLength"
+  - "reservPersons"
+  - "reservStart"
+  - "shoppingListId"
+  - "shoppingListItemSeqId"
+type: "object"
+properties:
+  shoppingListId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shopping_list_id"
+    exampleSetFlag: false
+  shoppingListItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shopping_list_item_seq_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  modifiedPrice:
+    type: "number"
+    description: "modified_price"
+    exampleSetFlag: false
+  reservStart:
+    type: "string"
+    description: "reserv_start"
+    format: "date-time"
+    exampleSetFlag: false
+  reservLength:
+    type: "number"
+    description: "reserv_length"
+    exampleSetFlag: false
+  reservPersons:
+    type: "number"
+    description: "reserv_persons"
+    exampleSetFlag: false
+  quantityPurchased:
+    type: "number"
+    description: "quantity_purchased"
+    exampleSetFlag: false
+  configId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "config_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

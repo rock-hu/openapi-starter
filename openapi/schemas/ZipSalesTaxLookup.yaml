@@ -1,0 +1,167 @@
+# zip_sales_tax_lookup null public null 0 0
+# primaryColumns
+#   zip_code
+#   state_code
+#   city
+#   county
+#   from_date
+# foreignKeys
+# checkConstraints---
+title: "ZipSalesTaxLookup"
+required:
+  - "city"
+  - "cityLocalSalesTax"
+  - "cityLocalUseTax"
+  - "citySalesTax"
+  - "cityUseTax"
+  - "comboSalesTax"
+  - "comboUseTax"
+  - "county"
+  - "countyDefault"
+  - "countyFips"
+  - "countyLocalSalesTax"
+  - "countyLocalUseTax"
+  - "countySalesTax"
+  - "countyUseTax"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "generalDefault"
+  - "geoCode"
+  - "insideCity"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "stateCode"
+  - "stateSalesTax"
+  - "stateUseTax"
+  - "zipCode"
+type: "object"
+properties:
+  zipCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "zip_code"
+    exampleSetFlag: false
+  stateCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "state_code"
+    exampleSetFlag: false
+  city:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "city"
+    exampleSetFlag: false
+  county:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "county"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  countyFips:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "county_fips"
+    exampleSetFlag: false
+  countyDefault:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "county_default"
+    exampleSetFlag: false
+  generalDefault:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "general_default"
+    exampleSetFlag: false
+  insideCity:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "inside_city"
+    exampleSetFlag: false
+  geoCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "geo_code"
+    exampleSetFlag: false
+  stateSalesTax:
+    type: "number"
+    description: "state_sales_tax"
+    exampleSetFlag: false
+  citySalesTax:
+    type: "number"
+    description: "city_sales_tax"
+    exampleSetFlag: false
+  cityLocalSalesTax:
+    type: "number"
+    description: "city_local_sales_tax"
+    exampleSetFlag: false
+  countySalesTax:
+    type: "number"
+    description: "county_sales_tax"
+    exampleSetFlag: false
+  countyLocalSalesTax:
+    type: "number"
+    description: "county_local_sales_tax"
+    exampleSetFlag: false
+  comboSalesTax:
+    type: "number"
+    description: "combo_sales_tax"
+    exampleSetFlag: false
+  stateUseTax:
+    type: "number"
+    description: "state_use_tax"
+    exampleSetFlag: false
+  cityUseTax:
+    type: "number"
+    description: "city_use_tax"
+    exampleSetFlag: false
+  cityLocalUseTax:
+    type: "number"
+    description: "city_local_use_tax"
+    exampleSetFlag: false
+  countyUseTax:
+    type: "number"
+    description: "county_use_tax"
+    exampleSetFlag: false
+  countyLocalUseTax:
+    type: "number"
+    description: "county_local_use_tax"
+    exampleSetFlag: false
+  comboUseTax:
+    type: "number"
+    description: "combo_use_tax"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

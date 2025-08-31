@@ -1,0 +1,98 @@
+# product_review null public null 0 0
+# primaryColumns
+#   product_review_id
+# foreignKeys
+#   product_review.user_login_id ==> user_login.user_login_id
+#   product_review.status_id ==> status_item.status_id
+#   product_review.product_store_id ==> product_store.product_store_id
+#   product_review.product_id ==> product.product_id
+# checkConstraints---
+title: "ProductReview"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "postedAnonymous"
+  - "postedDateTime"
+  - "productId"
+  - "productRating"
+  - "productReview"
+  - "productReviewId"
+  - "productStoreId"
+  - "statusId"
+  - "userLoginId"
+type: "object"
+properties:
+  productReviewId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_review_id"
+    exampleSetFlag: false
+  productStoreId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  userLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "user_login_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  postedAnonymous:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "posted_anonymous"
+    exampleSetFlag: false
+  postedDateTime:
+    type: "string"
+    description: "posted_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  productRating:
+    type: "number"
+    description: "product_rating"
+    exampleSetFlag: false
+  productReview:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "product_review"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

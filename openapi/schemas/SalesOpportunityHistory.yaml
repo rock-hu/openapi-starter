@@ -1,0 +1,116 @@
+# sales_opportunity_history null public null 0 0
+# primaryColumns
+#   sales_opportunity_history_id
+# foreignKeys
+#   sales_opportunity_history.opportunity_stage_id ==> sales_opportunity_stage.opportunity_stage_id
+#   sales_opportunity_history.sales_opportunity_id ==> sales_opportunity.sales_opportunity_id
+#   sales_opportunity_history.currency_uom_id ==> uom.uom_id
+#   sales_opportunity_history.modified_by_user_login ==> user_login.user_login_id
+# checkConstraints---
+title: "SalesOpportunityHistory"
+required:
+  - "changeNote"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUomId"
+  - "description"
+  - "estimatedAmount"
+  - "estimatedCloseDate"
+  - "estimatedProbability"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "modifiedByUserLogin"
+  - "modifiedTimestamp"
+  - "nextStep"
+  - "opportunityStageId"
+  - "salesOpportunityHistoryId"
+  - "salesOpportunityId"
+type: "object"
+properties:
+  salesOpportunityHistoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "sales_opportunity_history_id"
+    exampleSetFlag: false
+  salesOpportunityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "sales_opportunity_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  nextStep:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "next_step"
+    exampleSetFlag: false
+  estimatedAmount:
+    type: "number"
+    description: "estimated_amount"
+    exampleSetFlag: false
+  estimatedProbability:
+    type: "number"
+    description: "estimated_probability"
+    exampleSetFlag: false
+  currencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom_id"
+    exampleSetFlag: false
+  estimatedCloseDate:
+    type: "string"
+    description: "estimated_close_date"
+    format: "date-time"
+    exampleSetFlag: false
+  opportunityStageId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "opportunity_stage_id"
+    exampleSetFlag: false
+  changeNote:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "change_note"
+    exampleSetFlag: false
+  modifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "modified_by_user_login"
+    exampleSetFlag: false
+  modifiedTimestamp:
+    type: "string"
+    description: "modified_timestamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

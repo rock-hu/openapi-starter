@@ -1,0 +1,97 @@
+# uom_conversion_dated null public null 0 0
+# primaryColumns
+#   uom_id
+#   uom_id_to
+#   from_date
+# foreignKeys
+#   uom_conversion_dated.uom_id_to ==> uom.uom_id
+#   uom_conversion_dated.custom_method_id ==> custom_method.custom_method_id
+#   uom_conversion_dated.purpose_enum_id ==> enumeration.enum_id
+#   uom_conversion_dated.uom_id ==> uom.uom_id
+# checkConstraints---
+title: "UomConversionDated"
+required:
+  - "conversionFactor"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "customMethodId"
+  - "decimalScale"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "purposeEnumId"
+  - "roundingMode"
+  - "thruDate"
+  - "uomId"
+  - "uomIdTo"
+type: "object"
+properties:
+  uomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "uom_id"
+    exampleSetFlag: false
+  uomIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "uom_id_to"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  conversionFactor:
+    type: "number"
+    description: "conversion_factor"
+    exampleSetFlag: false
+  customMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "custom_method_id"
+    exampleSetFlag: false
+  decimalScale:
+    type: "number"
+    description: "decimal_scale"
+    exampleSetFlag: false
+  roundingMode:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "rounding_mode"
+    exampleSetFlag: false
+  purposeEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "purpose_enum_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

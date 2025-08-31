@@ -1,0 +1,59 @@
+# geo_assoc null public null 0 0
+# primaryColumns
+#   geo_id
+#   geo_id_to
+# foreignKeys
+#   geo_assoc.geo_assoc_type_id ==> geo_assoc_type.geo_assoc_type_id
+#   geo_assoc.geo_id_to ==> geo.geo_id
+#   geo_assoc.geo_id ==> geo.geo_id
+# checkConstraints---
+title: "GeoAssoc"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "geoAssocTypeId"
+  - "geoId"
+  - "geoIdTo"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  geoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_id"
+    exampleSetFlag: false
+  geoIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_id_to"
+    exampleSetFlag: false
+  geoAssocTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_assoc_type_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

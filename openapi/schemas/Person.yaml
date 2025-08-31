@@ -1,0 +1,249 @@
+# person null public null 0 0
+# primaryColumns
+#   party_id
+# foreignKeys
+#   person.employment_status_enum_id ==> enumeration.enum_id
+#   person.marital_status_enum_id ==> enumeration.enum_id
+#   person.residence_status_enum_id ==> enumeration.enum_id
+#   person.party_id ==> party.party_id
+# checkConstraints---
+title: "Person"
+required:
+  - "birthDate"
+  - "cardId"
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "deceasedDate"
+  - "employmentStatusEnumId"
+  - "existingCustomer"
+  - "firstName"
+  - "firstNameLocal"
+  - "gender"
+  - "height"
+  - "lastName"
+  - "lastNameLocal"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maritalStatusEnumId"
+  - "memberId"
+  - "middleName"
+  - "middleNameLocal"
+  - "monthsWithEmployer"
+  - "mothersMaidenName"
+  - "nickname"
+  - "occupation"
+  - "otherLocal"
+  - "partyId"
+  - "passportExpireDate"
+  - "passportNumber"
+  - "personalTitle"
+  - "residenceStatusEnumId"
+  - "salutation"
+  - "socialSecurityNumber"
+  - "suffix"
+  - "totalYearsWorkExperience"
+  - "weight"
+  - "yearsWithEmployer"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  salutation:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "salutation"
+    exampleSetFlag: false
+  firstName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "first_name"
+    exampleSetFlag: false
+  middleName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "middle_name"
+    exampleSetFlag: false
+  lastName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "last_name"
+    exampleSetFlag: false
+  personalTitle:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "personal_title"
+    exampleSetFlag: false
+  suffix:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "suffix"
+    exampleSetFlag: false
+  nickname:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "nickname"
+    exampleSetFlag: false
+  firstNameLocal:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "first_name_local"
+    exampleSetFlag: false
+  middleNameLocal:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "middle_name_local"
+    exampleSetFlag: false
+  lastNameLocal:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "last_name_local"
+    exampleSetFlag: false
+  otherLocal:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "other_local"
+    exampleSetFlag: false
+  memberId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "member_id"
+    exampleSetFlag: false
+  gender:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "gender"
+    exampleSetFlag: false
+  birthDate:
+    type: "string"
+    description: "birth_date"
+    format: "date"
+    exampleSetFlag: false
+  deceasedDate:
+    type: "string"
+    description: "deceased_date"
+    format: "date"
+    exampleSetFlag: false
+  height:
+    type: "number"
+    description: "height"
+    exampleSetFlag: false
+  weight:
+    type: "number"
+    description: "weight"
+    exampleSetFlag: false
+  mothersMaidenName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "mothers_maiden_name"
+    exampleSetFlag: false
+  maritalStatusEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "marital_status_enum_id"
+    exampleSetFlag: false
+  socialSecurityNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "social_security_number"
+    exampleSetFlag: false
+  passportNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "passport_number"
+    exampleSetFlag: false
+  passportExpireDate:
+    type: "string"
+    description: "passport_expire_date"
+    format: "date"
+    exampleSetFlag: false
+  totalYearsWorkExperience:
+    type: "number"
+    description: "total_years_work_experience"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  employmentStatusEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "employment_status_enum_id"
+    exampleSetFlag: false
+  residenceStatusEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "residence_status_enum_id"
+    exampleSetFlag: false
+  occupation:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "occupation"
+    exampleSetFlag: false
+  yearsWithEmployer:
+    type: "number"
+    description: "years_with_employer"
+    exampleSetFlag: false
+  monthsWithEmployer:
+    type: "number"
+    description: "months_with_employer"
+    exampleSetFlag: false
+  existingCustomer:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "existing_customer"
+    exampleSetFlag: false
+  cardId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "card_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

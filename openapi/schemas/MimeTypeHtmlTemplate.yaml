@@ -1,0 +1,49 @@
+# mime_type_html_template null public null 0 0
+# primaryColumns
+#   mime_type_id
+# foreignKeys
+#   mime_type_html_template.mime_type_id ==> mime_type.mime_type_id
+# checkConstraints---
+title: "MimeTypeHtmlTemplate"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "mimeTypeId"
+  - "templateLocation"
+type: "object"
+properties:
+  mimeTypeId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "mime_type_id"
+    exampleSetFlag: false
+  templateLocation:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "template_location"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

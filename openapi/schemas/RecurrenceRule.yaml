@@ -1,0 +1,141 @@
+# recurrence_rule null public null 0 0
+# primaryColumns
+#   recurrence_rule_id
+# foreignKeys
+# checkConstraints---
+title: "RecurrenceRule"
+required:
+  - "byDayList"
+  - "byHourList"
+  - "byMinuteList"
+  - "byMonthDayList"
+  - "byMonthList"
+  - "bySecondList"
+  - "bySetPosList"
+  - "byWeekNoList"
+  - "byYearDayList"
+  - "countNumber"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "frequency"
+  - "intervalNumber"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "recurrenceRuleId"
+  - "untilDateTime"
+  - "weekStart"
+  - "xName"
+type: "object"
+properties:
+  recurrenceRuleId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "recurrence_rule_id"
+    exampleSetFlag: false
+  frequency:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "frequency"
+    exampleSetFlag: false
+  untilDateTime:
+    type: "string"
+    description: "until_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  countNumber:
+    type: "number"
+    description: "count_number"
+    exampleSetFlag: false
+  intervalNumber:
+    type: "number"
+    description: "interval_number"
+    exampleSetFlag: false
+  bySecondList:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "by_second_list"
+    exampleSetFlag: false
+  byMinuteList:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "by_minute_list"
+    exampleSetFlag: false
+  byHourList:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "by_hour_list"
+    exampleSetFlag: false
+  byDayList:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "by_day_list"
+    exampleSetFlag: false
+  byMonthDayList:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "by_month_day_list"
+    exampleSetFlag: false
+  byYearDayList:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "by_year_day_list"
+    exampleSetFlag: false
+  byWeekNoList:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "by_week_no_list"
+    exampleSetFlag: false
+  byMonthList:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "by_month_list"
+    exampleSetFlag: false
+  bySetPosList:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "by_set_pos_list"
+    exampleSetFlag: false
+  weekStart:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "week_start"
+    exampleSetFlag: false
+  xName:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "x_name"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

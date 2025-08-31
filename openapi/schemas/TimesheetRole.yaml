@@ -1,0 +1,60 @@
+# timesheet_role null public null 0 0
+# primaryColumns
+#   timesheet_id
+#   party_id
+#   role_type_id
+# foreignKeys
+#   timesheet_role.party_id,role_type_id ==> party_role.party_id,role_type_id
+#   timesheet_role.timesheet_id ==> timesheet.timesheet_id
+#   timesheet_role.party_id ==> party.party_id
+# checkConstraints---
+title: "TimesheetRole"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "roleTypeId"
+  - "timesheetId"
+type: "object"
+properties:
+  timesheetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "timesheet_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,84 @@
+# fixed_asset_meter null public null 0 0
+# primaryColumns
+#   fixed_asset_id
+#   product_meter_type_id
+#   reading_date
+# foreignKeys
+#   fixed_asset_meter.fixed_asset_id,maint_hist_seq_id ==> fixed_asset_maint.fixed_asset_id,maint_hist_seq_id
+#   fixed_asset_meter.product_meter_type_id ==> product_meter_type.product_meter_type_id
+# checkConstraints---
+title: "FixedAssetMeter"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fixedAssetId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maintHistSeqId"
+  - "meterValue"
+  - "productMeterTypeId"
+  - "readingDate"
+  - "readingReasonEnumId"
+  - "workEffortId"
+type: "object"
+properties:
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  productMeterTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_meter_type_id"
+    exampleSetFlag: false
+  readingDate:
+    type: "string"
+    description: "reading_date"
+    format: "date-time"
+    exampleSetFlag: false
+  meterValue:
+    type: "number"
+    description: "meter_value"
+    exampleSetFlag: false
+  readingReasonEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "reading_reason_enum_id"
+    exampleSetFlag: false
+  maintHistSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "maint_hist_seq_id"
+    exampleSetFlag: false
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,175 @@
+# payment null public null 0 0
+# primaryColumns
+#   payment_id
+# foreignKeys
+#   payment.status_id ==> status_item.status_id
+#   payment.payment_method_type_id ==> payment_method_type.payment_method_type_id
+#   payment.payment_method_id ==> payment_method.payment_method_id
+#   payment.fin_account_trans_id ==> fin_account_trans.fin_account_trans_id
+#   payment.payment_gateway_response_id ==> payment_gateway_response.payment_gateway_response_id
+#   payment.role_type_id_to ==> role_type.role_type_id
+#   payment.payment_preference_id ==> order_payment_preference.order_payment_preference_id
+#   payment.payment_type_id ==> payment_type.payment_type_id
+#   payment.currency_uom_id ==> uom.uom_id
+#   payment.party_id_from ==> party.party_id
+#   payment.actual_currency_uom_id ==> uom.uom_id
+#   payment.party_id_to ==> party.party_id
+#   payment.override_gl_account_id ==> gl_account.gl_account_id
+# checkConstraints---
+title: "Payment"
+required:
+  - "actualCurrencyAmount"
+  - "actualCurrencyUomId"
+  - "amount"
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUomId"
+  - "effectiveDate"
+  - "finAccountTransId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "overrideGlAccountId"
+  - "partyIdFrom"
+  - "partyIdTo"
+  - "paymentGatewayResponseId"
+  - "paymentId"
+  - "paymentMethodId"
+  - "paymentMethodTypeId"
+  - "paymentPreferenceId"
+  - "paymentRefNum"
+  - "paymentTypeId"
+  - "roleTypeIdTo"
+  - "statusId"
+type: "object"
+properties:
+  paymentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_id"
+    exampleSetFlag: false
+  paymentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_type_id"
+    exampleSetFlag: false
+  paymentMethodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_type_id"
+    exampleSetFlag: false
+  paymentMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_id"
+    exampleSetFlag: false
+  paymentGatewayResponseId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_gateway_response_id"
+    exampleSetFlag: false
+  paymentPreferenceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_preference_id"
+    exampleSetFlag: false
+  partyIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_from"
+    exampleSetFlag: false
+  partyIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_to"
+    exampleSetFlag: false
+  roleTypeIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id_to"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  effectiveDate:
+    type: "string"
+    description: "effective_date"
+    format: "date-time"
+    exampleSetFlag: false
+  paymentRefNum:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "payment_ref_num"
+    exampleSetFlag: false
+  amount:
+    type: "number"
+    description: "amount"
+    exampleSetFlag: false
+  currencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom_id"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  finAccountTransId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fin_account_trans_id"
+    exampleSetFlag: false
+  overrideGlAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "override_gl_account_id"
+    exampleSetFlag: false
+  actualCurrencyAmount:
+    type: "number"
+    description: "actual_currency_amount"
+    exampleSetFlag: false
+  actualCurrencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "actual_currency_uom_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

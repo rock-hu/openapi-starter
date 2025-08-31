@@ -1,0 +1,69 @@
+# party_resume null public null 0 0
+# primaryColumns
+#   resume_id
+# foreignKeys
+#   party_resume.party_id ==> party.party_id
+# checkConstraints---
+title: "PartyResume"
+required:
+  - "contentId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "resumeDate"
+  - "resumeId"
+  - "resumeText"
+type: "object"
+properties:
+  resumeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "resume_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  contentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_id"
+    exampleSetFlag: false
+  resumeDate:
+    type: "string"
+    description: "resume_date"
+    format: "date-time"
+    exampleSetFlag: false
+  resumeText:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "resume_text"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,80 @@
+# order_term_attribute null public null 0 0
+# primaryColumns
+#   term_type_id
+#   order_id
+#   order_item_seq_id
+#   attr_name
+# foreignKeys
+#   order_term_attribute.term_type_id,order_id,order_item_seq_id ==> order_term.term_type_id,order_id,order_item_seq_id
+# checkConstraints---
+title: "OrderTermAttribute"
+required:
+  - "attrDescription"
+  - "attrName"
+  - "attrValue"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemSeqId"
+  - "termTypeId"
+type: "object"
+properties:
+  termTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "term_type_id"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  attrName:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "attr_name"
+    exampleSetFlag: false
+  attrValue:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "attr_value"
+    exampleSetFlag: false
+  attrDescription:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "attr_description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

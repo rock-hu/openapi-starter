@@ -1,0 +1,119 @@
+# entity_sync null public null 0 0
+# primaryColumns
+#   entity_sync_id
+# foreignKeys
+# checkConstraints---
+title: "EntitySync"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "entitySyncId"
+  - "forPullOnly"
+  - "forPushOnly"
+  - "keepRemoveInfoHours"
+  - "lastHistoryStartDate"
+  - "lastSuccessfulSynchTime"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maxRunningNoUpdateMillis"
+  - "offlineSyncSplitMillis"
+  - "preOfflineSynchTime"
+  - "runStatusId"
+  - "syncEndBufferMillis"
+  - "syncSplitMillis"
+  - "targetDelegatorName"
+  - "targetServiceName"
+type: "object"
+properties:
+  entitySyncId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "entity_sync_id"
+    exampleSetFlag: false
+  runStatusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "run_status_id"
+    exampleSetFlag: false
+  lastSuccessfulSynchTime:
+    type: "string"
+    description: "last_successful_synch_time"
+    format: "date-time"
+    exampleSetFlag: false
+  lastHistoryStartDate:
+    type: "string"
+    description: "last_history_start_date"
+    format: "date-time"
+    exampleSetFlag: false
+  preOfflineSynchTime:
+    type: "string"
+    description: "pre_offline_synch_time"
+    format: "date-time"
+    exampleSetFlag: false
+  offlineSyncSplitMillis:
+    type: "number"
+    description: "offline_sync_split_millis"
+    exampleSetFlag: false
+  syncSplitMillis:
+    type: "number"
+    description: "sync_split_millis"
+    exampleSetFlag: false
+  syncEndBufferMillis:
+    type: "number"
+    description: "sync_end_buffer_millis"
+    exampleSetFlag: false
+  maxRunningNoUpdateMillis:
+    type: "number"
+    description: "max_running_no_update_millis"
+    exampleSetFlag: false
+  targetServiceName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "target_service_name"
+    exampleSetFlag: false
+  targetDelegatorName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "target_delegator_name"
+    exampleSetFlag: false
+  keepRemoveInfoHours:
+    type: "number"
+    description: "keep_remove_info_hours"
+    exampleSetFlag: false
+  forPullOnly:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "for_pull_only"
+    exampleSetFlag: false
+  forPushOnly:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "for_push_only"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

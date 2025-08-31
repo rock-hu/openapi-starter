@@ -1,0 +1,71 @@
+# sales_opportunity_competitor null public null 0 0
+# primaryColumns
+#   sales_opportunity_id
+#   competitor_party_id
+# foreignKeys
+#   sales_opportunity_competitor.sales_opportunity_id ==> sales_opportunity.sales_opportunity_id
+# checkConstraints---
+title: "SalesOpportunityCompetitor"
+required:
+  - "competitorPartyId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "positionEnumId"
+  - "salesOpportunityId"
+  - "strengths"
+  - "weaknesses"
+type: "object"
+properties:
+  salesOpportunityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "sales_opportunity_id"
+    exampleSetFlag: false
+  competitorPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "competitor_party_id"
+    exampleSetFlag: false
+  positionEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "position_enum_id"
+    exampleSetFlag: false
+  strengths:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "strengths"
+    exampleSetFlag: false
+  weaknesses:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "weaknesses"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

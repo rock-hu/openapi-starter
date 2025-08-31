@@ -1,0 +1,502 @@
+# product null public null 0 0
+# primaryColumns
+#   product_id
+# foreignKeys
+#   product.default_shipment_box_type_id ==> shipment_box_type.shipment_box_type_id
+#   product.width_uom_id ==> uom.uom_id
+#   product.requirement_method_enum_id ==> enumeration.enum_id
+#   product.primary_product_category_id ==> product_category.product_category_id
+#   product.created_by_user_login ==> user_login.user_login_id
+#   product.depth_uom_id ==> uom.uom_id
+#   product.virtual_variant_method_enum ==> enumeration.enum_id
+#   product.weight_uom_id ==> uom.uom_id
+#   product.rating_type_enum ==> enumeration.enum_id
+#   product.height_uom_id ==> uom.uom_id
+#   product.quantity_uom_id ==> uom.uom_id
+#   product.amount_uom_type_id ==> uom_type.uom_type_id
+#   product.origin_geo_id ==> geo.geo_id
+#   product.last_modified_by_user_login ==> user_login.user_login_id
+#   product.inventory_item_type_id ==> inventory_item_type.inventory_item_type_id
+#   product.product_type_id ==> product_type.product_type_id
+#   product.diameter_uom_id ==> uom.uom_id
+#   product.facility_id ==> facility.facility_id
+# checkConstraints---
+title: "Product"
+required:
+  - "amountUomTypeId"
+  - "autoCreateKeywords"
+  - "billOfMaterialLevel"
+  - "brandName"
+  - "chargeShipping"
+  - "comments"
+  - "configId"
+  - "createdByUserLogin"
+  - "createdDate"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "defaultShipmentBoxTypeId"
+  - "depthUomId"
+  - "description"
+  - "detailImageUrl"
+  - "detailScreen"
+  - "diameterUomId"
+  - "facilityId"
+  - "fixedAmount"
+  - "heightUomId"
+  - "inShippingBox"
+  - "includeInPromotions"
+  - "internalName"
+  - "introductionDate"
+  - "inventoryItemTypeId"
+  - "inventoryMessage"
+  - "isVariant"
+  - "isVirtual"
+  - "largeImageUrl"
+  - "lastModifiedByUserLogin"
+  - "lastModifiedDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "longDescription"
+  - "lotIdFilledIn"
+  - "mediumImageUrl"
+  - "orderDecimalQuantity"
+  - "originGeoId"
+  - "originalImageUrl"
+  - "piecesIncluded"
+  - "priceDetailText"
+  - "primaryProductCategoryId"
+  - "productDepth"
+  - "productDiameter"
+  - "productHeight"
+  - "productId"
+  - "productName"
+  - "productRating"
+  - "productTypeId"
+  - "productWeight"
+  - "productWidth"
+  - "quantityIncluded"
+  - "quantityUomId"
+  - "ratingTypeEnum"
+  - "releaseDate"
+  - "requireAmount"
+  - "requireInventory"
+  - "requirementMethodEnumId"
+  - "reserv2ndPPPerc"
+  - "reservMaxPersons"
+  - "reservNthPPPerc"
+  - "returnable"
+  - "salesDiscWhenNotAvail"
+  - "salesDiscontinuationDate"
+  - "shippingDepth"
+  - "shippingHeight"
+  - "shippingWeight"
+  - "shippingWidth"
+  - "smallImageUrl"
+  - "supportDiscontinuationDate"
+  - "taxable"
+  - "virtualVariantMethodEnum"
+  - "weightUomId"
+  - "widthUomId"
+type: "object"
+properties:
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  productTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_type_id"
+    exampleSetFlag: false
+  primaryProductCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "primary_product_category_id"
+    exampleSetFlag: false
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  introductionDate:
+    type: "string"
+    description: "introduction_date"
+    format: "date-time"
+    exampleSetFlag: false
+  releaseDate:
+    type: "string"
+    description: "release_date"
+    format: "date-time"
+    exampleSetFlag: false
+  supportDiscontinuationDate:
+    type: "string"
+    description: "support_discontinuation_date"
+    format: "date-time"
+    exampleSetFlag: false
+  salesDiscontinuationDate:
+    type: "string"
+    description: "sales_discontinuation_date"
+    format: "date-time"
+    exampleSetFlag: false
+  salesDiscWhenNotAvail:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "sales_disc_when_not_avail"
+    exampleSetFlag: false
+  internalName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "internal_name"
+    exampleSetFlag: false
+  brandName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "brand_name"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  productName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "product_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  longDescription:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "long_description"
+    exampleSetFlag: false
+  priceDetailText:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "price_detail_text"
+    exampleSetFlag: false
+  smallImageUrl:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "small_image_url"
+    exampleSetFlag: false
+  mediumImageUrl:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "medium_image_url"
+    exampleSetFlag: false
+  largeImageUrl:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "large_image_url"
+    exampleSetFlag: false
+  detailImageUrl:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "detail_image_url"
+    exampleSetFlag: false
+  originalImageUrl:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "original_image_url"
+    exampleSetFlag: false
+  detailScreen:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "detail_screen"
+    exampleSetFlag: false
+  inventoryMessage:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "inventory_message"
+    exampleSetFlag: false
+  inventoryItemTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_type_id"
+    exampleSetFlag: false
+  requireInventory:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "require_inventory"
+    exampleSetFlag: false
+  quantityUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "quantity_uom_id"
+    exampleSetFlag: false
+  quantityIncluded:
+    type: "number"
+    description: "quantity_included"
+    exampleSetFlag: false
+  piecesIncluded:
+    type: "number"
+    description: "pieces_included"
+    exampleSetFlag: false
+  requireAmount:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "require_amount"
+    exampleSetFlag: false
+  fixedAmount:
+    type: "number"
+    description: "fixed_amount"
+    exampleSetFlag: false
+  amountUomTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "amount_uom_type_id"
+    exampleSetFlag: false
+  weightUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "weight_uom_id"
+    exampleSetFlag: false
+  shippingWeight:
+    type: "number"
+    description: "shipping_weight"
+    exampleSetFlag: false
+  productWeight:
+    type: "number"
+    description: "product_weight"
+    exampleSetFlag: false
+  heightUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "height_uom_id"
+    exampleSetFlag: false
+  productHeight:
+    type: "number"
+    description: "product_height"
+    exampleSetFlag: false
+  shippingHeight:
+    type: "number"
+    description: "shipping_height"
+    exampleSetFlag: false
+  widthUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "width_uom_id"
+    exampleSetFlag: false
+  productWidth:
+    type: "number"
+    description: "product_width"
+    exampleSetFlag: false
+  shippingWidth:
+    type: "number"
+    description: "shipping_width"
+    exampleSetFlag: false
+  depthUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "depth_uom_id"
+    exampleSetFlag: false
+  productDepth:
+    type: "number"
+    description: "product_depth"
+    exampleSetFlag: false
+  shippingDepth:
+    type: "number"
+    description: "shipping_depth"
+    exampleSetFlag: false
+  diameterUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "diameter_uom_id"
+    exampleSetFlag: false
+  productDiameter:
+    type: "number"
+    description: "product_diameter"
+    exampleSetFlag: false
+  productRating:
+    type: "number"
+    description: "product_rating"
+    exampleSetFlag: false
+  ratingTypeEnum:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "rating_type_enum"
+    exampleSetFlag: false
+  returnable:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "returnable"
+    exampleSetFlag: false
+  taxable:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "taxable"
+    exampleSetFlag: false
+  chargeShipping:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "charge_shipping"
+    exampleSetFlag: false
+  autoCreateKeywords:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "auto_create_keywords"
+    exampleSetFlag: false
+  includeInPromotions:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "include_in_promotions"
+    exampleSetFlag: false
+  isVirtual:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_virtual"
+    exampleSetFlag: false
+  isVariant:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_variant"
+    exampleSetFlag: false
+  virtualVariantMethodEnum:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "virtual_variant_method_enum"
+    exampleSetFlag: false
+  originGeoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "origin_geo_id"
+    exampleSetFlag: false
+  requirementMethodEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "requirement_method_enum_id"
+    exampleSetFlag: false
+  billOfMaterialLevel:
+    type: "number"
+    description: "bill_of_material_level"
+    exampleSetFlag: false
+  reservMaxPersons:
+    type: "number"
+    description: "reserv_max_persons"
+    exampleSetFlag: false
+  reserv2ndPPPerc:
+    type: "number"
+    description: "reserv2nd_p_p_perc"
+    exampleSetFlag: false
+  reservNthPPPerc:
+    type: "number"
+    description: "reserv_nth_p_p_perc"
+    exampleSetFlag: false
+  configId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "config_id"
+    exampleSetFlag: false
+  createdDate:
+    type: "string"
+    description: "created_date"
+    format: "date-time"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedDate:
+    type: "string"
+    description: "last_modified_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  inShippingBox:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "in_shipping_box"
+    exampleSetFlag: false
+  defaultShipmentBoxTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "default_shipment_box_type_id"
+    exampleSetFlag: false
+  lotIdFilledIn:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "lot_id_filled_in"
+    exampleSetFlag: false
+  orderDecimalQuantity:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "order_decimal_quantity"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

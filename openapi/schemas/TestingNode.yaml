@@ -1,0 +1,56 @@
+# testing_node null public null 0 0
+# primaryColumns
+#   testing_node_id
+# foreignKeys
+#   testing_node.primary_parent_node_id ==> testing_node.testing_node_id
+# checkConstraints---
+title: "TestingNode"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "primaryParentNodeId"
+  - "testingNodeId"
+type: "object"
+properties:
+  testingNodeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "testing_node_id"
+    exampleSetFlag: false
+  primaryParentNodeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "primary_parent_node_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

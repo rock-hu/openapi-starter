@@ -1,0 +1,119 @@
+# party_need null public null 0 0
+# primaryColumns
+#   party_need_id
+#   party_id
+#   role_type_id
+# foreignKeys
+#   party_need.party_id ==> party.party_id
+#   party_need.role_type_id ==> role_type.role_type_id
+#   party_need.communication_event_id ==> communication_event.communication_event_id
+#   party_need.party_type_id ==> party_type.party_type_id
+#   party_need.need_type_id ==> need_type.need_type_id
+#   party_need.product_id ==> product.product_id
+#   party_need.product_category_id ==> product_category.product_category_id
+# checkConstraints---
+title: "PartyNeed"
+required:
+  - "communicationEventId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "datetimeRecorded"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "needTypeId"
+  - "partyId"
+  - "partyNeedId"
+  - "partyTypeId"
+  - "productCategoryId"
+  - "productId"
+  - "roleTypeId"
+  - "visitId"
+type: "object"
+properties:
+  partyNeedId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_need_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  partyTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_type_id"
+    exampleSetFlag: false
+  needTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "need_type_id"
+    exampleSetFlag: false
+  communicationEventId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "communication_event_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  productCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_category_id"
+    exampleSetFlag: false
+  visitId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "visit_id"
+    exampleSetFlag: false
+  datetimeRecorded:
+    type: "string"
+    description: "datetime_recorded"
+    format: "date-time"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

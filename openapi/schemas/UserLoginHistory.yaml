@@ -1,0 +1,91 @@
+# user_login_history null public null 0 0
+# primaryColumns
+#   user_login_id
+#   from_date
+# foreignKeys
+#   user_login_history.party_id ==> party.party_id
+#   user_login_history.user_login_id ==> user_login.user_login_id
+# checkConstraints---
+title: "UserLoginHistory"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "originUserLoginId"
+  - "partyId"
+  - "passwordUsed"
+  - "successfulLogin"
+  - "thruDate"
+  - "userLoginId"
+  - "visitId"
+type: "object"
+properties:
+  userLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "user_login_id"
+    exampleSetFlag: false
+  visitId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "visit_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  passwordUsed:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "password_used"
+    exampleSetFlag: false
+  successfulLogin:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "successful_login"
+    exampleSetFlag: false
+  originUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "origin_user_login_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+exampleSetFlag: false

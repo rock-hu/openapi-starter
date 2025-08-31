@@ -1,0 +1,77 @@
+# product_cost_component_calc null public null 0 0
+# primaryColumns
+#   product_id
+#   cost_component_type_id
+#   from_date
+# foreignKeys
+#   product_cost_component_calc.product_id ==> product.product_id
+#   product_cost_component_calc.cost_component_calc_id ==> cost_component_calc.cost_component_calc_id
+#   product_cost_component_calc.cost_component_type_id ==> cost_component_type.cost_component_type_id
+# checkConstraints---
+title: "ProductCostComponentCalc"
+required:
+  - "costComponentCalcId"
+  - "costComponentTypeId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productId"
+  - "sequenceNum"
+  - "thruDate"
+type: "object"
+properties:
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  costComponentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cost_component_type_id"
+    exampleSetFlag: false
+  costComponentCalcId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cost_component_calc_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,187 @@
+# inventory_item_detail null public null 0 0
+# primaryColumns
+#   inventory_item_id
+#   inventory_item_detail_seq_id
+# foreignKeys
+#   inventory_item_detail.work_effort_id ==> work_effort.work_effort_id
+#   inventory_item_detail.inventory_item_id ==> inventory_item.inventory_item_id
+#   inventory_item_detail.item_issuance_id ==> item_issuance.item_issuance_id
+#   inventory_item_detail.fixed_asset_id,maint_hist_seq_id ==> fixed_asset_maint.fixed_asset_id,maint_hist_seq_id
+#   inventory_item_detail.reason_enum_id ==> enumeration.enum_id
+#   inventory_item_detail.physical_inventory_id ==> physical_inventory.physical_inventory_id
+#   inventory_item_detail.receipt_id ==> shipment_receipt.receipt_id
+# checkConstraints---
+title: "InventoryItemDetail"
+required:
+  - "accountingQuantityDiff"
+  - "availableToPromiseDiff"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "effectiveDate"
+  - "fixedAssetId"
+  - "inventoryItemDetailSeqId"
+  - "inventoryItemId"
+  - "itemIssuanceId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maintHistSeqId"
+  - "orderId"
+  - "orderItemSeqId"
+  - "physicalInventoryId"
+  - "quantityOnHandDiff"
+  - "reasonEnumId"
+  - "receiptId"
+  - "returnId"
+  - "returnItemSeqId"
+  - "shipGroupSeqId"
+  - "shipmentId"
+  - "shipmentItemSeqId"
+  - "unitCost"
+  - "workEffortId"
+type: "object"
+properties:
+  inventoryItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_id"
+    exampleSetFlag: false
+  inventoryItemDetailSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_detail_seq_id"
+    exampleSetFlag: false
+  effectiveDate:
+    type: "string"
+    description: "effective_date"
+    format: "date-time"
+    exampleSetFlag: false
+  quantityOnHandDiff:
+    type: "number"
+    description: "quantity_on_hand_diff"
+    exampleSetFlag: false
+  availableToPromiseDiff:
+    type: "number"
+    description: "available_to_promise_diff"
+    exampleSetFlag: false
+  accountingQuantityDiff:
+    type: "number"
+    description: "accounting_quantity_diff"
+    exampleSetFlag: false
+  unitCost:
+    type: "number"
+    description: "unit_cost"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  shipGroupSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "ship_group_seq_id"
+    exampleSetFlag: false
+  shipmentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_id"
+    exampleSetFlag: false
+  shipmentItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_item_seq_id"
+    exampleSetFlag: false
+  returnId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "return_id"
+    exampleSetFlag: false
+  returnItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "return_item_seq_id"
+    exampleSetFlag: false
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  maintHistSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "maint_hist_seq_id"
+    exampleSetFlag: false
+  itemIssuanceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "item_issuance_id"
+    exampleSetFlag: false
+  receiptId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "receipt_id"
+    exampleSetFlag: false
+  physicalInventoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "physical_inventory_id"
+    exampleSetFlag: false
+  reasonEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "reason_enum_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

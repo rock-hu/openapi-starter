@@ -1,0 +1,92 @@
+# order_status null public null 0 0
+# primaryColumns
+#   order_status_id
+# foreignKeys
+#   order_status.order_id ==> order_header.order_id
+#   order_status.status_id ==> status_item.status_id
+#   order_status.status_user_login ==> user_login.user_login_id
+# checkConstraints---
+title: "OrderStatus"
+required:
+  - "changeReason"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemSeqId"
+  - "orderPaymentPreferenceId"
+  - "orderStatusId"
+  - "statusDatetime"
+  - "statusId"
+  - "statusUserLogin"
+type: "object"
+properties:
+  orderStatusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_status_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  orderPaymentPreferenceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_payment_preference_id"
+    exampleSetFlag: false
+  statusDatetime:
+    type: "string"
+    description: "status_datetime"
+    format: "date-time"
+    exampleSetFlag: false
+  statusUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "status_user_login"
+    exampleSetFlag: false
+  changeReason:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "change_reason"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

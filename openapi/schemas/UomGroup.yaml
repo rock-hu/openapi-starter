@@ -1,0 +1,50 @@
+# uom_group null public null 0 0
+# primaryColumns
+#   uom_group_id
+#   uom_id
+# foreignKeys
+#   uom_group.uom_id ==> uom.uom_id
+# checkConstraints---
+title: "UomGroup"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "uomGroupId"
+  - "uomId"
+type: "object"
+properties:
+  uomGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "uom_group_id"
+    exampleSetFlag: false
+  uomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "uom_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

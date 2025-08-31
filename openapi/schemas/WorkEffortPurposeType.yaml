@@ -1,0 +1,56 @@
+# work_effort_purpose_type null public null 0 0
+# primaryColumns
+#   work_effort_purpose_type_id
+# foreignKeys
+#   work_effort_purpose_type.parent_type_id ==> work_effort_purpose_type.work_effort_purpose_type_id
+# checkConstraints---
+title: "WorkEffortPurposeType"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentTypeId"
+  - "workEffortPurposeTypeId"
+type: "object"
+properties:
+  workEffortPurposeTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_purpose_type_id"
+    exampleSetFlag: false
+  parentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_type_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

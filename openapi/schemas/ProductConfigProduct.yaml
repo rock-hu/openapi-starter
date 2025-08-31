@@ -1,0 +1,70 @@
+# product_config_product null public null 0 0
+# primaryColumns
+#   config_item_id
+#   config_option_id
+#   product_id
+# foreignKeys
+#   product_config_product.product_id ==> product.product_id
+#   product_config_product.config_item_id,config_option_id ==> product_config_option.config_item_id,config_option_id
+#   product_config_product.config_item_id ==> product_config_item.config_item_id
+# checkConstraints---
+title: "ProductConfigProduct"
+required:
+  - "configItemId"
+  - "configOptionId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productId"
+  - "quantity"
+  - "sequenceNum"
+type: "object"
+properties:
+  configItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "config_item_id"
+    exampleSetFlag: false
+  configOptionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "config_option_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,123 @@
+# job_requisition null public null 0 0
+# primaryColumns
+#   job_requisition_id
+# foreignKeys
+#   job_requisition.exam_type_enum_id ==> enumeration.enum_id
+#   job_requisition.job_posting_type_enum_id ==> enumeration.enum_id
+#   job_requisition.skill_type_id ==> skill_type.skill_type_id
+# checkConstraints---
+title: "JobRequisition"
+required:
+  - "age"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "durationMonths"
+  - "examTypeEnumId"
+  - "experienceMonths"
+  - "experienceYears"
+  - "gender"
+  - "jobLocation"
+  - "jobPostingTypeEnumId"
+  - "jobRequisitionDate"
+  - "jobRequisitionId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "noOfResources"
+  - "qualification"
+  - "requiredOnDate"
+  - "skillTypeId"
+type: "object"
+properties:
+  jobRequisitionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "job_requisition_id"
+    exampleSetFlag: false
+  durationMonths:
+    type: "number"
+    description: "duration_months"
+    exampleSetFlag: false
+  age:
+    type: "number"
+    description: "age"
+    exampleSetFlag: false
+  gender:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "gender"
+    exampleSetFlag: false
+  experienceMonths:
+    type: "number"
+    description: "experience_months"
+    exampleSetFlag: false
+  experienceYears:
+    type: "number"
+    description: "experience_years"
+    exampleSetFlag: false
+  qualification:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "qualification"
+    exampleSetFlag: false
+  jobLocation:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "job_location"
+    exampleSetFlag: false
+  skillTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "skill_type_id"
+    exampleSetFlag: false
+  noOfResources:
+    type: "number"
+    description: "no_of_resources"
+    exampleSetFlag: false
+  jobPostingTypeEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "job_posting_type_enum_id"
+    exampleSetFlag: false
+  jobRequisitionDate:
+    type: "string"
+    description: "job_requisition_date"
+    format: "date"
+    exampleSetFlag: false
+  examTypeEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "exam_type_enum_id"
+    exampleSetFlag: false
+  requiredOnDate:
+    type: "string"
+    description: "required_on_date"
+    format: "date"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

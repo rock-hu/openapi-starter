@@ -1,0 +1,88 @@
+# allocation_plan_header null public null 0 0
+# primaryColumns
+#   plan_id
+#   product_id
+# foreignKeys
+#   allocation_plan_header.plan_type_id ==> allocation_plan_type.plan_type_id
+#   allocation_plan_header.status_id ==> status_item.status_id
+#   allocation_plan_header.created_by_user_login ==> user_login.user_login_id
+#   allocation_plan_header.last_modified_by_user_login ==> user_login.user_login_id
+# checkConstraints---
+title: "AllocationPlanHeader"
+required:
+  - "createdByUserLogin"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastModifiedByUserLogin"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "planId"
+  - "planName"
+  - "planTypeId"
+  - "productId"
+  - "statusId"
+type: "object"
+properties:
+  planId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "plan_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  planTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "plan_type_id"
+    exampleSetFlag: false
+  planName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "plan_name"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

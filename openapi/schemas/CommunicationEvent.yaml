@@ -1,0 +1,232 @@
+# communication_event null public null 0 0
+# primaryColumns
+#   communication_event_id
+# foreignKeys
+#   communication_event.role_type_id_from ==> role_type.role_type_id
+#   communication_event.contact_list_id ==> contact_list.contact_list_id
+#   communication_event.content_mime_type_id ==> mime_type.mime_type_id
+#   communication_event.contact_mech_type_id ==> contact_mech_type.contact_mech_type_id
+#   communication_event.reason_enum_id ==> enumeration.enum_id
+#   communication_event.party_id_to ==> party.party_id
+#   communication_event.status_id ==> status_item.status_id
+#   communication_event.contact_mech_id_to ==> contact_mech.contact_mech_id
+#   communication_event.communication_event_type_id ==> communication_event_type.communication_event_type_id
+#   communication_event.role_type_id_to ==> role_type.role_type_id
+#   communication_event.contact_mech_id_from ==> contact_mech.contact_mech_id
+#   communication_event.party_id_from ==> party.party_id
+# checkConstraints---
+title: "CommunicationEvent"
+required:
+  - "bccString"
+  - "ccString"
+  - "communicationEventId"
+  - "communicationEventTypeId"
+  - "contactListId"
+  - "contactMechIdFrom"
+  - "contactMechIdTo"
+  - "contactMechTypeId"
+  - "content"
+  - "contentMimeTypeId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "datetimeEnded"
+  - "datetimeStarted"
+  - "entryDate"
+  - "fromString"
+  - "headerString"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "messageId"
+  - "note"
+  - "origCommEventId"
+  - "parentCommEventId"
+  - "partyIdFrom"
+  - "partyIdTo"
+  - "reasonEnumId"
+  - "roleTypeIdFrom"
+  - "roleTypeIdTo"
+  - "statusId"
+  - "subject"
+  - "toString"
+type: "object"
+properties:
+  communicationEventId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "communication_event_id"
+    exampleSetFlag: false
+  communicationEventTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "communication_event_type_id"
+    exampleSetFlag: false
+  origCommEventId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "orig_comm_event_id"
+    exampleSetFlag: false
+  parentCommEventId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_comm_event_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  contactMechTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_type_id"
+    exampleSetFlag: false
+  contactMechIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id_from"
+    exampleSetFlag: false
+  contactMechIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id_to"
+    exampleSetFlag: false
+  roleTypeIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id_from"
+    exampleSetFlag: false
+  roleTypeIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id_to"
+    exampleSetFlag: false
+  partyIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_from"
+    exampleSetFlag: false
+  partyIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_to"
+    exampleSetFlag: false
+  entryDate:
+    type: "string"
+    description: "entry_date"
+    format: "date-time"
+    exampleSetFlag: false
+  datetimeStarted:
+    type: "string"
+    description: "datetime_started"
+    format: "date-time"
+    exampleSetFlag: false
+  datetimeEnded:
+    type: "string"
+    description: "datetime_ended"
+    format: "date-time"
+    exampleSetFlag: false
+  subject:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "subject"
+    exampleSetFlag: false
+  contentMimeTypeId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "content_mime_type_id"
+    exampleSetFlag: false
+  content:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "content"
+    exampleSetFlag: false
+  note:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "note"
+    exampleSetFlag: false
+  reasonEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "reason_enum_id"
+    exampleSetFlag: false
+  contactListId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_list_id"
+    exampleSetFlag: false
+  headerString:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "header_string"
+    exampleSetFlag: false
+  fromString:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "from_string"
+    exampleSetFlag: false
+  toString:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "to_string"
+    exampleSetFlag: false
+  ccString:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "cc_string"
+    exampleSetFlag: false
+  bccString:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "bcc_string"
+    exampleSetFlag: false
+  messageId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "message_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,86 @@
+# tracking_code_order null public null 0 0
+# primaryColumns
+#   order_id
+#   tracking_code_type_id
+# foreignKeys
+#   tracking_code_order.tracking_code_id ==> tracking_code.tracking_code_id
+#   tracking_code_order.tracking_code_type_id ==> tracking_code_type.tracking_code_type_id
+#   tracking_code_order.order_id ==> order_header.order_id
+# checkConstraints---
+title: "TrackingCodeOrder"
+required:
+  - "affiliateReferredTimeStamp"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "hasExported"
+  - "isBillable"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "siteId"
+  - "trackingCodeId"
+  - "trackingCodeTypeId"
+type: "object"
+properties:
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  trackingCodeTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "tracking_code_type_id"
+    exampleSetFlag: false
+  trackingCodeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "tracking_code_id"
+    exampleSetFlag: false
+  isBillable:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_billable"
+    exampleSetFlag: false
+  siteId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "site_id"
+    exampleSetFlag: false
+  hasExported:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "has_exported"
+    exampleSetFlag: false
+  affiliateReferredTimeStamp:
+    type: "string"
+    description: "affiliate_referred_time_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

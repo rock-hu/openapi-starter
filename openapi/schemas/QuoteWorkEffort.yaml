@@ -1,0 +1,51 @@
+# quote_work_effort null public null 0 0
+# primaryColumns
+#   quote_id
+#   work_effort_id
+# foreignKeys
+#   quote_work_effort.work_effort_id ==> work_effort.work_effort_id
+#   quote_work_effort.quote_id ==> quote.quote_id
+# checkConstraints---
+title: "QuoteWorkEffort"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "quoteId"
+  - "workEffortId"
+type: "object"
+properties:
+  quoteId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "quote_id"
+    exampleSetFlag: false
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,99 @@
+# product_maint null public null 0 0
+# primaryColumns
+#   product_id
+#   product_maint_seq_id
+# foreignKeys
+#   product_maint.interval_meter_type_id ==> product_meter_type.product_meter_type_id
+#   product_maint.interval_uom_id ==> uom.uom_id
+#   product_maint.maint_template_work_effort_id ==> work_effort.work_effort_id
+#   product_maint.product_maint_type_id ==> product_maint_type.product_maint_type_id
+#   product_maint.product_id ==> product.product_id
+# checkConstraints---
+title: "ProductMaint"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "intervalMeterTypeId"
+  - "intervalQuantity"
+  - "intervalUomId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maintName"
+  - "maintTemplateWorkEffortId"
+  - "productId"
+  - "productMaintSeqId"
+  - "productMaintTypeId"
+  - "repeatCount"
+type: "object"
+properties:
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  productMaintSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_maint_seq_id"
+    exampleSetFlag: false
+  productMaintTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_maint_type_id"
+    exampleSetFlag: false
+  maintName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "maint_name"
+    exampleSetFlag: false
+  maintTemplateWorkEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "maint_template_work_effort_id"
+    exampleSetFlag: false
+  intervalQuantity:
+    type: "number"
+    description: "interval_quantity"
+    exampleSetFlag: false
+  intervalUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "interval_uom_id"
+    exampleSetFlag: false
+  intervalMeterTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "interval_meter_type_id"
+    exampleSetFlag: false
+  repeatCount:
+    type: "number"
+    description: "repeat_count"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

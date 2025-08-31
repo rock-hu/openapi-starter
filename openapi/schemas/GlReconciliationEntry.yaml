@@ -1,0 +1,64 @@
+# gl_reconciliation_entry null public null 0 0
+# primaryColumns
+#   gl_reconciliation_id
+#   acctg_trans_id
+#   acctg_trans_entry_seq_id
+# foreignKeys
+#   gl_reconciliation_entry.gl_reconciliation_id ==> gl_reconciliation.gl_reconciliation_id
+#   gl_reconciliation_entry.acctg_trans_id,acctg_trans_entry_seq_id ==> acctg_trans_entry.acctg_trans_id,acctg_trans_entry_seq_id
+# checkConstraints---
+title: "GlReconciliationEntry"
+required:
+  - "acctgTransEntrySeqId"
+  - "acctgTransId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "glReconciliationId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "reconciledAmount"
+type: "object"
+properties:
+  glReconciliationId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_reconciliation_id"
+    exampleSetFlag: false
+  acctgTransId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "acctg_trans_id"
+    exampleSetFlag: false
+  acctgTransEntrySeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "acctg_trans_entry_seq_id"
+    exampleSetFlag: false
+  reconciledAmount:
+    type: "number"
+    description: "reconciled_amount"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

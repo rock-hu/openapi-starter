@@ -1,0 +1,207 @@
+# fixed_asset null public null 0 0
+# primaryColumns
+#   fixed_asset_id
+# foreignKeys
+#   fixed_asset.class_enum_id ==> enumeration.enum_id
+#   fixed_asset.role_type_id ==> role_type.role_type_id
+#   fixed_asset.acquire_order_id,acquire_order_item_seq_id ==> order_item.order_id,order_item_seq_id
+#   fixed_asset.acquire_order_id ==> order_header.order_id
+#   fixed_asset.fixed_asset_type_id ==> fixed_asset_type.fixed_asset_type_id
+#   fixed_asset.located_at_facility_id ==> facility.facility_id
+#   fixed_asset.uom_id ==> uom.uom_id
+#   fixed_asset.party_id ==> party.party_id
+#   fixed_asset.parent_fixed_asset_id ==> fixed_asset.fixed_asset_id
+#   fixed_asset.instance_of_product_id ==> product.product_id
+#   fixed_asset.calendar_id ==> tech_data_calendar.calendar_id
+# checkConstraints---
+title: "FixedAsset"
+required:
+  - "acquireOrderId"
+  - "acquireOrderItemSeqId"
+  - "actualEndOfLife"
+  - "calendarId"
+  - "classEnumId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "dateAcquired"
+  - "dateLastServiced"
+  - "dateNextService"
+  - "depreciation"
+  - "expectedEndOfLife"
+  - "fixedAssetId"
+  - "fixedAssetName"
+  - "fixedAssetTypeId"
+  - "instanceOfProductId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "locatedAtFacilityId"
+  - "locatedAtLocationSeqId"
+  - "parentFixedAssetId"
+  - "partyId"
+  - "productionCapacity"
+  - "purchaseCost"
+  - "purchaseCostUomId"
+  - "roleTypeId"
+  - "salvageValue"
+  - "serialNumber"
+  - "uomId"
+type: "object"
+properties:
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  fixedAssetTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_type_id"
+    exampleSetFlag: false
+  parentFixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_fixed_asset_id"
+    exampleSetFlag: false
+  instanceOfProductId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "instance_of_product_id"
+    exampleSetFlag: false
+  classEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "class_enum_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  fixedAssetName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_name"
+    exampleSetFlag: false
+  acquireOrderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "acquire_order_id"
+    exampleSetFlag: false
+  acquireOrderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "acquire_order_item_seq_id"
+    exampleSetFlag: false
+  dateAcquired:
+    type: "string"
+    description: "date_acquired"
+    format: "date-time"
+    exampleSetFlag: false
+  dateLastServiced:
+    type: "string"
+    description: "date_last_serviced"
+    format: "date-time"
+    exampleSetFlag: false
+  dateNextService:
+    type: "string"
+    description: "date_next_service"
+    format: "date-time"
+    exampleSetFlag: false
+  expectedEndOfLife:
+    type: "string"
+    description: "expected_end_of_life"
+    format: "date"
+    exampleSetFlag: false
+  actualEndOfLife:
+    type: "string"
+    description: "actual_end_of_life"
+    format: "date"
+    exampleSetFlag: false
+  productionCapacity:
+    type: "number"
+    description: "production_capacity"
+    exampleSetFlag: false
+  uomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "uom_id"
+    exampleSetFlag: false
+  calendarId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "calendar_id"
+    exampleSetFlag: false
+  serialNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "serial_number"
+    exampleSetFlag: false
+  locatedAtFacilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "located_at_facility_id"
+    exampleSetFlag: false
+  locatedAtLocationSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "located_at_location_seq_id"
+    exampleSetFlag: false
+  salvageValue:
+    type: "number"
+    description: "salvage_value"
+    exampleSetFlag: false
+  depreciation:
+    type: "number"
+    description: "depreciation"
+    exampleSetFlag: false
+  purchaseCost:
+    type: "number"
+    description: "purchase_cost"
+    exampleSetFlag: false
+  purchaseCostUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "purchase_cost_uom_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,64 @@
+# work_effort_inventory_assign null public null 0 0
+# primaryColumns
+#   work_effort_id
+#   inventory_item_id
+# foreignKeys
+#   work_effort_inventory_assign.inventory_item_id ==> inventory_item.inventory_item_id
+#   work_effort_inventory_assign.work_effort_id ==> work_effort.work_effort_id
+#   work_effort_inventory_assign.status_id ==> status_item.status_id
+# checkConstraints---
+title: "WorkEffortInventoryAssign"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "inventoryItemId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "quantity"
+  - "statusId"
+  - "workEffortId"
+type: "object"
+properties:
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  inventoryItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

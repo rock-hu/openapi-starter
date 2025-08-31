@@ -1,0 +1,64 @@
+# market_interest null public null 0 0
+# primaryColumns
+#   product_category_id
+#   party_classification_group_id
+#   from_date
+# foreignKeys
+#   market_interest.party_classification_group_id ==> party_classification_group.party_classification_group_id
+#   market_interest.product_category_id ==> product_category.product_category_id
+# checkConstraints---
+title: "MarketInterest"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyClassificationGroupId"
+  - "productCategoryId"
+  - "thruDate"
+type: "object"
+properties:
+  productCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_category_id"
+    exampleSetFlag: false
+  partyClassificationGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_classification_group_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,77 @@
+# payment_gateway_eway null public null 0 0
+# primaryColumns
+#   payment_gateway_config_id
+# foreignKeys
+#   payment_gateway_eway.payment_gateway_config_id ==> payment_gateway_config.payment_gateway_config_id
+# checkConstraints---
+title: "PaymentGatewayEway"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "customerId"
+  - "enableBeagle"
+  - "enableCvn"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "paymentGatewayConfigId"
+  - "refundPwd"
+  - "testMode"
+type: "object"
+properties:
+  paymentGatewayConfigId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_gateway_config_id"
+    exampleSetFlag: false
+  customerId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "customer_id"
+    exampleSetFlag: false
+  refundPwd:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "refund_pwd"
+    exampleSetFlag: false
+  testMode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "test_mode"
+    exampleSetFlag: false
+  enableCvn:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "enable_cvn"
+    exampleSetFlag: false
+  enableBeagle:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "enable_beagle"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

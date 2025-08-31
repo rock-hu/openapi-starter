@@ -1,0 +1,120 @@
+# order_item_ship_grp_inv_res null public null 0 0
+# primaryColumns
+#   order_id
+#   ship_group_seq_id
+#   order_item_seq_id
+#   inventory_item_id
+# foreignKeys
+#   order_item_ship_grp_inv_res.order_id,order_item_seq_id ==> order_item.order_id,order_item_seq_id
+#   order_item_ship_grp_inv_res.inventory_item_id ==> inventory_item.inventory_item_id
+# checkConstraints---
+title: "OrderItemShipGrpInvRes"
+required:
+  - "createdDatetime"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currentPromisedDate"
+  - "inventoryItemId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemSeqId"
+  - "priority"
+  - "promisedDatetime"
+  - "quantity"
+  - "quantityNotAvailable"
+  - "reserveOrderEnumId"
+  - "reservedDatetime"
+  - "sequenceId"
+  - "shipGroupSeqId"
+type: "object"
+properties:
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  shipGroupSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "ship_group_seq_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  inventoryItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_id"
+    exampleSetFlag: false
+  reserveOrderEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "reserve_order_enum_id"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  quantityNotAvailable:
+    type: "number"
+    description: "quantity_not_available"
+    exampleSetFlag: false
+  reservedDatetime:
+    type: "string"
+    description: "reserved_datetime"
+    format: "date-time"
+    exampleSetFlag: false
+  createdDatetime:
+    type: "string"
+    description: "created_datetime"
+    format: "date-time"
+    exampleSetFlag: false
+  promisedDatetime:
+    type: "string"
+    description: "promised_datetime"
+    format: "date-time"
+    exampleSetFlag: false
+  currentPromisedDate:
+    type: "string"
+    description: "current_promised_date"
+    format: "date-time"
+    exampleSetFlag: false
+  priority:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "priority"
+    exampleSetFlag: false
+  sequenceId:
+    type: "number"
+    description: "sequence_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

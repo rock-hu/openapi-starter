@@ -1,0 +1,69 @@
+# gl_account_category_member null public null 0 0
+# primaryColumns
+#   gl_account_id
+#   gl_account_category_id
+#   from_date
+# foreignKeys
+#   gl_account_category_member.gl_account_category_id ==> gl_account_category.gl_account_category_id
+#   gl_account_category_member.gl_account_id ==> gl_account.gl_account_id
+# checkConstraints---
+title: "GlAccountCategoryMember"
+required:
+  - "amountPercentage"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "glAccountCategoryId"
+  - "glAccountId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "thruDate"
+type: "object"
+properties:
+  glAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_account_id"
+    exampleSetFlag: false
+  glAccountCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_account_category_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  amountPercentage:
+    type: "number"
+    description: "amount_percentage"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

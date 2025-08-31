@@ -1,0 +1,77 @@
+# shipment_package_content null public null 0 0
+# primaryColumns
+#   shipment_id
+#   shipment_package_seq_id
+#   shipment_item_seq_id
+# foreignKeys
+#   shipment_package_content.shipment_id,shipment_package_seq_id ==> shipment_package.shipment_id,shipment_package_seq_id
+#   shipment_package_content.shipment_id,shipment_item_seq_id ==> shipment_item.shipment_id,shipment_item_seq_id
+#   shipment_package_content.sub_product_id ==> product.product_id
+# checkConstraints---
+title: "ShipmentPackageContent"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "quantity"
+  - "shipmentId"
+  - "shipmentItemSeqId"
+  - "shipmentPackageSeqId"
+  - "subProductId"
+  - "subProductQuantity"
+type: "object"
+properties:
+  shipmentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_id"
+    exampleSetFlag: false
+  shipmentPackageSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_package_seq_id"
+    exampleSetFlag: false
+  shipmentItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_item_seq_id"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  subProductId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "sub_product_id"
+    exampleSetFlag: false
+  subProductQuantity:
+    type: "number"
+    description: "sub_product_quantity"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

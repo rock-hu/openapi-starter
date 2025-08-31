@@ -1,0 +1,181 @@
+# shopping_list null public null 0 0
+# primaryColumns
+#   shopping_list_id
+# foreignKeys
+#   shopping_list.product_promo_code_id ==> product_promo_code.product_promo_code_id
+#   shopping_list.party_id ==> party.party_id
+#   shopping_list.shopping_list_type_id ==> shopping_list_type.shopping_list_type_id
+#   shopping_list.payment_method_id ==> payment_method.payment_method_id
+#   shopping_list.recurrence_info_id ==> recurrence_info.recurrence_info_id
+#   shopping_list.product_store_id ==> product_store.product_store_id
+#   shopping_list.shipment_method_type_id,carrier_party_id,carrier_role_type_id ==> carrier_shipment_method.shipment_method_type_id,party_id,role_type_id
+#   shopping_list.contact_mech_id ==> contact_mech.contact_mech_id
+#   shopping_list.parent_shopping_list_id ==> shopping_list.shopping_list_id
+# checkConstraints---
+title: "ShoppingList"
+required:
+  - "carrierPartyId"
+  - "carrierRoleTypeId"
+  - "contactMechId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUom"
+  - "description"
+  - "isActive"
+  - "isPublic"
+  - "lastAdminModified"
+  - "lastOrderedDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "listName"
+  - "parentShoppingListId"
+  - "partyId"
+  - "paymentMethodId"
+  - "productPromoCodeId"
+  - "productStoreId"
+  - "recurrenceInfoId"
+  - "shipmentMethodTypeId"
+  - "shoppingListId"
+  - "shoppingListTypeId"
+  - "visitorId"
+type: "object"
+properties:
+  shoppingListId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shopping_list_id"
+    exampleSetFlag: false
+  shoppingListTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shopping_list_type_id"
+    exampleSetFlag: false
+  parentShoppingListId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_shopping_list_id"
+    exampleSetFlag: false
+  productStoreId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_id"
+    exampleSetFlag: false
+  visitorId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "visitor_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  listName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "list_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  isPublic:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_public"
+    exampleSetFlag: false
+  isActive:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_active"
+    exampleSetFlag: false
+  currencyUom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom"
+    exampleSetFlag: false
+  shipmentMethodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_method_type_id"
+    exampleSetFlag: false
+  carrierPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "carrier_party_id"
+    exampleSetFlag: false
+  carrierRoleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "carrier_role_type_id"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  paymentMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_id"
+    exampleSetFlag: false
+  recurrenceInfoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "recurrence_info_id"
+    exampleSetFlag: false
+  lastOrderedDate:
+    type: "string"
+    description: "last_ordered_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastAdminModified:
+    type: "string"
+    description: "last_admin_modified"
+    format: "date-time"
+    exampleSetFlag: false
+  productPromoCodeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_promo_code_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

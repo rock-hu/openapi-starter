@@ -1,0 +1,119 @@
+# product_manufacturing_rule null public null 0 0
+# primaryColumns
+#   rule_id
+# foreignKeys
+#   product_manufacturing_rule.product_id_in ==> product.product_id
+#   product_manufacturing_rule.product_feature ==> product_feature.product_feature_id
+#   product_manufacturing_rule.product_id_for ==> product.product_id
+#   product_manufacturing_rule.product_id_in_subst ==> product.product_id
+#   product_manufacturing_rule.product_id ==> product.product_id
+# checkConstraints---
+title: "ProductManufacturingRule"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productFeature"
+  - "productId"
+  - "productIdFor"
+  - "productIdIn"
+  - "productIdInSubst"
+  - "quantity"
+  - "ruleId"
+  - "ruleOperator"
+  - "ruleSeqId"
+  - "thruDate"
+type: "object"
+properties:
+  ruleId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "rule_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  productIdFor:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id_for"
+    exampleSetFlag: false
+  productIdIn:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id_in"
+    exampleSetFlag: false
+  ruleSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "rule_seq_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  productIdInSubst:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id_in_subst"
+    exampleSetFlag: false
+  productFeature:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_feature"
+    exampleSetFlag: false
+  ruleOperator:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "rule_operator"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

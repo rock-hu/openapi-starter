@@ -1,0 +1,51 @@
+# sales_opportunity_work_effort null public null 0 0
+# primaryColumns
+#   sales_opportunity_id
+#   work_effort_id
+# foreignKeys
+#   sales_opportunity_work_effort.sales_opportunity_id ==> sales_opportunity.sales_opportunity_id
+#   sales_opportunity_work_effort.work_effort_id ==> work_effort.work_effort_id
+# checkConstraints---
+title: "SalesOpportunityWorkEffort"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "salesOpportunityId"
+  - "workEffortId"
+type: "object"
+properties:
+  salesOpportunityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "sales_opportunity_id"
+    exampleSetFlag: false
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

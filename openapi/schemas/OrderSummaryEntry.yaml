@@ -1,0 +1,73 @@
+# order_summary_entry null public null 0 0
+# primaryColumns
+#   entry_date
+#   product_id
+#   facility_id
+# foreignKeys
+#   order_summary_entry.product_id ==> product.product_id
+#   order_summary_entry.facility_id ==> facility.facility_id
+# checkConstraints---
+title: "OrderSummaryEntry"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "entryDate"
+  - "facilityId"
+  - "grossSales"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productCost"
+  - "productId"
+  - "totalQuantity"
+type: "object"
+properties:
+  entryDate:
+    type: "string"
+    description: "entry_date"
+    format: "date"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  totalQuantity:
+    type: "number"
+    description: "total_quantity"
+    exampleSetFlag: false
+  grossSales:
+    type: "number"
+    description: "gross_sales"
+    exampleSetFlag: false
+  productCost:
+    type: "number"
+    description: "product_cost"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

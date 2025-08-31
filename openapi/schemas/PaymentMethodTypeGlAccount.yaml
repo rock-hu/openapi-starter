@@ -1,0 +1,59 @@
+# payment_method_type_gl_account null public null 0 0
+# primaryColumns
+#   payment_method_type_id
+#   organization_party_id
+# foreignKeys
+#   payment_method_type_gl_account.organization_party_id ==> party.party_id
+#   payment_method_type_gl_account.gl_account_id ==> gl_account.gl_account_id
+#   payment_method_type_gl_account.payment_method_type_id ==> payment_method_type.payment_method_type_id
+# checkConstraints---
+title: "PaymentMethodTypeGlAccount"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "glAccountId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "organizationPartyId"
+  - "paymentMethodTypeId"
+type: "object"
+properties:
+  paymentMethodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_type_id"
+    exampleSetFlag: false
+  organizationPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "organization_party_id"
+    exampleSetFlag: false
+  glAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_account_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

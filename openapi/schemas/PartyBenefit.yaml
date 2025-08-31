@@ -1,0 +1,113 @@
+# party_benefit null public null 0 0
+# primaryColumns
+#   role_type_id_from
+#   role_type_id_to
+#   party_id_from
+#   party_id_to
+#   benefit_type_id
+#   from_date
+# foreignKeys
+#   party_benefit.party_id_to ==> party.party_id
+#   party_benefit.party_id_to,role_type_id_to ==> party_role.party_id,role_type_id
+#   party_benefit.party_id_from,role_type_id_from ==> party_role.party_id,role_type_id
+#   party_benefit.party_id_from ==> party.party_id
+#   party_benefit.benefit_type_id ==> benefit_type.benefit_type_id
+# checkConstraints---
+title: "PartyBenefit"
+required:
+  - "actualEmployerPaidPercent"
+  - "availableTime"
+  - "benefitTypeId"
+  - "cost"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyIdFrom"
+  - "partyIdTo"
+  - "periodTypeId"
+  - "roleTypeIdFrom"
+  - "roleTypeIdTo"
+  - "thruDate"
+type: "object"
+properties:
+  roleTypeIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id_from"
+    exampleSetFlag: false
+  roleTypeIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id_to"
+    exampleSetFlag: false
+  partyIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_from"
+    exampleSetFlag: false
+  partyIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_to"
+    exampleSetFlag: false
+  benefitTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "benefit_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  periodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "period_type_id"
+    exampleSetFlag: false
+  cost:
+    type: "number"
+    description: "cost"
+    exampleSetFlag: false
+  actualEmployerPaidPercent:
+    type: "number"
+    description: "actual_employer_paid_percent"
+    exampleSetFlag: false
+  availableTime:
+    type: "number"
+    description: "available_time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

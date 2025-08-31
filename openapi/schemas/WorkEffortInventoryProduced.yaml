@@ -1,0 +1,51 @@
+# work_effort_inventory_produced null public null 0 0
+# primaryColumns
+#   work_effort_id
+#   inventory_item_id
+# foreignKeys
+#   work_effort_inventory_produced.work_effort_id ==> work_effort.work_effort_id
+#   work_effort_inventory_produced.inventory_item_id ==> inventory_item.inventory_item_id
+# checkConstraints---
+title: "WorkEffortInventoryProduced"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "inventoryItemId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "workEffortId"
+type: "object"
+properties:
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  inventoryItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

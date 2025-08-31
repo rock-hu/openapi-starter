@@ -1,0 +1,87 @@
+# product_group_order null public null 0 0
+# primaryColumns
+#   group_order_id
+# foreignKeys
+#   product_group_order.status_id ==> status_item.status_id
+#   product_group_order.job_id ==> job_sandbox.job_id
+#   product_group_order.product_id ==> product.product_id
+# checkConstraints---
+title: "ProductGroupOrder"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "groupOrderId"
+  - "jobId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productId"
+  - "reqOrderQty"
+  - "soldOrderQty"
+  - "statusId"
+  - "thruDate"
+type: "object"
+properties:
+  groupOrderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "group_order_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  reqOrderQty:
+    type: "number"
+    description: "req_order_qty"
+    exampleSetFlag: false
+  soldOrderQty:
+    type: "number"
+    description: "sold_order_qty"
+    exampleSetFlag: false
+  jobId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "job_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

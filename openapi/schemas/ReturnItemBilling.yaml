@@ -1,0 +1,86 @@
+# return_item_billing null public null 0 0
+# primaryColumns
+#   return_id
+#   return_item_seq_id
+#   invoice_id
+#   invoice_item_seq_id
+# foreignKeys
+#   return_item_billing.return_id ==> return_header.return_id
+#   return_item_billing.shipment_receipt_id ==> shipment_receipt.receipt_id
+#   return_item_billing.invoice_id,invoice_item_seq_id ==> invoice_item.invoice_id,invoice_item_seq_id
+#   return_item_billing.return_id,return_item_seq_id ==> return_item.return_id,return_item_seq_id
+# checkConstraints---
+title: "ReturnItemBilling"
+required:
+  - "amount"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "invoiceId"
+  - "invoiceItemSeqId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "quantity"
+  - "returnId"
+  - "returnItemSeqId"
+  - "shipmentReceiptId"
+type: "object"
+properties:
+  returnId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "return_id"
+    exampleSetFlag: false
+  returnItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "return_item_seq_id"
+    exampleSetFlag: false
+  invoiceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_id"
+    exampleSetFlag: false
+  invoiceItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_item_seq_id"
+    exampleSetFlag: false
+  shipmentReceiptId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_receipt_id"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  amount:
+    type: "number"
+    description: "amount"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

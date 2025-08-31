@@ -1,0 +1,101 @@
+# facility_location null public null 0 0
+# primaryColumns
+#   facility_id
+#   location_seq_id
+# foreignKeys
+#   facility_location.facility_id ==> facility.facility_id
+#   facility_location.geo_point_id ==> geo_point.geo_point_id
+#   facility_location.location_type_enum_id ==> enumeration.enum_id
+# checkConstraints---
+title: "FacilityLocation"
+required:
+  - "aisleId"
+  - "areaId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "facilityId"
+  - "geoPointId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "levelId"
+  - "locationSeqId"
+  - "locationTypeEnumId"
+  - "positionId"
+  - "sectionId"
+type: "object"
+properties:
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  locationSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "location_seq_id"
+    exampleSetFlag: false
+  locationTypeEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "location_type_enum_id"
+    exampleSetFlag: false
+  areaId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "area_id"
+    exampleSetFlag: false
+  aisleId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "aisle_id"
+    exampleSetFlag: false
+  sectionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "section_id"
+    exampleSetFlag: false
+  levelId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "level_id"
+    exampleSetFlag: false
+  positionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "position_id"
+    exampleSetFlag: false
+  geoPointId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_point_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,67 @@
+# order_item_contact_mech null public null 0 0
+# primaryColumns
+#   order_id
+#   order_item_seq_id
+#   contact_mech_purpose_type_id
+# foreignKeys
+#   order_item_contact_mech.order_id,order_item_seq_id ==> order_item.order_id,order_item_seq_id
+#   order_item_contact_mech.contact_mech_id ==> contact_mech.contact_mech_id
+#   order_item_contact_mech.contact_mech_purpose_type_id ==> contact_mech_purpose_type.contact_mech_purpose_type_id
+# checkConstraints---
+title: "OrderItemContactMech"
+required:
+  - "contactMechId"
+  - "contactMechPurposeTypeId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemSeqId"
+type: "object"
+properties:
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  contactMechPurposeTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_purpose_type_id"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,192 @@
+# visit null public null 0 0
+# primaryColumns
+#   visit_id
+# foreignKeys
+#   visit.user_agent_id ==> user_agent.user_agent_id
+#   visit.visitor_id ==> visitor.visitor_id
+# checkConstraints---
+title: "Visit"
+required:
+  - "clientHostName"
+  - "clientIpAddress"
+  - "clientIpCountryGeoId"
+  - "clientIpIspName"
+  - "clientIpPostalCode"
+  - "clientIpStateProvGeoId"
+  - "clientUser"
+  - "contactMechId"
+  - "cookie"
+  - "fromDate"
+  - "initialLocale"
+  - "initialReferrer"
+  - "initialRequest"
+  - "initialUserAgent"
+  - "partyId"
+  - "roleTypeId"
+  - "serverHostName"
+  - "serverIpAddress"
+  - "sessionId"
+  - "thruDate"
+  - "userAgentId"
+  - "userCreated"
+  - "userLoginId"
+  - "visitId"
+  - "visitorId"
+  - "webappName"
+type: "object"
+properties:
+  visitId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "visit_id"
+    exampleSetFlag: false
+  visitorId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "visitor_id"
+    exampleSetFlag: false
+  userLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "user_login_id"
+    exampleSetFlag: false
+  userCreated:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "user_created"
+    exampleSetFlag: false
+  sessionId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "session_id"
+    exampleSetFlag: false
+  serverIpAddress:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "server_ip_address"
+    exampleSetFlag: false
+  serverHostName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "server_host_name"
+    exampleSetFlag: false
+  webappName:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "webapp_name"
+    exampleSetFlag: false
+  initialLocale:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "initial_locale"
+    exampleSetFlag: false
+  initialRequest:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "initial_request"
+    exampleSetFlag: false
+  initialReferrer:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "initial_referrer"
+    exampleSetFlag: false
+  initialUserAgent:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "initial_user_agent"
+    exampleSetFlag: false
+  userAgentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "user_agent_id"
+    exampleSetFlag: false
+  clientIpAddress:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "client_ip_address"
+    exampleSetFlag: false
+  clientHostName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "client_host_name"
+    exampleSetFlag: false
+  clientUser:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "client_user"
+    exampleSetFlag: false
+  clientIpIspName:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "client_ip_isp_name"
+    exampleSetFlag: false
+  clientIpPostalCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "client_ip_postal_code"
+    exampleSetFlag: false
+  cookie:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "cookie"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  clientIpStateProvGeoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "client_ip_state_prov_geo_id"
+    exampleSetFlag: false
+  clientIpCountryGeoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "client_ip_country_geo_id"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+exampleSetFlag: false

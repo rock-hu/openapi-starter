@@ -1,0 +1,155 @@
+# marketing_campaign null public null 0 0
+# primaryColumns
+#   marketing_campaign_id
+# foreignKeys
+#   marketing_campaign.status_id ==> status_item.status_id
+#   marketing_campaign.currency_uom_id ==> uom.uom_id
+#   marketing_campaign.parent_campaign_id ==> marketing_campaign.marketing_campaign_id
+# checkConstraints---
+title: "MarketingCampaign"
+required:
+  - "actualCost"
+  - "budgetedCost"
+  - "campaignName"
+  - "campaignSummary"
+  - "convertedLeads"
+  - "createdByUserLogin"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUomId"
+  - "estimatedCost"
+  - "expectedResponsePercent"
+  - "expectedRevenue"
+  - "fromDate"
+  - "isActive"
+  - "lastModifiedByUserLogin"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "marketingCampaignId"
+  - "numSent"
+  - "parentCampaignId"
+  - "startDate"
+  - "statusId"
+  - "thruDate"
+type: "object"
+properties:
+  marketingCampaignId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "marketing_campaign_id"
+    exampleSetFlag: false
+  parentCampaignId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_campaign_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  campaignName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "campaign_name"
+    exampleSetFlag: false
+  campaignSummary:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "campaign_summary"
+    exampleSetFlag: false
+  budgetedCost:
+    type: "number"
+    description: "budgeted_cost"
+    exampleSetFlag: false
+  actualCost:
+    type: "number"
+    description: "actual_cost"
+    exampleSetFlag: false
+  estimatedCost:
+    type: "number"
+    description: "estimated_cost"
+    exampleSetFlag: false
+  currencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  isActive:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_active"
+    exampleSetFlag: false
+  convertedLeads:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "converted_leads"
+    exampleSetFlag: false
+  expectedResponsePercent:
+    type: "number"
+    description: "expected_response_percent"
+    exampleSetFlag: false
+  expectedRevenue:
+    type: "number"
+    description: "expected_revenue"
+    exampleSetFlag: false
+  numSent:
+    type: "number"
+    description: "num_sent"
+    exampleSetFlag: false
+  startDate:
+    type: "string"
+    description: "start_date"
+    format: "date-time"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

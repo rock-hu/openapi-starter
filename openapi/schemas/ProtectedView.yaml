@@ -1,0 +1,65 @@
+# protected_view null public null 0 0
+# primaryColumns
+#   group_id
+#   view_name_id
+# foreignKeys
+#   protected_view.group_id ==> security_group.group_id
+# checkConstraints---
+title: "ProtectedView"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "groupId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maxHits"
+  - "maxHitsDuration"
+  - "tarpitDuration"
+  - "viewNameId"
+type: "object"
+properties:
+  groupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "group_id"
+    exampleSetFlag: false
+  viewNameId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "view_name_id"
+    exampleSetFlag: false
+  maxHits:
+    type: "number"
+    description: "max_hits"
+    exampleSetFlag: false
+  maxHitsDuration:
+    type: "number"
+    description: "max_hits_duration"
+    exampleSetFlag: false
+  tarpitDuration:
+    type: "number"
+    description: "tarpit_duration"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,65 @@
+# status_valid_change null public null 0 0
+# primaryColumns
+#   status_id
+#   status_id_to
+# foreignKeys
+#   status_valid_change.status_id ==> status_item.status_id
+#   status_valid_change.status_id_to ==> status_item.status_id
+# checkConstraints---
+title: "StatusValidChange"
+required:
+  - "conditionExpression"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "statusId"
+  - "statusIdTo"
+  - "transitionName"
+type: "object"
+properties:
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  statusIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id_to"
+    exampleSetFlag: false
+  conditionExpression:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "condition_expression"
+    exampleSetFlag: false
+  transitionName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "transition_name"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

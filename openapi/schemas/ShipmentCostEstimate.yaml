@@ -1,0 +1,220 @@
+# shipment_cost_estimate null public null 0 0
+# primaryColumns
+#   shipment_cost_estimate_id
+# foreignKeys
+#   shipment_cost_estimate.party_id ==> party.party_id
+#   shipment_cost_estimate.weight_break_id ==> quantity_break.quantity_break_id
+#   shipment_cost_estimate.price_break_id ==> quantity_break.quantity_break_id
+#   shipment_cost_estimate.geo_id_to ==> geo.geo_id
+#   shipment_cost_estimate.quantity_break_id ==> quantity_break.quantity_break_id
+#   shipment_cost_estimate.weight_uom_id ==> uom.uom_id
+#   shipment_cost_estimate.shipment_method_type_id,carrier_party_id,carrier_role_type_id ==> carrier_shipment_method.shipment_method_type_id,party_id,role_type_id
+#   shipment_cost_estimate.product_store_ship_meth_id ==> product_store_shipment_meth.product_store_ship_meth_id
+#   shipment_cost_estimate.role_type_id ==> role_type.role_type_id
+#   shipment_cost_estimate.quantity_uom_id ==> uom.uom_id
+#   shipment_cost_estimate.price_uom_id ==> uom.uom_id
+#   shipment_cost_estimate.geo_id_from ==> geo.geo_id
+# checkConstraints---
+title: "ShipmentCostEstimate"
+required:
+  - "carrierPartyId"
+  - "carrierRoleTypeId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "featurePercent"
+  - "featurePrice"
+  - "geoIdFrom"
+  - "geoIdTo"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderFlatPrice"
+  - "orderItemFlatPrice"
+  - "orderPricePercent"
+  - "oversizePrice"
+  - "oversizeUnit"
+  - "partyId"
+  - "priceBreakId"
+  - "priceUnitPrice"
+  - "priceUomId"
+  - "productFeatureGroupId"
+  - "productStoreId"
+  - "productStoreShipMethId"
+  - "quantityBreakId"
+  - "quantityUnitPrice"
+  - "quantityUomId"
+  - "roleTypeId"
+  - "shipmentCostEstimateId"
+  - "shipmentMethodTypeId"
+  - "shippingPricePercent"
+  - "weightBreakId"
+  - "weightUnitPrice"
+  - "weightUomId"
+type: "object"
+properties:
+  shipmentCostEstimateId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_cost_estimate_id"
+    exampleSetFlag: false
+  shipmentMethodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_method_type_id"
+    exampleSetFlag: false
+  carrierPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "carrier_party_id"
+    exampleSetFlag: false
+  carrierRoleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "carrier_role_type_id"
+    exampleSetFlag: false
+  productStoreShipMethId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_ship_meth_id"
+    exampleSetFlag: false
+  productStoreId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  geoIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_id_to"
+    exampleSetFlag: false
+  geoIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_id_from"
+    exampleSetFlag: false
+  weightBreakId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "weight_break_id"
+    exampleSetFlag: false
+  weightUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "weight_uom_id"
+    exampleSetFlag: false
+  weightUnitPrice:
+    type: "number"
+    description: "weight_unit_price"
+    exampleSetFlag: false
+  quantityBreakId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "quantity_break_id"
+    exampleSetFlag: false
+  quantityUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "quantity_uom_id"
+    exampleSetFlag: false
+  quantityUnitPrice:
+    type: "number"
+    description: "quantity_unit_price"
+    exampleSetFlag: false
+  priceBreakId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "price_break_id"
+    exampleSetFlag: false
+  priceUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "price_uom_id"
+    exampleSetFlag: false
+  priceUnitPrice:
+    type: "number"
+    description: "price_unit_price"
+    exampleSetFlag: false
+  orderFlatPrice:
+    type: "number"
+    description: "order_flat_price"
+    exampleSetFlag: false
+  orderPricePercent:
+    type: "number"
+    description: "order_price_percent"
+    exampleSetFlag: false
+  orderItemFlatPrice:
+    type: "number"
+    description: "order_item_flat_price"
+    exampleSetFlag: false
+  shippingPricePercent:
+    type: "number"
+    description: "shipping_price_percent"
+    exampleSetFlag: false
+  productFeatureGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_feature_group_id"
+    exampleSetFlag: false
+  oversizeUnit:
+    type: "number"
+    description: "oversize_unit"
+    exampleSetFlag: false
+  oversizePrice:
+    type: "number"
+    description: "oversize_price"
+    exampleSetFlag: false
+  featurePercent:
+    type: "number"
+    description: "feature_percent"
+    exampleSetFlag: false
+  featurePrice:
+    type: "number"
+    description: "feature_price"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

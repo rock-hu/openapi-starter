@@ -1,0 +1,151 @@
+# survey_response_answer null public null 0 0
+# primaryColumns
+#   survey_response_id
+#   survey_question_id
+#   survey_multi_resp_col_id
+# foreignKeys
+#   survey_response_answer.survey_question_id,survey_option_seq_id ==> survey_question_option.survey_question_id,survey_option_seq_id
+#   survey_response_answer.survey_question_id ==> survey_question.survey_question_id
+#   survey_response_answer.content_id ==> content.content_id
+#   survey_response_answer.survey_response_id ==> survey_response.survey_response_id
+# checkConstraints---
+title: "SurveyResponseAnswer"
+required:
+  - "amountBase"
+  - "amountBaseUomId"
+  - "answeredDate"
+  - "booleanResponse"
+  - "contentId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyResponse"
+  - "duration"
+  - "durationUomId"
+  - "floatResponse"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "numericResponse"
+  - "sequenceNum"
+  - "surveyMultiRespColId"
+  - "surveyMultiRespId"
+  - "surveyOptionSeqId"
+  - "surveyQuestionId"
+  - "surveyResponseId"
+  - "textResponse"
+  - "weightFactor"
+type: "object"
+properties:
+  surveyResponseId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_response_id"
+    exampleSetFlag: false
+  surveyQuestionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_question_id"
+    exampleSetFlag: false
+  surveyMultiRespColId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_multi_resp_col_id"
+    exampleSetFlag: false
+  surveyMultiRespId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_multi_resp_id"
+    exampleSetFlag: false
+  booleanResponse:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "boolean_response"
+    exampleSetFlag: false
+  currencyResponse:
+    type: "number"
+    description: "currency_response"
+    exampleSetFlag: false
+  floatResponse:
+    type: "number"
+    description: "float_response"
+    exampleSetFlag: false
+  numericResponse:
+    type: "number"
+    description: "numeric_response"
+    exampleSetFlag: false
+  textResponse:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "text_response"
+    exampleSetFlag: false
+  surveyOptionSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_option_seq_id"
+    exampleSetFlag: false
+  contentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_id"
+    exampleSetFlag: false
+  answeredDate:
+    type: "string"
+    description: "answered_date"
+    format: "date-time"
+    exampleSetFlag: false
+  amountBase:
+    type: "number"
+    description: "amount_base"
+    exampleSetFlag: false
+  amountBaseUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "amount_base_uom_id"
+    exampleSetFlag: false
+  weightFactor:
+    type: "number"
+    description: "weight_factor"
+    exampleSetFlag: false
+  duration:
+    type: "number"
+    description: "duration"
+    exampleSetFlag: false
+  durationUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "duration_uom_id"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

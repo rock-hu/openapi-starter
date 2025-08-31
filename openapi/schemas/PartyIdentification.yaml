@@ -1,0 +1,58 @@
+# party_identification null public null 0 0
+# primaryColumns
+#   party_id
+#   party_identification_type_id
+# foreignKeys
+#   party_identification.party_identification_type_id ==> party_identification_type.party_identification_type_id
+#   party_identification.party_id ==> party.party_id
+# checkConstraints---
+title: "PartyIdentification"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "idValue"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "partyIdentificationTypeId"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  partyIdentificationTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_identification_type_id"
+    exampleSetFlag: false
+  idValue:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "id_value"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

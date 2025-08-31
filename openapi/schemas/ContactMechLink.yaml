@@ -1,0 +1,51 @@
+# contact_mech_link null public null 0 0
+# primaryColumns
+#   contact_mech_id_from
+#   contact_mech_id_to
+# foreignKeys
+#   contact_mech_link.contact_mech_id_from ==> contact_mech.contact_mech_id
+#   contact_mech_link.contact_mech_id_to ==> contact_mech.contact_mech_id
+# checkConstraints---
+title: "ContactMechLink"
+required:
+  - "contactMechIdFrom"
+  - "contactMechIdTo"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  contactMechIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id_from"
+    exampleSetFlag: false
+  contactMechIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id_to"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

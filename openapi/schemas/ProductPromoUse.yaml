@@ -1,0 +1,84 @@
+# product_promo_use null public null 0 0
+# primaryColumns
+#   order_id
+#   promo_sequence_id
+# foreignKeys
+#   product_promo_use.product_promo_id ==> product_promo.product_promo_id
+#   product_promo_use.product_promo_code_id ==> product_promo_code.product_promo_code_id
+#   product_promo_use.party_id ==> party.party_id
+#   product_promo_use.order_id ==> order_header.order_id
+# checkConstraints---
+title: "ProductPromoUse"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "partyId"
+  - "productPromoCodeId"
+  - "productPromoId"
+  - "promoSequenceId"
+  - "quantityLeftInActions"
+  - "totalDiscountAmount"
+type: "object"
+properties:
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  promoSequenceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "promo_sequence_id"
+    exampleSetFlag: false
+  productPromoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_promo_id"
+    exampleSetFlag: false
+  productPromoCodeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_promo_code_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  totalDiscountAmount:
+    type: "number"
+    description: "total_discount_amount"
+    exampleSetFlag: false
+  quantityLeftInActions:
+    type: "number"
+    description: "quantity_left_in_actions"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

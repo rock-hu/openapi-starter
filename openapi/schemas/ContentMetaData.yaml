@@ -1,0 +1,66 @@
+# content_meta_data null public null 0 0
+# primaryColumns
+#   content_id
+#   meta_data_predicate_id
+# foreignKeys
+#   content_meta_data.content_id ==> content.content_id
+#   content_meta_data.data_source_id ==> data_source.data_source_id
+#   content_meta_data.meta_data_predicate_id ==> meta_data_predicate.meta_data_predicate_id
+# checkConstraints---
+title: "ContentMetaData"
+required:
+  - "contentId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "dataSourceId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "metaDataPredicateId"
+  - "metaDataValue"
+type: "object"
+properties:
+  contentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_id"
+    exampleSetFlag: false
+  metaDataPredicateId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "meta_data_predicate_id"
+    exampleSetFlag: false
+  metaDataValue:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "meta_data_value"
+    exampleSetFlag: false
+  dataSourceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "data_source_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

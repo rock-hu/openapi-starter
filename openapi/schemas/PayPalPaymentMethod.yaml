@@ -1,0 +1,100 @@
+# pay_pal_payment_method null public null 0 0
+# primaryColumns
+#   payment_method_id
+# foreignKeys
+#   pay_pal_payment_method.contact_mech_id ==> contact_mech.contact_mech_id
+#   pay_pal_payment_method.payment_method_id ==> payment_method.payment_method_id
+#   pay_pal_payment_method.contact_mech_id ==> postal_address.contact_mech_id
+# checkConstraints---
+title: "PayPalPaymentMethod"
+required:
+  - "avsAddr"
+  - "avsZip"
+  - "contactMechId"
+  - "correlationId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "expressCheckoutToken"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "payerId"
+  - "payerStatus"
+  - "paymentMethodId"
+  - "transactionId"
+type: "object"
+properties:
+  paymentMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_id"
+    exampleSetFlag: false
+  payerId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payer_id"
+    exampleSetFlag: false
+  expressCheckoutToken:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "express_checkout_token"
+    exampleSetFlag: false
+  payerStatus:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "payer_status"
+    exampleSetFlag: false
+  avsAddr:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "avs_addr"
+    exampleSetFlag: false
+  avsZip:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "avs_zip"
+    exampleSetFlag: false
+  correlationId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "correlation_id"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  transactionId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "transaction_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

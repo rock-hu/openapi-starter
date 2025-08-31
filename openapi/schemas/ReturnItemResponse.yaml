@@ -1,0 +1,92 @@
+# return_item_response null public null 0 0
+# primaryColumns
+#   return_item_response_id
+# foreignKeys
+#   return_item_response.fin_account_trans_id ==> fin_account_trans.fin_account_trans_id
+#   return_item_response.billing_account_id ==> billing_account.billing_account_id
+#   return_item_response.payment_id ==> payment.payment_id
+#   return_item_response.replacement_order_id ==> order_header.order_id
+#   return_item_response.order_payment_preference_id ==> order_payment_preference.order_payment_preference_id
+# checkConstraints---
+title: "ReturnItemResponse"
+required:
+  - "billingAccountId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "finAccountTransId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderPaymentPreferenceId"
+  - "paymentId"
+  - "replacementOrderId"
+  - "responseAmount"
+  - "responseDate"
+  - "returnItemResponseId"
+type: "object"
+properties:
+  returnItemResponseId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "return_item_response_id"
+    exampleSetFlag: false
+  orderPaymentPreferenceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_payment_preference_id"
+    exampleSetFlag: false
+  replacementOrderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "replacement_order_id"
+    exampleSetFlag: false
+  paymentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_id"
+    exampleSetFlag: false
+  billingAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "billing_account_id"
+    exampleSetFlag: false
+  finAccountTransId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fin_account_trans_id"
+    exampleSetFlag: false
+  responseAmount:
+    type: "number"
+    description: "response_amount"
+    exampleSetFlag: false
+  responseDate:
+    type: "string"
+    description: "response_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

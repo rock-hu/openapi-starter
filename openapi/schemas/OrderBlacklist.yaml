@@ -1,0 +1,50 @@
+# order_blacklist null public null 0 0
+# primaryColumns
+#   blacklist_string
+#   order_blacklist_type_id
+# foreignKeys
+#   order_blacklist.order_blacklist_type_id ==> order_blacklist_type.order_blacklist_type_id
+# checkConstraints---
+title: "OrderBlacklist"
+required:
+  - "blacklistString"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderBlacklistTypeId"
+type: "object"
+properties:
+  blacklistString:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "blacklist_string"
+    exampleSetFlag: false
+  orderBlacklistTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_blacklist_type_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

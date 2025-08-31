@@ -1,0 +1,88 @@
+# picklist_role null public null 0 0
+# primaryColumns
+#   picklist_id
+#   party_id
+#   role_type_id
+#   from_date
+# foreignKeys
+#   picklist_role.party_id,role_type_id ==> party_role.party_id,role_type_id
+#   picklist_role.created_by_user_login ==> user_login.user_login_id
+#   picklist_role.picklist_id ==> picklist.picklist_id
+#   picklist_role.last_modified_by_user_login ==> user_login.user_login_id
+# checkConstraints---
+title: "PicklistRole"
+required:
+  - "createdByUserLogin"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastModifiedByUserLogin"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "picklistId"
+  - "roleTypeId"
+  - "thruDate"
+type: "object"
+properties:
+  picklistId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "picklist_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

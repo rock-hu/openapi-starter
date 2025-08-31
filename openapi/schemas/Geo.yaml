@@ -1,0 +1,84 @@
+# geo null public null 0 0
+# primaryColumns
+#   geo_id
+# foreignKeys
+#   geo.geo_type_id ==> geo_type.geo_type_id
+# checkConstraints---
+title: "Geo"
+required:
+  - "abbreviation"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "geoCode"
+  - "geoId"
+  - "geoName"
+  - "geoSecCode"
+  - "geoTypeId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "wellKnownText"
+type: "object"
+properties:
+  geoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_id"
+    exampleSetFlag: false
+  geoTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_type_id"
+    exampleSetFlag: false
+  geoName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "geo_name"
+    exampleSetFlag: false
+  geoCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "geo_code"
+    exampleSetFlag: false
+  geoSecCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "geo_sec_code"
+    exampleSetFlag: false
+  abbreviation:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "abbreviation"
+    exampleSetFlag: false
+  wellKnownText:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "well_known_text"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

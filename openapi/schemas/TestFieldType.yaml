@@ -1,0 +1,102 @@
+# test_field_type null public null 0 0
+# primaryColumns
+#   test_field_type_id
+# foreignKeys
+# checkConstraints---
+title: "TestFieldType"
+required:
+  - "blobField"
+  - "byteArrayField"
+  - "clobField"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "dateField"
+  - "dateTimeField"
+  - "fixedPointField"
+  - "floatingPointField"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "numericField"
+  - "objectField"
+  - "testFieldTypeId"
+  - "timeField"
+type: "object"
+properties:
+  testFieldTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "test_field_type_id"
+    exampleSetFlag: false
+  blobField:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "blob_field"
+    exampleSetFlag: false
+  byteArrayField:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "byte_array_field"
+    exampleSetFlag: false
+  objectField:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "object_field"
+    exampleSetFlag: false
+  dateField:
+    type: "string"
+    description: "date_field"
+    format: "date"
+    exampleSetFlag: false
+  timeField:
+    type: "string"
+    description: "time_field"
+    format: "date-time"
+    exampleSetFlag: false
+  dateTimeField:
+    type: "string"
+    description: "date_time_field"
+    format: "date-time"
+    exampleSetFlag: false
+  fixedPointField:
+    type: "number"
+    description: "fixed_point_field"
+    exampleSetFlag: false
+  floatingPointField:
+    type: "number"
+    description: "floating_point_field"
+    exampleSetFlag: false
+  numericField:
+    type: "number"
+    description: "numeric_field"
+    exampleSetFlag: false
+  clobField:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "clob_field"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

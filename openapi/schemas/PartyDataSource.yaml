@@ -1,0 +1,79 @@
+# party_data_source null public null 0 0
+# primaryColumns
+#   party_id
+#   data_source_id
+#   from_date
+# foreignKeys
+#   party_data_source.data_source_id ==> data_source.data_source_id
+#   party_data_source.party_id ==> party.party_id
+# checkConstraints---
+title: "PartyDataSource"
+required:
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "dataSourceId"
+  - "fromDate"
+  - "isCreate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "visitId"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  dataSourceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "data_source_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  visitId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "visit_id"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  isCreate:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_create"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,61 @@
+# budget_scenario_rule null public null 0 0
+# primaryColumns
+#   budget_scenario_id
+#   budget_item_type_id
+# foreignKeys
+#   budget_scenario_rule.budget_item_type_id ==> budget_item_type.budget_item_type_id
+#   budget_scenario_rule.budget_scenario_id ==> budget_scenario.budget_scenario_id
+# checkConstraints---
+title: "BudgetScenarioRule"
+required:
+  - "amountChange"
+  - "budgetItemTypeId"
+  - "budgetScenarioId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "percentageChange"
+type: "object"
+properties:
+  budgetScenarioId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_scenario_id"
+    exampleSetFlag: false
+  budgetItemTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_item_type_id"
+    exampleSetFlag: false
+  amountChange:
+    type: "number"
+    description: "amount_change"
+    exampleSetFlag: false
+  percentageChange:
+    type: "number"
+    description: "percentage_change"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,59 @@
+# work_requirement_fulfillment null public null 0 0
+# primaryColumns
+#   requirement_id
+#   work_effort_id
+# foreignKeys
+#   work_requirement_fulfillment.work_req_fulf_type_id ==> work_req_fulf_type.work_req_fulf_type_id
+#   work_requirement_fulfillment.work_effort_id ==> work_effort.work_effort_id
+#   work_requirement_fulfillment.requirement_id ==> requirement.requirement_id
+# checkConstraints---
+title: "WorkRequirementFulfillment"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "requirementId"
+  - "workEffortId"
+  - "workReqFulfTypeId"
+type: "object"
+properties:
+  requirementId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "requirement_id"
+    exampleSetFlag: false
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  workReqFulfTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_req_fulf_type_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

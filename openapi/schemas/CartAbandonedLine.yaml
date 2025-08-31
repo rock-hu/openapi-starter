@@ -1,0 +1,120 @@
+# cart_abandoned_line null public null 0 0
+# primaryColumns
+#   visit_id
+#   cart_abandoned_line_seq_id
+# foreignKeys
+#   cart_abandoned_line.product_id ==> product.product_id
+#   cart_abandoned_line.prod_catalog_id ==> prod_catalog.prod_catalog_id
+# checkConstraints---
+title: "CartAbandonedLine"
+required:
+  - "cartAbandonedLineSeqId"
+  - "configId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "prodCatalogId"
+  - "productId"
+  - "quantity"
+  - "reserv2ndPPPerc"
+  - "reservLength"
+  - "reservNthPPPerc"
+  - "reservPersons"
+  - "reservStart"
+  - "totalWithAdjustments"
+  - "unitPrice"
+  - "visitId"
+  - "wasReserved"
+type: "object"
+properties:
+  visitId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "visit_id"
+    exampleSetFlag: false
+  cartAbandonedLineSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cart_abandoned_line_seq_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  prodCatalogId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "prod_catalog_id"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  reservStart:
+    type: "string"
+    description: "reserv_start"
+    format: "date-time"
+    exampleSetFlag: false
+  reservLength:
+    type: "number"
+    description: "reserv_length"
+    exampleSetFlag: false
+  reservPersons:
+    type: "number"
+    description: "reserv_persons"
+    exampleSetFlag: false
+  unitPrice:
+    type: "number"
+    description: "unit_price"
+    exampleSetFlag: false
+  reserv2ndPPPerc:
+    type: "number"
+    description: "reserv2nd_p_p_perc"
+    exampleSetFlag: false
+  reservNthPPPerc:
+    type: "number"
+    description: "reserv_nth_p_p_perc"
+    exampleSetFlag: false
+  configId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "config_id"
+    exampleSetFlag: false
+  totalWithAdjustments:
+    type: "number"
+    description: "total_with_adjustments"
+    exampleSetFlag: false
+  wasReserved:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "was_reserved"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

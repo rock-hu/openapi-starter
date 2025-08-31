@@ -1,0 +1,203 @@
+# order_payment_preference null public null 0 0
+# primaryColumns
+#   order_payment_preference_id
+# foreignKeys
+#   order_payment_preference.order_id ==> order_header.order_id
+#   order_payment_preference.product_price_purpose_id ==> product_price_purpose.product_price_purpose_id
+#   order_payment_preference.fin_account_id ==> fin_account.fin_account_id
+#   order_payment_preference.payment_method_id ==> payment_method.payment_method_id
+#   order_payment_preference.payment_method_type_id ==> payment_method_type.payment_method_type_id
+#   order_payment_preference.created_by_user_login ==> user_login.user_login_id
+#   order_payment_preference.status_id ==> status_item.status_id
+# checkConstraints---
+title: "OrderPaymentPreference"
+required:
+  - "billingPostalCode"
+  - "createdByUserLogin"
+  - "createdDate"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "finAccountId"
+  - "lastModifiedByUserLogin"
+  - "lastModifiedDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "manualAuthCode"
+  - "manualRefNum"
+  - "maxAmount"
+  - "needsNsfRetry"
+  - "orderId"
+  - "orderItemSeqId"
+  - "orderPaymentPreferenceId"
+  - "overflowFlag"
+  - "paymentMethodId"
+  - "paymentMethodTypeId"
+  - "presentFlag"
+  - "processAttempt"
+  - "productPricePurposeId"
+  - "securityCode"
+  - "shipGroupSeqId"
+  - "statusId"
+  - "swipedFlag"
+  - "track2"
+type: "object"
+properties:
+  orderPaymentPreferenceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_payment_preference_id"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  shipGroupSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "ship_group_seq_id"
+    exampleSetFlag: false
+  productPricePurposeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_price_purpose_id"
+    exampleSetFlag: false
+  paymentMethodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_type_id"
+    exampleSetFlag: false
+  paymentMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_id"
+    exampleSetFlag: false
+  finAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fin_account_id"
+    exampleSetFlag: false
+  securityCode:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "security_code"
+    exampleSetFlag: false
+  track2:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "track2"
+    exampleSetFlag: false
+  presentFlag:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "present_flag"
+    exampleSetFlag: false
+  swipedFlag:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "swiped_flag"
+    exampleSetFlag: false
+  overflowFlag:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "overflow_flag"
+    exampleSetFlag: false
+  maxAmount:
+    type: "number"
+    description: "max_amount"
+    exampleSetFlag: false
+  processAttempt:
+    type: "number"
+    description: "process_attempt"
+    exampleSetFlag: false
+  billingPostalCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "billing_postal_code"
+    exampleSetFlag: false
+  manualAuthCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "manual_auth_code"
+    exampleSetFlag: false
+  manualRefNum:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "manual_ref_num"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  needsNsfRetry:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "needs_nsf_retry"
+    exampleSetFlag: false
+  createdDate:
+    type: "string"
+    description: "created_date"
+    format: "date-time"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedDate:
+    type: "string"
+    description: "last_modified_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

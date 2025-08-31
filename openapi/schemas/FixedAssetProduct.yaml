@@ -1,0 +1,98 @@
+# fixed_asset_product null public null 0 0
+# primaryColumns
+#   fixed_asset_id
+#   product_id
+#   fixed_asset_product_type_id
+#   from_date
+# foreignKeys
+#   fixed_asset_product.fixed_asset_product_type_id ==> fixed_asset_product_type.fixed_asset_product_type_id
+#   fixed_asset_product.quantity_uom_id ==> uom.uom_id
+#   fixed_asset_product.product_id ==> product.product_id
+#   fixed_asset_product.fixed_asset_id ==> fixed_asset.fixed_asset_id
+# checkConstraints---
+title: "FixedAssetProduct"
+required:
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fixedAssetId"
+  - "fixedAssetProductTypeId"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productId"
+  - "quantity"
+  - "quantityUomId"
+  - "sequenceNum"
+  - "thruDate"
+type: "object"
+properties:
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  fixedAssetProductTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_product_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  quantityUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "quantity_uom_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,57 @@
+# product_calculated_info null public null 0 0
+# primaryColumns
+#   product_id
+# foreignKeys
+#   product_calculated_info.product_id ==> product.product_id
+# checkConstraints---
+title: "ProductCalculatedInfo"
+required:
+  - "averageCustomerRating"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productId"
+  - "totalQuantityOrdered"
+  - "totalTimesViewed"
+type: "object"
+properties:
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  totalQuantityOrdered:
+    type: "number"
+    description: "total_quantity_ordered"
+    exampleSetFlag: false
+  totalTimesViewed:
+    type: "number"
+    description: "total_times_viewed"
+    exampleSetFlag: false
+  averageCustomerRating:
+    type: "number"
+    description: "average_customer_rating"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

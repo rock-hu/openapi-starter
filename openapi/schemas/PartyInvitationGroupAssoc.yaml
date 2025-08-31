@@ -1,0 +1,52 @@
+# party_invitation_group_assoc null public null 0 0
+# primaryColumns
+#   party_invitation_id
+#   party_id_to
+# foreignKeys
+#   party_invitation_group_assoc.party_id_to ==> party_group.party_id
+#   party_invitation_group_assoc.party_invitation_id ==> party_invitation.party_invitation_id
+#   party_invitation_group_assoc.party_id_to ==> party.party_id
+# checkConstraints---
+title: "PartyInvitationGroupAssoc"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyIdTo"
+  - "partyInvitationId"
+type: "object"
+properties:
+  partyInvitationId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_invitation_id"
+    exampleSetFlag: false
+  partyIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_to"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,51 @@
+# party_invitation_role_assoc null public null 0 0
+# primaryColumns
+#   party_invitation_id
+#   role_type_id
+# foreignKeys
+#   party_invitation_role_assoc.role_type_id ==> role_type.role_type_id
+#   party_invitation_role_assoc.party_invitation_id ==> party_invitation.party_invitation_id
+# checkConstraints---
+title: "PartyInvitationRoleAssoc"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyInvitationId"
+  - "roleTypeId"
+type: "object"
+properties:
+  partyInvitationId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_invitation_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

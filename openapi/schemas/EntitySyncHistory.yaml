@@ -1,0 +1,174 @@
+# entity_sync_history null public null 0 0
+# primaryColumns
+#   entity_sync_id
+#   start_date
+# foreignKeys
+#   entity_sync_history.entity_sync_id ==> entity_sync.entity_sync_id
+# checkConstraints---
+title: "EntitySyncHistory"
+required:
+  - "beginningSynchTime"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "entitySyncId"
+  - "lastCandidateEndTime"
+  - "lastSplitStartTime"
+  - "lastSuccessfulSynchTime"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "perSplitMaxItems"
+  - "perSplitMaxMillis"
+  - "perSplitMinItems"
+  - "perSplitMinMillis"
+  - "runStatusId"
+  - "runningTimeMillis"
+  - "startDate"
+  - "toCreateInserted"
+  - "toCreateNotUpdated"
+  - "toCreateUpdated"
+  - "toRemoveAlreadyDeleted"
+  - "toRemoveDeleted"
+  - "toStoreInserted"
+  - "toStoreNotUpdated"
+  - "toStoreUpdated"
+  - "totalRowsExported"
+  - "totalRowsToCreate"
+  - "totalRowsToRemove"
+  - "totalRowsToStore"
+  - "totalSplits"
+  - "totalStoreCalls"
+type: "object"
+properties:
+  entitySyncId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "entity_sync_id"
+    exampleSetFlag: false
+  startDate:
+    type: "string"
+    description: "start_date"
+    format: "date-time"
+    exampleSetFlag: false
+  runStatusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "run_status_id"
+    exampleSetFlag: false
+  beginningSynchTime:
+    type: "string"
+    description: "beginning_synch_time"
+    format: "date-time"
+    exampleSetFlag: false
+  lastSuccessfulSynchTime:
+    type: "string"
+    description: "last_successful_synch_time"
+    format: "date-time"
+    exampleSetFlag: false
+  lastCandidateEndTime:
+    type: "string"
+    description: "last_candidate_end_time"
+    format: "date-time"
+    exampleSetFlag: false
+  lastSplitStartTime:
+    type: "number"
+    description: "last_split_start_time"
+    exampleSetFlag: false
+  toCreateInserted:
+    type: "number"
+    description: "to_create_inserted"
+    exampleSetFlag: false
+  toCreateUpdated:
+    type: "number"
+    description: "to_create_updated"
+    exampleSetFlag: false
+  toCreateNotUpdated:
+    type: "number"
+    description: "to_create_not_updated"
+    exampleSetFlag: false
+  toStoreInserted:
+    type: "number"
+    description: "to_store_inserted"
+    exampleSetFlag: false
+  toStoreUpdated:
+    type: "number"
+    description: "to_store_updated"
+    exampleSetFlag: false
+  toStoreNotUpdated:
+    type: "number"
+    description: "to_store_not_updated"
+    exampleSetFlag: false
+  toRemoveDeleted:
+    type: "number"
+    description: "to_remove_deleted"
+    exampleSetFlag: false
+  toRemoveAlreadyDeleted:
+    type: "number"
+    description: "to_remove_already_deleted"
+    exampleSetFlag: false
+  totalRowsExported:
+    type: "number"
+    description: "total_rows_exported"
+    exampleSetFlag: false
+  totalRowsToCreate:
+    type: "number"
+    description: "total_rows_to_create"
+    exampleSetFlag: false
+  totalRowsToStore:
+    type: "number"
+    description: "total_rows_to_store"
+    exampleSetFlag: false
+  totalRowsToRemove:
+    type: "number"
+    description: "total_rows_to_remove"
+    exampleSetFlag: false
+  totalSplits:
+    type: "number"
+    description: "total_splits"
+    exampleSetFlag: false
+  totalStoreCalls:
+    type: "number"
+    description: "total_store_calls"
+    exampleSetFlag: false
+  runningTimeMillis:
+    type: "number"
+    description: "running_time_millis"
+    exampleSetFlag: false
+  perSplitMinMillis:
+    type: "number"
+    description: "per_split_min_millis"
+    exampleSetFlag: false
+  perSplitMaxMillis:
+    type: "number"
+    description: "per_split_max_millis"
+    exampleSetFlag: false
+  perSplitMinItems:
+    type: "number"
+    description: "per_split_min_items"
+    exampleSetFlag: false
+  perSplitMaxItems:
+    type: "number"
+    description: "per_split_max_items"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

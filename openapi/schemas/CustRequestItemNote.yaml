@@ -1,0 +1,59 @@
+# cust_request_item_note null public null 0 0
+# primaryColumns
+#   cust_request_id
+#   cust_request_item_seq_id
+#   note_id
+# foreignKeys
+#   cust_request_item_note.cust_request_id,cust_request_item_seq_id ==> cust_request_item.cust_request_id,cust_request_item_seq_id
+#   cust_request_item_note.note_id ==> note_data.note_id
+# checkConstraints---
+title: "CustRequestItemNote"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "custRequestId"
+  - "custRequestItemSeqId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "noteId"
+type: "object"
+properties:
+  custRequestId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_id"
+    exampleSetFlag: false
+  custRequestItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_item_seq_id"
+    exampleSetFlag: false
+  noteId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "note_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

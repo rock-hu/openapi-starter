@@ -1,0 +1,51 @@
+# communication_event_product null public null 0 0
+# primaryColumns
+#   product_id
+#   communication_event_id
+# foreignKeys
+#   communication_event_product.product_id ==> product.product_id
+#   communication_event_product.communication_event_id ==> communication_event.communication_event_id
+# checkConstraints---
+title: "CommunicationEventProduct"
+required:
+  - "communicationEventId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productId"
+type: "object"
+properties:
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  communicationEventId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "communication_event_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

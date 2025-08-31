@@ -1,0 +1,284 @@
+# shipment_route_segment null public null 0 0
+# primaryColumns
+#   shipment_id
+#   shipment_route_segment_id
+# foreignKeys
+#   shipment_route_segment.billing_weight_uom_id ==> uom.uom_id
+#   shipment_route_segment.dest_facility_id ==> facility.facility_id
+#   shipment_route_segment.shipment_id ==> shipment.shipment_id
+#   shipment_route_segment.dest_telecom_number_id ==> telecom_number.contact_mech_id
+#   shipment_route_segment.origin_telecom_number_id ==> telecom_number.contact_mech_id
+#   shipment_route_segment.shipment_method_type_id ==> shipment_method_type.shipment_method_type_id
+#   shipment_route_segment.origin_facility_id ==> facility.facility_id
+#   shipment_route_segment.delivery_id ==> delivery.delivery_id
+#   shipment_route_segment.carrier_party_id ==> party.party_id
+#   shipment_route_segment.dest_contact_mech_id ==> postal_address.contact_mech_id
+#   shipment_route_segment.currency_uom_id ==> uom.uom_id
+#   shipment_route_segment.carrier_service_status_id ==> status_item.status_id
+#   shipment_route_segment.origin_contact_mech_id ==> postal_address.contact_mech_id
+# checkConstraints---
+title: "ShipmentRouteSegment"
+required:
+  - "actualArrivalDate"
+  - "actualCost"
+  - "actualOtherCost"
+  - "actualServiceCost"
+  - "actualStartDate"
+  - "actualTransportCost"
+  - "billingWeight"
+  - "billingWeightUomId"
+  - "carrierDeliveryZone"
+  - "carrierPartyId"
+  - "carrierRestrictionCodes"
+  - "carrierRestrictionDesc"
+  - "carrierServiceStatusId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUomId"
+  - "deliveryId"
+  - "destContactMechId"
+  - "destFacilityId"
+  - "destTelecomNumberId"
+  - "estimatedArrivalDate"
+  - "estimatedStartDate"
+  - "homeDeliveryDate"
+  - "homeDeliveryType"
+  - "lastUpdatedDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "originContactMechId"
+  - "originFacilityId"
+  - "originTelecomNumberId"
+  - "shipmentId"
+  - "shipmentMethodTypeId"
+  - "shipmentRouteSegmentId"
+  - "thirdPartyAccountNumber"
+  - "thirdPartyCountryGeoCode"
+  - "thirdPartyPostalCode"
+  - "trackingDigest"
+  - "trackingIdNumber"
+  - "updatedByUserLoginId"
+  - "upsHighValueReport"
+type: "object"
+properties:
+  shipmentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_id"
+    exampleSetFlag: false
+  shipmentRouteSegmentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_route_segment_id"
+    exampleSetFlag: false
+  deliveryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "delivery_id"
+    exampleSetFlag: false
+  originFacilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "origin_facility_id"
+    exampleSetFlag: false
+  destFacilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "dest_facility_id"
+    exampleSetFlag: false
+  originContactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "origin_contact_mech_id"
+    exampleSetFlag: false
+  originTelecomNumberId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "origin_telecom_number_id"
+    exampleSetFlag: false
+  destContactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "dest_contact_mech_id"
+    exampleSetFlag: false
+  destTelecomNumberId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "dest_telecom_number_id"
+    exampleSetFlag: false
+  carrierPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "carrier_party_id"
+    exampleSetFlag: false
+  shipmentMethodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_method_type_id"
+    exampleSetFlag: false
+  carrierServiceStatusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "carrier_service_status_id"
+    exampleSetFlag: false
+  carrierDeliveryZone:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "carrier_delivery_zone"
+    exampleSetFlag: false
+  carrierRestrictionCodes:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "carrier_restriction_codes"
+    exampleSetFlag: false
+  carrierRestrictionDesc:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "carrier_restriction_desc"
+    exampleSetFlag: false
+  billingWeight:
+    type: "number"
+    description: "billing_weight"
+    exampleSetFlag: false
+  billingWeightUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "billing_weight_uom_id"
+    exampleSetFlag: false
+  actualTransportCost:
+    type: "number"
+    description: "actual_transport_cost"
+    exampleSetFlag: false
+  actualServiceCost:
+    type: "number"
+    description: "actual_service_cost"
+    exampleSetFlag: false
+  actualOtherCost:
+    type: "number"
+    description: "actual_other_cost"
+    exampleSetFlag: false
+  actualCost:
+    type: "number"
+    description: "actual_cost"
+    exampleSetFlag: false
+  currencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom_id"
+    exampleSetFlag: false
+  actualStartDate:
+    type: "string"
+    description: "actual_start_date"
+    format: "date-time"
+    exampleSetFlag: false
+  actualArrivalDate:
+    type: "string"
+    description: "actual_arrival_date"
+    format: "date-time"
+    exampleSetFlag: false
+  estimatedStartDate:
+    type: "string"
+    description: "estimated_start_date"
+    format: "date-time"
+    exampleSetFlag: false
+  estimatedArrivalDate:
+    type: "string"
+    description: "estimated_arrival_date"
+    format: "date-time"
+    exampleSetFlag: false
+  trackingIdNumber:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "tracking_id_number"
+    exampleSetFlag: false
+  trackingDigest:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "tracking_digest"
+    exampleSetFlag: false
+  updatedByUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "updated_by_user_login_id"
+    exampleSetFlag: false
+  lastUpdatedDate:
+    type: "string"
+    description: "last_updated_date"
+    format: "date-time"
+    exampleSetFlag: false
+  homeDeliveryType:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "home_delivery_type"
+    exampleSetFlag: false
+  homeDeliveryDate:
+    type: "string"
+    description: "home_delivery_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thirdPartyAccountNumber:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "third_party_account_number"
+    exampleSetFlag: false
+  thirdPartyPostalCode:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "third_party_postal_code"
+    exampleSetFlag: false
+  thirdPartyCountryGeoCode:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "third_party_country_geo_code"
+    exampleSetFlag: false
+  upsHighValueReport:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "ups_high_value_report"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

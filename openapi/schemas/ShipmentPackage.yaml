@@ -1,0 +1,105 @@
+# shipment_package null public null 0 0
+# primaryColumns
+#   shipment_id
+#   shipment_package_seq_id
+# foreignKeys
+#   shipment_package.dimension_uom_id ==> uom.uom_id
+#   shipment_package.shipment_box_type_id ==> shipment_box_type.shipment_box_type_id
+#   shipment_package.shipment_id ==> shipment.shipment_id
+#   shipment_package.weight_uom_id ==> uom.uom_id
+# checkConstraints---
+title: "ShipmentPackage"
+required:
+  - "boxHeight"
+  - "boxLength"
+  - "boxWidth"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "dateCreated"
+  - "dimensionUomId"
+  - "insuredValue"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "shipmentBoxTypeId"
+  - "shipmentId"
+  - "shipmentPackageSeqId"
+  - "weight"
+  - "weightUomId"
+type: "object"
+properties:
+  shipmentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_id"
+    exampleSetFlag: false
+  shipmentPackageSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_package_seq_id"
+    exampleSetFlag: false
+  shipmentBoxTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_box_type_id"
+    exampleSetFlag: false
+  dateCreated:
+    type: "string"
+    description: "date_created"
+    format: "date-time"
+    exampleSetFlag: false
+  boxLength:
+    type: "number"
+    description: "box_length"
+    exampleSetFlag: false
+  boxHeight:
+    type: "number"
+    description: "box_height"
+    exampleSetFlag: false
+  boxWidth:
+    type: "number"
+    description: "box_width"
+    exampleSetFlag: false
+  dimensionUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "dimension_uom_id"
+    exampleSetFlag: false
+  weight:
+    type: "number"
+    description: "weight"
+    exampleSetFlag: false
+  weightUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "weight_uom_id"
+    exampleSetFlag: false
+  insuredValue:
+    type: "number"
+    description: "insured_value"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

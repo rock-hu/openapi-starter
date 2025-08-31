@@ -1,0 +1,97 @@
+# product_store_payment_setting null public null 0 0
+# primaryColumns
+#   product_store_id
+#   payment_method_type_id
+#   payment_service_type_enum_id
+# foreignKeys
+#   product_store_payment_setting.payment_gateway_config_id ==> payment_gateway_config.payment_gateway_config_id
+#   product_store_payment_setting.product_store_id ==> product_store.product_store_id
+#   product_store_payment_setting.payment_service_type_enum_id ==> enumeration.enum_id
+#   product_store_payment_setting.payment_method_type_id ==> payment_method_type.payment_method_type_id
+#   product_store_payment_setting.payment_custom_method_id ==> custom_method.custom_method_id
+# checkConstraints---
+title: "ProductStorePaymentSetting"
+required:
+  - "applyToAllProducts"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "paymentCustomMethodId"
+  - "paymentGatewayConfigId"
+  - "paymentMethodTypeId"
+  - "paymentPropertiesPath"
+  - "paymentService"
+  - "paymentServiceTypeEnumId"
+  - "productStoreId"
+type: "object"
+properties:
+  productStoreId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_id"
+    exampleSetFlag: false
+  paymentMethodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_type_id"
+    exampleSetFlag: false
+  paymentServiceTypeEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_service_type_enum_id"
+    exampleSetFlag: false
+  paymentService:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "payment_service"
+    exampleSetFlag: false
+  paymentCustomMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_custom_method_id"
+    exampleSetFlag: false
+  paymentGatewayConfigId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_gateway_config_id"
+    exampleSetFlag: false
+  paymentPropertiesPath:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "payment_properties_path"
+    exampleSetFlag: false
+  applyToAllProducts:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "apply_to_all_products"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

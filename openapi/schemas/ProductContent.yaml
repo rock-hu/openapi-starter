@@ -1,0 +1,116 @@
+# product_content null public null 0 0
+# primaryColumns
+#   product_id
+#   content_id
+#   product_content_type_id
+#   from_date
+# foreignKeys
+#   product_content.content_id ==> content.content_id
+#   product_content.product_content_type_id ==> product_content_type.product_content_type_id
+#   product_content.product_id ==> product.product_id
+#   product_content.use_role_type_id ==> role_type.role_type_id
+#   product_content.use_time_uom_id ==> uom.uom_id
+# checkConstraints---
+title: "ProductContent"
+required:
+  - "contentId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productContentTypeId"
+  - "productId"
+  - "purchaseFromDate"
+  - "purchaseThruDate"
+  - "sequenceNum"
+  - "thruDate"
+  - "useCountLimit"
+  - "useRoleTypeId"
+  - "useTime"
+  - "useTimeUomId"
+type: "object"
+properties:
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  contentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_id"
+    exampleSetFlag: false
+  productContentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_content_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  purchaseFromDate:
+    type: "string"
+    description: "purchase_from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  purchaseThruDate:
+    type: "string"
+    description: "purchase_thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  useCountLimit:
+    type: "number"
+    description: "use_count_limit"
+    exampleSetFlag: false
+  useTime:
+    type: "number"
+    description: "use_time"
+    exampleSetFlag: false
+  useTimeUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "use_time_uom_id"
+    exampleSetFlag: false
+  useRoleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "use_role_type_id"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

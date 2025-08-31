@@ -1,0 +1,91 @@
+# survey_question_option null public null 0 0
+# primaryColumns
+#   survey_question_id
+#   survey_option_seq_id
+# foreignKeys
+#   survey_question_option.survey_question_id ==> survey_question.survey_question_id
+# checkConstraints---
+title: "SurveyQuestionOption"
+required:
+  - "amountBase"
+  - "amountBaseUomId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "duration"
+  - "durationUomId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "sequenceNum"
+  - "surveyOptionSeqId"
+  - "surveyQuestionId"
+  - "weightFactor"
+type: "object"
+properties:
+  surveyQuestionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_question_id"
+    exampleSetFlag: false
+  surveyOptionSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_option_seq_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  amountBase:
+    type: "number"
+    description: "amount_base"
+    exampleSetFlag: false
+  amountBaseUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "amount_base_uom_id"
+    exampleSetFlag: false
+  weightFactor:
+    type: "number"
+    description: "weight_factor"
+    exampleSetFlag: false
+  duration:
+    type: "number"
+    description: "duration"
+    exampleSetFlag: false
+  durationUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "duration_uom_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

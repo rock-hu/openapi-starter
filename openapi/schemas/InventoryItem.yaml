@@ -1,0 +1,215 @@
+# inventory_item null public null 0 0
+# primaryColumns
+#   inventory_item_id
+# foreignKeys
+#   inventory_item.facility_id ==> facility.facility_id
+#   inventory_item.product_id ==> product.product_id
+#   inventory_item.lot_id ==> lot.lot_id
+#   inventory_item.fixed_asset_id ==> fixed_asset.fixed_asset_id
+#   inventory_item.uom_id ==> uom.uom_id
+#   inventory_item.inventory_item_type_id ==> inventory_item_type.inventory_item_type_id
+#   inventory_item.owner_party_id ==> party.party_id
+#   inventory_item.party_id ==> party.party_id
+#   inventory_item.currency_uom_id ==> uom.uom_id
+#   inventory_item.container_id ==> container.container_id
+#   inventory_item.status_id ==> status_item.status_id
+# checkConstraints---
+title: "InventoryItem"
+required:
+  - "accountingQuantityTotal"
+  - "activationNumber"
+  - "activationValidThru"
+  - "availableToPromiseTotal"
+  - "binNumber"
+  - "comments"
+  - "containerId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUomId"
+  - "datetimeManufactured"
+  - "datetimeReceived"
+  - "expireDate"
+  - "facilityId"
+  - "fixedAssetId"
+  - "inventoryItemId"
+  - "inventoryItemTypeId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "locationSeqId"
+  - "lotId"
+  - "ownerPartyId"
+  - "partyId"
+  - "productId"
+  - "quantityOnHandTotal"
+  - "serialNumber"
+  - "softIdentifier"
+  - "statusId"
+  - "unitCost"
+  - "uomId"
+type: "object"
+properties:
+  inventoryItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_id"
+    exampleSetFlag: false
+  inventoryItemTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_type_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  ownerPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "owner_party_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  datetimeReceived:
+    type: "string"
+    description: "datetime_received"
+    format: "date-time"
+    exampleSetFlag: false
+  datetimeManufactured:
+    type: "string"
+    description: "datetime_manufactured"
+    format: "date-time"
+    exampleSetFlag: false
+  expireDate:
+    type: "string"
+    description: "expire_date"
+    format: "date-time"
+    exampleSetFlag: false
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  containerId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "container_id"
+    exampleSetFlag: false
+  lotId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "lot_id"
+    exampleSetFlag: false
+  uomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "uom_id"
+    exampleSetFlag: false
+  binNumber:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "bin_number"
+    exampleSetFlag: false
+  locationSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "location_seq_id"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  quantityOnHandTotal:
+    type: "number"
+    description: "quantity_on_hand_total"
+    exampleSetFlag: false
+  availableToPromiseTotal:
+    type: "number"
+    description: "available_to_promise_total"
+    exampleSetFlag: false
+  accountingQuantityTotal:
+    type: "number"
+    description: "accounting_quantity_total"
+    exampleSetFlag: false
+  serialNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "serial_number"
+    exampleSetFlag: false
+  softIdentifier:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "soft_identifier"
+    exampleSetFlag: false
+  activationNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "activation_number"
+    exampleSetFlag: false
+  activationValidThru:
+    type: "string"
+    description: "activation_valid_thru"
+    format: "date-time"
+    exampleSetFlag: false
+  unitCost:
+    type: "number"
+    description: "unit_cost"
+    exampleSetFlag: false
+  currencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom_id"
+    exampleSetFlag: false
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

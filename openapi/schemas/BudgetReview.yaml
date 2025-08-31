@@ -1,0 +1,74 @@
+# budget_review null public null 0 0
+# primaryColumns
+#   budget_id
+#   budget_review_id
+#   party_id
+#   budget_review_result_type_id
+# foreignKeys
+#   budget_review.party_id ==> party.party_id
+#   budget_review.budget_id ==> budget.budget_id
+#   budget_review.budget_review_result_type_id ==> budget_review_result_type.budget_review_result_type_id
+# checkConstraints---
+title: "BudgetReview"
+required:
+  - "budgetId"
+  - "budgetReviewId"
+  - "budgetReviewResultTypeId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "reviewDate"
+type: "object"
+properties:
+  budgetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_id"
+    exampleSetFlag: false
+  budgetReviewId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_review_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  budgetReviewResultTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_review_result_type_id"
+    exampleSetFlag: false
+  reviewDate:
+    type: "string"
+    description: "review_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,73 @@
+# work_effort_status null public null 0 0
+# primaryColumns
+#   work_effort_id
+#   status_id
+#   status_datetime
+# foreignKeys
+#   work_effort_status.set_by_user_login ==> user_login.user_login_id
+#   work_effort_status.status_id ==> status_item.status_id
+#   work_effort_status.work_effort_id ==> work_effort.work_effort_id
+# checkConstraints---
+title: "WorkEffortStatus"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "reason"
+  - "setByUserLogin"
+  - "statusDatetime"
+  - "statusId"
+  - "workEffortId"
+type: "object"
+properties:
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  statusDatetime:
+    type: "string"
+    description: "status_datetime"
+    format: "date-time"
+    exampleSetFlag: false
+  setByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "set_by_user_login"
+    exampleSetFlag: false
+  reason:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "reason"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

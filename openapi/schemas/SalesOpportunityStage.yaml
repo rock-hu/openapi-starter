@@ -1,0 +1,58 @@
+# sales_opportunity_stage null public null 0 0
+# primaryColumns
+#   opportunity_stage_id
+# foreignKeys
+# checkConstraints---
+title: "SalesOpportunityStage"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "defaultProbability"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "opportunityStageId"
+  - "sequenceNum"
+type: "object"
+properties:
+  opportunityStageId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "opportunity_stage_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  defaultProbability:
+    type: "number"
+    description: "default_probability"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

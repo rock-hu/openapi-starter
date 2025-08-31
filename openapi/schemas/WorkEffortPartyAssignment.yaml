@@ -1,0 +1,140 @@
+# work_effort_party_assignment null public null 0 0
+# primaryColumns
+#   work_effort_id
+#   party_id
+#   role_type_id
+#   from_date
+# foreignKeys
+#   work_effort_party_assignment.availability_status_id ==> status_item.status_id
+#   work_effort_party_assignment.status_id ==> status_item.status_id
+#   work_effort_party_assignment.expectation_enum_id ==> enumeration.enum_id
+#   work_effort_party_assignment.facility_id ==> facility.facility_id
+#   work_effort_party_assignment.work_effort_id ==> work_effort.work_effort_id
+#   work_effort_party_assignment.delegate_reason_enum_id ==> enumeration.enum_id
+#   work_effort_party_assignment.assigned_by_user_login_id ==> user_login.user_login_id
+#   work_effort_party_assignment.party_id,role_type_id ==> party_role.party_id,role_type_id
+# checkConstraints---
+title: "WorkEffortPartyAssignment"
+required:
+  - "assignedByUserLoginId"
+  - "availabilityStatusId"
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "delegateReasonEnumId"
+  - "expectationEnumId"
+  - "facilityId"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "mustRsvp"
+  - "partyId"
+  - "roleTypeId"
+  - "statusDateTime"
+  - "statusId"
+  - "thruDate"
+  - "workEffortId"
+type: "object"
+properties:
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  assignedByUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "assigned_by_user_login_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  statusDateTime:
+    type: "string"
+    description: "status_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  expectationEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "expectation_enum_id"
+    exampleSetFlag: false
+  delegateReasonEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "delegate_reason_enum_id"
+    exampleSetFlag: false
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  mustRsvp:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "must_rsvp"
+    exampleSetFlag: false
+  availabilityStatusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "availability_status_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

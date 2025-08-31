@@ -1,0 +1,48 @@
+# entity_group null public null 0 0
+# primaryColumns
+#   entity_group_id
+# foreignKeys
+# checkConstraints---
+title: "EntityGroup"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "entityGroupId"
+  - "entityGroupName"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  entityGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "entity_group_id"
+    exampleSetFlag: false
+  entityGroupName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "entity_group_name"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

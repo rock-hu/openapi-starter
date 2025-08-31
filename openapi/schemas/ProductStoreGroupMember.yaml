@@ -1,0 +1,69 @@
+# product_store_group_member null public null 0 0
+# primaryColumns
+#   product_store_id
+#   product_store_group_id
+#   from_date
+# foreignKeys
+#   product_store_group_member.product_store_id ==> product_store.product_store_id
+#   product_store_group_member.product_store_group_id ==> product_store_group.product_store_group_id
+# checkConstraints---
+title: "ProductStoreGroupMember"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productStoreGroupId"
+  - "productStoreId"
+  - "sequenceNum"
+  - "thruDate"
+type: "object"
+properties:
+  productStoreId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_id"
+    exampleSetFlag: false
+  productStoreGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_group_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

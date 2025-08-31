@@ -1,0 +1,79 @@
+# subscription_resource null public null 0 0
+# primaryColumns
+#   subscription_resource_id
+# foreignKeys
+#   subscription_resource.web_site_id ==> web_site.web_site_id
+#   subscription_resource.content_id ==> content.content_id
+#   subscription_resource.parent_resource_id ==> subscription_resource.subscription_resource_id
+# checkConstraints---
+title: "SubscriptionResource"
+required:
+  - "contentId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentResourceId"
+  - "serviceNameOnExpiry"
+  - "subscriptionResourceId"
+  - "webSiteId"
+type: "object"
+properties:
+  subscriptionResourceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "subscription_resource_id"
+    exampleSetFlag: false
+  parentResourceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_resource_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  contentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_id"
+    exampleSetFlag: false
+  webSiteId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "web_site_id"
+    exampleSetFlag: false
+  serviceNameOnExpiry:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "service_name_on_expiry"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,61 @@
+# service_semaphore null public null 0 0
+# primaryColumns
+#   service_name
+# foreignKeys
+# checkConstraints---
+title: "ServiceSemaphore"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "lockThread"
+  - "lockTime"
+  - "lockedByInstanceId"
+  - "serviceName"
+type: "object"
+properties:
+  serviceName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "service_name"
+    exampleSetFlag: false
+  lockedByInstanceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "locked_by_instance_id"
+    exampleSetFlag: false
+  lockThread:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "lock_thread"
+    exampleSetFlag: false
+  lockTime:
+    type: "string"
+    description: "lock_time"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

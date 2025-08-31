@@ -1,0 +1,104 @@
+# survey null public null 0 0
+# primaryColumns
+#   survey_id
+# foreignKeys
+# checkConstraints---
+title: "Survey"
+required:
+  - "acroFormContentId"
+  - "allowMultiple"
+  - "allowUpdate"
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "isAnonymous"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "responseService"
+  - "submitCaption"
+  - "surveyId"
+  - "surveyName"
+type: "object"
+properties:
+  surveyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_id"
+    exampleSetFlag: false
+  surveyName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "survey_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  submitCaption:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "submit_caption"
+    exampleSetFlag: false
+  responseService:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "response_service"
+    exampleSetFlag: false
+  isAnonymous:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_anonymous"
+    exampleSetFlag: false
+  allowMultiple:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "allow_multiple"
+    exampleSetFlag: false
+  allowUpdate:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "allow_update"
+    exampleSetFlag: false
+  acroFormContentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "acro_form_content_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

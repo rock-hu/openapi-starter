@@ -1,0 +1,85 @@
+# zip_sales_rule_lookup null public null 0 0
+# primaryColumns
+#   state_code
+#   city
+#   county
+#   from_date
+# foreignKeys
+# checkConstraints---
+title: "ZipSalesRuleLookup"
+required:
+  - "city"
+  - "county"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "idCode"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "shipCond"
+  - "stateCode"
+  - "taxable"
+type: "object"
+properties:
+  stateCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "state_code"
+    exampleSetFlag: false
+  city:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "city"
+    exampleSetFlag: false
+  county:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "county"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  idCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "id_code"
+    exampleSetFlag: false
+  taxable:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "taxable"
+    exampleSetFlag: false
+  shipCond:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "ship_cond"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

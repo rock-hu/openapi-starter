@@ -1,0 +1,110 @@
+# payment_gateway_world_pay null public null 0 0
+# primaryColumns
+#   payment_gateway_config_id
+# foreignKeys
+#   payment_gateway_world_pay.payment_gateway_config_id ==> payment_gateway_config.payment_gateway_config_id
+# checkConstraints---
+title: "PaymentGatewayWorldPay"
+required:
+  - "authMode"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fixContact"
+  - "hideContact"
+  - "hideCurrency"
+  - "instId"
+  - "langId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "noLanguageMenu"
+  - "paymentGatewayConfigId"
+  - "redirectUrl"
+  - "testMode"
+  - "withDelivery"
+type: "object"
+properties:
+  paymentGatewayConfigId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_gateway_config_id"
+    exampleSetFlag: false
+  redirectUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "redirect_url"
+    exampleSetFlag: false
+  instId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "inst_id"
+    exampleSetFlag: false
+  authMode:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "auth_mode"
+    exampleSetFlag: false
+  fixContact:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "fix_contact"
+    exampleSetFlag: false
+  hideContact:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "hide_contact"
+    exampleSetFlag: false
+  hideCurrency:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "hide_currency"
+    exampleSetFlag: false
+  langId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "lang_id"
+    exampleSetFlag: false
+  noLanguageMenu:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "no_language_menu"
+    exampleSetFlag: false
+  withDelivery:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "with_delivery"
+    exampleSetFlag: false
+  testMode:
+    type: "number"
+    description: "test_mode"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

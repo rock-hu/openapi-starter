@@ -1,0 +1,76 @@
+# budget_scenario_application null public null 0 0
+# primaryColumns
+#   budget_scenario_applic_id
+#   budget_scenario_id
+# foreignKeys
+#   budget_scenario_application.budget_id ==> budget.budget_id
+#   budget_scenario_application.budget_id,budget_item_seq_id ==> budget_item.budget_id,budget_item_seq_id
+#   budget_scenario_application.budget_scenario_id ==> budget_scenario.budget_scenario_id
+# checkConstraints---
+title: "BudgetScenarioApplication"
+required:
+  - "amountChange"
+  - "budgetId"
+  - "budgetItemSeqId"
+  - "budgetScenarioApplicId"
+  - "budgetScenarioId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "percentageChange"
+type: "object"
+properties:
+  budgetScenarioApplicId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_scenario_applic_id"
+    exampleSetFlag: false
+  budgetScenarioId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_scenario_id"
+    exampleSetFlag: false
+  budgetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_id"
+    exampleSetFlag: false
+  budgetItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_item_seq_id"
+    exampleSetFlag: false
+  amountChange:
+    type: "number"
+    description: "amount_change"
+    exampleSetFlag: false
+  percentageChange:
+    type: "number"
+    description: "percentage_change"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

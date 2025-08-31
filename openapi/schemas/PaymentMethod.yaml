@@ -1,0 +1,92 @@
+# payment_method null public null 0 0
+# primaryColumns
+#   payment_method_id
+# foreignKeys
+#   payment_method.party_id ==> party.party_id
+#   payment_method.gl_account_id ==> gl_account.gl_account_id
+#   payment_method.fin_account_id ==> fin_account.fin_account_id
+#   payment_method.payment_method_type_id ==> payment_method_type.payment_method_type_id
+# checkConstraints---
+title: "PaymentMethod"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "finAccountId"
+  - "fromDate"
+  - "glAccountId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "paymentMethodId"
+  - "paymentMethodTypeId"
+  - "thruDate"
+type: "object"
+properties:
+  paymentMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_id"
+    exampleSetFlag: false
+  paymentMethodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_type_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  glAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_account_id"
+    exampleSetFlag: false
+  finAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fin_account_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

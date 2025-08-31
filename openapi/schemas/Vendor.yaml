@@ -1,0 +1,70 @@
+# vendor null public null 0 0
+# primaryColumns
+#   party_id
+# foreignKeys
+#   vendor.party_id ==> party.party_id
+# checkConstraints---
+title: "Vendor"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "manifestCompanyName"
+  - "manifestCompanyTitle"
+  - "manifestLogoUrl"
+  - "manifestPolicies"
+  - "partyId"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  manifestCompanyName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "manifest_company_name"
+    exampleSetFlag: false
+  manifestCompanyTitle:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "manifest_company_title"
+    exampleSetFlag: false
+  manifestLogoUrl:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "manifest_logo_url"
+    exampleSetFlag: false
+  manifestPolicies:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "manifest_policies"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

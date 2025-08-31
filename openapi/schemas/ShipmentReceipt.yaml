@@ -1,0 +1,148 @@
+# shipment_receipt null public null 0 0
+# primaryColumns
+#   receipt_id
+# foreignKeys
+#   shipment_receipt.inventory_item_id ==> inventory_item.inventory_item_id
+#   shipment_receipt.rejection_id ==> rejection_reason.rejection_id
+#   shipment_receipt.order_id,order_item_seq_id ==> order_item.order_id,order_item_seq_id
+#   shipment_receipt.product_id ==> product.product_id
+#   shipment_receipt.return_id,return_item_seq_id ==> return_item.return_id,return_item_seq_id
+#   shipment_receipt.shipment_id,shipment_package_seq_id ==> shipment_package.shipment_id,shipment_package_seq_id
+#   shipment_receipt.received_by_user_login_id ==> user_login.user_login_id
+# checkConstraints---
+title: "ShipmentReceipt"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "datetimeReceived"
+  - "inventoryItemId"
+  - "itemDescription"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemSeqId"
+  - "productId"
+  - "quantityAccepted"
+  - "quantityRejected"
+  - "receiptId"
+  - "receivedByUserLoginId"
+  - "rejectionId"
+  - "returnId"
+  - "returnItemSeqId"
+  - "shipmentId"
+  - "shipmentItemSeqId"
+  - "shipmentPackageSeqId"
+type: "object"
+properties:
+  receiptId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "receipt_id"
+    exampleSetFlag: false
+  inventoryItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  shipmentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_id"
+    exampleSetFlag: false
+  shipmentItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_item_seq_id"
+    exampleSetFlag: false
+  shipmentPackageSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_package_seq_id"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  returnId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "return_id"
+    exampleSetFlag: false
+  returnItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "return_item_seq_id"
+    exampleSetFlag: false
+  rejectionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "rejection_id"
+    exampleSetFlag: false
+  receivedByUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "received_by_user_login_id"
+    exampleSetFlag: false
+  datetimeReceived:
+    type: "string"
+    description: "datetime_received"
+    format: "date-time"
+    exampleSetFlag: false
+  itemDescription:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "item_description"
+    exampleSetFlag: false
+  quantityAccepted:
+    type: "number"
+    description: "quantity_accepted"
+    exampleSetFlag: false
+  quantityRejected:
+    type: "number"
+    description: "quantity_rejected"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,97 @@
+# product_promo_cond null public null 0 0
+# primaryColumns
+#   product_promo_id
+#   product_promo_rule_id
+#   product_promo_cond_seq_id
+# foreignKeys
+#   product_promo_cond.custom_method_id ==> custom_method.custom_method_id
+#   product_promo_cond.operator_enum_id ==> enumeration.enum_id
+#   product_promo_cond.product_promo_id,product_promo_rule_id ==> product_promo_rule.product_promo_id,product_promo_rule_id
+#   product_promo_cond.input_param_enum_id ==> enumeration.enum_id
+#   product_promo_cond.product_promo_id ==> product_promo.product_promo_id
+# checkConstraints---
+title: "ProductPromoCond"
+required:
+  - "condValue"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "customMethodId"
+  - "inputParamEnumId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "operatorEnumId"
+  - "otherValue"
+  - "productPromoCondSeqId"
+  - "productPromoId"
+  - "productPromoRuleId"
+type: "object"
+properties:
+  productPromoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_promo_id"
+    exampleSetFlag: false
+  productPromoRuleId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_promo_rule_id"
+    exampleSetFlag: false
+  productPromoCondSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_promo_cond_seq_id"
+    exampleSetFlag: false
+  customMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "custom_method_id"
+    exampleSetFlag: false
+  inputParamEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "input_param_enum_id"
+    exampleSetFlag: false
+  operatorEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "operator_enum_id"
+    exampleSetFlag: false
+  condValue:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "cond_value"
+    exampleSetFlag: false
+  otherValue:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "other_value"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

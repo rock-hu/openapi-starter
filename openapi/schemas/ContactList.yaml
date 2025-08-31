@@ -1,0 +1,159 @@
+# contact_list null public null 0 0
+# primaryColumns
+#   contact_list_id
+# foreignKeys
+#   contact_list.marketing_campaign_id ==> marketing_campaign.marketing_campaign_id
+#   contact_list.owner_party_id ==> party.party_id
+#   contact_list.contact_mech_type_id ==> contact_mech_type.contact_mech_type_id
+#   contact_list.last_modified_by_user_login ==> user_login.user_login_id
+#   contact_list.contact_list_type_id ==> contact_list_type.contact_list_type_id
+#   contact_list.created_by_user_login ==> user_login.user_login_id
+# checkConstraints---
+title: "ContactList"
+required:
+  - "comments"
+  - "contactListId"
+  - "contactListName"
+  - "contactListTypeId"
+  - "contactMechTypeId"
+  - "createdByUserLogin"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "isPublic"
+  - "lastModifiedByUserLogin"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "marketingCampaignId"
+  - "optOutScreen"
+  - "ownerPartyId"
+  - "singleUse"
+  - "verifyEmailFrom"
+  - "verifyEmailScreen"
+  - "verifyEmailSubject"
+  - "verifyEmailWebSiteId"
+type: "object"
+properties:
+  contactListId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_list_id"
+    exampleSetFlag: false
+  contactListTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_list_type_id"
+    exampleSetFlag: false
+  contactMechTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_type_id"
+    exampleSetFlag: false
+  marketingCampaignId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "marketing_campaign_id"
+    exampleSetFlag: false
+  contactListName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "contact_list_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  isPublic:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_public"
+    exampleSetFlag: false
+  singleUse:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "single_use"
+    exampleSetFlag: false
+  ownerPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "owner_party_id"
+    exampleSetFlag: false
+  verifyEmailFrom:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "verify_email_from"
+    exampleSetFlag: false
+  verifyEmailScreen:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "verify_email_screen"
+    exampleSetFlag: false
+  verifyEmailSubject:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "verify_email_subject"
+    exampleSetFlag: false
+  verifyEmailWebSiteId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "verify_email_web_site_id"
+    exampleSetFlag: false
+  optOutScreen:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "opt_out_screen"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

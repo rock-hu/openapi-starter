@@ -1,0 +1,76 @@
+# uom_conversion null public null 0 0
+# primaryColumns
+#   uom_id
+#   uom_id_to
+# foreignKeys
+#   uom_conversion.uom_id ==> uom.uom_id
+#   uom_conversion.uom_id_to ==> uom.uom_id
+#   uom_conversion.custom_method_id ==> custom_method.custom_method_id
+# checkConstraints---
+title: "UomConversion"
+required:
+  - "conversionFactor"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "customMethodId"
+  - "decimalScale"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "roundingMode"
+  - "uomId"
+  - "uomIdTo"
+type: "object"
+properties:
+  uomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "uom_id"
+    exampleSetFlag: false
+  uomIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "uom_id_to"
+    exampleSetFlag: false
+  conversionFactor:
+    type: "number"
+    description: "conversion_factor"
+    exampleSetFlag: false
+  customMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "custom_method_id"
+    exampleSetFlag: false
+  decimalScale:
+    type: "number"
+    description: "decimal_scale"
+    exampleSetFlag: false
+  roundingMode:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "rounding_mode"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

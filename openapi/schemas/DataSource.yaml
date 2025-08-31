@@ -1,0 +1,56 @@
+# data_source null public null 0 0
+# primaryColumns
+#   data_source_id
+# foreignKeys
+#   data_source.data_source_type_id ==> data_source_type.data_source_type_id
+# checkConstraints---
+title: "DataSource"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "dataSourceId"
+  - "dataSourceTypeId"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  dataSourceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "data_source_id"
+    exampleSetFlag: false
+  dataSourceTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "data_source_type_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

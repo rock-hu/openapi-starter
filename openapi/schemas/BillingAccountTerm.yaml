@@ -1,0 +1,75 @@
+# billing_account_term null public null 0 0
+# primaryColumns
+#   billing_account_term_id
+# foreignKeys
+#   billing_account_term.uom_id ==> uom.uom_id
+#   billing_account_term.term_type_id ==> term_type.term_type_id
+#   billing_account_term.billing_account_id ==> billing_account.billing_account_id
+# checkConstraints---
+title: "BillingAccountTerm"
+required:
+  - "billingAccountId"
+  - "billingAccountTermId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "termDays"
+  - "termTypeId"
+  - "termValue"
+  - "uomId"
+type: "object"
+properties:
+  billingAccountTermId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "billing_account_term_id"
+    exampleSetFlag: false
+  billingAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "billing_account_id"
+    exampleSetFlag: false
+  termTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "term_type_id"
+    exampleSetFlag: false
+  termValue:
+    type: "number"
+    description: "term_value"
+    exampleSetFlag: false
+  termDays:
+    type: "number"
+    description: "term_days"
+    exampleSetFlag: false
+  uomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "uom_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

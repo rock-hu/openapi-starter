@@ -1,0 +1,71 @@
+# cust_request_type null public null 0 0
+# primaryColumns
+#   cust_request_type_id
+# foreignKeys
+#   cust_request_type.party_id ==> party.party_id
+#   cust_request_type.parent_type_id ==> cust_request_type.cust_request_type_id
+# checkConstraints---
+title: "CustRequestType"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "custRequestTypeId"
+  - "description"
+  - "hasTable"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentTypeId"
+  - "partyId"
+type: "object"
+properties:
+  custRequestTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_type_id"
+    exampleSetFlag: false
+  parentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_type_id"
+    exampleSetFlag: false
+  hasTable:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "has_table"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

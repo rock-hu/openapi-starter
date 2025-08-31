@@ -1,0 +1,70 @@
+# order_notification null public null 0 0
+# primaryColumns
+#   order_notification_id
+# foreignKeys
+#   order_notification.email_type ==> enumeration.enum_id
+#   order_notification.order_id ==> order_header.order_id
+# checkConstraints---
+title: "OrderNotification"
+required:
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "emailType"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "notificationDate"
+  - "orderId"
+  - "orderNotificationId"
+type: "object"
+properties:
+  orderNotificationId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_notification_id"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  emailType:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "email_type"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  notificationDate:
+    type: "string"
+    description: "notification_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

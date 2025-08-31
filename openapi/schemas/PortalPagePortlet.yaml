@@ -1,0 +1,71 @@
+# portal_page_portlet null public null 0 0
+# primaryColumns
+#   portal_page_id
+#   portal_portlet_id
+#   portlet_seq_id
+# foreignKeys
+#   portal_page_portlet.portal_portlet_id ==> portal_portlet.portal_portlet_id
+#   portal_page_portlet.portal_page_id ==> portal_page.portal_page_id
+# checkConstraints---
+title: "PortalPagePortlet"
+required:
+  - "columnSeqId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "portalPageId"
+  - "portalPortletId"
+  - "portletSeqId"
+  - "sequenceNum"
+type: "object"
+properties:
+  portalPageId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "portal_page_id"
+    exampleSetFlag: false
+  portalPortletId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "portal_portlet_id"
+    exampleSetFlag: false
+  portletSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "portlet_seq_id"
+    exampleSetFlag: false
+  columnSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "column_seq_id"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

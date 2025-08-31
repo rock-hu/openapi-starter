@@ -1,0 +1,112 @@
+# time_entry null public null 0 0
+# primaryColumns
+#   time_entry_id
+# foreignKeys
+#   time_entry.timesheet_id ==> timesheet.timesheet_id
+#   time_entry.party_id ==> party.party_id
+#   time_entry.invoice_id,invoice_item_seq_id ==> invoice_item.invoice_id,invoice_item_seq_id
+#   time_entry.rate_type_id ==> rate_type.rate_type_id
+#   time_entry.work_effort_id ==> work_effort.work_effort_id
+# checkConstraints---
+title: "TimeEntry"
+required:
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "hours"
+  - "invoiceId"
+  - "invoiceItemSeqId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "rateTypeId"
+  - "thruDate"
+  - "timeEntryId"
+  - "timesheetId"
+  - "workEffortId"
+type: "object"
+properties:
+  timeEntryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "time_entry_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  rateTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "rate_type_id"
+    exampleSetFlag: false
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  timesheetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "timesheet_id"
+    exampleSetFlag: false
+  invoiceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_id"
+    exampleSetFlag: false
+  invoiceItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_item_seq_id"
+    exampleSetFlag: false
+  hours:
+    type: "number"
+    description: "hours"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,70 @@
+# telecom_number null public null 0 0
+# primaryColumns
+#   contact_mech_id
+# foreignKeys
+#   telecom_number.contact_mech_id ==> contact_mech.contact_mech_id
+# checkConstraints---
+title: "TelecomNumber"
+required:
+  - "areaCode"
+  - "askForName"
+  - "contactMechId"
+  - "contactNumber"
+  - "countryCode"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  countryCode:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "country_code"
+    exampleSetFlag: false
+  areaCode:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "area_code"
+    exampleSetFlag: false
+  contactNumber:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "contact_number"
+    exampleSetFlag: false
+  askForName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "ask_for_name"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

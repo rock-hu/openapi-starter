@@ -1,0 +1,55 @@
+# content_keyword null public null 0 0
+# primaryColumns
+#   content_id
+#   keyword
+# foreignKeys
+#   content_keyword.content_id ==> content.content_id
+# checkConstraints---
+title: "ContentKeyword"
+required:
+  - "contentId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "keyword"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "relevancyWeight"
+type: "object"
+properties:
+  contentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_id"
+    exampleSetFlag: false
+  keyword:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "keyword"
+    exampleSetFlag: false
+  relevancyWeight:
+    type: "number"
+    description: "relevancy_weight"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

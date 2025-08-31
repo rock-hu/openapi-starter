@@ -1,0 +1,94 @@
+# party_qual null public null 0 0
+# primaryColumns
+#   party_id
+#   party_qual_type_id
+#   from_date
+# foreignKeys
+#   party_qual.verif_status_id ==> status_item.status_id
+#   party_qual.status_id ==> status_item.status_id
+#   party_qual.party_id ==> party.party_id
+#   party_qual.party_qual_type_id ==> party_qual_type.party_qual_type_id
+# checkConstraints---
+title: "PartyQual"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "partyQualTypeId"
+  - "qualificationDesc"
+  - "statusId"
+  - "thruDate"
+  - "title"
+  - "verifStatusId"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  partyQualTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_qual_type_id"
+    exampleSetFlag: false
+  qualificationDesc:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "qualification_desc"
+    exampleSetFlag: false
+  title:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "title"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  verifStatusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "verif_status_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

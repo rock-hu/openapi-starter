@@ -1,0 +1,70 @@
+# shipment_item null public null 0 0
+# primaryColumns
+#   shipment_id
+#   shipment_item_seq_id
+# foreignKeys
+#   shipment_item.product_id ==> product.product_id
+#   shipment_item.shipment_id ==> shipment.shipment_id
+# checkConstraints---
+title: "ShipmentItem"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productId"
+  - "quantity"
+  - "shipmentContentDescription"
+  - "shipmentId"
+  - "shipmentItemSeqId"
+type: "object"
+properties:
+  shipmentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_id"
+    exampleSetFlag: false
+  shipmentItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_item_seq_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  shipmentContentDescription:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "shipment_content_description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

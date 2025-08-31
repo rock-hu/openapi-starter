@@ -1,0 +1,72 @@
+# product_keyword_new null public null 0 0
+# primaryColumns
+#   product_id
+#   keyword
+#   keyword_type_id
+# foreignKeys
+#   product_keyword_new.product_id ==> product.product_id
+#   product_keyword_new.status_id ==> status_item.status_id
+#   product_keyword_new.keyword_type_id ==> enumeration.enum_id
+# checkConstraints---
+title: "ProductKeywordNew"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "keyword"
+  - "keywordTypeId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productId"
+  - "relevancyWeight"
+  - "statusId"
+type: "object"
+properties:
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  keyword:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "keyword"
+    exampleSetFlag: false
+  keywordTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "keyword_type_id"
+    exampleSetFlag: false
+  relevancyWeight:
+    type: "number"
+    description: "relevancy_weight"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

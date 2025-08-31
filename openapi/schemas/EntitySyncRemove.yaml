@@ -1,0 +1,48 @@
+# entity_sync_remove null public null 0 0
+# primaryColumns
+#   entity_sync_remove_id
+# foreignKeys
+# checkConstraints---
+title: "EntitySyncRemove"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "entitySyncRemoveId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "primaryKeyRemoved"
+type: "object"
+properties:
+  entitySyncRemoveId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "entity_sync_remove_id"
+    exampleSetFlag: false
+  primaryKeyRemoved:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "primary_key_removed"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

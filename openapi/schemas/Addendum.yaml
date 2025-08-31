@@ -1,0 +1,76 @@
+# addendum null public null 0 0
+# primaryColumns
+#   addendum_id
+# foreignKeys
+#   addendum.agreement_id ==> agreement.agreement_id
+#   addendum.agreement_id,agreement_item_seq_id ==> agreement_item.agreement_id,agreement_item_seq_id
+# checkConstraints---
+title: "Addendum"
+required:
+  - "addendumCreationDate"
+  - "addendumEffectiveDate"
+  - "addendumId"
+  - "addendumText"
+  - "agreementId"
+  - "agreementItemSeqId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  addendumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "addendum_id"
+    exampleSetFlag: false
+  agreementId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "agreement_id"
+    exampleSetFlag: false
+  agreementItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "agreement_item_seq_id"
+    exampleSetFlag: false
+  addendumCreationDate:
+    type: "string"
+    description: "addendum_creation_date"
+    format: "date-time"
+    exampleSetFlag: false
+  addendumEffectiveDate:
+    type: "string"
+    description: "addendum_effective_date"
+    format: "date-time"
+    exampleSetFlag: false
+  addendumText:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "addendum_text"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

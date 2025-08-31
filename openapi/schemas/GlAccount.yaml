@@ -1,0 +1,116 @@
+# gl_account null public null 0 0
+# primaryColumns
+#   gl_account_id
+# foreignKeys
+#   gl_account.parent_gl_account_id ==> gl_account.gl_account_id
+#   gl_account.gl_account_type_id ==> gl_account_type.gl_account_type_id
+#   gl_account.gl_resource_type_id ==> gl_resource_type.gl_resource_type_id
+#   gl_account.gl_xbrl_class_id ==> gl_xbrl_class.gl_xbrl_class_id
+#   gl_account.gl_account_class_id ==> gl_account_class.gl_account_class_id
+# checkConstraints---
+title: "GlAccount"
+required:
+  - "accountCode"
+  - "accountName"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "externalId"
+  - "glAccountClassId"
+  - "glAccountId"
+  - "glAccountTypeId"
+  - "glResourceTypeId"
+  - "glXbrlClassId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentGlAccountId"
+  - "productId"
+type: "object"
+properties:
+  glAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_account_id"
+    exampleSetFlag: false
+  glAccountTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_account_type_id"
+    exampleSetFlag: false
+  glAccountClassId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_account_class_id"
+    exampleSetFlag: false
+  glResourceTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_resource_type_id"
+    exampleSetFlag: false
+  glXbrlClassId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_xbrl_class_id"
+    exampleSetFlag: false
+  parentGlAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_gl_account_id"
+    exampleSetFlag: false
+  accountCode:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "account_code"
+    exampleSetFlag: false
+  accountName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "account_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  externalId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "external_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

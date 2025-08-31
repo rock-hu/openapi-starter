@@ -1,0 +1,69 @@
+# product_facility_location null public null 0 0
+# primaryColumns
+#   product_id
+#   facility_id
+#   location_seq_id
+# foreignKeys
+#   product_facility_location.facility_id,location_seq_id ==> facility_location.facility_id,location_seq_id
+#   product_facility_location.product_id ==> product.product_id
+# checkConstraints---
+title: "ProductFacilityLocation"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "facilityId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "locationSeqId"
+  - "minimumStock"
+  - "moveQuantity"
+  - "productId"
+type: "object"
+properties:
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  locationSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "location_seq_id"
+    exampleSetFlag: false
+  minimumStock:
+    type: "number"
+    description: "minimum_stock"
+    exampleSetFlag: false
+  moveQuantity:
+    type: "number"
+    description: "move_quantity"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

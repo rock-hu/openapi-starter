@@ -1,0 +1,76 @@
+# communication_event_role null public null 0 0
+# primaryColumns
+#   communication_event_id
+#   party_id
+#   role_type_id
+# foreignKeys
+#   communication_event_role.party_id ==> party.party_id
+#   communication_event_role.communication_event_id ==> communication_event.communication_event_id
+#   communication_event_role.status_id ==> status_item.status_id
+#   communication_event_role.contact_mech_id ==> contact_mech.contact_mech_id
+#   communication_event_role.party_id,role_type_id ==> party_role.party_id,role_type_id
+# checkConstraints---
+title: "CommunicationEventRole"
+required:
+  - "communicationEventId"
+  - "contactMechId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "roleTypeId"
+  - "statusId"
+type: "object"
+properties:
+  communicationEventId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "communication_event_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

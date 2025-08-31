@@ -1,0 +1,72 @@
+# party_skill null public null 0 0
+# primaryColumns
+#   party_id
+#   skill_type_id
+# foreignKeys
+#   party_skill.skill_type_id ==> skill_type.skill_type_id
+#   party_skill.party_id ==> party.party_id
+# checkConstraints---
+title: "PartySkill"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "rating"
+  - "skillLevel"
+  - "skillTypeId"
+  - "startedUsingDate"
+  - "yearsExperience"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  skillTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "skill_type_id"
+    exampleSetFlag: false
+  yearsExperience:
+    type: "number"
+    description: "years_experience"
+    exampleSetFlag: false
+  rating:
+    type: "number"
+    description: "rating"
+    exampleSetFlag: false
+  skillLevel:
+    type: "number"
+    description: "skill_level"
+    exampleSetFlag: false
+  startedUsingDate:
+    type: "string"
+    description: "started_using_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

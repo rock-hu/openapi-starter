@@ -1,0 +1,64 @@
+# web_site_contact_list null public null 0 0
+# primaryColumns
+#   web_site_id
+#   contact_list_id
+#   from_date
+# foreignKeys
+#   web_site_contact_list.web_site_id ==> web_site.web_site_id
+#   web_site_contact_list.contact_list_id ==> contact_list.contact_list_id
+# checkConstraints---
+title: "WebSiteContactList"
+required:
+  - "contactListId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "thruDate"
+  - "webSiteId"
+type: "object"
+properties:
+  webSiteId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "web_site_id"
+    exampleSetFlag: false
+  contactListId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_list_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

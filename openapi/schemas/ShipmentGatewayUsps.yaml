@@ -1,0 +1,87 @@
+# shipment_gateway_usps null public null 0 0
+# primaryColumns
+#   shipment_gateway_config_id
+# foreignKeys
+#   shipment_gateway_usps.shipment_gateway_config_id ==> shipment_gateway_config.shipment_gateway_config_id
+# checkConstraints---
+title: "ShipmentGatewayUsps"
+required:
+  - "accessPassword"
+  - "accessUserId"
+  - "connectTimeout"
+  - "connectUrl"
+  - "connectUrlLabels"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maxEstimateWeight"
+  - "shipmentGatewayConfigId"
+  - "test"
+type: "object"
+properties:
+  shipmentGatewayConfigId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_gateway_config_id"
+    exampleSetFlag: false
+  connectUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "connect_url"
+    exampleSetFlag: false
+  connectUrlLabels:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "connect_url_labels"
+    exampleSetFlag: false
+  connectTimeout:
+    type: "number"
+    description: "connect_timeout"
+    exampleSetFlag: false
+  accessUserId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "access_user_id"
+    exampleSetFlag: false
+  accessPassword:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "access_password"
+    exampleSetFlag: false
+  maxEstimateWeight:
+    type: "number"
+    description: "max_estimate_weight"
+    exampleSetFlag: false
+  test:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "test"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

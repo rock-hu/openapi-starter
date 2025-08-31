@@ -1,0 +1,250 @@
+# shipment null public null 0 0
+# primaryColumns
+#   shipment_id
+# foreignKeys
+#   shipment.destination_telecom_number_id ==> telecom_number.contact_mech_id
+#   shipment.estimated_arrival_work_eff_id ==> work_effort.work_effort_id
+#   shipment.estimated_ship_work_eff_id ==> work_effort.work_effort_id
+#   shipment.origin_facility_id ==> facility.facility_id
+#   shipment.destination_facility_id ==> facility.facility_id
+#   shipment.primary_return_id ==> return_header.return_id
+#   shipment.shipment_type_id ==> shipment_type.shipment_type_id
+#   shipment.origin_contact_mech_id ==> postal_address.contact_mech_id
+#   shipment.party_id_from ==> party.party_id
+#   shipment.status_id ==> status_item.status_id
+#   shipment.picklist_bin_id ==> picklist_bin.picklist_bin_id
+#   shipment.origin_telecom_number_id ==> telecom_number.contact_mech_id
+#   shipment.party_id_to ==> party.party_id
+#   shipment.destination_contact_mech_id ==> postal_address.contact_mech_id
+#   shipment.currency_uom_id ==> uom.uom_id
+#   shipment.primary_order_id ==> order_header.order_id
+# checkConstraints---
+title: "Shipment"
+required:
+  - "additionalShippingCharge"
+  - "addtlShippingChargeDesc"
+  - "createdByUserLogin"
+  - "createdDate"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUomId"
+  - "destinationContactMechId"
+  - "destinationFacilityId"
+  - "destinationTelecomNumberId"
+  - "estimatedArrivalDate"
+  - "estimatedArrivalWorkEffId"
+  - "estimatedReadyDate"
+  - "estimatedShipCost"
+  - "estimatedShipDate"
+  - "estimatedShipWorkEffId"
+  - "handlingInstructions"
+  - "lastModifiedByUserLogin"
+  - "lastModifiedDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "latestCancelDate"
+  - "originContactMechId"
+  - "originFacilityId"
+  - "originTelecomNumberId"
+  - "partyIdFrom"
+  - "partyIdTo"
+  - "picklistBinId"
+  - "primaryOrderId"
+  - "primaryReturnId"
+  - "primaryShipGroupSeqId"
+  - "shipmentId"
+  - "shipmentTypeId"
+  - "statusId"
+type: "object"
+properties:
+  shipmentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_id"
+    exampleSetFlag: false
+  shipmentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_type_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  primaryOrderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "primary_order_id"
+    exampleSetFlag: false
+  primaryReturnId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "primary_return_id"
+    exampleSetFlag: false
+  primaryShipGroupSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "primary_ship_group_seq_id"
+    exampleSetFlag: false
+  picklistBinId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "picklist_bin_id"
+    exampleSetFlag: false
+  estimatedReadyDate:
+    type: "string"
+    description: "estimated_ready_date"
+    format: "date-time"
+    exampleSetFlag: false
+  estimatedShipDate:
+    type: "string"
+    description: "estimated_ship_date"
+    format: "date-time"
+    exampleSetFlag: false
+  estimatedShipWorkEffId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "estimated_ship_work_eff_id"
+    exampleSetFlag: false
+  estimatedArrivalDate:
+    type: "string"
+    description: "estimated_arrival_date"
+    format: "date-time"
+    exampleSetFlag: false
+  estimatedArrivalWorkEffId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "estimated_arrival_work_eff_id"
+    exampleSetFlag: false
+  latestCancelDate:
+    type: "string"
+    description: "latest_cancel_date"
+    format: "date-time"
+    exampleSetFlag: false
+  estimatedShipCost:
+    type: "number"
+    description: "estimated_ship_cost"
+    exampleSetFlag: false
+  currencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom_id"
+    exampleSetFlag: false
+  handlingInstructions:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "handling_instructions"
+    exampleSetFlag: false
+  originFacilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "origin_facility_id"
+    exampleSetFlag: false
+  destinationFacilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "destination_facility_id"
+    exampleSetFlag: false
+  originContactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "origin_contact_mech_id"
+    exampleSetFlag: false
+  originTelecomNumberId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "origin_telecom_number_id"
+    exampleSetFlag: false
+  destinationContactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "destination_contact_mech_id"
+    exampleSetFlag: false
+  destinationTelecomNumberId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "destination_telecom_number_id"
+    exampleSetFlag: false
+  partyIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_to"
+    exampleSetFlag: false
+  partyIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_from"
+    exampleSetFlag: false
+  additionalShippingCharge:
+    type: "number"
+    description: "additional_shipping_charge"
+    exampleSetFlag: false
+  addtlShippingChargeDesc:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "addtl_shipping_charge_desc"
+    exampleSetFlag: false
+  createdDate:
+    type: "string"
+    description: "created_date"
+    format: "date-time"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedDate:
+    type: "string"
+    description: "last_modified_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

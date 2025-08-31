@@ -1,0 +1,78 @@
+# product_store_keyword_ovrd null public null 0 0
+# primaryColumns
+#   product_store_id
+#   keyword
+#   from_date
+# foreignKeys
+#   product_store_keyword_ovrd.target_type_enum_id ==> enumeration.enum_id
+#   product_store_keyword_ovrd.product_store_id ==> product_store.product_store_id
+# checkConstraints---
+title: "ProductStoreKeywordOvrd"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "keyword"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productStoreId"
+  - "target"
+  - "targetTypeEnumId"
+  - "thruDate"
+type: "object"
+properties:
+  productStoreId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_id"
+    exampleSetFlag: false
+  keyword:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "keyword"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  target:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "target"
+    exampleSetFlag: false
+  targetTypeEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "target_type_enum_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

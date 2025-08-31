@@ -1,0 +1,122 @@
+# server_hit null public null 0 0
+# primaryColumns
+#   visit_id
+#   content_id
+#   hit_start_date_time
+#   hit_type_id
+# foreignKeys
+#   server_hit.hit_type_id ==> server_hit_type.hit_type_id
+#   server_hit.visit_id ==> visit.visit_id
+# checkConstraints---
+title: "ServerHit"
+required:
+  - "contentId"
+  - "hitStartDateTime"
+  - "hitTypeId"
+  - "idByIpContactMechId"
+  - "internalContentId"
+  - "numOfBytes"
+  - "partyId"
+  - "refByWebContactMechId"
+  - "referrerUrl"
+  - "requestUrl"
+  - "runningTimeMillis"
+  - "serverHostName"
+  - "serverIpAddress"
+  - "statusId"
+  - "userLoginId"
+  - "visitId"
+type: "object"
+properties:
+  visitId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "visit_id"
+    exampleSetFlag: false
+  contentId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "content_id"
+    exampleSetFlag: false
+  hitStartDateTime:
+    type: "string"
+    description: "hit_start_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  hitTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "hit_type_id"
+    exampleSetFlag: false
+  numOfBytes:
+    type: "number"
+    description: "num_of_bytes"
+    exampleSetFlag: false
+  runningTimeMillis:
+    type: "number"
+    description: "running_time_millis"
+    exampleSetFlag: false
+  userLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "user_login_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  requestUrl:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "request_url"
+    exampleSetFlag: false
+  referrerUrl:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "referrer_url"
+    exampleSetFlag: false
+  serverIpAddress:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "server_ip_address"
+    exampleSetFlag: false
+  serverHostName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "server_host_name"
+    exampleSetFlag: false
+  internalContentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "internal_content_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  idByIpContactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "id_by_ip_contact_mech_id"
+    exampleSetFlag: false
+  refByWebContactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "ref_by_web_contact_mech_id"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,51 @@
+# valid_contact_mech_role null public null 0 0
+# primaryColumns
+#   role_type_id
+#   contact_mech_type_id
+# foreignKeys
+#   valid_contact_mech_role.contact_mech_type_id ==> contact_mech_type.contact_mech_type_id
+#   valid_contact_mech_role.role_type_id ==> role_type.role_type_id
+# checkConstraints---
+title: "ValidContactMechRole"
+required:
+  - "contactMechTypeId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "roleTypeId"
+type: "object"
+properties:
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  contactMechTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_type_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

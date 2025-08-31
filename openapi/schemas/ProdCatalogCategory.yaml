@@ -1,0 +1,78 @@
+# prod_catalog_category null public null 0 0
+# primaryColumns
+#   prod_catalog_id
+#   product_category_id
+#   prod_catalog_category_type_id
+#   from_date
+# foreignKeys
+#   prod_catalog_category.prod_catalog_category_type_id ==> prod_catalog_category_type.prod_catalog_category_type_id
+#   prod_catalog_category.prod_catalog_id ==> prod_catalog.prod_catalog_id
+#   prod_catalog_category.product_category_id ==> product_category.product_category_id
+# checkConstraints---
+title: "ProdCatalogCategory"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "prodCatalogCategoryTypeId"
+  - "prodCatalogId"
+  - "productCategoryId"
+  - "sequenceNum"
+  - "thruDate"
+type: "object"
+properties:
+  prodCatalogId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "prod_catalog_id"
+    exampleSetFlag: false
+  productCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_category_id"
+    exampleSetFlag: false
+  prodCatalogCategoryTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "prod_catalog_category_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

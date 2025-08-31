@@ -1,0 +1,191 @@
+# payment_gateway_response null public null 0 0
+# primaryColumns
+#   payment_gateway_response_id
+# foreignKeys
+#   payment_gateway_response.payment_method_type_id ==> payment_method_type.payment_method_type_id
+#   payment_gateway_response.currency_uom_id ==> uom.uom_id
+#   payment_gateway_response.order_payment_preference_id ==> order_payment_preference.order_payment_preference_id
+#   payment_gateway_response.payment_method_id ==> payment_method.payment_method_id
+#   payment_gateway_response.payment_service_type_enum_id ==> enumeration.enum_id
+#   payment_gateway_response.trans_code_enum_id ==> enumeration.enum_id
+# checkConstraints---
+title: "PaymentGatewayResponse"
+required:
+  - "altReference"
+  - "amount"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUomId"
+  - "gatewayAvsResult"
+  - "gatewayCode"
+  - "gatewayCvResult"
+  - "gatewayFlag"
+  - "gatewayMessage"
+  - "gatewayScoreResult"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderPaymentPreferenceId"
+  - "paymentGatewayResponseId"
+  - "paymentMethodId"
+  - "paymentMethodTypeId"
+  - "paymentServiceTypeEnumId"
+  - "referenceNum"
+  - "resultBadCardNumber"
+  - "resultBadExpire"
+  - "resultDeclined"
+  - "resultNsf"
+  - "subReference"
+  - "transCodeEnumId"
+  - "transactionDate"
+type: "object"
+properties:
+  paymentGatewayResponseId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_gateway_response_id"
+    exampleSetFlag: false
+  paymentServiceTypeEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_service_type_enum_id"
+    exampleSetFlag: false
+  orderPaymentPreferenceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_payment_preference_id"
+    exampleSetFlag: false
+  paymentMethodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_type_id"
+    exampleSetFlag: false
+  paymentMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_id"
+    exampleSetFlag: false
+  transCodeEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "trans_code_enum_id"
+    exampleSetFlag: false
+  amount:
+    type: "number"
+    description: "amount"
+    exampleSetFlag: false
+  currencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom_id"
+    exampleSetFlag: false
+  referenceNum:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "reference_num"
+    exampleSetFlag: false
+  altReference:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "alt_reference"
+    exampleSetFlag: false
+  subReference:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "sub_reference"
+    exampleSetFlag: false
+  gatewayCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "gateway_code"
+    exampleSetFlag: false
+  gatewayFlag:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "gateway_flag"
+    exampleSetFlag: false
+  gatewayAvsResult:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "gateway_avs_result"
+    exampleSetFlag: false
+  gatewayCvResult:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "gateway_cv_result"
+    exampleSetFlag: false
+  gatewayScoreResult:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "gateway_score_result"
+    exampleSetFlag: false
+  gatewayMessage:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "gateway_message"
+    exampleSetFlag: false
+  transactionDate:
+    type: "string"
+    description: "transaction_date"
+    format: "date-time"
+    exampleSetFlag: false
+  resultDeclined:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "result_declined"
+    exampleSetFlag: false
+  resultNsf:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "result_nsf"
+    exampleSetFlag: false
+  resultBadExpire:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "result_bad_expire"
+    exampleSetFlag: false
+  resultBadCardNumber:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "result_bad_card_number"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

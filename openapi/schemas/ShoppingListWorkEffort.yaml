@@ -1,0 +1,51 @@
+# shopping_list_work_effort null public null 0 0
+# primaryColumns
+#   shopping_list_id
+#   work_effort_id
+# foreignKeys
+#   shopping_list_work_effort.shopping_list_id ==> shopping_list.shopping_list_id
+#   shopping_list_work_effort.work_effort_id ==> work_effort.work_effort_id
+# checkConstraints---
+title: "ShoppingListWorkEffort"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "shoppingListId"
+  - "workEffortId"
+type: "object"
+properties:
+  shoppingListId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shopping_list_id"
+    exampleSetFlag: false
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

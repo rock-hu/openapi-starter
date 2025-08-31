@@ -1,0 +1,113 @@
+# product_search_constraint null public null 0 0
+# primaryColumns
+#   product_search_result_id
+#   constraint_seq_id
+# foreignKeys
+#   product_search_constraint.product_search_result_id ==> product_search_result.product_search_result_id
+# checkConstraints---
+title: "ProductSearchConstraint"
+required:
+  - "anyPrefix"
+  - "anySuffix"
+  - "constraintName"
+  - "constraintSeqId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "highValue"
+  - "includeSubCategories"
+  - "infoString"
+  - "isAnd"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "lowValue"
+  - "productSearchResultId"
+  - "removeStems"
+type: "object"
+properties:
+  productSearchResultId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_search_result_id"
+    exampleSetFlag: false
+  constraintSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "constraint_seq_id"
+    exampleSetFlag: false
+  constraintName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "constraint_name"
+    exampleSetFlag: false
+  infoString:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "info_string"
+    exampleSetFlag: false
+  includeSubCategories:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "include_sub_categories"
+    exampleSetFlag: false
+  isAnd:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_and"
+    exampleSetFlag: false
+  anyPrefix:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "any_prefix"
+    exampleSetFlag: false
+  anySuffix:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "any_suffix"
+    exampleSetFlag: false
+  removeStems:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "remove_stems"
+    exampleSetFlag: false
+  lowValue:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "low_value"
+    exampleSetFlag: false
+  highValue:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "high_value"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

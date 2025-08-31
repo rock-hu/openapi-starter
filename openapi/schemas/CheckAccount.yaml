@@ -1,0 +1,100 @@
+# check_account null public null 0 0
+# primaryColumns
+#   payment_method_id
+# foreignKeys
+#   check_account.contact_mech_id ==> contact_mech.contact_mech_id
+#   check_account.payment_method_id ==> payment_method.payment_method_id
+#   check_account.contact_mech_id ==> postal_address.contact_mech_id
+# checkConstraints---
+title: "CheckAccount"
+required:
+  - "accountNumber"
+  - "accountType"
+  - "bankName"
+  - "branchCode"
+  - "companyNameOnAccount"
+  - "contactMechId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "nameOnAccount"
+  - "paymentMethodId"
+  - "routingNumber"
+type: "object"
+properties:
+  paymentMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_id"
+    exampleSetFlag: false
+  bankName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "bank_name"
+    exampleSetFlag: false
+  routingNumber:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "routing_number"
+    exampleSetFlag: false
+  accountType:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "account_type"
+    exampleSetFlag: false
+  accountNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "account_number"
+    exampleSetFlag: false
+  nameOnAccount:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "name_on_account"
+    exampleSetFlag: false
+  companyNameOnAccount:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "company_name_on_account"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  branchCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "branch_code"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

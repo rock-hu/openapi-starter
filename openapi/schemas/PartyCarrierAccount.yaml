@@ -1,0 +1,71 @@
+# party_carrier_account null public null 0 0
+# primaryColumns
+#   party_id
+#   carrier_party_id
+#   from_date
+# foreignKeys
+#   party_carrier_account.party_id ==> party.party_id
+#   party_carrier_account.carrier_party_id ==> party.party_id
+# checkConstraints---
+title: "PartyCarrierAccount"
+required:
+  - "accountNumber"
+  - "carrierPartyId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "thruDate"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  carrierPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "carrier_party_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  accountNumber:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "account_number"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

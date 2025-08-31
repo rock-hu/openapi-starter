@@ -1,0 +1,73 @@
+# requirement_role null public null 0 0
+# primaryColumns
+#   requirement_id
+#   party_id
+#   role_type_id
+#   from_date
+# foreignKeys
+#   requirement_role.requirement_id ==> requirement.requirement_id
+#   requirement_role.party_id ==> party.party_id
+#   requirement_role.party_id,role_type_id ==> party_role.party_id,role_type_id
+# checkConstraints---
+title: "RequirementRole"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "requirementId"
+  - "roleTypeId"
+  - "thruDate"
+type: "object"
+properties:
+  requirementId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "requirement_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

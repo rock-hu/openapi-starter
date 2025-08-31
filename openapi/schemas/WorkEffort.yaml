@@ -1,0 +1,367 @@
+# work_effort null public null 0 0
+# primaryColumns
+#   work_effort_id
+# foreignKeys
+#   work_effort.work_effort_type_id ==> work_effort_type.work_effort_type_id
+#   work_effort.temp_expr_id ==> temporal_expression.temp_expr_id
+#   work_effort.runtime_data_id ==> runtime_data.runtime_data_id
+#   work_effort.current_status_id ==> status_item.status_id
+#   work_effort.work_effort_parent_id ==> work_effort.work_effort_id
+#   work_effort.note_id ==> note_data.note_id
+#   work_effort.estimate_calc_method ==> custom_method.custom_method_id
+#   work_effort.facility_id ==> facility.facility_id
+#   work_effort.recurrence_info_id ==> recurrence_info.recurrence_info_id
+#   work_effort.work_effort_purpose_type_id ==> work_effort_purpose_type.work_effort_purpose_type_id
+#   work_effort.accommodation_spot_id ==> accommodation_spot.accommodation_spot_id
+#   work_effort.money_uom_id ==> uom.uom_id
+#   work_effort.scope_enum_id ==> enumeration.enum_id
+#   work_effort.fixed_asset_id ==> fixed_asset.fixed_asset_id
+#   work_effort.accommodation_map_id ==> accommodation_map.accommodation_map_id
+# checkConstraints---
+title: "WorkEffort"
+required:
+  - "accommodationMapId"
+  - "accommodationSpotId"
+  - "actualCompletionDate"
+  - "actualMilliSeconds"
+  - "actualSetupMillis"
+  - "actualStartDate"
+  - "createdByUserLogin"
+  - "createdDate"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currentStatusId"
+  - "description"
+  - "estimateCalcMethod"
+  - "estimatedCompletionDate"
+  - "estimatedMilliSeconds"
+  - "estimatedSetupMillis"
+  - "estimatedStartDate"
+  - "facilityId"
+  - "fixedAssetId"
+  - "infoUrl"
+  - "lastModifiedByUserLogin"
+  - "lastModifiedDate"
+  - "lastStatusUpdate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "locationDesc"
+  - "moneyUomId"
+  - "noteId"
+  - "percentComplete"
+  - "priority"
+  - "quantityProduced"
+  - "quantityRejected"
+  - "quantityToProduce"
+  - "recurrenceInfoId"
+  - "reserv2ndPPPerc"
+  - "reservNthPPPerc"
+  - "reservPersons"
+  - "revisionNumber"
+  - "runtimeDataId"
+  - "scopeEnumId"
+  - "sendNotificationEmail"
+  - "serviceLoaderName"
+  - "showAsEnumId"
+  - "sourceReferenceId"
+  - "specialTerms"
+  - "tempExprId"
+  - "timeTransparency"
+  - "totalMilliSecondsAllowed"
+  - "totalMoneyAllowed"
+  - "universalId"
+  - "workEffortId"
+  - "workEffortName"
+  - "workEffortParentId"
+  - "workEffortPurposeTypeId"
+  - "workEffortTypeId"
+type: "object"
+properties:
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  workEffortTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_type_id"
+    exampleSetFlag: false
+  currentStatusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "current_status_id"
+    exampleSetFlag: false
+  lastStatusUpdate:
+    type: "string"
+    description: "last_status_update"
+    format: "date-time"
+    exampleSetFlag: false
+  workEffortPurposeTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_purpose_type_id"
+    exampleSetFlag: false
+  workEffortParentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_parent_id"
+    exampleSetFlag: false
+  scopeEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "scope_enum_id"
+    exampleSetFlag: false
+  priority:
+    type: "number"
+    description: "priority"
+    exampleSetFlag: false
+  percentComplete:
+    type: "number"
+    description: "percent_complete"
+    exampleSetFlag: false
+  workEffortName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "work_effort_name"
+    exampleSetFlag: false
+  showAsEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "show_as_enum_id"
+    exampleSetFlag: false
+  sendNotificationEmail:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "send_notification_email"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  locationDesc:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "location_desc"
+    exampleSetFlag: false
+  estimatedStartDate:
+    type: "string"
+    description: "estimated_start_date"
+    format: "date-time"
+    exampleSetFlag: false
+  estimatedCompletionDate:
+    type: "string"
+    description: "estimated_completion_date"
+    format: "date-time"
+    exampleSetFlag: false
+  actualStartDate:
+    type: "string"
+    description: "actual_start_date"
+    format: "date-time"
+    exampleSetFlag: false
+  actualCompletionDate:
+    type: "string"
+    description: "actual_completion_date"
+    format: "date-time"
+    exampleSetFlag: false
+  estimatedMilliSeconds:
+    type: "number"
+    description: "estimated_milli_seconds"
+    exampleSetFlag: false
+  estimatedSetupMillis:
+    type: "number"
+    description: "estimated_setup_millis"
+    exampleSetFlag: false
+  estimateCalcMethod:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "estimate_calc_method"
+    exampleSetFlag: false
+  actualMilliSeconds:
+    type: "number"
+    description: "actual_milli_seconds"
+    exampleSetFlag: false
+  actualSetupMillis:
+    type: "number"
+    description: "actual_setup_millis"
+    exampleSetFlag: false
+  totalMilliSecondsAllowed:
+    type: "number"
+    description: "total_milli_seconds_allowed"
+    exampleSetFlag: false
+  totalMoneyAllowed:
+    type: "number"
+    description: "total_money_allowed"
+    exampleSetFlag: false
+  moneyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "money_uom_id"
+    exampleSetFlag: false
+  specialTerms:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "special_terms"
+    exampleSetFlag: false
+  timeTransparency:
+    type: "number"
+    description: "time_transparency"
+    exampleSetFlag: false
+  universalId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "universal_id"
+    exampleSetFlag: false
+  sourceReferenceId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "source_reference_id"
+    exampleSetFlag: false
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  infoUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "info_url"
+    exampleSetFlag: false
+  recurrenceInfoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "recurrence_info_id"
+    exampleSetFlag: false
+  tempExprId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "temp_expr_id"
+    exampleSetFlag: false
+  runtimeDataId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "runtime_data_id"
+    exampleSetFlag: false
+  noteId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "note_id"
+    exampleSetFlag: false
+  serviceLoaderName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "service_loader_name"
+    exampleSetFlag: false
+  quantityToProduce:
+    type: "number"
+    description: "quantity_to_produce"
+    exampleSetFlag: false
+  quantityProduced:
+    type: "number"
+    description: "quantity_produced"
+    exampleSetFlag: false
+  quantityRejected:
+    type: "number"
+    description: "quantity_rejected"
+    exampleSetFlag: false
+  reservPersons:
+    type: "number"
+    description: "reserv_persons"
+    exampleSetFlag: false
+  reserv2ndPPPerc:
+    type: "number"
+    description: "reserv2nd_p_p_perc"
+    exampleSetFlag: false
+  reservNthPPPerc:
+    type: "number"
+    description: "reserv_nth_p_p_perc"
+    exampleSetFlag: false
+  accommodationMapId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "accommodation_map_id"
+    exampleSetFlag: false
+  accommodationSpotId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "accommodation_spot_id"
+    exampleSetFlag: false
+  revisionNumber:
+    type: "number"
+    description: "revision_number"
+    exampleSetFlag: false
+  createdDate:
+    type: "string"
+    description: "created_date"
+    format: "date-time"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedDate:
+    type: "string"
+    description: "last_modified_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

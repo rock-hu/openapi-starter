@@ -1,0 +1,184 @@
+# order_item_ship_group null public null 0 0
+# primaryColumns
+#   order_id
+#   ship_group_seq_id
+# foreignKeys
+#   order_item_ship_group.telecom_contact_mech_id ==> contact_mech.contact_mech_id
+#   order_item_ship_group.shipment_method_type_id,carrier_party_id,carrier_role_type_id ==> carrier_shipment_method.shipment_method_type_id,party_id,role_type_id
+#   order_item_ship_group.vendor_party_id ==> party.party_id
+#   order_item_ship_group.carrier_party_id ==> party.party_id
+#   order_item_ship_group.supplier_party_id ==> party.party_id
+#   order_item_ship_group.contact_mech_id ==> postal_address.contact_mech_id
+#   order_item_ship_group.contact_mech_id ==> contact_mech.contact_mech_id
+#   order_item_ship_group.supplier_agreement_id ==> agreement.agreement_id
+#   order_item_ship_group.carrier_party_id,carrier_role_type_id ==> party_role.party_id,role_type_id
+#   order_item_ship_group.order_id ==> order_header.order_id
+#   order_item_ship_group.telecom_contact_mech_id ==> telecom_number.contact_mech_id
+#   order_item_ship_group.facility_id ==> facility.facility_id
+#   order_item_ship_group.shipment_method_type_id ==> shipment_method_type.shipment_method_type_id
+# checkConstraints---
+title: "OrderItemShipGroup"
+required:
+  - "carrierPartyId"
+  - "carrierRoleTypeId"
+  - "contactMechId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "estimatedDeliveryDate"
+  - "estimatedShipDate"
+  - "facilityId"
+  - "giftMessage"
+  - "isGift"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maySplit"
+  - "orderId"
+  - "shipAfterDate"
+  - "shipByDate"
+  - "shipGroupSeqId"
+  - "shipmentMethodTypeId"
+  - "shippingInstructions"
+  - "supplierAgreementId"
+  - "supplierPartyId"
+  - "telecomContactMechId"
+  - "trackingNumber"
+  - "vendorPartyId"
+type: "object"
+properties:
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  shipGroupSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "ship_group_seq_id"
+    exampleSetFlag: false
+  shipmentMethodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_method_type_id"
+    exampleSetFlag: false
+  supplierPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "supplier_party_id"
+    exampleSetFlag: false
+  supplierAgreementId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "supplier_agreement_id"
+    exampleSetFlag: false
+  vendorPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "vendor_party_id"
+    exampleSetFlag: false
+  carrierPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "carrier_party_id"
+    exampleSetFlag: false
+  carrierRoleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "carrier_role_type_id"
+    exampleSetFlag: false
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  telecomContactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "telecom_contact_mech_id"
+    exampleSetFlag: false
+  trackingNumber:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "tracking_number"
+    exampleSetFlag: false
+  shippingInstructions:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "shipping_instructions"
+    exampleSetFlag: false
+  maySplit:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "may_split"
+    exampleSetFlag: false
+  giftMessage:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "gift_message"
+    exampleSetFlag: false
+  isGift:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_gift"
+    exampleSetFlag: false
+  shipAfterDate:
+    type: "string"
+    description: "ship_after_date"
+    format: "date-time"
+    exampleSetFlag: false
+  shipByDate:
+    type: "string"
+    description: "ship_by_date"
+    format: "date-time"
+    exampleSetFlag: false
+  estimatedShipDate:
+    type: "string"
+    description: "estimated_ship_date"
+    format: "date-time"
+    exampleSetFlag: false
+  estimatedDeliveryDate:
+    type: "string"
+    description: "estimated_delivery_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

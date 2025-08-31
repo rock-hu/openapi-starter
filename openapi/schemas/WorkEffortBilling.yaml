@@ -1,0 +1,64 @@
+# work_effort_billing null public null 0 0
+# primaryColumns
+#   work_effort_id
+#   invoice_id
+#   invoice_item_seq_id
+# foreignKeys
+#   work_effort_billing.invoice_id,invoice_item_seq_id ==> invoice_item.invoice_id,invoice_item_seq_id
+#   work_effort_billing.work_effort_id ==> work_effort.work_effort_id
+# checkConstraints---
+title: "WorkEffortBilling"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "invoiceId"
+  - "invoiceItemSeqId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "percentage"
+  - "workEffortId"
+type: "object"
+properties:
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  invoiceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_id"
+    exampleSetFlag: false
+  invoiceItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_item_seq_id"
+    exampleSetFlag: false
+  percentage:
+    type: "number"
+    description: "percentage"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,56 @@
+# gl_xbrl_class null public null 0 0
+# primaryColumns
+#   gl_xbrl_class_id
+# foreignKeys
+#   gl_xbrl_class.parent_gl_xbrl_class_id ==> gl_xbrl_class.gl_xbrl_class_id
+# checkConstraints---
+title: "GlXbrlClass"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "glXbrlClassId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentGlXbrlClassId"
+type: "object"
+properties:
+  glXbrlClassId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_xbrl_class_id"
+    exampleSetFlag: false
+  parentGlXbrlClassId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_gl_xbrl_class_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

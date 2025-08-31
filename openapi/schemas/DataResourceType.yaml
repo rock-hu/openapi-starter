@@ -1,0 +1,63 @@
+# data_resource_type null public null 0 0
+# primaryColumns
+#   data_resource_type_id
+# foreignKeys
+#   data_resource_type.parent_type_id ==> data_resource_type.data_resource_type_id
+# checkConstraints---
+title: "DataResourceType"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "dataResourceTypeId"
+  - "description"
+  - "hasTable"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentTypeId"
+type: "object"
+properties:
+  dataResourceTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "data_resource_type_id"
+    exampleSetFlag: false
+  parentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_type_id"
+    exampleSetFlag: false
+  hasTable:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "has_table"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

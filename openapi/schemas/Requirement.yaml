@@ -1,0 +1,165 @@
+# requirement null public null 0 0
+# primaryColumns
+#   requirement_id
+# foreignKeys
+#   requirement.product_id ==> product.product_id
+#   requirement.requirement_type_id ==> requirement_type.requirement_type_id
+#   requirement.deliverable_id ==> deliverable.deliverable_id
+#   requirement.facility_id ==> facility.facility_id
+#   requirement.fixed_asset_id ==> fixed_asset.fixed_asset_id
+#   requirement.status_id ==> status_item.status_id
+# checkConstraints---
+title: "Requirement"
+required:
+  - "createdByUserLogin"
+  - "createdDate"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "deliverableId"
+  - "description"
+  - "estimatedBudget"
+  - "facilityId"
+  - "facilityIdTo"
+  - "fixedAssetId"
+  - "lastModifiedByUserLogin"
+  - "lastModifiedDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productId"
+  - "quantity"
+  - "reason"
+  - "requiredByDate"
+  - "requirementId"
+  - "requirementStartDate"
+  - "requirementTypeId"
+  - "statusId"
+  - "useCase"
+type: "object"
+properties:
+  requirementId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "requirement_id"
+    exampleSetFlag: false
+  requirementTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "requirement_type_id"
+    exampleSetFlag: false
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  deliverableId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "deliverable_id"
+    exampleSetFlag: false
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  requirementStartDate:
+    type: "string"
+    description: "requirement_start_date"
+    format: "date-time"
+    exampleSetFlag: false
+  requiredByDate:
+    type: "string"
+    description: "required_by_date"
+    format: "date-time"
+    exampleSetFlag: false
+  estimatedBudget:
+    type: "number"
+    description: "estimated_budget"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  useCase:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "use_case"
+    exampleSetFlag: false
+  reason:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "reason"
+    exampleSetFlag: false
+  createdDate:
+    type: "string"
+    description: "created_date"
+    format: "date-time"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedDate:
+    type: "string"
+    description: "last_modified_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  facilityIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id_to"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

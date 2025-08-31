@@ -1,0 +1,76 @@
+# testing_node_member null public null 0 0
+# primaryColumns
+#   testing_node_id
+#   testing_id
+#   from_date
+# foreignKeys
+#   testing_node_member.testing_id ==> testing.testing_id
+#   testing_node_member.testing_node_id ==> testing_node.testing_node_id
+# checkConstraints---
+title: "TestingNodeMember"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "extendFromDate"
+  - "extendThruDate"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "testingId"
+  - "testingNodeId"
+  - "thruDate"
+type: "object"
+properties:
+  testingNodeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "testing_node_id"
+    exampleSetFlag: false
+  testingId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "testing_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  extendFromDate:
+    type: "string"
+    description: "extend_from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  extendThruDate:
+    type: "string"
+    description: "extend_thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

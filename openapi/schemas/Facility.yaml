@@ -1,0 +1,161 @@
+# facility null public null 0 0
+# primaryColumns
+#   facility_id
+# foreignKeys
+#   facility.default_inventory_item_type_id ==> inventory_item_type.inventory_item_type_id
+#   facility.facility_size_uom_id ==> uom.uom_id
+#   facility.parent_facility_id ==> facility.facility_id
+#   facility.facility_type_id ==> facility_type.facility_type_id
+#   facility.geo_point_id ==> geo_point.geo_point_id
+#   facility.default_weight_uom_id ==> uom.uom_id
+#   facility.owner_party_id ==> party.party_id
+#   facility.primary_facility_group_id ==> facility_group.facility_group_id
+#   facility.default_dimension_uom_id ==> uom.uom_id
+# checkConstraints---
+title: "Facility"
+required:
+  - "closedDate"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "defaultDaysToShip"
+  - "defaultDimensionUomId"
+  - "defaultInventoryItemTypeId"
+  - "defaultWeightUomId"
+  - "description"
+  - "facilityId"
+  - "facilityLevel"
+  - "facilityName"
+  - "facilitySize"
+  - "facilitySizeUomId"
+  - "facilityTypeId"
+  - "geoPointId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "openedDate"
+  - "ownerPartyId"
+  - "parentFacilityId"
+  - "primaryFacilityGroupId"
+  - "productStoreId"
+type: "object"
+properties:
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  facilityTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_type_id"
+    exampleSetFlag: false
+  parentFacilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_facility_id"
+    exampleSetFlag: false
+  ownerPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "owner_party_id"
+    exampleSetFlag: false
+  defaultInventoryItemTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "default_inventory_item_type_id"
+    exampleSetFlag: false
+  facilityName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "facility_name"
+    exampleSetFlag: false
+  primaryFacilityGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "primary_facility_group_id"
+    exampleSetFlag: false
+  facilitySize:
+    type: "number"
+    description: "facility_size"
+    exampleSetFlag: false
+  facilitySizeUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_size_uom_id"
+    exampleSetFlag: false
+  productStoreId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_id"
+    exampleSetFlag: false
+  defaultDaysToShip:
+    type: "number"
+    description: "default_days_to_ship"
+    exampleSetFlag: false
+  openedDate:
+    type: "string"
+    description: "opened_date"
+    format: "date-time"
+    exampleSetFlag: false
+  closedDate:
+    type: "string"
+    description: "closed_date"
+    format: "date-time"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  defaultDimensionUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "default_dimension_uom_id"
+    exampleSetFlag: false
+  defaultWeightUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "default_weight_uom_id"
+    exampleSetFlag: false
+  geoPointId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_point_id"
+    exampleSetFlag: false
+  facilityLevel:
+    type: "number"
+    description: "facility_level"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

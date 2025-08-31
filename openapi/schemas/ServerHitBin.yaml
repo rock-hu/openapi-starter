@@ -1,0 +1,85 @@
+# server_hit_bin null public null 0 0
+# primaryColumns
+#   server_hit_bin_id
+# foreignKeys
+#   server_hit_bin.hit_type_id ==> server_hit_type.hit_type_id
+# checkConstraints---
+title: "ServerHitBin"
+required:
+  - "binEndDateTime"
+  - "binStartDateTime"
+  - "contentId"
+  - "hitTypeId"
+  - "internalContentId"
+  - "maxTimeMillis"
+  - "minTimeMillis"
+  - "numberHits"
+  - "serverHitBinId"
+  - "serverHostName"
+  - "serverIpAddress"
+  - "totalTimeMillis"
+type: "object"
+properties:
+  serverHitBinId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "server_hit_bin_id"
+    exampleSetFlag: false
+  contentId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "content_id"
+    exampleSetFlag: false
+  hitTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "hit_type_id"
+    exampleSetFlag: false
+  serverIpAddress:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "server_ip_address"
+    exampleSetFlag: false
+  serverHostName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "server_host_name"
+    exampleSetFlag: false
+  binStartDateTime:
+    type: "string"
+    description: "bin_start_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  binEndDateTime:
+    type: "string"
+    description: "bin_end_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  numberHits:
+    type: "number"
+    description: "number_hits"
+    exampleSetFlag: false
+  totalTimeMillis:
+    type: "number"
+    description: "total_time_millis"
+    exampleSetFlag: false
+  minTimeMillis:
+    type: "number"
+    description: "min_time_millis"
+    exampleSetFlag: false
+  maxTimeMillis:
+    type: "number"
+    description: "max_time_millis"
+    exampleSetFlag: false
+  internalContentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "internal_content_id"
+    exampleSetFlag: false
+exampleSetFlag: false

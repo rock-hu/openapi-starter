@@ -1,0 +1,151 @@
+# fin_account null public null 0 0
+# primaryColumns
+#   fin_account_id
+# foreignKeys
+#   fin_account.replenish_payment_id ==> payment_method.payment_method_id
+#   fin_account.owner_party_id ==> party.party_id
+#   fin_account.currency_uom_id ==> uom.uom_id
+#   fin_account.post_to_gl_account_id ==> gl_account.gl_account_id
+#   fin_account.organization_party_id ==> party.party_id
+#   fin_account.fin_account_type_id ==> fin_account_type.fin_account_type_id
+# checkConstraints---
+title: "FinAccount"
+required:
+  - "actualBalance"
+  - "availableBalance"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUomId"
+  - "finAccountCode"
+  - "finAccountId"
+  - "finAccountName"
+  - "finAccountPin"
+  - "finAccountTypeId"
+  - "fromDate"
+  - "isRefundable"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "organizationPartyId"
+  - "ownerPartyId"
+  - "postToGlAccountId"
+  - "replenishLevel"
+  - "replenishPaymentId"
+  - "statusId"
+  - "thruDate"
+type: "object"
+properties:
+  finAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fin_account_id"
+    exampleSetFlag: false
+  finAccountTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fin_account_type_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  finAccountName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "fin_account_name"
+    exampleSetFlag: false
+  finAccountCode:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "fin_account_code"
+    exampleSetFlag: false
+  finAccountPin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "fin_account_pin"
+    exampleSetFlag: false
+  currencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom_id"
+    exampleSetFlag: false
+  organizationPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "organization_party_id"
+    exampleSetFlag: false
+  ownerPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "owner_party_id"
+    exampleSetFlag: false
+  postToGlAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "post_to_gl_account_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  isRefundable:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_refundable"
+    exampleSetFlag: false
+  replenishPaymentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "replenish_payment_id"
+    exampleSetFlag: false
+  replenishLevel:
+    type: "number"
+    description: "replenish_level"
+    exampleSetFlag: false
+  actualBalance:
+    type: "number"
+    description: "actual_balance"
+    exampleSetFlag: false
+  availableBalance:
+    type: "number"
+    description: "available_balance"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

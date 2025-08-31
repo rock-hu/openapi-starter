@@ -1,0 +1,72 @@
+# facility_location_geo_point null public null 0 0
+# primaryColumns
+#   facility_id
+#   location_seq_id
+#   geo_point_id
+#   from_date
+# foreignKeys
+#   facility_location_geo_point.geo_point_id ==> geo_point.geo_point_id
+#   facility_location_geo_point.facility_id,location_seq_id ==> facility_location.facility_id,location_seq_id
+# checkConstraints---
+title: "FacilityLocationGeoPoint"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "facilityId"
+  - "fromDate"
+  - "geoPointId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "locationSeqId"
+  - "thruDate"
+type: "object"
+properties:
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  locationSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "location_seq_id"
+    exampleSetFlag: false
+  geoPointId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_point_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

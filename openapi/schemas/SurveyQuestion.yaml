@@ -1,0 +1,100 @@
+# survey_question null public null 0 0
+# primaryColumns
+#   survey_question_id
+# foreignKeys
+#   survey_question.survey_question_type_id ==> survey_question_type.survey_question_type_id
+#   survey_question.geo_id ==> geo.geo_id
+#   survey_question.survey_question_category_id ==> survey_question_category.survey_question_category_id
+# checkConstraints---
+title: "SurveyQuestion"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "enumTypeId"
+  - "formatString"
+  - "geoId"
+  - "hint"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "question"
+  - "surveyQuestionCategoryId"
+  - "surveyQuestionId"
+  - "surveyQuestionTypeId"
+type: "object"
+properties:
+  surveyQuestionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_question_id"
+    exampleSetFlag: false
+  surveyQuestionCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_question_category_id"
+    exampleSetFlag: false
+  surveyQuestionTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_question_type_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  question:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "question"
+    exampleSetFlag: false
+  hint:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "hint"
+    exampleSetFlag: false
+  enumTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "enum_type_id"
+    exampleSetFlag: false
+  geoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_id"
+    exampleSetFlag: false
+  formatString:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "format_string"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

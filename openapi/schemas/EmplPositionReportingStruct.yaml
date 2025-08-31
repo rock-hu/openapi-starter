@@ -1,0 +1,78 @@
+# empl_position_reporting_struct null public null 0 0
+# primaryColumns
+#   empl_position_id_reporting_to
+#   empl_position_id_managed_by
+#   from_date
+# foreignKeys
+#   empl_position_reporting_struct.empl_position_id_reporting_to ==> empl_position.empl_position_id
+#   empl_position_reporting_struct.empl_position_id_managed_by ==> empl_position.empl_position_id
+# checkConstraints---
+title: "EmplPositionReportingStruct"
+required:
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "emplPositionIdManagedBy"
+  - "emplPositionIdReportingTo"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "primaryFlag"
+  - "thruDate"
+type: "object"
+properties:
+  emplPositionIdReportingTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "empl_position_id_reporting_to"
+    exampleSetFlag: false
+  emplPositionIdManagedBy:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "empl_position_id_managed_by"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  primaryFlag:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "primary_flag"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,62 @@
+# country_code null public null 0 0
+# primaryColumns
+#   country_code
+# foreignKeys
+# checkConstraints---
+title: "CountryCode"
+required:
+  - "countryAbbr"
+  - "countryCode"
+  - "countryName"
+  - "countryNumber"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  countryCode:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "country_code"
+    exampleSetFlag: false
+  countryAbbr:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "country_abbr"
+    exampleSetFlag: false
+  countryNumber:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "country_number"
+    exampleSetFlag: false
+  countryName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "country_name"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

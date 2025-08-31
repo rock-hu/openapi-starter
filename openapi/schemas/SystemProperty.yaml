@@ -1,0 +1,63 @@
+# system_property null public null 0 0
+# primaryColumns
+#   system_resource_id
+#   system_property_id
+# foreignKeys
+# checkConstraints---
+title: "SystemProperty"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "systemPropertyId"
+  - "systemPropertyValue"
+  - "systemResourceId"
+type: "object"
+properties:
+  systemResourceId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "system_resource_id"
+    exampleSetFlag: false
+  systemPropertyId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "system_property_id"
+    exampleSetFlag: false
+  systemPropertyValue:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "system_property_value"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

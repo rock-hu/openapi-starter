@@ -1,0 +1,110 @@
+# shipment_gateway_dhl null public null 0 0
+# primaryColumns
+#   shipment_gateway_config_id
+# foreignKeys
+#   shipment_gateway_dhl.shipment_gateway_config_id ==> shipment_gateway_config.shipment_gateway_config_id
+# checkConstraints---
+title: "ShipmentGatewayDhl"
+required:
+  - "accessAccountNbr"
+  - "accessPassword"
+  - "accessShippingKey"
+  - "accessUserId"
+  - "connectTimeout"
+  - "connectUrl"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "headAction"
+  - "headVersion"
+  - "labelImageFormat"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "rateEstimateTemplate"
+  - "shipmentGatewayConfigId"
+type: "object"
+properties:
+  shipmentGatewayConfigId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_gateway_config_id"
+    exampleSetFlag: false
+  connectUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "connect_url"
+    exampleSetFlag: false
+  connectTimeout:
+    type: "number"
+    description: "connect_timeout"
+    exampleSetFlag: false
+  headVersion:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "head_version"
+    exampleSetFlag: false
+  headAction:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "head_action"
+    exampleSetFlag: false
+  accessUserId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "access_user_id"
+    exampleSetFlag: false
+  accessPassword:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "access_password"
+    exampleSetFlag: false
+  accessAccountNbr:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "access_account_nbr"
+    exampleSetFlag: false
+  accessShippingKey:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "access_shipping_key"
+    exampleSetFlag: false
+  labelImageFormat:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "label_image_format"
+    exampleSetFlag: false
+  rateEstimateTemplate:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "rate_estimate_template"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

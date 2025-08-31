@@ -1,0 +1,69 @@
+# accommodation_spot null public null 0 0
+# primaryColumns
+#   accommodation_spot_id
+# foreignKeys
+#   accommodation_spot.fixed_asset_id ==> fixed_asset.fixed_asset_id
+#   accommodation_spot.accommodation_class_id ==> accommodation_class.accommodation_class_id
+# checkConstraints---
+title: "AccommodationSpot"
+required:
+  - "accommodationClassId"
+  - "accommodationSpotId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "fixedAssetId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "numberOfSpaces"
+type: "object"
+properties:
+  accommodationSpotId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "accommodation_spot_id"
+    exampleSetFlag: false
+  accommodationClassId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "accommodation_class_id"
+    exampleSetFlag: false
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  numberOfSpaces:
+    type: "number"
+    description: "number_of_spaces"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,107 @@
+# shipment_time_estimate null public null 0 0
+# primaryColumns
+#   shipment_method_type_id
+#   party_id
+#   role_type_id
+#   geo_id_to
+#   geo_id_from
+#   from_date
+# foreignKeys
+#   shipment_time_estimate.shipment_method_type_id,party_id,role_type_id ==> carrier_shipment_method.shipment_method_type_id,party_id,role_type_id
+#   shipment_time_estimate.geo_id_to ==> geo.geo_id
+#   shipment_time_estimate.geo_id_from ==> geo.geo_id
+#   shipment_time_estimate.lead_time_uom_id ==> uom.uom_id
+# checkConstraints---
+title: "ShipmentTimeEstimate"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "geoIdFrom"
+  - "geoIdTo"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "leadTime"
+  - "leadTimeUomId"
+  - "partyId"
+  - "roleTypeId"
+  - "sequenceNumber"
+  - "shipmentMethodTypeId"
+  - "thruDate"
+type: "object"
+properties:
+  shipmentMethodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_method_type_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  geoIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_id_to"
+    exampleSetFlag: false
+  geoIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_id_from"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  leadTime:
+    type: "number"
+    description: "lead_time"
+    exampleSetFlag: false
+  leadTimeUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "lead_time_uom_id"
+    exampleSetFlag: false
+  sequenceNumber:
+    type: "number"
+    description: "sequence_number"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

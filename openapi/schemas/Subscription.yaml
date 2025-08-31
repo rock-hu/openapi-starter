@@ -1,0 +1,279 @@
+# subscription null public null 0 0
+# primaryColumns
+#   subscription_id
+# foreignKeys
+#   subscription.subscription_resource_id ==> subscription_resource.subscription_resource_id
+#   subscription.party_id ==> party.party_id
+#   subscription.use_time_uom_id ==> uom.uom_id
+#   subscription.product_category_id ==> product_category.product_category_id
+#   subscription.product_id ==> product.product_id
+#   subscription.order_id,order_item_seq_id ==> order_item.order_id,order_item_seq_id
+#   subscription.role_type_id ==> role_type.role_type_id
+#   subscription.max_life_time_uom_id ==> uom.uom_id
+#   subscription.originated_from_role_type_id ==> role_type.role_type_id
+#   subscription.grace_period_on_expiry_uom_id ==> uom.uom_id
+#   subscription.cancl_autm_ext_time_uom_id ==> uom.uom_id
+#   subscription.inventory_item_id ==> inventory_item.inventory_item_id
+#   subscription.need_type_id ==> need_type.need_type_id
+#   subscription.originated_from_party_id ==> party.party_id
+#   subscription.subscription_type_id ==> subscription_type.subscription_type_id
+#   subscription.contact_mech_id ==> contact_mech.contact_mech_id
+#   subscription.available_time_uom_id ==> uom.uom_id
+# checkConstraints---
+title: "Subscription"
+required:
+  - "automaticExtend"
+  - "availableTime"
+  - "availableTimeUomId"
+  - "canclAutmExtTime"
+  - "canclAutmExtTimeUomId"
+  - "communicationEventId"
+  - "contactMechId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "expirationCompletedDate"
+  - "externalSubscriptionId"
+  - "fromDate"
+  - "gracePeriodOnExpiry"
+  - "gracePeriodOnExpiryUomId"
+  - "inventoryItemId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maxLifeTime"
+  - "maxLifeTimeUomId"
+  - "needTypeId"
+  - "orderId"
+  - "orderItemSeqId"
+  - "originatedFromPartyId"
+  - "originatedFromRoleTypeId"
+  - "partyId"
+  - "partyNeedId"
+  - "productCategoryId"
+  - "productId"
+  - "purchaseFromDate"
+  - "purchaseThruDate"
+  - "roleTypeId"
+  - "subscriptionId"
+  - "subscriptionResourceId"
+  - "subscriptionTypeId"
+  - "thruDate"
+  - "useCountLimit"
+  - "useTime"
+  - "useTimeUomId"
+type: "object"
+properties:
+  subscriptionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "subscription_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  subscriptionResourceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "subscription_resource_id"
+    exampleSetFlag: false
+  communicationEventId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "communication_event_id"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  originatedFromPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "originated_from_party_id"
+    exampleSetFlag: false
+  originatedFromRoleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "originated_from_role_type_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  partyNeedId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_need_id"
+    exampleSetFlag: false
+  needTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "need_type_id"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  productCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_category_id"
+    exampleSetFlag: false
+  inventoryItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_id"
+    exampleSetFlag: false
+  subscriptionTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "subscription_type_id"
+    exampleSetFlag: false
+  externalSubscriptionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "external_subscription_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  purchaseFromDate:
+    type: "string"
+    description: "purchase_from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  purchaseThruDate:
+    type: "string"
+    description: "purchase_thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  maxLifeTime:
+    type: "number"
+    description: "max_life_time"
+    exampleSetFlag: false
+  maxLifeTimeUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "max_life_time_uom_id"
+    exampleSetFlag: false
+  availableTime:
+    type: "number"
+    description: "available_time"
+    exampleSetFlag: false
+  availableTimeUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "available_time_uom_id"
+    exampleSetFlag: false
+  useCountLimit:
+    type: "number"
+    description: "use_count_limit"
+    exampleSetFlag: false
+  useTime:
+    type: "number"
+    description: "use_time"
+    exampleSetFlag: false
+  useTimeUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "use_time_uom_id"
+    exampleSetFlag: false
+  automaticExtend:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "automatic_extend"
+    exampleSetFlag: false
+  canclAutmExtTime:
+    type: "number"
+    description: "cancl_autm_ext_time"
+    exampleSetFlag: false
+  canclAutmExtTimeUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cancl_autm_ext_time_uom_id"
+    exampleSetFlag: false
+  gracePeriodOnExpiry:
+    type: "number"
+    description: "grace_period_on_expiry"
+    exampleSetFlag: false
+  gracePeriodOnExpiryUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "grace_period_on_expiry_uom_id"
+    exampleSetFlag: false
+  expirationCompletedDate:
+    type: "string"
+    description: "expiration_completed_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

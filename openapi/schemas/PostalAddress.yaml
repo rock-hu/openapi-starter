@@ -1,0 +1,166 @@
+# postal_address null public null 0 0
+# primaryColumns
+#   contact_mech_id
+# foreignKeys
+#   postal_address.postal_code_geo_id ==> geo.geo_id
+#   postal_address.contact_mech_id ==> contact_mech.contact_mech_id
+#   postal_address.city_geo_id ==> geo.geo_id
+#   postal_address.municipality_geo_id ==> geo.geo_id
+#   postal_address.geo_point_id ==> geo_point.geo_point_id
+#   postal_address.country_geo_id ==> geo.geo_id
+#   postal_address.county_geo_id ==> geo.geo_id
+#   postal_address.state_province_geo_id ==> geo.geo_id
+# checkConstraints---
+title: "PostalAddress"
+required:
+  - "address1"
+  - "address2"
+  - "attnName"
+  - "city"
+  - "cityGeoId"
+  - "contactMechId"
+  - "countryGeoId"
+  - "countyGeoId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "directions"
+  - "geoPointId"
+  - "houseNumber"
+  - "houseNumberExt"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "municipalityGeoId"
+  - "postalCode"
+  - "postalCodeExt"
+  - "postalCodeGeoId"
+  - "stateProvinceGeoId"
+  - "toName"
+type: "object"
+properties:
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  toName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "to_name"
+    exampleSetFlag: false
+  attnName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "attn_name"
+    exampleSetFlag: false
+  address1:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "address1"
+    exampleSetFlag: false
+  address2:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "address2"
+    exampleSetFlag: false
+  houseNumber:
+    type: "number"
+    description: "house_number"
+    exampleSetFlag: false
+  houseNumberExt:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "house_number_ext"
+    exampleSetFlag: false
+  directions:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "directions"
+    exampleSetFlag: false
+  city:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "city"
+    exampleSetFlag: false
+  cityGeoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "city_geo_id"
+    exampleSetFlag: false
+  postalCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "postal_code"
+    exampleSetFlag: false
+  postalCodeExt:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "postal_code_ext"
+    exampleSetFlag: false
+  countryGeoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "country_geo_id"
+    exampleSetFlag: false
+  stateProvinceGeoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "state_province_geo_id"
+    exampleSetFlag: false
+  countyGeoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "county_geo_id"
+    exampleSetFlag: false
+  municipalityGeoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "municipality_geo_id"
+    exampleSetFlag: false
+  postalCodeGeoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "postal_code_geo_id"
+    exampleSetFlag: false
+  geoPointId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_point_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

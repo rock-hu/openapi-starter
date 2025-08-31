@@ -1,0 +1,113 @@
+# invoice_item_assoc null public null 0 0
+# primaryColumns
+#   invoice_id_from
+#   invoice_item_seq_id_from
+#   invoice_id_to
+#   invoice_item_seq_id_to
+#   invoice_item_assoc_type_id
+#   from_date
+# foreignKeys
+#   invoice_item_assoc.invoice_id_from,invoice_item_seq_id_from ==> invoice_item.invoice_id,invoice_item_seq_id
+#   invoice_item_assoc.invoice_id_to,invoice_item_seq_id_to ==> invoice_item.invoice_id,invoice_item_seq_id
+#   invoice_item_assoc.invoice_item_assoc_type_id ==> invoice_item_assoc_type.invoice_item_assoc_type_id
+# checkConstraints---
+title: "InvoiceItemAssoc"
+required:
+  - "amount"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "invoiceIdFrom"
+  - "invoiceIdTo"
+  - "invoiceItemAssocTypeId"
+  - "invoiceItemSeqIdFrom"
+  - "invoiceItemSeqIdTo"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyIdFrom"
+  - "partyIdTo"
+  - "quantity"
+  - "thruDate"
+type: "object"
+properties:
+  invoiceIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_id_from"
+    exampleSetFlag: false
+  invoiceItemSeqIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_item_seq_id_from"
+    exampleSetFlag: false
+  invoiceIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_id_to"
+    exampleSetFlag: false
+  invoiceItemSeqIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_item_seq_id_to"
+    exampleSetFlag: false
+  invoiceItemAssocTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_item_assoc_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  partyIdFrom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_from"
+    exampleSetFlag: false
+  partyIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id_to"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  amount:
+    type: "number"
+    description: "amount"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

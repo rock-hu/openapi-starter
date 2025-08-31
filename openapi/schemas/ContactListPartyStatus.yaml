@@ -1,0 +1,85 @@
+# contact_list_party_status null public null 0 0
+# primaryColumns
+#   contact_list_id
+#   party_id
+#   from_date
+#   status_date
+# foreignKeys
+#   contact_list_party_status.contact_list_id,party_id,from_date ==> contact_list_party.contact_list_id,party_id,from_date
+# checkConstraints---
+title: "ContactListPartyStatus"
+required:
+  - "contactListId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "optInVerifyCode"
+  - "partyId"
+  - "setByUserLoginId"
+  - "statusDate"
+  - "statusId"
+type: "object"
+properties:
+  contactListId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_list_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  statusDate:
+    type: "string"
+    description: "status_date"
+    format: "date-time"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  setByUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "set_by_user_login_id"
+    exampleSetFlag: false
+  optInVerifyCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "opt_in_verify_code"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

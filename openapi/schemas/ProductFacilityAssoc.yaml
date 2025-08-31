@@ -1,0 +1,92 @@
+# product_facility_assoc null public null 0 0
+# primaryColumns
+#   product_id
+#   facility_id
+#   facility_id_to
+#   facility_assoc_type_id
+#   from_date
+# foreignKeys
+#   product_facility_assoc.facility_assoc_type_id ==> facility_assoc_type.facility_assoc_type_id
+#   product_facility_assoc.facility_id_to ==> facility.facility_id
+#   product_facility_assoc.product_id ==> product.product_id
+#   product_facility_assoc.facility_id ==> facility.facility_id
+# checkConstraints---
+title: "ProductFacilityAssoc"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "facilityAssocTypeId"
+  - "facilityId"
+  - "facilityIdTo"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productId"
+  - "sequenceNum"
+  - "thruDate"
+  - "transitTime"
+type: "object"
+properties:
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  facilityIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id_to"
+    exampleSetFlag: false
+  facilityAssocTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_assoc_type_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  transitTime:
+    type: "number"
+    description: "transit_time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

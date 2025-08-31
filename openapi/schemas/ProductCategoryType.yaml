@@ -1,0 +1,63 @@
+# product_category_type null public null 0 0
+# primaryColumns
+#   product_category_type_id
+# foreignKeys
+#   product_category_type.parent_type_id ==> product_category_type.product_category_type_id
+# checkConstraints---
+title: "ProductCategoryType"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "hasTable"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentTypeId"
+  - "productCategoryTypeId"
+type: "object"
+properties:
+  productCategoryTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_category_type_id"
+    exampleSetFlag: false
+  parentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_type_id"
+    exampleSetFlag: false
+  hasTable:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "has_table"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,106 @@
+# work_effort_event_reminder null public null 0 0
+# primaryColumns
+#   work_effort_id
+#   sequence_id
+# foreignKeys
+#   work_effort_event_reminder.party_id ==> party.party_id
+#   work_effort_event_reminder.contact_mech_id ==> contact_mech.contact_mech_id
+#   work_effort_event_reminder.work_effort_id ==> work_effort.work_effort_id
+# checkConstraints---
+title: "WorkEffortEventReminder"
+required:
+  - "contactMechId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currentCount"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "localeId"
+  - "partyId"
+  - "reminderDateTime"
+  - "reminderOffset"
+  - "repeatCount"
+  - "repeatInterval"
+  - "sequenceId"
+  - "timeZoneId"
+  - "workEffortId"
+type: "object"
+properties:
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  sequenceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "sequence_id"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  reminderDateTime:
+    type: "string"
+    description: "reminder_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  repeatCount:
+    type: "number"
+    description: "repeat_count"
+    exampleSetFlag: false
+  repeatInterval:
+    type: "number"
+    description: "repeat_interval"
+    exampleSetFlag: false
+  currentCount:
+    type: "number"
+    description: "current_count"
+    exampleSetFlag: false
+  reminderOffset:
+    type: "number"
+    description: "reminder_offset"
+    exampleSetFlag: false
+  localeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "locale_id"
+    exampleSetFlag: false
+  timeZoneId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "time_zone_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

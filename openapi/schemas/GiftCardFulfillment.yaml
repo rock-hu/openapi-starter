@@ -1,0 +1,134 @@
+# gift_card_fulfillment null public null 0 0
+# primaryColumns
+#   fulfillment_id
+# foreignKeys
+#   gift_card_fulfillment.order_id ==> order_header.order_id
+#   gift_card_fulfillment.order_id,order_item_seq_id ==> order_item.order_id,order_item_seq_id
+#   gift_card_fulfillment.type_enum_id ==> enumeration.enum_id
+#   gift_card_fulfillment.party_id ==> party.party_id
+#   gift_card_fulfillment.survey_response_id ==> survey_response.survey_response_id
+# checkConstraints---
+title: "GiftCardFulfillment"
+required:
+  - "amount"
+  - "authCode"
+  - "cardNumber"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fulfillmentDate"
+  - "fulfillmentId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "merchantId"
+  - "orderId"
+  - "orderItemSeqId"
+  - "partyId"
+  - "pinNumber"
+  - "referenceNum"
+  - "responseCode"
+  - "surveyResponseId"
+  - "typeEnumId"
+type: "object"
+properties:
+  fulfillmentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fulfillment_id"
+    exampleSetFlag: false
+  typeEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "type_enum_id"
+    exampleSetFlag: false
+  merchantId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "merchant_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  surveyResponseId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_response_id"
+    exampleSetFlag: false
+  cardNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "card_number"
+    exampleSetFlag: false
+  pinNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "pin_number"
+    exampleSetFlag: false
+  amount:
+    type: "number"
+    description: "amount"
+    exampleSetFlag: false
+  responseCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "response_code"
+    exampleSetFlag: false
+  referenceNum:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "reference_num"
+    exampleSetFlag: false
+  authCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "auth_code"
+    exampleSetFlag: false
+  fulfillmentDate:
+    type: "string"
+    description: "fulfillment_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

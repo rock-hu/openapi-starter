@@ -1,0 +1,92 @@
+# work_effort_fixed_asset_assign null public null 0 0
+# primaryColumns
+#   work_effort_id
+#   fixed_asset_id
+#   from_date
+# foreignKeys
+#   work_effort_fixed_asset_assign.fixed_asset_id ==> fixed_asset.fixed_asset_id
+#   work_effort_fixed_asset_assign.status_id ==> status_item.status_id
+#   work_effort_fixed_asset_assign.availability_status_id ==> status_item.status_id
+#   work_effort_fixed_asset_assign.work_effort_id ==> work_effort.work_effort_id
+# checkConstraints---
+title: "WorkEffortFixedAssetAssign"
+required:
+  - "allocatedCost"
+  - "availabilityStatusId"
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fixedAssetId"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "statusId"
+  - "thruDate"
+  - "workEffortId"
+type: "object"
+properties:
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  availabilityStatusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "availability_status_id"
+    exampleSetFlag: false
+  allocatedCost:
+    type: "number"
+    description: "allocated_cost"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

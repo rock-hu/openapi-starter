@@ -1,0 +1,55 @@
+# user_login_session null public null 0 0
+# primaryColumns
+#   user_login_id
+# foreignKeys
+#   user_login_session.user_login_id ==> user_login.user_login_id
+# checkConstraints---
+title: "UserLoginSession"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "savedDate"
+  - "sessionData"
+  - "userLoginId"
+type: "object"
+properties:
+  userLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "user_login_id"
+    exampleSetFlag: false
+  savedDate:
+    type: "string"
+    description: "saved_date"
+    format: "date-time"
+    exampleSetFlag: false
+  sessionData:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "session_data"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

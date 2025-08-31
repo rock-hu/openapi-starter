@@ -1,0 +1,70 @@
+# catalina_session null public null 0 0
+# primaryColumns
+#   session_id
+# foreignKeys
+# checkConstraints---
+title: "CatalinaSession"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "isValid"
+  - "lastAccessed"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maxIdle"
+  - "sessionId"
+  - "sessionInfo"
+  - "sessionSize"
+type: "object"
+properties:
+  sessionId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "session_id"
+    exampleSetFlag: false
+  sessionSize:
+    type: "number"
+    description: "session_size"
+    exampleSetFlag: false
+  sessionInfo:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "session_info"
+    exampleSetFlag: false
+  isValid:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_valid"
+    exampleSetFlag: false
+  maxIdle:
+    type: "number"
+    description: "max_idle"
+    exampleSetFlag: false
+  lastAccessed:
+    type: "number"
+    description: "last_accessed"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,63 @@
+# deliverable null public null 0 0
+# primaryColumns
+#   deliverable_id
+# foreignKeys
+#   deliverable.deliverable_type_id ==> deliverable_type.deliverable_type_id
+# checkConstraints---
+title: "Deliverable"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "deliverableId"
+  - "deliverableName"
+  - "deliverableTypeId"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  deliverableId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "deliverable_id"
+    exampleSetFlag: false
+  deliverableTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "deliverable_type_id"
+    exampleSetFlag: false
+  deliverableName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "deliverable_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,78 @@
+# fin_account_type null public null 0 0
+# primaryColumns
+#   fin_account_type_id
+# foreignKeys
+#   fin_account_type.parent_type_id ==> fin_account_type.fin_account_type_id
+#   fin_account_type.replenish_enum_id ==> enumeration.enum_id
+# checkConstraints---
+title: "FinAccountType"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "finAccountTypeId"
+  - "hasTable"
+  - "isRefundable"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentTypeId"
+  - "replenishEnumId"
+type: "object"
+properties:
+  finAccountTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fin_account_type_id"
+    exampleSetFlag: false
+  parentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_type_id"
+    exampleSetFlag: false
+  replenishEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "replenish_enum_id"
+    exampleSetFlag: false
+  isRefundable:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_refundable"
+    exampleSetFlag: false
+  hasTable:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "has_table"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

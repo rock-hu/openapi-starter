@@ -1,0 +1,96 @@
+# entity_audit_log null public null 0 0
+# primaryColumns
+#   audit_history_seq_id
+# foreignKeys
+# checkConstraints---
+title: "EntityAuditLog"
+required:
+  - "auditHistorySeqId"
+  - "changedByInfo"
+  - "changedDate"
+  - "changedEntityName"
+  - "changedFieldName"
+  - "changedSessionInfo"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "newValueText"
+  - "oldValueText"
+  - "pkCombinedValueText"
+type: "object"
+properties:
+  auditHistorySeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "audit_history_seq_id"
+    exampleSetFlag: false
+  changedEntityName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "changed_entity_name"
+    exampleSetFlag: false
+  changedFieldName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "changed_field_name"
+    exampleSetFlag: false
+  pkCombinedValueText:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "pk_combined_value_text"
+    exampleSetFlag: false
+  oldValueText:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "old_value_text"
+    exampleSetFlag: false
+  newValueText:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "new_value_text"
+    exampleSetFlag: false
+  changedDate:
+    type: "string"
+    description: "changed_date"
+    format: "date-time"
+    exampleSetFlag: false
+  changedByInfo:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "changed_by_info"
+    exampleSetFlag: false
+  changedSessionInfo:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "changed_session_info"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

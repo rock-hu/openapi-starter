@@ -1,0 +1,78 @@
+# content_search_result null public null 0 0
+# primaryColumns
+#   content_search_result_id
+# foreignKeys
+# checkConstraints---
+title: "ContentSearchResult"
+required:
+  - "contentSearchResultId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "isAscending"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "numResults"
+  - "orderByName"
+  - "searchDate"
+  - "secondsTotal"
+  - "visitId"
+type: "object"
+properties:
+  contentSearchResultId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_search_result_id"
+    exampleSetFlag: false
+  visitId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "visit_id"
+    exampleSetFlag: false
+  orderByName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "order_by_name"
+    exampleSetFlag: false
+  isAscending:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_ascending"
+    exampleSetFlag: false
+  numResults:
+    type: "number"
+    description: "num_results"
+    exampleSetFlag: false
+  secondsTotal:
+    type: "number"
+    description: "seconds_total"
+    exampleSetFlag: false
+  searchDate:
+    type: "string"
+    description: "search_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

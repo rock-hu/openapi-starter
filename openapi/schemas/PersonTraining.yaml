@@ -1,0 +1,102 @@
+# person_training null public null 0 0
+# primaryColumns
+#   party_id
+#   training_class_type_id
+#   from_date
+# foreignKeys
+#   person_training.training_request_id ==> training_request.training_request_id
+#   person_training.party_id ==> party.party_id
+#   person_training.training_class_type_id ==> training_class_type.training_class_type_id
+#   person_training.approver_id ==> person.party_id
+#   person_training.work_effort_id ==> work_effort.work_effort_id
+# checkConstraints---
+title: "PersonTraining"
+required:
+  - "approvalStatus"
+  - "approverId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "reason"
+  - "thruDate"
+  - "trainingClassTypeId"
+  - "trainingRequestId"
+  - "workEffortId"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  trainingRequestId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "training_request_id"
+    exampleSetFlag: false
+  trainingClassTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "training_class_type_id"
+    exampleSetFlag: false
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  approverId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "approver_id"
+    exampleSetFlag: false
+  approvalStatus:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "approval_status"
+    exampleSetFlag: false
+  reason:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "reason"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

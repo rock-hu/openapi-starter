@@ -1,0 +1,91 @@
+# contact_list_comm_status null public null 0 0
+# primaryColumns
+#   contact_list_id
+#   communication_event_id
+#   contact_mech_id
+# foreignKeys
+#   contact_list_comm_status.status_id ==> status_item.status_id
+#   contact_list_comm_status.communication_event_id ==> communication_event.communication_event_id
+#   contact_list_comm_status.party_id ==> party.party_id
+#   contact_list_comm_status.contact_list_id ==> contact_list.contact_list_id
+#   contact_list_comm_status.change_by_user_login_id ==> user_login.user_login_id
+#   contact_list_comm_status.contact_mech_id ==> contact_mech.contact_mech_id
+# checkConstraints---
+title: "ContactListCommStatus"
+required:
+  - "changeByUserLoginId"
+  - "communicationEventId"
+  - "contactListId"
+  - "contactMechId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "messageId"
+  - "partyId"
+  - "statusId"
+type: "object"
+properties:
+  contactListId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_list_id"
+    exampleSetFlag: false
+  communicationEventId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "communication_event_id"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  messageId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "message_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  changeByUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "change_by_user_login_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

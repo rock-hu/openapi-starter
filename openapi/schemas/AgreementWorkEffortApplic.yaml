@@ -1,0 +1,59 @@
+# agreement_work_effort_applic null public null 0 0
+# primaryColumns
+#   agreement_id
+#   agreement_item_seq_id
+#   work_effort_id
+# foreignKeys
+#   agreement_work_effort_applic.work_effort_id ==> work_effort.work_effort_id
+#   agreement_work_effort_applic.agreement_id ==> agreement.agreement_id
+# checkConstraints---
+title: "AgreementWorkEffortApplic"
+required:
+  - "agreementId"
+  - "agreementItemSeqId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "workEffortId"
+type: "object"
+properties:
+  agreementId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "agreement_id"
+    exampleSetFlag: false
+  agreementItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "agreement_item_seq_id"
+    exampleSetFlag: false
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

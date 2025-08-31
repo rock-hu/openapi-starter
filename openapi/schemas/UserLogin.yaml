@@ -1,0 +1,144 @@
+# user_login null public null 0 0
+# primaryColumns
+#   user_login_id
+# foreignKeys
+#   user_login.party_id ==> party.party_id
+# checkConstraints---
+title: "UserLogin"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currentPassword"
+  - "disabledBy"
+  - "disabledDateTime"
+  - "enabled"
+  - "externalAuthId"
+  - "hasLoggedOut"
+  - "isSystem"
+  - "lastCurrencyUom"
+  - "lastLocale"
+  - "lastTimeZone"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "passwordHint"
+  - "requirePasswordChange"
+  - "successiveFailedLogins"
+  - "userLdapDn"
+  - "userLoginId"
+type: "object"
+properties:
+  userLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "user_login_id"
+    exampleSetFlag: false
+  currentPassword:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "current_password"
+    exampleSetFlag: false
+  passwordHint:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "password_hint"
+    exampleSetFlag: false
+  isSystem:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_system"
+    exampleSetFlag: false
+  enabled:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "enabled"
+    exampleSetFlag: false
+  hasLoggedOut:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "has_logged_out"
+    exampleSetFlag: false
+  requirePasswordChange:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "require_password_change"
+    exampleSetFlag: false
+  lastCurrencyUom:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "last_currency_uom"
+    exampleSetFlag: false
+  lastLocale:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "last_locale"
+    exampleSetFlag: false
+  lastTimeZone:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "last_time_zone"
+    exampleSetFlag: false
+  disabledDateTime:
+    type: "string"
+    description: "disabled_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  successiveFailedLogins:
+    type: "number"
+    description: "successive_failed_logins"
+    exampleSetFlag: false
+  externalAuthId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "external_auth_id"
+    exampleSetFlag: false
+  userLdapDn:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "user_ldap_dn"
+    exampleSetFlag: false
+  disabledBy:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "disabled_by"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+exampleSetFlag: false

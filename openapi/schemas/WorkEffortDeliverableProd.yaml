@@ -1,0 +1,51 @@
+# work_effort_deliverable_prod null public null 0 0
+# primaryColumns
+#   work_effort_id
+#   deliverable_id
+# foreignKeys
+#   work_effort_deliverable_prod.work_effort_id ==> work_effort.work_effort_id
+#   work_effort_deliverable_prod.deliverable_id ==> deliverable.deliverable_id
+# checkConstraints---
+title: "WorkEffortDeliverableProd"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "deliverableId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "workEffortId"
+type: "object"
+properties:
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  deliverableId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "deliverable_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

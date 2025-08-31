@@ -1,0 +1,101 @@
+# ftp_address null public null 0 0
+# primaryColumns
+#   contact_mech_id
+# foreignKeys
+#   ftp_address.contact_mech_id ==> contact_mech.contact_mech_id
+# checkConstraints---
+title: "FtpAddress"
+required:
+  - "binaryTransfer"
+  - "contactMechId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "defaultTimeout"
+  - "filePath"
+  - "ftpPassword"
+  - "hostname"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "passiveMode"
+  - "port"
+  - "username"
+  - "zipFile"
+type: "object"
+properties:
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  hostname:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "hostname"
+    exampleSetFlag: false
+  port:
+    type: "number"
+    description: "port"
+    exampleSetFlag: false
+  username:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "username"
+    exampleSetFlag: false
+  ftpPassword:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "ftp_password"
+    exampleSetFlag: false
+  binaryTransfer:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "binary_transfer"
+    exampleSetFlag: false
+  filePath:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "file_path"
+    exampleSetFlag: false
+  zipFile:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "zip_file"
+    exampleSetFlag: false
+  passiveMode:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "passive_mode"
+    exampleSetFlag: false
+  defaultTimeout:
+    type: "number"
+    description: "default_timeout"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

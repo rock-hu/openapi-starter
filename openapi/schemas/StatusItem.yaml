@@ -1,0 +1,70 @@
+# status_item null public null 0 0
+# primaryColumns
+#   status_id
+# foreignKeys
+#   status_item.status_type_id ==> status_type.status_type_id
+# checkConstraints---
+title: "StatusItem"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "sequenceId"
+  - "statusCode"
+  - "statusId"
+  - "statusTypeId"
+type: "object"
+properties:
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  statusTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_type_id"
+    exampleSetFlag: false
+  statusCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "status_code"
+    exampleSetFlag: false
+  sequenceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "sequence_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

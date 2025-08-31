@@ -1,0 +1,63 @@
+# work_effort_assoc_type null public null 0 0
+# primaryColumns
+#   work_effort_assoc_type_id
+# foreignKeys
+#   work_effort_assoc_type.parent_type_id ==> work_effort_assoc_type.work_effort_assoc_type_id
+# checkConstraints---
+title: "WorkEffortAssocType"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "hasTable"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "parentTypeId"
+  - "workEffortAssocTypeId"
+type: "object"
+properties:
+  workEffortAssocTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_assoc_type_id"
+    exampleSetFlag: false
+  parentTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_type_id"
+    exampleSetFlag: false
+  hasTable:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "has_table"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

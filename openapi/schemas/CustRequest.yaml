@@ -1,0 +1,196 @@
+# cust_request null public null 0 0
+# primaryColumns
+#   cust_request_id
+# foreignKeys
+#   cust_request.currency_uom_id ==> uom.uom_id
+#   cust_request.sales_channel_enum_id ==> enumeration.enum_id
+#   cust_request.cust_request_type_id ==> cust_request_type.cust_request_type_id
+#   cust_request.status_id ==> status_item.status_id
+#   cust_request.maximum_amount_uom_id ==> uom.uom_id
+#   cust_request.from_party_id ==> party.party_id
+#   cust_request.cust_request_category_id ==> cust_request_category.cust_request_category_id
+#   cust_request.product_store_id ==> product_store.product_store_id
+#   cust_request.fulfill_contact_mech_id ==> contact_mech.contact_mech_id
+# checkConstraints---
+title: "CustRequest"
+required:
+  - "closedDateTime"
+  - "createdByUserLogin"
+  - "createdDate"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUomId"
+  - "custRequestCategoryId"
+  - "custRequestDate"
+  - "custRequestId"
+  - "custRequestName"
+  - "custRequestTypeId"
+  - "description"
+  - "fromPartyId"
+  - "fulfillContactMechId"
+  - "internalComment"
+  - "lastModifiedByUserLogin"
+  - "lastModifiedDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maximumAmountUomId"
+  - "openDateTime"
+  - "priority"
+  - "productStoreId"
+  - "reason"
+  - "responseRequiredDate"
+  - "salesChannelEnumId"
+  - "statusId"
+type: "object"
+properties:
+  custRequestId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_id"
+    exampleSetFlag: false
+  custRequestTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_type_id"
+    exampleSetFlag: false
+  custRequestCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "cust_request_category_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  fromPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "from_party_id"
+    exampleSetFlag: false
+  priority:
+    type: "number"
+    description: "priority"
+    exampleSetFlag: false
+  custRequestDate:
+    type: "string"
+    description: "cust_request_date"
+    format: "date-time"
+    exampleSetFlag: false
+  responseRequiredDate:
+    type: "string"
+    description: "response_required_date"
+    format: "date-time"
+    exampleSetFlag: false
+  custRequestName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "cust_request_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  maximumAmountUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "maximum_amount_uom_id"
+    exampleSetFlag: false
+  productStoreId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_id"
+    exampleSetFlag: false
+  salesChannelEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "sales_channel_enum_id"
+    exampleSetFlag: false
+  fulfillContactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fulfill_contact_mech_id"
+    exampleSetFlag: false
+  currencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom_id"
+    exampleSetFlag: false
+  openDateTime:
+    type: "string"
+    description: "open_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  closedDateTime:
+    type: "string"
+    description: "closed_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  internalComment:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "internal_comment"
+    exampleSetFlag: false
+  reason:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "reason"
+    exampleSetFlag: false
+  createdDate:
+    type: "string"
+    description: "created_date"
+    format: "date-time"
+    exampleSetFlag: false
+  createdByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login"
+    exampleSetFlag: false
+  lastModifiedDate:
+    type: "string"
+    description: "last_modified_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastModifiedByUserLogin:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "last_modified_by_user_login"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

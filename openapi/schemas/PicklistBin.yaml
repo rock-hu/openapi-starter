@@ -1,0 +1,69 @@
+# picklist_bin null public null 0 0
+# primaryColumns
+#   picklist_bin_id
+# foreignKeys
+#   picklist_bin.picklist_id ==> picklist.picklist_id
+#   picklist_bin.primary_order_id,primary_ship_group_seq_id ==> order_item_ship_group.order_id,ship_group_seq_id
+# checkConstraints---
+title: "PicklistBin"
+required:
+  - "binLocationNumber"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "picklistBinId"
+  - "picklistId"
+  - "primaryOrderId"
+  - "primaryShipGroupSeqId"
+type: "object"
+properties:
+  picklistBinId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "picklist_bin_id"
+    exampleSetFlag: false
+  picklistId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "picklist_id"
+    exampleSetFlag: false
+  binLocationNumber:
+    type: "number"
+    description: "bin_location_number"
+    exampleSetFlag: false
+  primaryOrderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "primary_order_id"
+    exampleSetFlag: false
+  primaryShipGroupSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "primary_ship_group_seq_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

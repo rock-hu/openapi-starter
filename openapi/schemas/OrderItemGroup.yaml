@@ -1,0 +1,65 @@
+# order_item_group null public null 0 0
+# primaryColumns
+#   order_id
+#   order_item_group_seq_id
+# foreignKeys
+#   order_item_group.order_id ==> order_header.order_id
+#   order_item_group.order_id,parent_group_seq_id ==> order_item_group.order_id,order_item_group_seq_id
+# checkConstraints---
+title: "OrderItemGroup"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "groupName"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderId"
+  - "orderItemGroupSeqId"
+  - "parentGroupSeqId"
+type: "object"
+properties:
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemGroupSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_group_seq_id"
+    exampleSetFlag: false
+  parentGroupSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_group_seq_id"
+    exampleSetFlag: false
+  groupName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "group_name"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

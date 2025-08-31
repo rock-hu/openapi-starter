@@ -1,0 +1,105 @@
+# web_site_publish_point null public null 0 0
+# primaryColumns
+#   content_id
+# foreignKeys
+#   web_site_publish_point.content_id ==> content.content_id
+# checkConstraints---
+title: "WebSitePublishPoint"
+required:
+  - "aboutContentId"
+  - "contentDept"
+  - "contentId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "leftBarId"
+  - "lineLogo"
+  - "logo"
+  - "medallionLogo"
+  - "rightBarId"
+  - "styleSheetFile"
+  - "templateTitle"
+type: "object"
+properties:
+  contentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_id"
+    exampleSetFlag: false
+  templateTitle:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "template_title"
+    exampleSetFlag: false
+  styleSheetFile:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "style_sheet_file"
+    exampleSetFlag: false
+  logo:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "logo"
+    exampleSetFlag: false
+  medallionLogo:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "medallion_logo"
+    exampleSetFlag: false
+  lineLogo:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "line_logo"
+    exampleSetFlag: false
+  leftBarId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "left_bar_id"
+    exampleSetFlag: false
+  rightBarId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "right_bar_id"
+    exampleSetFlag: false
+  contentDept:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "content_dept"
+    exampleSetFlag: false
+  aboutContentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "about_content_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

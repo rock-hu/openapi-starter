@@ -1,0 +1,70 @@
+# enumeration null public null 0 0
+# primaryColumns
+#   enum_id
+# foreignKeys
+#   enumeration.enum_type_id ==> enumeration_type.enum_type_id
+# checkConstraints---
+title: "Enumeration"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "enumCode"
+  - "enumId"
+  - "enumTypeId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "sequenceId"
+type: "object"
+properties:
+  enumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "enum_id"
+    exampleSetFlag: false
+  enumTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "enum_type_id"
+    exampleSetFlag: false
+  enumCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "enum_code"
+    exampleSetFlag: false
+  sequenceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "sequence_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

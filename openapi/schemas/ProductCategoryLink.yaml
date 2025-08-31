@@ -1,0 +1,125 @@
+# product_category_link null public null 0 0
+# primaryColumns
+#   product_category_id
+#   link_seq_id
+#   from_date
+# foreignKeys
+#   product_category_link.product_category_id ==> product_category.product_category_id
+#   product_category_link.link_type_enum_id ==> enumeration.enum_id
+# checkConstraints---
+title: "ProductCategoryLink"
+required:
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "detailSubScreen"
+  - "detailText"
+  - "fromDate"
+  - "imageTwoUrl"
+  - "imageUrl"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "linkInfo"
+  - "linkSeqId"
+  - "linkTypeEnumId"
+  - "productCategoryId"
+  - "sequenceNum"
+  - "thruDate"
+  - "titleText"
+type: "object"
+properties:
+  productCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_category_id"
+    exampleSetFlag: false
+  linkSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "link_seq_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  titleText:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "title_text"
+    exampleSetFlag: false
+  detailText:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "detail_text"
+    exampleSetFlag: false
+  imageUrl:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "image_url"
+    exampleSetFlag: false
+  imageTwoUrl:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "image_two_url"
+    exampleSetFlag: false
+  linkTypeEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "link_type_enum_id"
+    exampleSetFlag: false
+  linkInfo:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "link_info"
+    exampleSetFlag: false
+  detailSubScreen:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "detail_sub_screen"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

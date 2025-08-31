@@ -1,0 +1,174 @@
+# shipment_gateway_ups null public null 0 0
+# primaryColumns
+#   shipment_gateway_config_id
+# foreignKeys
+#   shipment_gateway_ups.shipment_gateway_config_id ==> shipment_gateway_config.shipment_gateway_config_id
+# checkConstraints---
+title: "ShipmentGatewayUps"
+required:
+  - "accessLicenseNumber"
+  - "accessPassword"
+  - "accessUserId"
+  - "billShipperAccountNumber"
+  - "codAllowCod"
+  - "codFundsCode"
+  - "codSurchargeAmount"
+  - "codSurchargeApplyToPackage"
+  - "codSurchargeCurrencyUomId"
+  - "connectTimeout"
+  - "connectUrl"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "customerClassification"
+  - "defaultReturnLabelMemo"
+  - "defaultReturnLabelSubject"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maxEstimateWeight"
+  - "minEstimateWeight"
+  - "saveCertInfo"
+  - "saveCertPath"
+  - "shipmentGatewayConfigId"
+  - "shipperNumber"
+  - "shipperPickupType"
+type: "object"
+properties:
+  shipmentGatewayConfigId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_gateway_config_id"
+    exampleSetFlag: false
+  connectUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "connect_url"
+    exampleSetFlag: false
+  connectTimeout:
+    type: "number"
+    description: "connect_timeout"
+    exampleSetFlag: false
+  shipperNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "shipper_number"
+    exampleSetFlag: false
+  billShipperAccountNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "bill_shipper_account_number"
+    exampleSetFlag: false
+  accessLicenseNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "access_license_number"
+    exampleSetFlag: false
+  accessUserId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "access_user_id"
+    exampleSetFlag: false
+  accessPassword:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "access_password"
+    exampleSetFlag: false
+  saveCertInfo:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "save_cert_info"
+    exampleSetFlag: false
+  saveCertPath:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "save_cert_path"
+    exampleSetFlag: false
+  shipperPickupType:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "shipper_pickup_type"
+    exampleSetFlag: false
+  customerClassification:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "customer_classification"
+    exampleSetFlag: false
+  maxEstimateWeight:
+    type: "number"
+    description: "max_estimate_weight"
+    exampleSetFlag: false
+  minEstimateWeight:
+    type: "number"
+    description: "min_estimate_weight"
+    exampleSetFlag: false
+  codAllowCod:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "cod_allow_cod"
+    exampleSetFlag: false
+  codSurchargeAmount:
+    type: "number"
+    description: "cod_surcharge_amount"
+    exampleSetFlag: false
+  codSurchargeCurrencyUomId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "cod_surcharge_currency_uom_id"
+    exampleSetFlag: false
+  codSurchargeApplyToPackage:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "cod_surcharge_apply_to_package"
+    exampleSetFlag: false
+  codFundsCode:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "cod_funds_code"
+    exampleSetFlag: false
+  defaultReturnLabelMemo:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "default_return_label_memo"
+    exampleSetFlag: false
+  defaultReturnLabelSubject:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "default_return_label_subject"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

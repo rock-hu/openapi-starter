@@ -1,0 +1,215 @@
+# product_store_shipment_meth null public null 0 0
+# primaryColumns
+#   product_store_ship_meth_id
+# foreignKeys
+#   product_store_shipment_meth.shipment_gateway_config_id ==> shipment_gateway_config.shipment_gateway_config_id
+#   product_store_shipment_meth.shipment_custom_method_id ==> custom_method.custom_method_id
+#   product_store_shipment_meth.shipment_method_type_id ==> shipment_method_type.shipment_method_type_id
+# checkConstraints---
+title: "ProductStoreShipmentMeth"
+required:
+  - "allowCompanyAddr"
+  - "allowUspsAddr"
+  - "allowancePercent"
+  - "companyPartyId"
+  - "configProps"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "excludeFeatureGroup"
+  - "excludeGeoId"
+  - "includeFeatureGroup"
+  - "includeGeoId"
+  - "includeNoChargeItems"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maxSize"
+  - "maxTotal"
+  - "maxWeight"
+  - "minSize"
+  - "minTotal"
+  - "minWeight"
+  - "minimumPrice"
+  - "partyId"
+  - "productStoreId"
+  - "productStoreShipMethId"
+  - "requireCompanyAddr"
+  - "requireUspsAddr"
+  - "roleTypeId"
+  - "sequenceNumber"
+  - "serviceName"
+  - "shipmentCustomMethodId"
+  - "shipmentGatewayConfigId"
+  - "shipmentMethodTypeId"
+type: "object"
+properties:
+  productStoreShipMethId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_ship_meth_id"
+    exampleSetFlag: false
+  productStoreId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_id"
+    exampleSetFlag: false
+  shipmentMethodTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_method_type_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  companyPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "company_party_id"
+    exampleSetFlag: false
+  minWeight:
+    type: "number"
+    description: "min_weight"
+    exampleSetFlag: false
+  maxWeight:
+    type: "number"
+    description: "max_weight"
+    exampleSetFlag: false
+  minSize:
+    type: "number"
+    description: "min_size"
+    exampleSetFlag: false
+  maxSize:
+    type: "number"
+    description: "max_size"
+    exampleSetFlag: false
+  minTotal:
+    type: "number"
+    description: "min_total"
+    exampleSetFlag: false
+  maxTotal:
+    type: "number"
+    description: "max_total"
+    exampleSetFlag: false
+  allowUspsAddr:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "allow_usps_addr"
+    exampleSetFlag: false
+  requireUspsAddr:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "require_usps_addr"
+    exampleSetFlag: false
+  allowCompanyAddr:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "allow_company_addr"
+    exampleSetFlag: false
+  requireCompanyAddr:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "require_company_addr"
+    exampleSetFlag: false
+  includeNoChargeItems:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "include_no_charge_items"
+    exampleSetFlag: false
+  includeFeatureGroup:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "include_feature_group"
+    exampleSetFlag: false
+  excludeFeatureGroup:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "exclude_feature_group"
+    exampleSetFlag: false
+  includeGeoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "include_geo_id"
+    exampleSetFlag: false
+  excludeGeoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "exclude_geo_id"
+    exampleSetFlag: false
+  serviceName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "service_name"
+    exampleSetFlag: false
+  configProps:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "config_props"
+    exampleSetFlag: false
+  shipmentCustomMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_custom_method_id"
+    exampleSetFlag: false
+  shipmentGatewayConfigId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_gateway_config_id"
+    exampleSetFlag: false
+  sequenceNumber:
+    type: "number"
+    description: "sequence_number"
+    exampleSetFlag: false
+  allowancePercent:
+    type: "number"
+    description: "allowance_percent"
+    exampleSetFlag: false
+  minimumPrice:
+    type: "number"
+    description: "minimum_price"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

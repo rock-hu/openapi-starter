@@ -1,0 +1,92 @@
+# timesheet null public null 0 0
+# primaryColumns
+#   timesheet_id
+# foreignKeys
+#   timesheet.client_party_id ==> party.party_id
+#   timesheet.approved_by_user_login_id ==> user_login.user_login_id
+#   timesheet.status_id ==> status_item.status_id
+#   timesheet.party_id ==> party.party_id
+# checkConstraints---
+title: "Timesheet"
+required:
+  - "approvedByUserLoginId"
+  - "clientPartyId"
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "statusId"
+  - "thruDate"
+  - "timesheetId"
+type: "object"
+properties:
+  timesheetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "timesheet_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  clientPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "client_party_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  approvedByUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "approved_by_user_login_id"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

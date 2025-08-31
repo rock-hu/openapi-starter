@@ -1,0 +1,119 @@
+# survey_question_appl null public null 0 0
+# primaryColumns
+#   survey_id
+#   survey_question_id
+#   from_date
+# foreignKeys
+#   survey_question_appl.survey_id ==> survey.survey_id
+#   survey_question_appl.with_survey_question_id,with_survey_option_seq_id ==> survey_question_option.survey_question_id,survey_option_seq_id
+#   survey_question_appl.survey_question_id ==> survey_question.survey_question_id
+# checkConstraints---
+title: "SurveyQuestionAppl"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "externalFieldRef"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "requiredField"
+  - "sequenceNum"
+  - "surveyId"
+  - "surveyMultiRespColId"
+  - "surveyMultiRespId"
+  - "surveyPageSeqId"
+  - "surveyQuestionId"
+  - "thruDate"
+  - "withSurveyOptionSeqId"
+  - "withSurveyQuestionId"
+type: "object"
+properties:
+  surveyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_id"
+    exampleSetFlag: false
+  surveyQuestionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_question_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  surveyPageSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_page_seq_id"
+    exampleSetFlag: false
+  surveyMultiRespId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_multi_resp_id"
+    exampleSetFlag: false
+  surveyMultiRespColId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_multi_resp_col_id"
+    exampleSetFlag: false
+  requiredField:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "required_field"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  externalFieldRef:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "external_field_ref"
+    exampleSetFlag: false
+  withSurveyQuestionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "with_survey_question_id"
+    exampleSetFlag: false
+  withSurveyOptionSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "with_survey_option_seq_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

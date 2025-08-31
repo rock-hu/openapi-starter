@@ -1,0 +1,58 @@
+# communication_event_purpose null public null 0 0
+# primaryColumns
+#   communication_event_prp_typ_id
+#   communication_event_id
+# foreignKeys
+#   communication_event_purpose.communication_event_prp_typ_id ==> communication_event_prp_typ.communication_event_prp_typ_id
+#   communication_event_purpose.communication_event_id ==> communication_event.communication_event_id
+# checkConstraints---
+title: "CommunicationEventPurpose"
+required:
+  - "communicationEventId"
+  - "communicationEventPrpTypId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  communicationEventPrpTypId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "communication_event_prp_typ_id"
+    exampleSetFlag: false
+  communicationEventId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "communication_event_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

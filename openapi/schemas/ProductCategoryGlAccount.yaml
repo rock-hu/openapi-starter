@@ -1,0 +1,68 @@
+# product_category_gl_account null public null 0 0
+# primaryColumns
+#   product_category_id
+#   organization_party_id
+#   gl_account_type_id
+# foreignKeys
+#   product_category_gl_account.gl_account_type_id ==> gl_account_type.gl_account_type_id
+#   product_category_gl_account.gl_account_id ==> gl_account.gl_account_id
+#   product_category_gl_account.product_category_id ==> product_category.product_category_id
+#   product_category_gl_account.organization_party_id ==> party.party_id
+# checkConstraints---
+title: "ProductCategoryGlAccount"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "glAccountId"
+  - "glAccountTypeId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "organizationPartyId"
+  - "productCategoryId"
+type: "object"
+properties:
+  productCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_category_id"
+    exampleSetFlag: false
+  organizationPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "organization_party_id"
+    exampleSetFlag: false
+  glAccountTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_account_type_id"
+    exampleSetFlag: false
+  glAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_account_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

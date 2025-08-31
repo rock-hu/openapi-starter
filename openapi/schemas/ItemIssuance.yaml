@@ -1,0 +1,125 @@
+# item_issuance null public null 0 0
+# primaryColumns
+#   item_issuance_id
+# foreignKeys
+#   item_issuance.order_id,order_item_seq_id ==> order_item.order_id,order_item_seq_id
+#   item_issuance.issued_by_user_login_id ==> user_login.user_login_id
+#   item_issuance.shipment_id,shipment_item_seq_id ==> shipment_item.shipment_id,shipment_item_seq_id
+#   item_issuance.fixed_asset_id,maint_hist_seq_id ==> fixed_asset_maint.fixed_asset_id,maint_hist_seq_id
+#   item_issuance.inventory_item_id ==> inventory_item.inventory_item_id
+# checkConstraints---
+title: "ItemIssuance"
+required:
+  - "cancelQuantity"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fixedAssetId"
+  - "inventoryItemId"
+  - "issuedByUserLoginId"
+  - "issuedDateTime"
+  - "itemIssuanceId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maintHistSeqId"
+  - "orderId"
+  - "orderItemSeqId"
+  - "quantity"
+  - "shipGroupSeqId"
+  - "shipmentId"
+  - "shipmentItemSeqId"
+type: "object"
+properties:
+  itemIssuanceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "item_issuance_id"
+    exampleSetFlag: false
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  orderItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_item_seq_id"
+    exampleSetFlag: false
+  shipGroupSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "ship_group_seq_id"
+    exampleSetFlag: false
+  inventoryItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_id"
+    exampleSetFlag: false
+  shipmentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_id"
+    exampleSetFlag: false
+  shipmentItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shipment_item_seq_id"
+    exampleSetFlag: false
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  maintHistSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "maint_hist_seq_id"
+    exampleSetFlag: false
+  issuedDateTime:
+    type: "string"
+    description: "issued_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  issuedByUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "issued_by_user_login_id"
+    exampleSetFlag: false
+  quantity:
+    type: "number"
+    description: "quantity"
+    exampleSetFlag: false
+  cancelQuantity:
+    type: "number"
+    description: "cancel_quantity"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

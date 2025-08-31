@@ -1,0 +1,112 @@
+# payment_gateway_clear_commerce null public null 0 0
+# primaryColumns
+#   payment_gateway_config_id
+# foreignKeys
+#   payment_gateway_clear_commerce.payment_gateway_config_id ==> payment_gateway_config.payment_gateway_config_id
+# checkConstraints---
+title: "PaymentGatewayClearCommerce"
+required:
+  - "clientId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "effectiveAlias"
+  - "enableCVM"
+  - "groupId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "paymentGatewayConfigId"
+  - "processMode"
+  - "pwd"
+  - "serverURL"
+  - "sourceId"
+  - "userAlias"
+  - "username"
+type: "object"
+properties:
+  paymentGatewayConfigId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_gateway_config_id"
+    exampleSetFlag: false
+  sourceId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "source_id"
+    exampleSetFlag: false
+  groupId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "group_id"
+    exampleSetFlag: false
+  clientId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "client_id"
+    exampleSetFlag: false
+  username:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "username"
+    exampleSetFlag: false
+  pwd:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "pwd"
+    exampleSetFlag: false
+  userAlias:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "user_alias"
+    exampleSetFlag: false
+  effectiveAlias:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "effective_alias"
+    exampleSetFlag: false
+  processMode:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "process_mode"
+    exampleSetFlag: false
+  serverURL:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "server_u_r_l"
+    exampleSetFlag: false
+  enableCVM:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "enable_c_v_m"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

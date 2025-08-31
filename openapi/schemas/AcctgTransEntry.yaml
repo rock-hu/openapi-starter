@@ -1,0 +1,217 @@
+# acctg_trans_entry null public null 0 0
+# primaryColumns
+#   acctg_trans_id
+#   acctg_trans_entry_seq_id
+# foreignKeys
+#   acctg_trans_entry.party_id ==> party.party_id
+#   acctg_trans_entry.inventory_item_id ==> inventory_item.inventory_item_id
+#   acctg_trans_entry.gl_account_id ==> gl_account.gl_account_id
+#   acctg_trans_entry.orig_currency_uom_id ==> uom.uom_id
+#   acctg_trans_entry.acctg_trans_entry_type_id ==> acctg_trans_entry_type.acctg_trans_entry_type_id
+#   acctg_trans_entry.gl_account_type_id ==> gl_account_type.gl_account_type_id
+#   acctg_trans_entry.settlement_term_id ==> settlement_term.settlement_term_id
+#   acctg_trans_entry.currency_uom_id ==> uom.uom_id
+#   acctg_trans_entry.acctg_trans_id ==> acctg_trans.acctg_trans_id
+#   acctg_trans_entry.role_type_id ==> role_type.role_type_id
+#   acctg_trans_entry.reconcile_status_id ==> status_item.status_id
+#   acctg_trans_entry.gl_account_id,organization_party_id ==> gl_account_organization.gl_account_id,organization_party_id
+# checkConstraints---
+title: "AcctgTransEntry"
+required:
+  - "acctgTransEntrySeqId"
+  - "acctgTransEntryTypeId"
+  - "acctgTransId"
+  - "amount"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUomId"
+  - "debitCreditFlag"
+  - "description"
+  - "dueDate"
+  - "glAccountId"
+  - "glAccountTypeId"
+  - "groupId"
+  - "inventoryItemId"
+  - "isSummary"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "organizationPartyId"
+  - "origAmount"
+  - "origCurrencyUomId"
+  - "partyId"
+  - "productId"
+  - "reconcileStatusId"
+  - "roleTypeId"
+  - "settlementTermId"
+  - "taxId"
+  - "theirPartyId"
+  - "theirProductId"
+  - "voucherRef"
+type: "object"
+properties:
+  acctgTransId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "acctg_trans_id"
+    exampleSetFlag: false
+  acctgTransEntrySeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "acctg_trans_entry_seq_id"
+    exampleSetFlag: false
+  acctgTransEntryTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "acctg_trans_entry_type_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  voucherRef:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "voucher_ref"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  theirPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "their_party_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  theirProductId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "their_product_id"
+    exampleSetFlag: false
+  inventoryItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_item_id"
+    exampleSetFlag: false
+  glAccountTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_account_type_id"
+    exampleSetFlag: false
+  glAccountId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_account_id"
+    exampleSetFlag: false
+  organizationPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "organization_party_id"
+    exampleSetFlag: false
+  amount:
+    type: "number"
+    description: "amount"
+    exampleSetFlag: false
+  currencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom_id"
+    exampleSetFlag: false
+  origAmount:
+    type: "number"
+    description: "orig_amount"
+    exampleSetFlag: false
+  origCurrencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "orig_currency_uom_id"
+    exampleSetFlag: false
+  debitCreditFlag:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "debit_credit_flag"
+    exampleSetFlag: false
+  dueDate:
+    type: "string"
+    description: "due_date"
+    format: "date"
+    exampleSetFlag: false
+  groupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "group_id"
+    exampleSetFlag: false
+  taxId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "tax_id"
+    exampleSetFlag: false
+  reconcileStatusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "reconcile_status_id"
+    exampleSetFlag: false
+  settlementTermId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "settlement_term_id"
+    exampleSetFlag: false
+  isSummary:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_summary"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

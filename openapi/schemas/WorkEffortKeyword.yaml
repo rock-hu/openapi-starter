@@ -1,0 +1,55 @@
+# work_effort_keyword null public null 0 0
+# primaryColumns
+#   work_effort_id
+#   keyword
+# foreignKeys
+#   work_effort_keyword.work_effort_id ==> work_effort.work_effort_id
+# checkConstraints---
+title: "WorkEffortKeyword"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "keyword"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "relevancyWeight"
+  - "workEffortId"
+type: "object"
+properties:
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  keyword:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "keyword"
+    exampleSetFlag: false
+  relevancyWeight:
+    type: "number"
+    description: "relevancy_weight"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,61 @@
+# physical_inventory null public null 0 0
+# primaryColumns
+#   physical_inventory_id
+# foreignKeys
+# checkConstraints---
+title: "PhysicalInventory"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "generalComments"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "physicalInventoryDate"
+  - "physicalInventoryId"
+type: "object"
+properties:
+  physicalInventoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "physical_inventory_id"
+    exampleSetFlag: false
+  physicalInventoryDate:
+    type: "string"
+    description: "physical_inventory_date"
+    format: "date-time"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  generalComments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "general_comments"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

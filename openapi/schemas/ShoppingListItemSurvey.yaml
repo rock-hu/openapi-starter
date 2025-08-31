@@ -1,0 +1,60 @@
+# shopping_list_item_survey null public null 0 0
+# primaryColumns
+#   shopping_list_id
+#   shopping_list_item_seq_id
+#   survey_response_id
+# foreignKeys
+#   shopping_list_item_survey.survey_response_id ==> survey_response.survey_response_id
+#   shopping_list_item_survey.shopping_list_id ==> shopping_list.shopping_list_id
+#   shopping_list_item_survey.shopping_list_id,shopping_list_item_seq_id ==> shopping_list_item.shopping_list_id,shopping_list_item_seq_id
+# checkConstraints---
+title: "ShoppingListItemSurvey"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "shoppingListId"
+  - "shoppingListItemSeqId"
+  - "surveyResponseId"
+type: "object"
+properties:
+  shoppingListId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shopping_list_id"
+    exampleSetFlag: false
+  shoppingListItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shopping_list_item_seq_id"
+    exampleSetFlag: false
+  surveyResponseId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "survey_response_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

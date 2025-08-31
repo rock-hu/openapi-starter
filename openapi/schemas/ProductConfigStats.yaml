@@ -1,0 +1,62 @@
+# product_config_stats null public null 0 0
+# primaryColumns
+#   config_id
+#   product_id
+# foreignKeys
+#   product_config_stats.product_id ==> product.product_id
+# checkConstraints---
+title: "ProductConfigStats"
+required:
+  - "configId"
+  - "configTypeId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "numOfConfs"
+  - "productId"
+type: "object"
+properties:
+  configId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "config_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  numOfConfs:
+    type: "number"
+    description: "num_of_confs"
+    exampleSetFlag: false
+  configTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "config_type_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

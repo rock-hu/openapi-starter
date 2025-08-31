@@ -1,0 +1,77 @@
+# prod_catalog_role null public null 0 0
+# primaryColumns
+#   party_id
+#   role_type_id
+#   prod_catalog_id
+#   from_date
+# foreignKeys
+#   prod_catalog_role.party_id,role_type_id ==> party_role.party_id,role_type_id
+#   prod_catalog_role.prod_catalog_id ==> prod_catalog.prod_catalog_id
+# checkConstraints---
+title: "ProdCatalogRole"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "prodCatalogId"
+  - "roleTypeId"
+  - "sequenceNum"
+  - "thruDate"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  prodCatalogId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "prod_catalog_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  sequenceNum:
+    type: "number"
+    description: "sequence_num"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

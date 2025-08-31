@@ -1,0 +1,72 @@
+# budget_status null public null 0 0
+# primaryColumns
+#   budget_id
+#   status_id
+# foreignKeys
+#   budget_status.status_id ==> status_item.status_id
+#   budget_status.change_by_user_login_id ==> user_login.user_login_id
+#   budget_status.budget_id ==> budget.budget_id
+# checkConstraints---
+title: "BudgetStatus"
+required:
+  - "budgetId"
+  - "changeByUserLoginId"
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "statusDate"
+  - "statusId"
+type: "object"
+properties:
+  budgetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "budget_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  statusDate:
+    type: "string"
+    description: "status_date"
+    format: "date-time"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  changeByUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "change_by_user_login_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

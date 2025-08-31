@@ -1,0 +1,90 @@
+# note_data null public null 0 0
+# primaryColumns
+#   note_id
+# foreignKeys
+#   note_data.note_party ==> party.party_id
+# checkConstraints---
+title: "NoteData"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "moreInfoItemId"
+  - "moreInfoItemName"
+  - "moreInfoUrl"
+  - "noteDateTime"
+  - "noteId"
+  - "noteInfo"
+  - "noteName"
+  - "noteParty"
+type: "object"
+properties:
+  noteId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "note_id"
+    exampleSetFlag: false
+  noteName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "note_name"
+    exampleSetFlag: false
+  noteInfo:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "note_info"
+    exampleSetFlag: false
+  noteDateTime:
+    type: "string"
+    description: "note_date_time"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  noteParty:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "note_party"
+    exampleSetFlag: false
+  moreInfoUrl:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "more_info_url"
+    exampleSetFlag: false
+  moreInfoItemId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "more_info_item_id"
+    exampleSetFlag: false
+  moreInfoItemName:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "more_info_item_name"
+    exampleSetFlag: false
+exampleSetFlag: false

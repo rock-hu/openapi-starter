@@ -1,0 +1,51 @@
+# postal_address_boundary null public null 0 0
+# primaryColumns
+#   contact_mech_id
+#   geo_id
+# foreignKeys
+#   postal_address_boundary.geo_id ==> geo.geo_id
+#   postal_address_boundary.contact_mech_id ==> postal_address.contact_mech_id
+# checkConstraints---
+title: "PostalAddressBoundary"
+required:
+  - "contactMechId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "geoId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  geoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

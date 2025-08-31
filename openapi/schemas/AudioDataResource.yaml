@@ -1,0 +1,49 @@
+# audio_data_resource null public null 0 0
+# primaryColumns
+#   data_resource_id
+# foreignKeys
+#   audio_data_resource.data_resource_id ==> data_resource.data_resource_id
+# checkConstraints---
+title: "AudioDataResource"
+required:
+  - "audioData"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "dataResourceId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  dataResourceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "data_resource_id"
+    exampleSetFlag: false
+  audioData:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "audio_data"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

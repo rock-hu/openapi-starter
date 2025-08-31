@@ -1,0 +1,66 @@
+# product_price_auto_notice null public null 0 0
+# primaryColumns
+#   product_price_notice_id
+# foreignKeys
+# checkConstraints---
+title: "ProductPriceAutoNotice"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "facilityId"
+  - "fromDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "productPriceNoticeId"
+  - "runDate"
+  - "thruDate"
+type: "object"
+properties:
+  productPriceNoticeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_price_notice_id"
+    exampleSetFlag: false
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  runDate:
+    type: "string"
+    description: "run_date"
+    format: "date-time"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,590 @@
+# product_store null public null 0 0
+# primaryColumns
+#   product_store_id
+# foreignKeys
+#   product_store.item_cancel_status ==> status_item.status_id
+#   product_store.vat_tax_auth_geo_id,vat_tax_auth_party_id ==> tax_authority.tax_auth_geo_id,tax_auth_party_id
+#   product_store.requirement_method_enum_id ==> enumeration.enum_id
+#   product_store.item_approved_status ==> status_item.status_id
+#   product_store.header_declined_status ==> status_item.status_id
+#   product_store.header_cancel_status ==> status_item.status_id
+#   product_store.default_sales_channel_enum_id ==> enumeration.enum_id
+#   product_store.reserve_order_enum_id ==> enumeration.enum_id
+#   product_store.store_credit_account_enum_id ==> enumeration.enum_id
+#   product_store.header_approved_status ==> status_item.status_id
+#   product_store.inventory_facility_id ==> facility.facility_id
+#   product_store.primary_store_group_id ==> product_store_group.product_store_group_id
+#   product_store.pay_to_party_id ==> party.party_id
+#   product_store.item_declined_status ==> status_item.status_id
+#   product_store.digital_item_approved_status ==> status_item.status_id
+#   product_store.default_currency_uom_id ==> uom.uom_id
+# checkConstraints---
+title: "ProductStore"
+required:
+  - "addToCartRemoveIncompat"
+  - "addToCartReplaceUpsell"
+  - "allocateInventory"
+  - "allowComment"
+  - "allowPassword"
+  - "authDeclinedMessage"
+  - "authErrorMessage"
+  - "authFraudMessage"
+  - "autoApproveInvoice"
+  - "autoApproveOrder"
+  - "autoApproveReviews"
+  - "autoInvoiceDigitalItems"
+  - "autoOrderCcTryExp"
+  - "autoOrderCcTryLaterMax"
+  - "autoOrderCcTryLaterNsf"
+  - "autoOrderCcTryOtherCards"
+  - "autoSaveCart"
+  - "balanceResOnOrderCreation"
+  - "checkGcBalance"
+  - "checkInventory"
+  - "companyName"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "daysToCancelNonPay"
+  - "defaultCurrencyUomId"
+  - "defaultLocaleString"
+  - "defaultPassword"
+  - "defaultSalesChannelEnumId"
+  - "defaultTimeZoneString"
+  - "digProdUploadCategoryId"
+  - "digitalItemApprovedStatus"
+  - "enableAutoSuggestionList"
+  - "enableDigProdUpload"
+  - "explodeOrderItems"
+  - "headerApprovedStatus"
+  - "headerCancelStatus"
+  - "headerDeclinedStatus"
+  - "inventoryFacilityId"
+  - "isDemoStore"
+  - "isImmediatelyFulfilled"
+  - "itemApprovedStatus"
+  - "itemCancelStatus"
+  - "itemDeclinedStatus"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "managedByLot"
+  - "manualAuthIsCapture"
+  - "oneInventoryFacility"
+  - "orderDecimalQuantity"
+  - "orderNumberPrefix"
+  - "payToPartyId"
+  - "primaryStoreGroupId"
+  - "prodSearchExcludeVariants"
+  - "productStoreId"
+  - "prorateShipping"
+  - "prorateTaxes"
+  - "reqReturnInventoryReceive"
+  - "reqShipAddrForDigItems"
+  - "requireCustomerRole"
+  - "requireInventory"
+  - "requirementMethodEnumId"
+  - "reserveInventory"
+  - "reserveOrderEnumId"
+  - "retryFailedAuths"
+  - "selectPaymentTypePerItem"
+  - "setOwnerUponIssuance"
+  - "shipIfCaptureFails"
+  - "showCheckoutGiftOptions"
+  - "showOutOfStockProducts"
+  - "showPricesWithVatTax"
+  - "showTaxIsExempt"
+  - "splitPayPrefPerShpGrp"
+  - "storeCreditAccountEnumId"
+  - "storeCreditValidDays"
+  - "storeName"
+  - "subtitle"
+  - "title"
+  - "usePrimaryEmailUsername"
+  - "vatTaxAuthGeoId"
+  - "vatTaxAuthPartyId"
+  - "viewCartOnAdd"
+  - "visualThemeId"
+type: "object"
+properties:
+  productStoreId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_store_id"
+    exampleSetFlag: false
+  primaryStoreGroupId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "primary_store_group_id"
+    exampleSetFlag: false
+  storeName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "store_name"
+    exampleSetFlag: false
+  companyName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "company_name"
+    exampleSetFlag: false
+  title:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "title"
+    exampleSetFlag: false
+  subtitle:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "subtitle"
+    exampleSetFlag: false
+  payToPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "pay_to_party_id"
+    exampleSetFlag: false
+  daysToCancelNonPay:
+    type: "number"
+    description: "days_to_cancel_non_pay"
+    exampleSetFlag: false
+  manualAuthIsCapture:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "manual_auth_is_capture"
+    exampleSetFlag: false
+  prorateShipping:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "prorate_shipping"
+    exampleSetFlag: false
+  prorateTaxes:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "prorate_taxes"
+    exampleSetFlag: false
+  viewCartOnAdd:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "view_cart_on_add"
+    exampleSetFlag: false
+  autoSaveCart:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "auto_save_cart"
+    exampleSetFlag: false
+  autoApproveReviews:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "auto_approve_reviews"
+    exampleSetFlag: false
+  isDemoStore:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_demo_store"
+    exampleSetFlag: false
+  isImmediatelyFulfilled:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_immediately_fulfilled"
+    exampleSetFlag: false
+  inventoryFacilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "inventory_facility_id"
+    exampleSetFlag: false
+  oneInventoryFacility:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "one_inventory_facility"
+    exampleSetFlag: false
+  checkInventory:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "check_inventory"
+    exampleSetFlag: false
+  reserveInventory:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "reserve_inventory"
+    exampleSetFlag: false
+  reserveOrderEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "reserve_order_enum_id"
+    exampleSetFlag: false
+  requireInventory:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "require_inventory"
+    exampleSetFlag: false
+  balanceResOnOrderCreation:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "balance_res_on_order_creation"
+    exampleSetFlag: false
+  requirementMethodEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "requirement_method_enum_id"
+    exampleSetFlag: false
+  orderNumberPrefix:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "order_number_prefix"
+    exampleSetFlag: false
+  defaultLocaleString:
+    maxLength: 10
+    minLength: 0
+    type: "string"
+    description: "default_locale_string"
+    exampleSetFlag: false
+  defaultCurrencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "default_currency_uom_id"
+    exampleSetFlag: false
+  defaultTimeZoneString:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "default_time_zone_string"
+    exampleSetFlag: false
+  defaultSalesChannelEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "default_sales_channel_enum_id"
+    exampleSetFlag: false
+  allowPassword:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "allow_password"
+    exampleSetFlag: false
+  defaultPassword:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "default_password"
+    exampleSetFlag: false
+  explodeOrderItems:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "explode_order_items"
+    exampleSetFlag: false
+  checkGcBalance:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "check_gc_balance"
+    exampleSetFlag: false
+  retryFailedAuths:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "retry_failed_auths"
+    exampleSetFlag: false
+  headerApprovedStatus:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "header_approved_status"
+    exampleSetFlag: false
+  itemApprovedStatus:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "item_approved_status"
+    exampleSetFlag: false
+  digitalItemApprovedStatus:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "digital_item_approved_status"
+    exampleSetFlag: false
+  headerDeclinedStatus:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "header_declined_status"
+    exampleSetFlag: false
+  itemDeclinedStatus:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "item_declined_status"
+    exampleSetFlag: false
+  headerCancelStatus:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "header_cancel_status"
+    exampleSetFlag: false
+  itemCancelStatus:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "item_cancel_status"
+    exampleSetFlag: false
+  authDeclinedMessage:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "auth_declined_message"
+    exampleSetFlag: false
+  authFraudMessage:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "auth_fraud_message"
+    exampleSetFlag: false
+  authErrorMessage:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "auth_error_message"
+    exampleSetFlag: false
+  visualThemeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "visual_theme_id"
+    exampleSetFlag: false
+  storeCreditAccountEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "store_credit_account_enum_id"
+    exampleSetFlag: false
+  usePrimaryEmailUsername:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "use_primary_email_username"
+    exampleSetFlag: false
+  requireCustomerRole:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "require_customer_role"
+    exampleSetFlag: false
+  autoInvoiceDigitalItems:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "auto_invoice_digital_items"
+    exampleSetFlag: false
+  reqShipAddrForDigItems:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "req_ship_addr_for_dig_items"
+    exampleSetFlag: false
+  showCheckoutGiftOptions:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "show_checkout_gift_options"
+    exampleSetFlag: false
+  selectPaymentTypePerItem:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "select_payment_type_per_item"
+    exampleSetFlag: false
+  showPricesWithVatTax:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "show_prices_with_vat_tax"
+    exampleSetFlag: false
+  showTaxIsExempt:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "show_tax_is_exempt"
+    exampleSetFlag: false
+  vatTaxAuthGeoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "vat_tax_auth_geo_id"
+    exampleSetFlag: false
+  vatTaxAuthPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "vat_tax_auth_party_id"
+    exampleSetFlag: false
+  enableAutoSuggestionList:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "enable_auto_suggestion_list"
+    exampleSetFlag: false
+  enableDigProdUpload:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "enable_dig_prod_upload"
+    exampleSetFlag: false
+  prodSearchExcludeVariants:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "prod_search_exclude_variants"
+    exampleSetFlag: false
+  digProdUploadCategoryId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "dig_prod_upload_category_id"
+    exampleSetFlag: false
+  autoOrderCcTryExp:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "auto_order_cc_try_exp"
+    exampleSetFlag: false
+  autoOrderCcTryOtherCards:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "auto_order_cc_try_other_cards"
+    exampleSetFlag: false
+  autoOrderCcTryLaterNsf:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "auto_order_cc_try_later_nsf"
+    exampleSetFlag: false
+  autoOrderCcTryLaterMax:
+    type: "number"
+    description: "auto_order_cc_try_later_max"
+    exampleSetFlag: false
+  storeCreditValidDays:
+    type: "number"
+    description: "store_credit_valid_days"
+    exampleSetFlag: false
+  autoApproveInvoice:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "auto_approve_invoice"
+    exampleSetFlag: false
+  autoApproveOrder:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "auto_approve_order"
+    exampleSetFlag: false
+  shipIfCaptureFails:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "ship_if_capture_fails"
+    exampleSetFlag: false
+  setOwnerUponIssuance:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "set_owner_upon_issuance"
+    exampleSetFlag: false
+  reqReturnInventoryReceive:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "req_return_inventory_receive"
+    exampleSetFlag: false
+  addToCartRemoveIncompat:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "add_to_cart_remove_incompat"
+    exampleSetFlag: false
+  addToCartReplaceUpsell:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "add_to_cart_replace_upsell"
+    exampleSetFlag: false
+  splitPayPrefPerShpGrp:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "split_pay_pref_per_shp_grp"
+    exampleSetFlag: false
+  managedByLot:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "managed_by_lot"
+    exampleSetFlag: false
+  showOutOfStockProducts:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "show_out_of_stock_products"
+    exampleSetFlag: false
+  orderDecimalQuantity:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "order_decimal_quantity"
+    exampleSetFlag: false
+  allowComment:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "allow_comment"
+    exampleSetFlag: false
+  allocateInventory:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "allocate_inventory"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

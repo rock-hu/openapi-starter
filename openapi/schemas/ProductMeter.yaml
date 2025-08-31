@@ -1,0 +1,66 @@
+# product_meter null public null 0 0
+# primaryColumns
+#   product_id
+#   product_meter_type_id
+# foreignKeys
+#   product_meter.product_meter_type_id ==> product_meter_type.product_meter_type_id
+#   product_meter.meter_uom_id ==> uom.uom_id
+#   product_meter.product_id ==> product.product_id
+# checkConstraints---
+title: "ProductMeter"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "meterName"
+  - "meterUomId"
+  - "productId"
+  - "productMeterTypeId"
+type: "object"
+properties:
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  productMeterTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_meter_type_id"
+    exampleSetFlag: false
+  meterUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "meter_uom_id"
+    exampleSetFlag: false
+  meterName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "meter_name"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,73 @@
+# supplier_product_feature null public null 0 0
+# primaryColumns
+#   party_id
+#   product_feature_id
+# foreignKeys
+#   supplier_product_feature.uom_id ==> uom.uom_id
+#   supplier_product_feature.product_feature_id ==> product_feature.product_feature_id
+#   supplier_product_feature.party_id ==> party.party_id
+# checkConstraints---
+title: "SupplierProductFeature"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "idCode"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "productFeatureId"
+  - "uomId"
+type: "object"
+properties:
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  productFeatureId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_feature_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  uomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "uom_id"
+    exampleSetFlag: false
+  idCode:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "id_code"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

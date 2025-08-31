@@ -1,0 +1,69 @@
+# gl_journal null public null 0 0
+# primaryColumns
+#   gl_journal_id
+# foreignKeys
+#   gl_journal.organization_party_id ==> party.party_id
+# checkConstraints---
+title: "GlJournal"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "glJournalId"
+  - "glJournalName"
+  - "isPosted"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "organizationPartyId"
+  - "postedDate"
+type: "object"
+properties:
+  glJournalId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "gl_journal_id"
+    exampleSetFlag: false
+  glJournalName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "gl_journal_name"
+    exampleSetFlag: false
+  organizationPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "organization_party_id"
+    exampleSetFlag: false
+  isPosted:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "is_posted"
+    exampleSetFlag: false
+  postedDate:
+    type: "string"
+    description: "posted_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

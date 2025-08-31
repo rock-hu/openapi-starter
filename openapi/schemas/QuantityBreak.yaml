@@ -1,0 +1,59 @@
+# quantity_break null public null 0 0
+# primaryColumns
+#   quantity_break_id
+# foreignKeys
+#   quantity_break.quantity_break_type_id ==> quantity_break_type.quantity_break_type_id
+# checkConstraints---
+title: "QuantityBreak"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fromQuantity"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "quantityBreakId"
+  - "quantityBreakTypeId"
+  - "thruQuantity"
+type: "object"
+properties:
+  quantityBreakId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "quantity_break_id"
+    exampleSetFlag: false
+  quantityBreakTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "quantity_break_type_id"
+    exampleSetFlag: false
+  fromQuantity:
+    type: "number"
+    description: "from_quantity"
+    exampleSetFlag: false
+  thruQuantity:
+    type: "number"
+    description: "thru_quantity"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

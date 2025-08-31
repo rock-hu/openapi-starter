@@ -1,0 +1,64 @@
+# fin_account_trans_attribute null public null 0 0
+# primaryColumns
+#   fin_account_trans_id
+#   attr_name
+# foreignKeys
+#   fin_account_trans_attribute.fin_account_trans_id ==> fin_account_trans.fin_account_trans_id
+# checkConstraints---
+title: "FinAccountTransAttribute"
+required:
+  - "attrDescription"
+  - "attrName"
+  - "attrValue"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "finAccountTransId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  finAccountTransId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fin_account_trans_id"
+    exampleSetFlag: false
+  attrName:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "attr_name"
+    exampleSetFlag: false
+  attrValue:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "attr_value"
+    exampleSetFlag: false
+  attrDescription:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "attr_description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

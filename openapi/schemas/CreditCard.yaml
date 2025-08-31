@@ -1,0 +1,150 @@
+# credit_card null public null 0 0
+# primaryColumns
+#   payment_method_id
+# foreignKeys
+#   credit_card.payment_method_id ==> payment_method.payment_method_id
+#   credit_card.contact_mech_id ==> postal_address.contact_mech_id
+#   credit_card.contact_mech_id ==> contact_mech.contact_mech_id
+# checkConstraints---
+title: "CreditCard"
+required:
+  - "cardNumber"
+  - "cardType"
+  - "companyNameOnCard"
+  - "consecutiveFailedAuths"
+  - "consecutiveFailedNsf"
+  - "contactMechId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "expireDate"
+  - "firstNameOnCard"
+  - "issueNumber"
+  - "lastFailedAuthDate"
+  - "lastFailedNsfDate"
+  - "lastNameOnCard"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "middleNameOnCard"
+  - "paymentMethodId"
+  - "suffixOnCard"
+  - "titleOnCard"
+  - "validFromDate"
+type: "object"
+properties:
+  paymentMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_id"
+    exampleSetFlag: false
+  cardType:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "card_type"
+    exampleSetFlag: false
+  cardNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "card_number"
+    exampleSetFlag: false
+  validFromDate:
+    maxLength: 7
+    minLength: 0
+    type: "string"
+    description: "valid_from_date"
+    exampleSetFlag: false
+  expireDate:
+    maxLength: 7
+    minLength: 0
+    type: "string"
+    description: "expire_date"
+    exampleSetFlag: false
+  issueNumber:
+    maxLength: 7
+    minLength: 0
+    type: "string"
+    description: "issue_number"
+    exampleSetFlag: false
+  companyNameOnCard:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "company_name_on_card"
+    exampleSetFlag: false
+  titleOnCard:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "title_on_card"
+    exampleSetFlag: false
+  firstNameOnCard:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "first_name_on_card"
+    exampleSetFlag: false
+  middleNameOnCard:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "middle_name_on_card"
+    exampleSetFlag: false
+  lastNameOnCard:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "last_name_on_card"
+    exampleSetFlag: false
+  suffixOnCard:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "suffix_on_card"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  consecutiveFailedAuths:
+    type: "number"
+    description: "consecutive_failed_auths"
+    exampleSetFlag: false
+  lastFailedAuthDate:
+    type: "string"
+    description: "last_failed_auth_date"
+    format: "date-time"
+    exampleSetFlag: false
+  consecutiveFailedNsf:
+    type: "number"
+    description: "consecutive_failed_nsf"
+    exampleSetFlag: false
+  lastFailedNsfDate:
+    type: "string"
+    description: "last_failed_nsf_date"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

@@ -1,0 +1,85 @@
+# work_effort_review null public null 0 0
+# primaryColumns
+#   work_effort_id
+#   user_login_id
+#   review_date
+# foreignKeys
+#   work_effort_review.user_login_id ==> user_login.user_login_id
+#   work_effort_review.status_id ==> status_item.status_id
+#   work_effort_review.work_effort_id ==> work_effort.work_effort_id
+# checkConstraints---
+title: "WorkEffortReview"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "postedAnonymous"
+  - "rating"
+  - "reviewDate"
+  - "reviewText"
+  - "statusId"
+  - "userLoginId"
+  - "workEffortId"
+type: "object"
+properties:
+  workEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "work_effort_id"
+    exampleSetFlag: false
+  userLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "user_login_id"
+    exampleSetFlag: false
+  reviewDate:
+    type: "string"
+    description: "review_date"
+    format: "date-time"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  postedAnonymous:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "posted_anonymous"
+    exampleSetFlag: false
+  rating:
+    type: "number"
+    description: "rating"
+    exampleSetFlag: false
+  reviewText:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "review_text"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

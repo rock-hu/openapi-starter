@@ -1,0 +1,51 @@
+# marketing_campaign_note null public null 0 0
+# primaryColumns
+#   marketing_campaign_id
+#   note_id
+# foreignKeys
+#   marketing_campaign_note.note_id ==> note_data.note_id
+#   marketing_campaign_note.marketing_campaign_id ==> marketing_campaign.marketing_campaign_id
+# checkConstraints---
+title: "MarketingCampaignNote"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "marketingCampaignId"
+  - "noteId"
+type: "object"
+properties:
+  marketingCampaignId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "marketing_campaign_id"
+    exampleSetFlag: false
+  noteId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "note_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

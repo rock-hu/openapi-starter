@@ -1,0 +1,102 @@
+# reorder_guideline null public null 0 0
+# primaryColumns
+#   reorder_guideline_id
+# foreignKeys
+#   reorder_guideline.geo_id ==> geo.geo_id
+#   reorder_guideline.product_id ==> product.product_id
+#   reorder_guideline.party_id ==> party.party_id
+#   reorder_guideline.facility_id ==> facility.facility_id
+# checkConstraints---
+title: "ReorderGuideline"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "facilityId"
+  - "fromDate"
+  - "geoId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "partyId"
+  - "productId"
+  - "reorderGuidelineId"
+  - "reorderLevel"
+  - "reorderQuantity"
+  - "roleTypeId"
+  - "thruDate"
+type: "object"
+properties:
+  reorderGuidelineId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "reorder_guideline_id"
+    exampleSetFlag: false
+  productId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_id"
+    exampleSetFlag: false
+  partyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "party_id"
+    exampleSetFlag: false
+  roleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "role_type_id"
+    exampleSetFlag: false
+  facilityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_id"
+    exampleSetFlag: false
+  geoId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "geo_id"
+    exampleSetFlag: false
+  fromDate:
+    type: "string"
+    description: "from_date"
+    format: "date-time"
+    exampleSetFlag: false
+  thruDate:
+    type: "string"
+    description: "thru_date"
+    format: "date-time"
+    exampleSetFlag: false
+  reorderQuantity:
+    type: "number"
+    description: "reorder_quantity"
+    exampleSetFlag: false
+  reorderLevel:
+    type: "number"
+    description: "reorder_level"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

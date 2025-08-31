@@ -1,0 +1,64 @@
+# order_adjustment_billing null public null 0 0
+# primaryColumns
+#   order_adjustment_id
+#   invoice_id
+#   invoice_item_seq_id
+# foreignKeys
+#   order_adjustment_billing.order_adjustment_id ==> order_adjustment.order_adjustment_id
+#   order_adjustment_billing.invoice_id,invoice_item_seq_id ==> invoice_item.invoice_id,invoice_item_seq_id
+# checkConstraints---
+title: "OrderAdjustmentBilling"
+required:
+  - "amount"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "invoiceId"
+  - "invoiceItemSeqId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "orderAdjustmentId"
+type: "object"
+properties:
+  orderAdjustmentId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_adjustment_id"
+    exampleSetFlag: false
+  invoiceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_id"
+    exampleSetFlag: false
+  invoiceItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_item_seq_id"
+    exampleSetFlag: false
+  amount:
+    type: "number"
+    description: "amount"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

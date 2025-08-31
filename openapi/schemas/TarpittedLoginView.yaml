@@ -1,0 +1,54 @@
+# tarpitted_login_view null public null 0 0
+# primaryColumns
+#   view_name_id
+#   user_login_id
+# foreignKeys
+# checkConstraints---
+title: "TarpittedLoginView"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "tarpitReleaseDateTime"
+  - "userLoginId"
+  - "viewNameId"
+type: "object"
+properties:
+  viewNameId:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "view_name_id"
+    exampleSetFlag: false
+  userLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "user_login_id"
+    exampleSetFlag: false
+  tarpitReleaseDateTime:
+    type: "number"
+    description: "tarpit_release_date_time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

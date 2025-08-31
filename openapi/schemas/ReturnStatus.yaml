@@ -1,0 +1,78 @@
+# return_status null public null 0 0
+# primaryColumns
+#   return_status_id
+# foreignKeys
+#   return_status.change_by_user_login_id ==> user_login.user_login_id
+#   return_status.return_id ==> return_header.return_id
+#   return_status.status_id ==> status_item.status_id
+# checkConstraints---
+title: "ReturnStatus"
+required:
+  - "changeByUserLoginId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "returnId"
+  - "returnItemSeqId"
+  - "returnStatusId"
+  - "statusDatetime"
+  - "statusId"
+type: "object"
+properties:
+  returnStatusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "return_status_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  returnId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "return_id"
+    exampleSetFlag: false
+  returnItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "return_item_seq_id"
+    exampleSetFlag: false
+  changeByUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "change_by_user_login_id"
+    exampleSetFlag: false
+  statusDatetime:
+    type: "string"
+    description: "status_datetime"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

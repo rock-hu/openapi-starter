@@ -1,0 +1,58 @@
+# order_header_note null public null 0 0
+# primaryColumns
+#   order_id
+#   note_id
+# foreignKeys
+#   order_header_note.order_id ==> order_header.order_id
+#   order_header_note.note_id ==> note_data.note_id
+# checkConstraints---
+title: "OrderHeaderNote"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "internalNote"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "noteId"
+  - "orderId"
+type: "object"
+properties:
+  orderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "order_id"
+    exampleSetFlag: false
+  noteId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "note_id"
+    exampleSetFlag: false
+  internalNote:
+    maxLength: 1
+    minLength: 0
+    type: "string"
+    description: "internal_note"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

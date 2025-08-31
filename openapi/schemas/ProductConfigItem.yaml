@@ -1,0 +1,76 @@
+# product_config_item null public null 0 0
+# primaryColumns
+#   config_item_id
+# foreignKeys
+# checkConstraints---
+title: "ProductConfigItem"
+required:
+  - "configItemId"
+  - "configItemName"
+  - "configItemTypeId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "imageUrl"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "longDescription"
+type: "object"
+properties:
+  configItemId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "config_item_id"
+    exampleSetFlag: false
+  configItemTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "config_item_type_id"
+    exampleSetFlag: false
+  configItemName:
+    maxLength: 100
+    minLength: 0
+    type: "string"
+    description: "config_item_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  longDescription:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "long_description"
+    exampleSetFlag: false
+  imageUrl:
+    maxLength: 2000
+    minLength: 0
+    type: "string"
+    description: "image_url"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

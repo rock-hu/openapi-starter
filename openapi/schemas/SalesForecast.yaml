@@ -1,0 +1,132 @@
+# sales_forecast null public null 0 0
+# primaryColumns
+#   sales_forecast_id
+# foreignKeys
+#   sales_forecast.internal_party_id ==> party.party_id
+#   sales_forecast.currency_uom_id ==> uom.uom_id
+#   sales_forecast.created_by_user_login_id ==> user_login.user_login_id
+#   sales_forecast.custom_time_period_id ==> custom_time_period.custom_time_period_id
+#   sales_forecast.organization_party_id ==> party.party_id
+#   sales_forecast.modified_by_user_login_id ==> user_login.user_login_id
+#   sales_forecast.parent_sales_forecast_id ==> sales_forecast.sales_forecast_id
+# checkConstraints---
+title: "SalesForecast"
+required:
+  - "bestCaseAmount"
+  - "closedAmount"
+  - "createdByUserLoginId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "currencyUomId"
+  - "customTimePeriodId"
+  - "forecastAmount"
+  - "internalPartyId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "modifiedByUserLoginId"
+  - "organizationPartyId"
+  - "parentSalesForecastId"
+  - "percentOfQuotaClosed"
+  - "percentOfQuotaForecast"
+  - "pipelineAmount"
+  - "quotaAmount"
+  - "salesForecastId"
+type: "object"
+properties:
+  salesForecastId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "sales_forecast_id"
+    exampleSetFlag: false
+  parentSalesForecastId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "parent_sales_forecast_id"
+    exampleSetFlag: false
+  organizationPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "organization_party_id"
+    exampleSetFlag: false
+  internalPartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "internal_party_id"
+    exampleSetFlag: false
+  customTimePeriodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "custom_time_period_id"
+    exampleSetFlag: false
+  currencyUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "currency_uom_id"
+    exampleSetFlag: false
+  quotaAmount:
+    type: "number"
+    description: "quota_amount"
+    exampleSetFlag: false
+  forecastAmount:
+    type: "number"
+    description: "forecast_amount"
+    exampleSetFlag: false
+  bestCaseAmount:
+    type: "number"
+    description: "best_case_amount"
+    exampleSetFlag: false
+  closedAmount:
+    type: "number"
+    description: "closed_amount"
+    exampleSetFlag: false
+  percentOfQuotaForecast:
+    type: "number"
+    description: "percent_of_quota_forecast"
+    exampleSetFlag: false
+  percentOfQuotaClosed:
+    type: "number"
+    description: "percent_of_quota_closed"
+    exampleSetFlag: false
+  pipelineAmount:
+    type: "number"
+    description: "pipeline_amount"
+    exampleSetFlag: false
+  createdByUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "created_by_user_login_id"
+    exampleSetFlag: false
+  modifiedByUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "modified_by_user_login_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

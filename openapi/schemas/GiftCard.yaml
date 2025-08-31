@@ -1,0 +1,72 @@
+# gift_card null public null 0 0
+# primaryColumns
+#   payment_method_id
+# foreignKeys
+#   gift_card.contact_mech_id ==> postal_address.contact_mech_id
+#   gift_card.payment_method_id ==> payment_method.payment_method_id
+#   gift_card.contact_mech_id ==> contact_mech.contact_mech_id
+# checkConstraints---
+title: "GiftCard"
+required:
+  - "cardNumber"
+  - "contactMechId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "expireDate"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "paymentMethodId"
+  - "pinNumber"
+type: "object"
+properties:
+  paymentMethodId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "payment_method_id"
+    exampleSetFlag: false
+  cardNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "card_number"
+    exampleSetFlag: false
+  pinNumber:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "pin_number"
+    exampleSetFlag: false
+  expireDate:
+    maxLength: 7
+    minLength: 0
+    type: "string"
+    description: "expire_date"
+    exampleSetFlag: false
+  contactMechId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "contact_mech_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

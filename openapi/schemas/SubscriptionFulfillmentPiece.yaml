@@ -1,0 +1,51 @@
+# subscription_fulfillment_piece null public null 0 0
+# primaryColumns
+#   subscription_activity_id
+#   subscription_id
+# foreignKeys
+#   subscription_fulfillment_piece.subscription_activity_id ==> subscription_activity.subscription_activity_id
+#   subscription_fulfillment_piece.subscription_id ==> subscription.subscription_id
+# checkConstraints---
+title: "SubscriptionFulfillmentPiece"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "subscriptionActivityId"
+  - "subscriptionId"
+type: "object"
+properties:
+  subscriptionActivityId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "subscription_activity_id"
+    exampleSetFlag: false
+  subscriptionId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "subscription_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

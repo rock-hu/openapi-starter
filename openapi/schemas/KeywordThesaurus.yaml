@@ -1,0 +1,57 @@
+# keyword_thesaurus null public null 0 0
+# primaryColumns
+#   entered_keyword
+#   alternate_keyword
+# foreignKeys
+#   keyword_thesaurus.relationship_enum_id ==> enumeration.enum_id
+# checkConstraints---
+title: "KeywordThesaurus"
+required:
+  - "alternateKeyword"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "enteredKeyword"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "relationshipEnumId"
+type: "object"
+properties:
+  enteredKeyword:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "entered_keyword"
+    exampleSetFlag: false
+  alternateKeyword:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "alternate_keyword"
+    exampleSetFlag: false
+  relationshipEnumId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "relationship_enum_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

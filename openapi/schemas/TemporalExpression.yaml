@@ -1,0 +1,91 @@
+# temporal_expression null public null 0 0
+# primaryColumns
+#   temp_expr_id
+# foreignKeys
+# checkConstraints---
+title: "TemporalExpression"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "date1"
+  - "date2"
+  - "description"
+  - "integer1"
+  - "integer2"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "string1"
+  - "string2"
+  - "tempExprId"
+  - "tempExprTypeId"
+type: "object"
+properties:
+  tempExprId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "temp_expr_id"
+    exampleSetFlag: false
+  tempExprTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "temp_expr_type_id"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  date1:
+    type: "string"
+    description: "date1"
+    format: "date-time"
+    exampleSetFlag: false
+  date2:
+    type: "string"
+    description: "date2"
+    format: "date-time"
+    exampleSetFlag: false
+  integer1:
+    type: "number"
+    description: "integer1"
+    exampleSetFlag: false
+  integer2:
+    type: "number"
+    description: "integer2"
+    exampleSetFlag: false
+  string1:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "string1"
+    exampleSetFlag: false
+  string2:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "string2"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

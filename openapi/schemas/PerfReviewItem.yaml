@@ -1,0 +1,89 @@
+# perf_review_item null public null 0 0
+# primaryColumns
+#   employee_party_id
+#   employee_role_type_id
+#   perf_review_id
+#   perf_review_item_seq_id
+# foreignKeys
+#   perf_review_item.employee_party_id ==> party.party_id
+#   perf_review_item.employee_party_id,employee_role_type_id ==> party_role.party_id,role_type_id
+#   perf_review_item.employee_party_id,employee_role_type_id,perf_review_id ==> perf_review.employee_party_id,employee_role_type_id,perf_review_id
+# checkConstraints---
+title: "PerfReviewItem"
+required:
+  - "comments"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "employeePartyId"
+  - "employeeRoleTypeId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "perfRatingTypeId"
+  - "perfReviewId"
+  - "perfReviewItemSeqId"
+  - "perfReviewItemTypeId"
+type: "object"
+properties:
+  employeePartyId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "employee_party_id"
+    exampleSetFlag: false
+  employeeRoleTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "employee_role_type_id"
+    exampleSetFlag: false
+  perfReviewId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "perf_review_id"
+    exampleSetFlag: false
+  perfReviewItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "perf_review_item_seq_id"
+    exampleSetFlag: false
+  perfReviewItemTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "perf_review_item_type_id"
+    exampleSetFlag: false
+  perfRatingTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "perf_rating_type_id"
+    exampleSetFlag: false
+  comments:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "comments"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

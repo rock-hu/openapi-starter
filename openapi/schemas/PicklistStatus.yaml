@@ -1,0 +1,73 @@
+# picklist_status null public null 0 0
+# primaryColumns
+#   picklist_id
+#   status_date
+# foreignKeys
+#   picklist_status.picklist_id ==> picklist.picklist_id
+#   picklist_status.status_id ==> status_item.status_id
+#   picklist_status.status_id_to ==> status_item.status_id
+#   picklist_status.change_by_user_login_id ==> user_login.user_login_id
+# checkConstraints---
+title: "PicklistStatus"
+required:
+  - "changeByUserLoginId"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "picklistId"
+  - "statusDate"
+  - "statusId"
+  - "statusIdTo"
+type: "object"
+properties:
+  picklistId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "picklist_id"
+    exampleSetFlag: false
+  statusDate:
+    type: "string"
+    description: "status_date"
+    format: "date-time"
+    exampleSetFlag: false
+  changeByUserLoginId:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "change_by_user_login_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  statusIdTo:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id_to"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

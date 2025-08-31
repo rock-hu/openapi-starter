@@ -1,0 +1,95 @@
+# invoice_term null public null 0 0
+# primaryColumns
+#   invoice_term_id
+# foreignKeys
+#   invoice_term.invoice_id ==> invoice.invoice_id
+#   invoice_term.term_type_id ==> term_type.term_type_id
+# checkConstraints---
+title: "InvoiceTerm"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "invoiceId"
+  - "invoiceItemSeqId"
+  - "invoiceTermId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "termDays"
+  - "termTypeId"
+  - "termValue"
+  - "textValue"
+  - "uomId"
+type: "object"
+properties:
+  invoiceTermId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_term_id"
+    exampleSetFlag: false
+  termTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "term_type_id"
+    exampleSetFlag: false
+  invoiceId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_id"
+    exampleSetFlag: false
+  invoiceItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "invoice_item_seq_id"
+    exampleSetFlag: false
+  termValue:
+    type: "number"
+    description: "term_value"
+    exampleSetFlag: false
+  termDays:
+    type: "number"
+    description: "term_days"
+    exampleSetFlag: false
+  textValue:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "text_value"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  uomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "uom_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

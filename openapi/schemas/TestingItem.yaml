@@ -1,0 +1,57 @@
+# testing_item null public null 0 0
+# primaryColumns
+#   testing_id
+#   testing_seq_id
+# foreignKeys
+#   testing_item.testing_id ==> testing.testing_id
+# checkConstraints---
+title: "TestingItem"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "testingHistory"
+  - "testingId"
+  - "testingSeqId"
+type: "object"
+properties:
+  testingId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "testing_id"
+    exampleSetFlag: false
+  testingSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "testing_seq_id"
+    exampleSetFlag: false
+  testingHistory:
+    maxLength: 2147483647
+    minLength: 0
+    type: "string"
+    description: "testing_history"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

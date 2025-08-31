@@ -1,0 +1,57 @@
+# facility_type_attr null public null 0 0
+# primaryColumns
+#   facility_type_id
+#   attr_name
+# foreignKeys
+#   facility_type_attr.facility_type_id ==> facility_type.facility_type_id
+# checkConstraints---
+title: "FacilityTypeAttr"
+required:
+  - "attrName"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "description"
+  - "facilityTypeId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+type: "object"
+properties:
+  facilityTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "facility_type_id"
+    exampleSetFlag: false
+  attrName:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "attr_name"
+    exampleSetFlag: false
+  description:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "description"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

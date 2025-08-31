@@ -1,0 +1,65 @@
+# shopping_list_item_attribute null public null 0 0
+# primaryColumns
+#   shopping_list_id
+#   shopping_list_item_seq_id
+#   attr_name
+# foreignKeys
+#   shopping_list_item_attribute.shopping_list_id,shopping_list_item_seq_id ==> shopping_list_item.shopping_list_id,shopping_list_item_seq_id
+# checkConstraints---
+title: "ShoppingListItemAttribute"
+required:
+  - "attrName"
+  - "attrValue"
+  - "createdStamp"
+  - "createdTxStamp"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "shoppingListId"
+  - "shoppingListItemSeqId"
+type: "object"
+properties:
+  shoppingListId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shopping_list_id"
+    exampleSetFlag: false
+  shoppingListItemSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "shopping_list_item_seq_id"
+    exampleSetFlag: false
+  attrName:
+    maxLength: 60
+    minLength: 0
+    type: "string"
+    description: "attr_name"
+    exampleSetFlag: false
+  attrValue:
+    maxLength: 255
+    minLength: 0
+    type: "string"
+    description: "attr_value"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false

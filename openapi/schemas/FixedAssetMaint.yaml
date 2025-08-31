@@ -1,0 +1,110 @@
+# fixed_asset_maint null public null 0 0
+# primaryColumns
+#   fixed_asset_id
+#   maint_hist_seq_id
+# foreignKeys
+#   fixed_asset_maint.fixed_asset_id ==> fixed_asset.fixed_asset_id
+#   fixed_asset_maint.schedule_work_effort_id ==> work_effort.work_effort_id
+#   fixed_asset_maint.status_id ==> status_item.status_id
+#   fixed_asset_maint.interval_meter_type_id ==> product_meter_type.product_meter_type_id
+#   fixed_asset_maint.interval_uom_id ==> uom.uom_id
+#   fixed_asset_maint.product_maint_type_id ==> product_maint_type.product_maint_type_id
+#   fixed_asset_maint.purchase_order_id ==> order_header.order_id
+# checkConstraints---
+title: "FixedAssetMaint"
+required:
+  - "createdStamp"
+  - "createdTxStamp"
+  - "fixedAssetId"
+  - "intervalMeterTypeId"
+  - "intervalQuantity"
+  - "intervalUomId"
+  - "lastUpdatedStamp"
+  - "lastUpdatedTxStamp"
+  - "maintHistSeqId"
+  - "productMaintSeqId"
+  - "productMaintTypeId"
+  - "purchaseOrderId"
+  - "scheduleWorkEffortId"
+  - "statusId"
+type: "object"
+properties:
+  fixedAssetId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "fixed_asset_id"
+    exampleSetFlag: false
+  maintHistSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "maint_hist_seq_id"
+    exampleSetFlag: false
+  statusId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "status_id"
+    exampleSetFlag: false
+  productMaintTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_maint_type_id"
+    exampleSetFlag: false
+  productMaintSeqId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "product_maint_seq_id"
+    exampleSetFlag: false
+  scheduleWorkEffortId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "schedule_work_effort_id"
+    exampleSetFlag: false
+  intervalQuantity:
+    type: "number"
+    description: "interval_quantity"
+    exampleSetFlag: false
+  intervalUomId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "interval_uom_id"
+    exampleSetFlag: false
+  intervalMeterTypeId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "interval_meter_type_id"
+    exampleSetFlag: false
+  purchaseOrderId:
+    maxLength: 20
+    minLength: 0
+    type: "string"
+    description: "purchase_order_id"
+    exampleSetFlag: false
+  lastUpdatedStamp:
+    type: "string"
+    description: "last_updated_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  lastUpdatedTxStamp:
+    type: "string"
+    description: "last_updated_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdStamp:
+    type: "string"
+    description: "created_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+  createdTxStamp:
+    type: "string"
+    description: "created_tx_stamp"
+    format: "date-time"
+    exampleSetFlag: false
+exampleSetFlag: false
